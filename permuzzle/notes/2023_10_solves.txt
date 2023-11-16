@@ -1,0 +1,1758 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.000webhostapp.com/permuzzle/
+https://zqjxkvby.000webhostapp.com/permuzzle/scoreboard.php
+
+===
+TODO: send to gelatinbrain:
+
+===
+
+7.8.6
+Types of pieces:
+- hexagons, as same as 7.8.5 hexagons. affecting others
+See 7.8.5. 
+
+- diamonds
+3-cycle, affecting all other pieces
+Top 2 pieces -> lower center
+[C', B2, A2, C2, A, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A2, B'3, A', B, A, B'3, A'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, B'3, A', B', C'2, A'2, B'2, C],
+
+Inverted:
+[C', B2, A2, C2, B, A, B3, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A2, B3, A', B', A, B3, A'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B3, A', C'2, A'2, B'2, C],
+
+Around bottom right
+[A', C2, B2, A2, B, C'3, B'2, A2, C, A, C', B', C, A', C', A, B, A'3, B2, C'3, B', C, B, C'3, B'2, A'3, B', A', C, A, C', B, C, A', C', A'2, B2, C'3, B', C', A'2, B'2, C'2, A],
+
+Inverted:
+[A', C2, B2, A2, C, B, C3, B'2, A2, C, A, C', B', C, A', C', A, B, A3, B2, C3, B', C', B, C3, B'2, A3, B', A', C, A, C', B, C, A', C', A'2, B2, C3, B', A'2, B'2, C'2, A],
+
+Around bottom left
+[B', A2, C2, B2, C, A'3, C'2, B2, A, B, A', C', A, B', A', B, C, B'3, C2, A'3, C', A, C, A'3, C'2, B'3, C', B', A, B, A', C, A, B', A', B'2, C2, A'3, C', A', B'2, C'2, A'2, B],
+
+Inverted:
+[B', A2, C2, B2, A, C, A3, C'2, B2, A, B, A', C', A, B', A', B, C, B3, C2, A3, C', A', C, A3, C'2, B3, C', B', A, B, A', C, A, B', A', B'2, C2, A3, C', B'2, C'2, A'2, B],
+
+Double rotate by 180: lower center and top right
+[C', B2, A2, C2, A, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A2, B'3, A', B, A, B'3, A'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, B'3, A', B', C'2, A'2, B'3, C'2, B2, A2, C2, B, A, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A2, B'3, A', B', A, B'3, A'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, B'3, A', C'2, A'2, B'2, C2, B, C],
+
+- irregular pentagons. all in one orbit
+top two pieces -> center
+[B'2, C', B', C', B'2, A2, B2, C, B'2, A'2, C', A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, C, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', C', B'2, A'2, B2, C, B, C, B2],
+
+Inverted:
+[B'2, C', B', C', B'2, A2, B2, C, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, C', A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, C, A2, B2, C', B'2, A'2, B2, C, B, C, B2],
+
+Around bottom right
+[C'2, A', C', A', C'2, B2, C2, A, C'2, B'2, A', B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, A, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', A', C'2, B'2, C2, A, C, A, C2],
+
+Inverted:
+[C'2, A', C', A', C'2, B2, C2, A, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, A', B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A, B2, C2, A', C'2, B'2, C2, A, C, A, C2],
+
+Around bottom left
+[A'2, B', A', B', A'2, C2, A2, B, A'2, C'2, B', C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A'3, C'2, B, C2, A'3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', B', A'2, C'2, A2, B, A, B, A2],
+
+Inverted:
+[A'2, B', A', B', A'2, C2, A2, B, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A3, C'2, B', C2, A3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, B, C2, A2, B', A'2, C'2, A2, B, A, B, A2],
+
+- regular triangles, as same as 7.8.5. But need new algos.
+top 2 -> center
+[B3, A'2, C, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, B', C', B, A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', A2, B3],
+
+Inverted:
+[B'3, A'2, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, B', C, B, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', C', A2, B'3],
+
+Around bottom right
+[C3, B'2, A, C, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, C', A', C, B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C', B2, C3],
+
+Inverted:
+[C'3, B'2, C, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, C', A, C, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C', A', B2, C'3],
+
+Around bottom left
+[A3, C'2, B, A, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A3, C'2, A', B', A, C2, A3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A', C2, A3],
+
+Inverted:
+[A'3, C'2, A, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A'3, C'2, A', B, A, C2, A'3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A', B', C2, A'3],
+
+Double rotation
+center right handed rotation. top left handed 
+[B'3, A'2, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, B', C, B, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', C', A2, B'3, C, B'2, A'2, C, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, B', C', B, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', A2, B2, C'],
+
+Inverted:
+[C, B'2, A'2, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, B', C, B, A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', C', A2, B2, C', B3, A'2, C, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, B', C', B, A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', A2, B3],
+
+- fat triangles (adjacent to hexagons)
+two pieces on top left, one piece on center right
+[B2, C3, A'2, C', A, C, A, B2, C', B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, C', A, C, B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C', A', C2, B'2, A', B2, C'2, A, C, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, C', A', C, B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C, B'2, C', A', C, A2, C3, B'2],
+
+Inverted:
+[B2, C'3, A'2, C', A, C, B2, C', B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, C', A, C, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C', A', C2, B'2, A, B2, C'2, A, C, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, C', A', C, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C, B'2, A', C', A', C, A2, C'3, B'2],
+
+Around bottom right
+[C2, A3, B'2, A', B, A, B, C2, A', C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A3, C'2, A', B, A, C2, A3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A', B', A2, C'2, B', C2, A'2, B, A, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A3, C'2, A', B', A, C2, A3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A, C'2, A', B', A, B2, A3, C'2],
+
+Inverted:
+[C2, A'3, B'2, A', B, A, C2, A', C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A'3, C'2, A', B, A, C2, A'3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A', B', A2, C'2, B, C2, A'2, B, A, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A'3, C'2, A', B', A, C2, A'3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, A, C'2, B', A', B', A, B2, A'3, C'2],
+
+Around bottom left
+[A2, B3, C'2, B', C, B, C, A2, B', A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, B', C, B, A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', C', B2, A'2, C', A2, B'2, C, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, B', C', B, A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B, A'2, B', C', B, C2, B3, A'2],
+
+Inverted:
+[A2, B'3, C'2, B', C, B, A2, B', A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, B', C, B, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B', C', B2, A'2, C, A2, B'2, C, B, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, B', C', B, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, B, A'2, C', B', C', B, C2, B'3, A'2],
+
+
+
+7.8.6
+1d8ebf221282810bb437d2417986f20d
+b92773b9e916d32c676cce30e51acb34
+e60ecd3ba7404fa79d773bd897042fd0
+9b6437c89e613dc27689ec135e95bcdf
+
+7.8.6b
+a00c0499a636901aa6858710cd32a758
+4fa69d453bc497682f249b6537c89e61
+3dd57680ec0a5ea1bc476e86dc1a7a86
+f40bd926b34c7986f20db94673a4e9f4
+
+7.8.6c
+be13c45927b7e86256c4f67a2fd09b64
+37cc9e213dc27689ece75ea0bc436e91
+dc347a8cf412d929b34c7986f2e6b944
+738ce916d32c6798ce31e51acb0be630
+
+7.8.6d
+f5d06eb82e74f9e97bac4d7398ce31e5
+1ade34da19cd32a758bbb09c623bc497
+6838d092642ec88e611dc2618951135e
+a1bc436e91dc237a85f40bd9268f4c76
+
+
+backup
+3-cycle diamonds, without affecting hexagons.
+[A, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A2, B'3, A'],B,
+[A, B3, A'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B3, A'],B',
+
+
+3-cycle diamonds:
+[C2, B, C, B', A', B, C', B', C, A, C'3],B,[C3, A', C', B, C, B', A, B, C', B', C'2],B',
+
+3 cycles of pentagons, affecting triangles
+[B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2],A,
+[B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2],A',
+
+3-cycle of regular triangles, affecting 6 fat triangles
+[C,B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2,C'],A,
+[C,B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2,C'],A',
+
+3-cycle of fat triangles
+[B2, C', B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, C', A, C, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C', A', C2, B'2],
+A,
+[B2, C'2, A, C, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, C', A', C, B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, C, B'2],
+A',
+
+
+7.8.5
+There are hexagons and triangles.
+Hexagons are as same as 7.8.4 hexagons.
+Triangles are new.
+
+3-cycle of hexagons, top two pieces and bottom center. Affecting triangles
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+
+Inverted:
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+
+Parity:
+Exchange two pieces, top 2 pieces. Side effect is rotating a piece by 60 deg
+[B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2],
+
+Double rotation:
+top right: right handed by 60, bottom center left handed by 60
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'3, B', C'3, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'3, B, C],
+
+Inverted:
+[C', B', C3, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C3, B, C3, A3, C2, B, C, B', A', B, C', B', C, A, C3, A, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+
+Parity:
+If need to rotate by 60, first run the previous parity algo.
+
+single rotation by 120:
+bottom center left handed rotation by 120
+C',[B2, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B2, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B2, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B2, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B2, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B2, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, A', C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, B2, C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B'],C,
+
+Inverted:
+C',[B, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2, B'2, C2, A3, C2, B, C, B', A', B, C', B', C, A, C3, A, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B'2, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2, B'2, C2, A3, C2, B, C, B', A', B, C', B', C, A, C3, A, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B', C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2, B'2, C2, A3, C2, B, C, B', A', B, C', B', C, A, C3, A, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B'2, C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2, B'2, C2, A3, C2, B, C, B', A', B, C', B', C, A, C3, A, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2, B'2],C,
+
+3-cycle of triangles
+top -> down -> very center
+[B, C, A2, B, A2, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, A', B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A', B', A'2, C', B'],
+
+Inverted:
+[B, C, A2, B, A, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, A, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A'2, B', A'2, C', B'],
+
+From bottom right
+[C, A, B2, C, B2, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A3, C'2, B', C2, A3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, B', C', B'2, A', C'],
+
+Inverted:
+[C, A, B2, C, B, C2, A2, C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A'3, C'2, B, C2, A'3, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A'2, C'2, B'2, C', B'2, A', C'],
+
+From bottom left
+[A, B, C2, A, C2, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B3, A'2, C', A2, B3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, C', A', C'2, B', A'],
+
+Inverted:
+[A, B, C2, A, C, A2, B2, A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B'3, A'2, C, A2, B'3, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B'2, A'2, C'2, A', C'2, B', A'],
+
+Double rotation:
+top center left handed, center right handed
+[B, C, A2, B, A, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, A, B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A'2, B', A'2, C', B', C, B2, C, A2, B, A2, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2, A', B2, C'3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A', B', A'2, C', B'2, C'],
+
+Inverted:
+[C, B2, C, A2, B, A, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, A, B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A'2, B', A'2, C', B'2, C', B, C, A2, B, A2, B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C3, B'2, A', B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2, A', B', A'2, C', B'],
+
+7.8.5
+c0501a879a0acc461ef38812d32c6798
+ce9ae50acb34e619cdc6a7594fb09d62
+3bd397612fc69b7137e39e473d4e768a
+ec135ea1bc436e91dc237a85f41ad9b2
+
+7.8.5b
+f5ef6eb82e74f9e97bf54d6598ce31e5
+1a0234e919cd32a758bbb09c623bc497
+6838d0926421c88b6108c2478991135c
+a1bc436e91dc237a85f40bd926bc4cbc
+
+7.8.5c
+ebd052e472cc41e6745f53a4584fb09d
+621dc483682fd09b64c3c89f613dc276
+89fb1357a1aa437891d52348855d0bd8
+26b34c7986f20db946738ce916c72c46
+
+
+backup
+position parity
+B,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+
+120 single rotation parity
+B2,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B2,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B2,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B2,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B2,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B2,
+[C2, A'2, C2, B, C, B', A', B, C', B', C, A, C3, A', C3, A', C', B, C, B', A, B, C', B', C'2, A3, C'2],
+B2,
+[C2, A'3, C2, B, C, B', A', B, C', B', C, A, C'3, A, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C'2],
+B',
+
+3-cycle of hexagons
+[C2, B, C, B', A', B, C', B', C, A, C'3],A2,
+[C3, A', C', B, C, B', A, B, C', B', C'2],A'2,
+
+Some triangles move
+[C2, B, C, B', A', B, C', B', C, A, C'3]x2,
+
+3-cycle of triangles
+[B2, C2, B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C'3, B'2],A,
+[B2, C3, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C'2, B'2],A',
+
+7.8.4
+We have hexagons, triangles, and rectangles.
+
+Hexagons are new
+1. Triangles are from 7.8.2 and also 7.8.3
+Permutation: intuitive.
+Double rotation:
+center left handed rotation, down right handed rotation
+[C, A', C', A, C, A', C', A, B, A', C, A, C', A', C, A, C', B'],
+
+Inverted:
+[B, C, A', C', A, C, A', C', A, B', A', C, A, C', A', C, A, C'],
+
+2. Rectangels are from 7.8.3
+See algos there.
+
+3. Hexagons
+3-cycle: top two -> bottom center
+[A'2, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A3],
+
+Inverted:
+[A'3, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A2],
+
+Double rotation:
+Top right, right handed rotation. Bottom center left handed
+[B'2, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B2],
+
+Inverted:
+[B'2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B2],
+
+Single rotation 
+If all triangles or hexagons are distinct (7.8.4d), we can only single rotation by 120.
+If some triangles and some hexagons are the same, we can single rotation by 60.
+
+Parity:
+2-swap triangles and hexagons, rotating top right right handed by 60:
+[B', A', C, A, C', B', C, A', C', A, B', A', C, A, C', B', C, A', C', A, B', A', C, A, C', B', C, A', C', A, C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B', C2, B', A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, B, C'2, B', C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B', C2, B', A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, B, C', B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B, C2, B', A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, B, C'2, B'2, C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B'3, A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, B2, C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B', A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C', B'2, A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, B, C'3, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C'3, B', A'3, C2, B, C2, B, C, B', A', B, C', B', C, A, C'3, B', C'3, A', C', B, C, B', A, B, C', B', C2, A'3, C, B', A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B, C', B, C', B', A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B, C, B, C', B', A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B, C, A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B, A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B'2, C2, B', A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B, C', A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C', A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C2, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, B'3, C'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, C'3, B2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, B2, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, B'3, A'2, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A'3, B', C', A'3, C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C'2, A2, C, A, B'2, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B2, A', B'2, A'3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A'3, B, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B, A'3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A'3, B, A'3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A'3, B, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B'2, C'2, B'2, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B2, C, B'2, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B2, C, B'3, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B'3, C, B'2, A'3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C'3, B, A'2, B'2, C'3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A'3, B2, C'],
+
+Inverted:
+[C, B'2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B2, C', B3, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B3, C', B'2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B2, C', B'2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B2, C2, B2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B', A3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A3, B', A3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A3, B', A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B', A3, B2, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A, B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B', A', B', A3, B2, A, B'2, A3, B, A, B, C, B'2, C, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B', A', B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'2, A3, B2, A', C', A'2, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A3, C, B, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B3, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B'2, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B'2, C3, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C3, B3, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, B3, C'2, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C2, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C, A3, C2, B, C, B', A', B, C', B', C, A, C3, B2, A2, B', C3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, A, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2, A2, C, B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B, C'2, B2, A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, C', B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B, C, B', C', B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B, C, B', C, B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B, C', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B, C3, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C3, B', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B2, C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B, C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C', B'2, A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B3, C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C', B2, C2, B', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B, C'2, B', C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C, B', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B, C'2, B, C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C', B, C2, B', A3, C'2, B, C, B', A', B, C', B', C, A, C3, B, C3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A3, B, C'2, B, C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C', A', C, A, C', B, C, A', C', A, B, A', C, A, C', B, C, A', C', A, B, A', C, A, C', B, C, A', C', A, B],
+
+7.8.4
+0993970ab121c64c14bd930bb946738c
+e986d3336798ce31e5eecb35e619cd32
+a74f4fb99d773bd297592fdb9bc837c9
+9e613dc27689ec135ea1bc436eb1dc55
+
+7.8.4b
+48ddf46947d7ee645ab6ff633dc27689
+eca25ebfbc436e91dcd77a84f40bd926
+b35b798ff21bb95673aae93ad36e679a
+ce31e51acb34e619cd32a7584f819d3e
+
+7.8.4c
+5060e6f563de53b32137e7f00db94673
+8cc816d92c6798ce31111aca34e619cd
+32b05846b08b622bc4a56829d0076435
+c89e613dc27689ec135ea1bc4367910a
+
+7.8.4d
+1b34b39a0c30bd9e0c56a37589ec135e
+a13d436291dc237a85000bd826b34c79
+86e50db046658cf816d62c78987131e6
+1acb34e619cd32a7584fb09d6237c483
+
+
+
+
+backup:
+[B, C, B'2, C, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C, B2, C', B'],A,
+[B, C, B'2, C', B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C', B2, C', B'],A',
+
+[C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2],A,
+[B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C'2],A',
+
+C2, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2,
+
+
+7.8.3
+First solve the triangle pieces like 7.8.2. Then solve the leaves
+
+3-cycle, top left -> right -> middle
+[C, B', A'3, C'2, B, C, B', A', B, C', B', C, A, C'3, B, C'3, A', C', B, C, B', A, B, C', B', C'2, B', C'2, A'3, B, C'],
+
+Inverted:
+[C, B', A3, C2, B, C2, B, C, B', A', B, C', B', C, A, C3, B', C3, A', C', B, C, B', A, B, C', B', C2, A3, B, C'],
+
+Around bottom right:
+[A, C', B'3, A'2, C, A, C', B', C, A', C', A, B, A'3, C, A'3, B', A', C, A, C', B, C, A', C', A'2, C', A'2, B'3, C, A'],
+
+Inverted:
+[A, C', B3, A2, C, A2, C, A, C', B', C, A', C', A, B, A3, C', A3, B', A', C, A, C', B, C, A', C', A2, B3, C, A'],
+
+Around bottom left:
+[B, A', C'3, B'2, A, B, A', C', A, B', A', B, C, B'3, A, B'3, C', B', A, B, A', C, A, B', A', B'2, A', B'2, C'3, A, B'],
+
+Inverted:
+[B, A', C3, B2, A, B2, A, B, A', C', A, B', A', B, C, B3, A', B3, C', B', A, B, A', C, A, B', A', B2, C3, A, B'],
+
+
+Double flip:
+top and center
+[B', A'3, C'3, B, C, B', A', B, C', B', C, A, C'3, B2, A2, B', C'3, A', C', B, C, B', A, B, C', B', C'2, B, A'2, B'2, C', A'3, B],
+
+Inverted:
+[B', A3, C, B2, A2, B', C2, B, C, B', A', B, C', B', C, A, C3, B, A'2, B'2, C3, A', C', B, C, B', A, B, C', B', C3, A3, B],
+
+backup
+[C2, B, C, B', A', B, C', B', C, A, C'3],B,[C3, A', C', B, C, B', A, B, C', B', C'2],B',
+
+[C2, B, C, B', A', B, C', B', C, A, C'3],B2,A2,B',
+[C3, A', C', B, C, B', A, B, C', B', C'2],B,A'2,B'2,
+
+7.8.3
+fafd705fc9bb366efcb0427b85f40bd9
+26434c7b86f20db946878ce816d32c67
+98d931ec1ade34f219e13286587db09e
+623bc497682fd09b6437c89e613fc2bf
+
+7.8.3b
+9f013da0d4441b91b16c1b84f40bd926
+b3177984f20db9467378e917d32c6798
+ce26e513cb21e60dcd01a7544fbe9d63
+3bc497682fd09b6437c89e613dc076a7
+
+7.8.3c
+b165eaed7b59d4bc2e1af0de237a85f4
+0bad26b74c7986f20d4d46728ce916d3
+2c7098c731f01ade34e419e8327b584f
+b09d623bc497682fd09b6437c89a6115
+
+7.8.3d
+ebda52e472cc41e6743953a5584fb09d
+625ec492682fd09b64c3c89f613dc276
+89fb1357a1a9437b91d3234e85dd0bd9
+26b34c7986f20db946738ce916d72cb4
+
+7.8.3e
+2b5ad39c0a3cb19705a4b1996437c89e
+6158c27289ec135ea148436f91dc237a
+85e30bd026a64c6c86e90da046e98ce9
+16d32c6798ce31e51acb34e619c932f4
+
+
+7.8.2
+The algos are similar to the corner pieces on a Rubik's cube
+
+3-cycle
+[C', B, C, B', A', B, C', B', C, A],
+
+Inverted:
+[A', C', B, C, B', A, B, C', B', C],
+
+Double rotation
+[C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, A],
+
+Inverted:
+[A', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C],
+
+7.8.2
+55bf2f78eef578b92bd1ede916d32c67
+988c31e51acb34e6193932a6584fb09d
+622cc49e683bd08d6421c88b61cdc277
+89ec135ea1bc436e91dc237a85f40bd9
+
+7.8.2b
+1495ad308d1dbe348b44ac32a7584fb0
+9d513bc497682fd09b9037c99e613dc2
+769eec1a5eb5bc556e89dc3e7a9cf40a
+d926b34c7986f20db946738ce916d32c
+
+44c5fd6055c50389814e3fa1bc436e91
+dc107a85f40bd926b3b87987f20db946
+739be91fd338678ece29e539cbf6e61b
+cd32a7584fb09d623bc497682fd09b64
+
+7.8.2c
+5f69fbcf59e26fcb595878cf32a7584f
+b017623bc497682fd06f6436c89e613d
+c26189e5134aa1aa434891e423db85f4
+0bd926b34c7986f20db946738ce916d3
+
+7.8.2d
+a0230499a636901aa6c08719cd32a758
+4f2e9d623bc497682f249b6537c89e61
+3dd57680ec075eb7bc736ea4dc5a7a85
+f40bd926b34c7986f20db946738ce916
+
+7.8.2e
+1488ad308d1dbe348bfeac32a7584fb0
+9ded3bc497682fd09b9037c99e613dc2
+769eec1a5eb5bc556ea4dc077a5cf40a
+d926b34c7986f20db946738ce916d32c
+
+1488ad308d1dbe348bfeac32a7584fb0
+9ded3bc497682fd09b9037c99e613dc2
+769eec1a5eb5bc556ea4dc087a5cf40a
+d926b34c7986f20db946738ce916d32c
+
+
+7.7.4
+
+Compared to 7.7.3, we have 8 types of pieces
+- extra 3C pieces at the axes downward triangles
+- Hexagons like 7.7.3
+- Big upward triangles
+- irregular pentagons (two orbits)
+- diamonds
+- kites (two symmetric orbits)
+- small triangles: upward 
+- small triangles: downward
+
+- Fix the axes (3C big triangles downward triangles), including position and the orientations first. Trivial
+
+- 3-cycle diamonds
+Around top
+[D', C, A', D', C', D, C, A', C', D', C, D, A', C', D],
+
+Inverted:
+[D', C, A, D', C', D, C, A, C', D', C, D, A, C', D],
+
+- 3-cycle 2C pentagons
+Right handed 3-cycle
+[C', D, B', D, A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D, A, D', A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D', A', B, D', C],
+
+Inverted:
+[C', D, B', A, D, A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D', A', D, A, D, A', D', A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D, A', D', A, D', B, D', C],
+
+- 3-cycle 1C pentagons, affecting other pieces
+Around top left -> center
+[C, A', D', B', D', C', B, C, B', D, B, D, A, C'],
+
+Inverted:
+[C, A', D', B', D', B, C', B', C, D, B, D, A, C'],
+
+Around bottom right -> center
+[A, B', D', C', D', A', C, A, C', D, C, D, B, A'],
+
+Inverted:
+[A, B', D', C', D', C, A', C', A, D, C, D, B, A'],
+
+Around bottom left -> center
+[B, C', D', A', D', B', A, B, A', D, A, D, C, B'],
+
+Inverted:
+[B, C', D', A', D', A, B', A', B, D, A, D, C, B'],
+
+
+- Upward triangle 3-cycle, affecting kites, downward triangle and hexagons
+Around top
+[B', A', C, A, D', B', C, A', D, B', A', C', B', C, B, A, B, D', B', A', B', C', B, C, A, B, A, C', B, D, A', C', A, B],
+
+Inverted:
+[B', A', C, A, D', B', C, A', B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D', A, C', B, D, A', C', A, B],
+
+- Kites 3-cycle, affecting hexagons, downward small triangles. Two orbits
+- orbit 1, around top
+[C', A', C, A, C', A', C', B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D', C, A, D', C', D, A', C', D, B', A', C', B', C, B, A, B, D', B', A', B', C', B, C, A, B, C, A, D', C, D, C, A', C', A, C],
+
+Inverted:
+[C', A', C, A, C', D', C', D, A', C', B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D', C, A, D', C, D, A', C', D, B', A', C', B', C, B, A, B, D', B', A', B', C', B, C, A, B, C, A, C, A', C', A, C],
+
+- orbit 2, mirrored. around top
+[B, A, B', A', B, A, B, C, A, B, C, B', C', A', C', D', C, A, C, B, C', B', A', C', D, B', A', D, B, D', A, B, D', C, A, B, C, B', C', A', C', D, C, A, C, B, C', B', A', C', B', A', D, B', D', B', A, B, A', B'],
+
+Inverted:
+[B, A, B', A', B, D, B, D', A, B, C, A, B, C, B', C', A', C', D', C, A, C, B, C', B', A', C', D, B', A', D, B', D', A, B, D', C, A, B, C, B', C', A', C', D, C, A, C, B, C', B', A', C', B', A', B', A, B, A', B'],
+
+- Hexagon 3-cycle, affecting downward small triangle and big upward triangles
+3-cycle, left handed involving top:
+[B, C, B, C', B', A', B, C, B', C', A, B'],
+
+Inverted:
+[B, A', C, B, C', B', A, B, C, B', C', B'],
+
+Left handed around center
+[A, B', A', C, B, C', B', A, B, C, B', C', B, A'],
+
+Inverted:
+[A, B', C, B, C', B', A', B, C, B', C', A, B, A'],
+
+Double rotation:
+left middle: left handed rotation, right middle: right handed rotation
+[A', D', B', C, B, C', B', A', B, C, B', C', A, B, D, B, C, B, C', B', A', B, C, B', C', A, B', A],
+
+Inverted:
+[A', B, A', C, B, C', B', A, B, C, B', C', B', D', B', A', C, B, C', B', A, B, C, B', C', B, D, A],
+
+
+- Pure 3-cycle of big upward triangles
+Around top: two triangles on top + one at center
+[C, A', C', B, C, B', A', B, C', B', C, A', C'],
+
+Inverted:
+[C, A, C', B, C, B', A, B, C', B', C, A, C'],
+
+Around bottom right
+[A, B', A', C, A, C', B', C, A', C', A, B', A'],
+
+Inverted:
+[A, B, A', C, A, C', B, C, A', C', A, B, A'],
+
+Around bottom left
+[B, C', B', A, B, A', C', A, B', A', B, C', B'],
+
+Inverted:
+[B, C, B', A, B, A', C, A, B', A', B, C, B'],
+
+Double rotation by 120:
+center right handed, top right left handed
+[C, A', C', B, C, B', A', B, C', B', C, A', C', D, C, A, C', B, C, B', A, B, C', B', C, A, C', D'],
+
+Inverted:
+[D, C, A', C', B, C, B', A', B, C', B', C, A', C', D', C, A, C', B, C, B', A, B, C', B', C, A, C'],
+
+Single rotation? Will need in 7.7.4d and 7.7.4e. Is it possible? Not sure. Probably not.
+
+- Pure downward small triangles 3-cycle.
+Around top: two triangles on top + one at bottom
+[C', D', C, A, D, C, A', D', B', C', B', C, B', D, A, D', B, C', B, C, B, D, C', D', A', C', D, C],
+
+Inverted:
+[C', D', C, A, D, C, D', B', C', B', C, B', D, A', D', B, C', B, C, B, D, A, C', D', A', C', D, C],
+
+Around bottom right
+[A', D', A, B, D, A, B', D', C', A', C', A, C', D, B, D', C, A', C, A, C, D, A', D', B', A', D, A],
+
+Inverted:
+[A', D', A, B, D, A, D', C', A', C', A, C', D, B', D', C, A', C, A, C, D, B, A', D', B', A', D, A],
+
+Around bottom left
+[B', D', B, C, D, B, C', D', A', B', A', B, A', D, C, D', A, B', A, B, A, D, B', D', C', B', D, B],
+
+Inverted:
+[B', D', B, C, D, B, D', A', B', A', B, A', D, C', D', A, B', A, B, A, D, C, B', D', C', B', D, B],
+
+7.7.4
+1488ad338d1dbe348b41ac35a7584fb0
+9df63bc997682fd09b9037c99e613dc2
+769eec1a5eb5bc4c6eb5dc037a9cf409
+d926b34c7986f20db946738ce918d3a2
+
+7.7.4b
+ebdf52e772cc41e674fd53a2584fb09d
+62c7c49c682fd09b64c3c89f613dc276
+89fb1357a1a8436191e7234d85dd0bda
+26b34c7986f20db946738ce916df2cf3
+
+7.7.4c
+e2ce4078edf37ed94b1a2d7d86f20db9
+46a28ce316d32c67983a31e41acb34e6
+19da32ae585bb08d622ec49f6805d09a
+6437c89e613dc27689ec135ea1b643eb
+
+7.7.4d
+c05f1a849a0acc461eac8811d32c6798
+ce1be517cb34e619cdc6a7594fb09d62
+3bd397612fc49b7637e89e643dce7688
+ec135ea1bc436e91dc237a85f405d92c
+
+7.7.4e
+d2a8206cf9db567ae8de6adf26b34c79
+86540db746738ce916272c6698ce31e5
+1adc34ef19d932b25877b0b86281c495
+682fd09b6437c89e613dc27689e21315
+
+
+back up:
+
+[D, A', C', B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D', C, A, D'],C,
+[D, A', C', D, B', A', C', B', C, B, A, B, D', B', A', B', C', B, C, A, B, C, A, D'],C',
+
+3-cycle 2C pentagons
+[D', A', D, A]x6,
+
+D',[D', A', D, A]x6,D,A,
+D',[A', D', A, D]x6,D,A',
+
+
+pure downward small triangles 3-cycle.
+[D', B', C', B', C, B', D, A', D', B, C', B, C, B, D, A],
+
+Pure 3-cycle of big upward triangles
+[C', B, C, B', A', B, C', B', C, A],
+
+
+[D, A', C', B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D', C, A, D'],
+C,
+[D, A', C', D, B', A', C', B', C, B, A, B, D', B', A', B', C', B, C, A, B, C, A, D'],
+C',
+
+upward triangle and kite 3-cycle, affecting downward triangle and hexagons
+B', A', C', B', C, B, A, B, D, B', A', B', C', B, C, A, B, D',
+
+from commutator of
+[B', A', C', B', C, B, A, B], and D
+
+[D, A, B, D, C', B, C, B', D, B', A, B, A', B, D', B, C', B', C, D, B', A, B', A', B, D, B', A', D'],
+C',B,C,B',
+[D, A, B, D', B', A, B, A', B, D', C', B, C, B', D, B', A, B', A', B, D', B, C', B', C, D', B', A', D'],
+B,C',B',C,
+
+upward triangle and kite 3-cycle, affecting downward triangle
+[C', B', D', C', D', C, B', C', B', C, B', C', D, C, D, A, D', C', D', C, B, C', B, C, B, C', D, C, D, A', B, C],
+A,
+[C', B', A, D', C', D', C, B', C', B', C, B', C', D, C, D, A', D', C', D', C, B, C', B, C, B, C', D, C, D, B, C],
+A',
+
+
+[D', C', D', C, B', C', B', C, B', C', D, C, D],
+A,
+[D', C', D', C, B, C', B, C, B, C', D, C, D],
+A',
+
+[D', B', C', B', C, B', D, A', D', B, C', B, C, B, D, A],
+
+[D', B', C', B', C, B', D],A',
+[D', B, C', B, C, B, D],A,
+
+pure 3-cycle of big upward triangles
+[C', B, C, B', A', B, C', B', C, A],
+
+don't need this, too long
+[C',B,C,B']x5,A,[B,C',B',C]x5,A',
+
+useful algo:
+D, C', B, C, B', D, B', A, B, A', B, D', B, C', B', C, D, B', A, B', A', B, D,
+
+
+======
+renaming:
+7.8.1 <- 7.4.1
+7.7.0 <- 7.0.1 <- 7.2.3
+
+7.7.3
+There are 6 hexagons: as same as hexagons of 7.7.2
+18 upward triangles,
+downward triangles,
+irregular hexagons: as same as rectangles of 7.7.2
+
+1. Solve hexagons
+hexagon rotation
+Double rotate: central top left left handed, top right right handed
+[C, D', C', D, C, D', C', D', A', D', A, D, A', D', A', D, A, D', A', D, A, D, C, D, C', D', C, D, C', A],
+
+Inverted:
+[A', C, D', C', D, C, D', C', D', A', D', A, D, A', D', A, D, A, D', A', D, A, D, C, D, C', D', C, D, C'],
+
+2. Solve downward triangles
+near top corner
+[D, A, B, D, C', B, C, B', D, B', A, B, A', B, D', B, C', B', C, D, B', A, B', A', B, D, B', A', D'],
+
+Inverted:
+[D, A, B, D', B', A, B, A', B, D', C', B, C, B', D, B', A, B', A', B, D', B, C', B', C, D', B', A', D'],
+
+near bottom right
+[D, B, C, D, A', C, A, C', D, C', B, C, B', C, D', C, A', C', A, D, C', B, C', B', C, D, C', B', D'],
+
+Inverted:
+[D, B, C, D', C', B, C, B', C, D', A', C, A, C', D, C', B, C', B', C, D', C, A', C', A, D', C', B', D'],
+
+near bottom left
+[D, C, A, D, B', A, B, A', D, A', C, A, C', A, D', A, B', A', B, D, A', C, A', C', A, D, A', C', D'],
+
+Inverted:
+[D, C, A, D', A', C, A, C', A, D', B', A, B, A', D, A', C, A', C', A, D', A, B', A', B, D', A', C', D'],
+
+
+3. Solve hexagons
+  The algos for hexagons affect upward triangles. can be simplified.
+
+3-cycle, around top corner, affecting upward triangles
+[D', C, B, A', C, B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', C', D],
+
+Inverted:
+[D', C, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, C', A, B', C', D],
+
+3-cycle, around bottom right corner, affecting upward triangles
+[D', A, C, B', A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', A', D],
+
+Inverted:
+[D', A, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', B, C', A', D],
+
+3-cycle, around bottom left corner, affecting upward triangles
+[D', B, A, C', B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', B', D],
+
+Inverted:
+[D', B, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', C, A', B', D],
+
+4. Solve upward triangles. Upward triangles are all single color. No need to worry about rotating them.
+
+pure 3-cycle
+Around top corner
+[B', A, D, B, D, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', C, D', B', D', B, D, C', B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, D', B', A', B],
+
+Inverted:
+[B', A, B, D, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', C, D', B', D, B, D, C', B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, D', B', D', A', B],
+
+Around bottom right:
+[C', B, D, C, D, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, C', A, D', C', D', C, D, A', C, B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, D', C', B', C],
+
+Inverted:
+[C', B, C, D, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, C', A, D', C', D, C, D, A', C, B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, D', C', D', B', C],
+
+Around bottom left:
+[A', C, D, A, D, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', B, D', A', D', A, D, B', A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, D', A', C', A],
+
+Inverted:
+[A', C, A, D, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', B, D', A', D, A, D, B', A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, D', A', D', C', A],
+
+7.7.3
+aa2bd04e1181870dd46e1288e916d32c
+6734ce3fe51acb34e6edcd33a7584fb0
+9d753bcd977b2fdf9b5f37d29e0c3dc0
+7689ec135ea1bc436e91dc237a8bf445
+
+7.7.3b
+cf4d0d93b4240f8599fcb822b34c7986
+f224b956738ce916d3d86799ce31e51a
+cb23e610cd21a7484fa79d763b829768
+2fd09b6437c89e613dc27689ec1c5e7e
+
+7.7.3c
+ca49108e8111a62c0a94af37e51acb34
+e61dcd23a7584fb09d963bc597682fd0
+9b7337c19e723dd276baec155ed4bc43
+6e91dc237a85f40bd926b34c7996f2d0
+
+=====
+backup
+
+downward triangle 3-cycle:
+[A', B, D', C', B, C, B', D, B', A, B, A', B, D', B, C', B', C, D, B', A, B'],
+
+
+
+[C',B,C,B']x5,
+C',B,C,B',C',B,C,B',C',B,C,B',
+
+
+[A, D, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', B, D', A'],
+
+
+hexagons 3-cycles and upward triangle 3-cycles together
+[C',B,C,B']x5,A,[B,C',B',C]x5,A',
+
+
+
+hexagon 3-cycle, affecting upward triangles
+
+[C',B,C,B'],
+[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A],
+[B,C',B',C],
+[A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],
+
+
+this algo is order 3 now:
+[C', B, C, B', A', B, C', B', C, A],
+
+Inverted:
+[A', C', B, C, B', A, B, C', B', C],
+
+[C',B,C,B']x6,
+[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A],
+[B,C',B',C]x6,
+[A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],
+
+[C',B,C,B'],
+[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A],
+[B,C',B',C],
+[A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],
+
+
+[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A],
+B,
+[A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],
+B',
+
+
+7.7.2b, 7.7.2c
+Very similar to 7.7.2, however my terminology of 1C, nC triangles should change. 
+The old 1C pieces need to be rotated now. 
+It seems rectangles cannot be rotated in place.
+
+7.7.2b
+44c3fd6355c5038981913fa2bc436e91
+dca27a96f40bd926b3b87987f20db946
+739be91fd33e6797ce27e51dcbb6e61b
+cd32a7584fb09d623bc497682fc39b2a
+
+7.7.2c
+8101da441b8b9c16bece069cce31e51a
+cb08e60fcd32a7584f449d633bc49768
+2fc79b6d37da9e6e3dee768decd25ea2
+bc436e91dc237a85f40bd926b35b7959
+
+
+7.7.2
+There are 6 hexagons, 10 1C (tips facing down), 12 nC (2C or 3C) triangles (tips facing up), 
+and many rectangles.
+
+1. Solve hexagons, just like 7.7.1
+hexagon rotation
+Double rotate: central top left left handed, top right right handed
+[C, D', C', D, C, D', C', D', A', D', A, D, A', D', A', D, A, D', A', D, A, D, C, D, C', D', C, D, C', A],
+
+Inverted:
+[A', C, D', C', D, C, D', C', D', A', D', A, D, A', D', A, D, A, D', A', D, A, D, C, D, C', D', C, D, C'],
+
+2. Solve nC triangles (tips facing up)
+3-cycle of nC triangles, affecting rectangles and 1C triangles: top center -> top left -> top right
+[C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C],
+
+Inverted:
+[C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C],
+
+rotated. For the bottom right corner:
+[A', B', C', B, C, D, C, B, D', B', D', A', C, A, C', A', C, A, C', A', C, A, C', D, B, C, B', D', C, A', C', A, C, A', C', A, C, A', C', A, D, B, C', D, B', C', D', C', B', C, B, A],
+
+Inverted:
+[A', B', C', B, C, D, C, B, D', C, B', D', A', C, A, C', A', C, A, C', A', C, A, C', D, B, C', B', D', C, A', C', A, C, A', C', A, C, A', C', A, D, B, D, B', C', D', C', B', C, B, A],
+
+rotated. For the bottom left corner:
+[B', C', A', C, A, D, A, C, D', C', D', B', A, B, A', B', A, B, A', B', A, B, A', D, C, A, C', D', A, B', A', B, A, B', A', B, A, B', A', B, D, C, A', D, C', A', D', A', C', A, C, B],
+
+Inverted:
+[B', C', A', C, A, D, A, C, D', A, C', D', B', A, B, A', B', A, B, A', B', A, B, A', D, C, A', C', D', A, B', A', B, A, B', A', B, A, B', A', B, D, C, D, C', A', D', A', C', A, C, B],
+
+
+Double rotation of nC triangles, affecting rectangles and 1C triangles
+top center right handed, top right left handed
+[D, C', A, C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, C, D'],
+
+Inverted:
+[D, C', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A', C, D'],
+
+Around bottom right
+[D, A', B, A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, C', B, A, D'],
+
+Inverted:
+[D, A', B', C, B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B', A, D'],
+
+Around bottom left
+[D, B', C, B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, A', C, B, D'],
+
+Inverted:
+[D, B', C', A, C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C', B, D'],
+
+Parity: rotate one nC triangle:
+Top center left handed
+[A, B, A, B', A, B, A, B', C, D', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D, C', B', D, C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D', B, D', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D, B, D, C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D', B', A, B, A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, C', B', A, B, A', B', A, B, A', B', A, B, A', C, A, B', A', B, A, B', A', B, A, B', A', B, C', B, A', B', D, B', C, B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, A', C, B, D', B, D', B', D, B', C', A, C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C', B, D', B, D', B', C', A, C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C', B, D', B', C, B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, A', C, B],
+
+Inverted:
+[B', C', A, C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C', B, D, B', C, B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, A', C, B, D, B', D, B', C, B, C, B', C', B, C, B', C', B, C, B', A, B, C', B', C, B, C', B', C, B, C', B', C, A', C, B, D', B, D, B', D, B', C', A, C', B, C, B', C', B, C, B', C', B, C, B', A', B, C', B', C, B, C', B', C, B, C', B', C', B, D', B, A, B', C, B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B, C, B', A, B, A', B', A, B, A', B', A, B, A', C', A, B', A', B, A, B', A', B, A, B', A', B', A', B, D, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D', B', D', C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D, B', D, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D', B, C, D', C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D, C', B, A', B', A', B, A', B', A'],
+
+
+3. Solve rectangles
+3 cycle of rectangles, affecting 1C triangles: two pieces on top left corner and one piece near top
+B',[A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B],B,
+
+Inverted:
+B',[B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A],B,
+
+3 cycle of rectangles, affecting 1C triangles: around bottom right corner
+C',[B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C', B', C', D', A', B, A, B', C, B', C', B, C, B, C', A, C', A', C, B, C, B, C', B, A', B', A, B, C', A, C, A', C, B', C', D, C, B, C, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, C', B', C', D', C, B, C', A, C', A', C, B', A', B, A, B', C, B', C', B', C', A, C, A', C, B', C', B', C, B, C', B, A', B', A, D, C, B, C],C,
+
+Inverted:
+C',[C', B', C', D', A', B, A, B', C, B', C', B, C, B, C', A, C', A', C, B, C, B, C', B, A', B', A, B, C', A, C, A', C, B', C', D, C, B, C, B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', B', A, B, A', C', B', C', D', C, B, C', A, C', A', C, B', A', B, A, B', C, B', C', B', C', A, C, A', C, B', C', B', C, B, C', B, A', B', A, D, C, B, C, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B, A, B', A', B],C,
+
+3 cycle of rectangles, affecting 1C triangles: around bottom left corner
+A',[C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],A,
+
+Inverted:
+A',[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C],A,
+
+4. Solve 1C triangles (tips facing down)
+Pure 1C 3-cycle. The three pieces in the corners, right handed cycles
+[C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C],
+
+Inverted, left handled cycle:
+[C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C],
+
+Better fix the center first because it's hard to set up for it.
+
+3-cycle involving center: right handed cycle, center instead of top
+[C', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C],
+
+Inverted:
+[C', A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', C],
+
+Double rotation:
+center: right handed, top: left handed
+[D', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D, B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B],
+
+Inverted:
+[B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D', B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, D],
+
+Parity: single rotation
+Center left handed
+[D', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D, B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B', C', D', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D, B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, C, B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D', B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, D, C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D', B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, D, B', C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B', C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, A', C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, A, C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, B', C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, B, C', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C, A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', C, B, C', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C, B, C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B, D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C', A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B, C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, B', A, C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, A', B', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', B, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, D', C', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C, D, B', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', B', D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B', C, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', C, B, D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B', C, B, D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B', C', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', C, B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', C, B', C', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C, A, B', D, A, C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A, D', B, A', B, D, A', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B', C', D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, C, B, D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', C, B', C, D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, C, B, D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B', C, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', C, A, C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', D, A, C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A, D', A, D, A, C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A, D', A, B', C', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C, B, C, D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', C', D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B, D, C', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A', C, D', B', D', C', A, C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, C, D, B', D', C', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A', C, D, B, A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A', D, C', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A, B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D', B, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, B', D', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D', C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C', D', C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D, C', B', D, C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D', B, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, A, B', A', B, D', B', A, B, A', D', A, B', A', B, D', B', A, B, A', D'],
+
+Center right handed
+[D, A, B', A', B, D, B', A, B, A', D, A, B', A', B, D, B', A, B, A', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, B', D, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D', B, C, D', C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D, C, A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D, C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, D, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A, C, D, B, C', A', B', A, B, D, B, A, D', A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B, A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, B', D, A', B', D', B', A', B, A, C, B', D, C', A', B', A, B, D, B, A, D', B, A', D', C', B, C, B', C', B, C, B', C', B, C, B', D, A, B', A', D', B, C', B', C, B, C', B', C, B, C', B', C, D, A, D, A', B', D', B', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, C, D', A, C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, B', D', C', A, C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, C, D, B, D', C', A', B, A', C, A, C', A', C, A, C', A', C, A, C', B', C, A', C', A, C, A', C', A, C, A', C', A', C, D, B, D, C', A, C, A, C', A', C, A, C', A', C, A, C', B, C, A', C', A, C, A', C', A, C, A', C', A, B', A, C, D', B', D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, C, D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C', B', C', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', C, B, A', D, A', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A', D', A', D, A', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A', D', A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A', C', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', C', B, D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B', C', D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, C', B, C', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C, D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B', C', D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, C, B, D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', A, C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A, D', B', A, B', D, A', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B, C, B', A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', B', C, A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A', D', B, A', C', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', C, B, C', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C', D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', C, B, D', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D, B', C', B, D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B', C', B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, C', B, D', B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D, B, D, B, A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B, D', B, D', C', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', C, D, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, B', D, B', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', A', C, A, C', B', A', B', D', C', A, C, A', B, A', B', A, B, A, B', C, B', C', B, A, B, A, B', A, C', A', C, A, B', C, B, C', B, A', B', D, B, A, B, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, C, A', C', A, B', A', B', D', B, A, B', C, B', C', B, A', C', A, C, A', B, A', B', A', B', C, B, C', B, A', B', A', B, A, B', A, C', A', C, D, B, A, B', D', B, A, C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, A', B, C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B', C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C, D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', B', C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, B', C', A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', C, B', C', A, C, B', D, A, C', D', A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B, A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, B', D, C, A', D', B, C', A', C', A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', C, A, C, B', D, A, C', D', B, A', B', A, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, B', A, B, A', C', A, B', A', B, C, A', B, A, B', A', B', A, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, C', B', A, B, A', C, A, B', A', B, A', B, A, D, C, A', D', B, C', A', C, B', C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B, C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, A', C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, A, C', D, B, A', D', B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C, B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, C', D, A, B', D', C, B, C', D, B, A', D', C, B', C', B, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, C', B, C, B', A', B, C', B', C, A, B', C, B, C', B', C', B, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, A', C', B, C, B', A, B, C', B', C, B', C, B, D, A, B', D', C, B, D', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D, B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', D', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D, B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, C', B', C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D', B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, D, C, B, C, B, A', D, C, B', D', C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A, C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, A', D, B, C', D', A, B', C', B, D', B', C, B, A', D, C, B', D', A, C', A', C, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, A', C, A, C', B', C, A', C', A, B, C', A, C, A', C', A', C, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, B', A', C, A, C', B, C, A', C', A, C', A, C, D, B, C', D', A, B', C', B, D],
+
+
+7.7.2
+00868a14bb2b1298a3d78415cb34e619
+cd87a74d4fb09d623b3097692fd09b64
+37df9e683dd07683ec0e5e93bc166e92
+dc237a85f40bd926b34c7986f217b973
+
+backup
+
+pure rectangle 3-cycle:
+
+[C',B,C,B']x6,
+[A', C', A', D', B', C, B, C', A, C', A', C, A, C, A', B, A', B', A, C, A, C, A', C, B', C', B, C, A', B, A, B', A, C', A', D, A, C, A],
+[B,C',B',C]x6,
+[A', C', A', D', A, C, A', B, A', B', A, C', B', C, B, C', A, C', A', C', A', B, A, B', A, C', A', C', A, C, A', C, B', C', B, D, A, C, A],
+
+
+[C',B,C,B']x6,
+[B,C',B',C]x6,
+
+
+[C', A, C, A', B, A', B', A],
+
+Inverted:
+[A', B, A, B', A, C', A', C],
+
+Original:
+[A', B, A, B', C, B', C', B],
+
+Inverted:
+[B', C, B, C', B, A', B', A],
+
+two 2-swaps of 1C pieces
+[C', A, C, A', B, A', B', A],
+[A', B, A, B', C, B', C', B],
+[A', B, A, B', A, C', A', C],
+[B', C, B, C', B, A', B', A],
+
+[C', A, C, A', B, A', B', A],
+A,[A', B, A, B', C, B', C', B],A',
+[A', B, A, B', A, C', A', C],
+A,[B', C, B, C', B, A', B', A],A',
+
+
+[C',B,C,B']x6,
+[C', A, C, A', B, A', B', A],
+[B,C',B',C]x6,
+[A', B, A, B', A, C', A', C],
+
+
+
+commutator:
+[C',B,C,B']x6,
+[B,C',B',C]x6,
+
+[A', C', B, C, B', A', B, C', B', C, A'],
+[A, C', B, C, B', A, B, C', B', C, A],
+
+[C',B,C,B']x6,
+[A', C', B, C, B', A', B, C', B', C, A'],
+[B,C',B',C]x6,
+[A, C', B, C, B', A, B, C', B', C, A],
+
+
+order 210??
+[C',B,C,B']x30,
+
+[C',B,C,B']x3,
+
+A',D',[C',B,C,B']x3,D,A,
+B,
+A',D',[B,C',B',C]x3,D,A,
+B',
+
+
+Double rotation of nC triangles, affecting rectangles and 1C triangles
+[C',B,C,B']x3,A,
+[B,C',B',C]x3,A',
+
+3 cycle of rectangles, affecting 1C triangles
+[C',B,C,B']x30,A,
+[B,C',B',C]x30,A',
+
+[C',B,C,B']x6,D,
+[B,C',B',C]x6,D',
+
+order 15
+[C', B, C, B', A', B, C', B', C, A],
+
+Inverted:
+[A', C', B, C, B', A, B, C', B', C],
+
+5-cycle of 1C triangles
+[C', B, C, B', A', B, C', B', C, A]x3,
+
+
+nC triangles rotation in place.
+1C 3-cycle
+rectangle changes
+[C', B, C, B', A', B, C', B', C, A]x5,
+
+pure 3-cycle of 1C triangle
+D,[C', B, C, B', A', B, C', B', C, A]x3,D',
+[C', B, C, B', A', B, C', B', C, A]x5,
+D,[A', C', B, C, B', A, B, C', B', C]x3,D',
+[A', C', B, C, B', A, B, C', B', C]x5,
+
+
+[C', B, C, B', A', B, C', B', C, A]x5,
+[A', C', B, C, B', A, B, C', B', C]x5,
+
+5-cycle of 1C pieces:
+[C', B, C, B', A', B, C', B', C, A]x3,
+
+
+[C', B, C, B', A', B, C', B', C, A]x3,
+A',
+[A', C', B, C, B', A, B, C', B', C]x3,
+A,
+
+[C',B,C,B'],
+[A', C', B, C, B', A, B, C', B', C]x3,
+[B,C',B',C],
+
+5-cycle of 1C pieces, better setup
+
+[B', C', B],
+[C', B, C, B', A', B, C', B', C, A]x3, 
+[B', C, B],
+
+70-move 3-cycle
+[B', C', B],
+[C', B, C, B', A', B, C', B', C, A]x3, 
+[B', C, B],
+C,
+[B', C', B],
+[A', C', B, C, B', A, B, C', B', C]x3, 
+[B', C, B],
+C',
+
+
+[C', B, C, B', A', B, C', B', C, A]x3, 
+[B', C, B],
+C,
+[B', C', B],
+[A', C', B, C, B', A, B, C', B', C]x3, 
+[B', C, B],
+C',
+[B', C', B],
+
+
+7.7.1
+There are 6 hexagons, 6 single-colored triangles and 3 tri-colored triangles (axes)
+
+1. solve the axes, both positions and orientations. Trivial
+2. Solve the hexagons. The hexagons are pieces from 7.0.1, but you cannot freely rotate the axes.
+You must use commutators to cancel out the axes turns.
+
+Double rotate: central top left left handed, top right right handed
+[C, D', C', D, C, D', C', D', A', D', A, D, A', D', A', D, A, D', A', D, A, D, C, D, C', D', C, D, C', A],
+
+Inverted:
+[A', C, D', C', D, C, D', C', D', A', D', A, D, A', D', A, D, A, D', A', D, A, D, C, D, C', D', C, D, C'],
+
+3. solve the single colored triangles
+3-cycle of triangles
+bottom right -> center -> bottom left
+[A, B, C', B, C, B', A', B, C', B', C, A, B', A'],
+
+Inverted:
+[A, B, A', C', B, C, B', A, B, C', B', C, B', A'],
+
+left side down -> center -> left side up
+[B, C, A', C, A, C', B', C, A', C', A, B, C', B'],
+
+Inverted:
+[B, C, B', A', C, A, C', B, C, A', C', A, C', B'],
+
+right side up -> center -> right side down
+[C, A, B', A, B, A', C', A, B', A', B, C, A', C'],
+
+Inverted:
+[C, A, C', B', A, B, A', C, A, B', A', B, A', C'],
+
+Double rotation:
+[A, B, C', B, C, B', A', B, C', B', C, A, B', A', D, A, B, A', C', B, C, B', A, B, C', B', C, B', A', D'],
+
+3-fold symmetry of notation:
+A->B->C, D
+
+7.7.1
+ed685ec01e8e991333badd426e91dc23
+7a66f40ad926b34c7972f20cb946738c
+e901d3256797ce3ee522cb1be678cd32
+a7584fb09d623bc497682fd09b653720
+
+
+
+
+
+=============
+7.0.1
+intuitive
+triple rotate: 3 center pieces right handed
+C,B',C',B,D,
+
+Double rotate:
+[A', D, A, D', A, B, A', B', D],
+
+7.0.1
+44c8fd6355c5038981443fa1bc436e91
+dc3b7a85f40bd926b3b87987f20db946
+739be91fd322678dce12e50ecbf6e619
+cd32a7584fb09d623bc497682fd09b64
+
+7.0.2
+Solve corners first, and then solve centers
+
+Double flipping central top right + central down: 
+[A'3, B, A'3, B'],
+
+Double rotate: central top left + central down
+[A2, D'2, A'2, D2, A'2, B'2, A2, B2, D'2],
+
+Single rotate: central down
+[A'3, B, A'3, B', C', D, A'3, B, A'3, B', D', C],
+
+7.0.2
+f5f06ebb2e74f9e97b084d6798ce31e5
+1aaf34e619cd32a758bbb09c623bc497
+6838d0926439c888611dc25c89d1135c
+a1bc436e91dc237a85f40bd926b34c25
+
+
+7.0.3
+Double flip central top left + top right
+[F,A,F,A],
+
+Triple rotate, all centers
+[F, A, F, A, L, F, A, F, A, L, K, F, A, F, A, K],
+
+Double rotate, central top right, central down
+[C, A, D, A, C, D],[B,A,G,A,B,G],
+
+Single rotate, central down:
+[G, C, A, D, A, C, D, B, A, G, A, B, G, F, A, F, A, L, F, A, F, A, L, K, F, A, F, A, K, G],
+
+left right symmetry:
+A,(B,C),(D,G),
+
+7.0.3
+af2019879c0cac26de331886f20db946
+73e0e916d32c6798cec5e51bcb34e619
+cd25a7514fbe9d743bf497792f869b66
+37c89e613dc27689ec135ea1bc436ef5
+
+
+7.0.4
+Got lucky in the first solve.
+
+Double rotation, center top left right handed rotation, center down left handed rotation
+[C'3, B', C, B3],
+
+Inverted:
+[B'3, C', B, C3],
+
+7.0.4
+3ca7fe6353c3e26842f0fa6437c89e61
+3dc67689ec135ea1bcb76e90dc237a85
+f41cd92fb3437986f204b95673aae914
+d32c6798ce31e51acb34e619cd32a758
+
+7.0.5
+Solve corners first. If a corner needs flipping, let it go around a triangle.
+
+Double flip: center top right, center down
+[A', C, A', C2, A', C, A'],
+
+Single rotation, center top left left handed
+[C'3, B', C, B3, C4, B4]x2,
+
+Inverted:
+[B'4, C'4, B'3, C', B, C3]x2,
+
+7.0.5 (attempt 1)
+e87c54c9f66648c21be48d135ea1bc43
+6ea2dc237a85f40bd9d2b34d7986f20d
+b9517385e919d32c6780ce17e5b4cb37
+e619cd32a7584fb09d623bc497682fe0
+
+7.0.5 (attempt 2)
+ee7a58c5ff6f5ad0f65756c89e613dc2
+769aec135ea1bc436e65dc227a85f40b
+d931b3457989f20db95873ace96cd32e
+6798ce31e51acb34e619cd32a7584fbc
+
+
+=============
+3.25.17
+
+3-cycle: -->
+[L', F', L, F, R', F', L', F, L, R],
+
+Inverted:
+[R', L', F', L, F, R, F', L', F, L],
+
+Single rotation by 120 wrt FUR axis left handed:
+[U', R2, B, F', R', F, R, B', R', F', R, F, B'6, R'2, F', B'6, F', R', F, R, B, R', F', R, F, B5, F, R2, B'4, L2, B5, R'2, F', B'5, F', R', F, R, B', R', F', R, F, B'6, F, R2, B'6, F', R', F, R, B, R', F', R, F, L'2, B'2, R'2, U],
+
+Inverted, right handed:
+[U', R2, B2, L2, F', R', F, R, B', R', F', R, F, B6, R'2, F', B6, F', R', F, R, B, R', F', R, F, B5, F, R2, B'5, L'2, B4, R'2, F', B'5, F', R', F, R, B', R', F', R, F, B6, F, R2, B6, F', R', F, R, B, R', F', R, F, B', R'2, U],
+
+Single rotation by 120 wrt DLF axis:
+[R, L', F', L, F, R', F', L', F, L, R'6, F'2, L', R'6, L', F', L, F, R, F', L', F, L, R5, L, F2, R'4, B2, R5, F'2, L', R'5, L', F', L, F, R', F', L', F, L, R'6, L, F2, R'6, L', F', L, F, R, F', L', F, L, B'2, R'2],
+
+Inverted:
+[R2, B2, L', F', L, F, R', F', L', F, L, R6, F'2, L', R6, L', F', L, F, R, F', L', F, L, R5, L, F2, R'5, B'2, R4, F'2, L', R'5, L', F', L, F, R', F', L', F, L, R6, L, F2, R6, L', F', L, F, R, F', L', F, L, R'],
+
+Single rotation by 120 wrt DFR axis:
+[B', L', B, L, F', L', B', L, B, F'6, L'2, B', F'6, B', L', B, L, F, L', B', L, B, F5, B, L2, F'4, R2, F5, L'2, B', F'5, B', L', B, L, F', L', B', L, B, F'6, B, L2, F'6, B', L', B, L, F, L', B', L, B, R'2, F'],
+
+Inverted:
+[F, R2, B', L', B, L, F', L', B', L, B, F6, L'2, B', F6, B', L', B, L, F, L', B', L, B, F5, B, L2, F'5, R'2, F4, L'2, B', F'5, B', L', B, L, F', L', B', L, B, F6, B, L2, F6, B', L', B, L, F, L', B', L, B],
+
+Single rotation by 120 wrt DRB axis
+[U2, L, R', U', R, U, L', U', R', U, R, L'6, U'2, R', L'6, R', U', R, U, L, U', R', U, R, L5, R, U2, L'4, D2, L5, U'2, R', L'5, R', U', R, U, L', U', R', U, R, L'6, R, U2, L'6, R', U', R, U, L, U', R', U, R, D'2, L'2, U'2],
+
+Inverted:
+[U2, L2, D2, R', U', R, U, L', U', R', U, R, L6, U'2, R', L6, R', U', R, U, L, U', R', U, R, L5, R, U2, L'5, D'2, L4, U'2, R', L'5, R', U', R, U, L', U', R', U, R, L6, R, U2, L6, R', U', R, U, L, U', R', U, R, L', U'2],
+
+Single rotation by 180 wrt UD axis
+[R, L', F', L, F, R', F', L', F, L, R'6, F'2, L', R'6, L', F', L, F, R, F', L', F, L, R5, L, F2, R'4, B2, R5, F'2, L', R'5, L', F', L, F, R', F', L', F, L, R'6, L, F2, R'6, L', F', L, F, R, F', L', F, L, B'2, R'2, U', R2, B2, L2, F', R', F, R, B', R', F', R, F, B'6, R'2, F', B'6, F', R', F, R, B, R', F', R, F, B5, F, R2, B'5, L'2, B4, R'2, F', B'5, F', R', F, R, B', R', F', R, F, B'6, F, R2, B'6, F', R', F, R, B, R', F', R, F, B', R'2, U],
+
+Single rotation by 180 wrt FB axis
+[U', F, B', U', B, U, F', U', B', U, B, F'6, U'2, B', F'6, B', U', B, U, F, U', B', U, B, F5, B, U2, F'4, D2, F5, U'2, B', F'5, B', U', B, U, F', U', B', U, B, F'6, B, U2, F'6, B', U', B, U, F, U', B', U, B, D'2, F'2, R', F2, D2, B2, U', F', U, F, D', F', U', F, U, D'6, F'2, U', D'6, U', F', U, F, D, F', U', F, U, D5, U, F2, D'5, B'2, D4, F'2, U', D'5, U', F', U, F, D', F', U', F, U, D'6, U, F2, D'6, U', F', U, F, D, F', U', F, U, D', F'2, R, U],
+
+Single rotation by 180 wrt LR axis
+[R, U', R, L', U', L, U, R', U', L', U, L, R'6, U'2, L', R'6, L', U', L, U, R, U', L', U, L, R5, L, U2, R'4, D2, R5, U'2, L', R'5, L', U', L, U, R', U', L', U, L, R'6, L, U2, R'6, L', U', L, U, R, U', L', U, L, D'2, R'2, B', R2, D2, L2, U', R', U, R, D', R', U', R, U, D'6, R'2, U', D'6, U', R', U, R, D, R', U', R, U, D5, U, R2, D'5, L'2, D4, R'2, U', D'5, U', R', U, R, D', R', U', R, U, D'6, U, R2, D'6, U', R', U, R, D, R', U', R, U, D', R'2, B, U, R'],
+
+Double rotation by an odd number of 90 turns to fix parity:
+[R, L', F', L, F, R', F', L', F, L, R'6, F'2, L', R'6, L', F', L, F, R, F', L', F, L, R5, L, F2, R'6],
+
+Inverted:
+[R6, F'2, L', R'5, L', F', L, F, R', F', L', F, L, R6, L, F2, R6, L', F', L, F, R, F', L', F, L, R'],
+
+3.25.17
+fff775d24465edcf5ccc7bc934e619cd
+324d5849b09d623bc463682ed09b6437
+c8896134c27889f81364a1b143d791dc
+237a85f40bd926b34c7986f20db3460e
+
+3.25.17b
+Use the same algo as 3.25.17
+
+3.25.17b
+ebd152e472c941e7749153a3584fb09d
+62b7c492682fd09b64c3c89f613dc276
+89fb1357a1b2437b91cd2342855d0bd8
+26b34c7986f20db946738ce916d62ccc
+
+
+====
+backup
+[R, L', F', L, F, R', F', L', F, L, R'6, F'2, L', R'6, L', F', L, F, R, F', L', F, L, R5, L, F2, R'6],
+R2, B2,R',
+[R6, F'2, L', R'5, L', F', L, F, R', F', L', F, L, R6, L, F2, R6, L', F', L, F, R, F', L', F, L, R'],
+R,B'2,R'2,
+
+[B'5, F', R', F, R, B', R', F', R, F, B'6],
+R'2, F',
+[B6, F', R', F, R, B, R', F', R, F, B5],
+F,R2,
+
+with setup:
+[B'5, F', R', F, R, B', R', F', R, F, B'6],
+
+Inverted:
+[B6, F', R', F, R, B, R', F', R, F, B5],
+
+
+
+
+3.25.16
+Moves are similar to 3.25.13.
+When a piece moves to its neighbor, it rotates by 90 deg. It's easier to construct algos that
+rotates a piece in place by an even number of 90 deg rotations.
+If you need to do an odd number of 90 deg turns, bring another piece in.
+
+3-cycle:
+-->
+[L, F', L', F, R', F', L, F, L', R],
+
+Inverted:
+[R', L, F', L', F, R, F', L, F, L'],
+
+Double rotation by 120, right piece rotated right handed, left piece rotated left handed:
+[B, L', B', L, F', L', B, L, B', F, R, L', R, B', R', B, L, B', R, B, R'2],
+
+Inverted:
+[R2, B', R', B, L', B', R, B, R', L, R', F', B, L', B', L, F, L', B, L, B'],
+
+Double rotation by 120, right piece rotated wrt the DRB-ULF axis, left piece mirrored
+[L'4, R'4, F, L', F', L, B', L', F, L, F', B, R'2, U3, R'3, B', F, L', F', L, B, L', F, L, F', R3, U'3, R'2, L'4],
+
+Inverted:
+[L4, R2, U3, R'3, F, L', F', L, B', L', F, L, F', B, R3, U'3, R2, B', F, L', F', L, B, L', F, L, F', R4, L4],
+
+Double rotation by 120, right piece rotated wrt the DLF-URB axis, left piece mirrored
+[L', B3, F4, R', B, R, B', L, B, R', B', R, L', F2, U'3, F3, L, R', B, R, B', L', B, R', B', R, F'3, U3, F2, B'3, L],
+
+Inverted:
+[L', B3, F'2, U'3, F3, R', B, R, B', L, B, R', B', R, L', F'3, U3, F'2, L, R', B, R, B', L', B, R', B', R, F'4, B'3, L],
+
+Double rotation by 120, right piece rotated wrt the DFR-UBL axis, left piece mirrored
+[L'2, U'4, R', D', L3, R'4, U', L, U, L', D, L, U', L', U, D', R2, F'3, R3, D, U', L, U, L', D', L, U', L', U, R'3, F3, R2, L'3, D, R, U'4, L2],
+
+Inverted:
+[L'2, U4, R', D', L3, R'2, F'3, R3, U', L, U, L', D, L, U', L', U, D', R'3, F3, R'2, D, U', L, U, L', D', L, U', L', U, R4, L'3, D, R, U4, L2],
+
+Single rotation UD axis by 180:
+[F', B, L', B', L, F', L', B, L, B', F, R, L', R, B', R', B, L, B', R, B, R'2, L'4, R'4, F, L', F', L, B', L', F, L, F', B, R2, D3, R, B', F, L', F', L, B, L', F, L, F', R', D'3, R2, L'4, F],
+
+Single rotation FB axis by 180:
+[L, F', L', F, R', F', L, F, L', R, B, F', B, L', B', L, F, L', B, L, B'2, F'4, B'4, R, F', R', F, L', F', R, F, R', L, B2, D3, B, L', R, F', R', F, L, F', R, F, R', B', D'3, B2, F'4],
+
+Single rotation LR axis by 180:
+[B', R, B, R', F, R, B', R', B, F', L', R, L', B, L, B', R', B, L', B', L2, R4, L4, F', R, F, R', B, R, F', R', F, B', L'2, D'3, L', B, F', R, F, R', B', R, F', R', F, L, D3, L'2, R4],
+
+Single rotation by 120 wrt the DFR-UBL axis
+[L, F', L', F, R', F', L, F, L', R, B, F', B, L', B', L, F, L', B, L, B'2, F'4, L', D', F3, B2, L', B', L, F', L', B, L, B', F, B', R', L, F', L', F, R, F', L, F, L', F'3, D, L, F'4],
+
+Inverted:
+[F4, L', D', F3, L, F', L', F, R', F', L, F, L', R, B, F', B, L', B', L, F, L', B, L, B'2, F'3, D, L, F4, B2, L', B', L, F', L', B, L, B', F, B', R', L, F', L', F, R, F', L, F, L'],
+
+3.25.16
+aa3cd04d1184870cd4c61289e916d32c
+6790ce35e51acb34e6edcd33a7584fb0
+9d753bcd97662fc29b6637c09ecc3dc3
+7689ec135ea1bc436e91dc237a80f423
+
+
+3.25.16b
+
+We can use all algos from 3.25.16. Also:
+
+Double rotation by 90 to fix parity:
+[R, L, F', L', F, R', F', L, F, L', R'4, F', U', L', R'4, L, F', L', F, R, F', L, F, L', R3, L, U, F, R'4],
+
+Inverted:
+[R4, F', U', L', R'3, L, F', L', F, R', F', L, F, L', R4, L, U, F, R4, L, F', L', F, R, F', L, F, L', R'],
+
+3.25.16b
+9a0db02d0f9abb308831aa37e619cd32
+a7194fb39d623bc4979c2fd19b6437c8
+9e763dcb7687ec075eb4bc5e6ed8dc23
+7a85f40bd926b34c7986f20db94573da
+
+
+
+Back up:
+3-cycle with good setup:
+
+[R'4, F, L', F', L, B', L', F, L, F', B, R'4],
+
+Inverted:
+[R4, B', F, L', F', L, B, L', F, L, F', R4],
+
+Can do R U D
+
+[R'4, F, L', F', L, B', L', F, L, F', B, R'4],
+R2,U3,R,
+[R4, B', F, L', F', L, B, L', F, L, F', R4],
+R',U'3,R'2,
+
+
+[R'4, F, L', F', L, B', L', F, L, F', B, R'4],
+R6,D3,R'3,
+[R4, B', F, L', F', L, B, L', F, L, F', R4],
+R3,D'3,R'6,
+
+special setup
+[B'3, F, R', F', R, B', R', F, R, F', B'4],
+R',U',F',
+[B4, F, R', F', R, B, R', F, R, F', B3],
+F,U,R,
+
+====
+
+3.25.15
+3-cycle -->:
+[B, L', B', L, F', L', B, L, B', F, R', F', B, L', B', L, F, L', B, L, B', R],
+
+Inverted <--:
+[R', B, L', B', L, F', L', B, L, B', F, R, F', B, L', B', L, F, L', B, L, B'],
+
+double rotate, vertical axis (UD): center going forward (out):
+[B, L', B', L, F', L', B, L, B', F, R'4, D', R3, F', B, L', B', L, F, L', B, L, B', R'3, D, R4],
+
+Inverted, center going backward (in):
+[R'4, D', R3, B, L', B', L, F', L', B, L, B', F, R'3, D, R4, F', B, L', B', L, F, L', B, L, B'],
+
+double rotate, FB axis: center going up:
+[L, R', D, R', D', R, U', R', D, R, D', U, L'4, B', L3, U', D, R', D', R, U, R', D, R, D', L'3, B, L'4, R, L'],
+
+Inverted, center going down:
+[L, R', L4, B', L3, D, R', D', R, U', R', D, R, D', U, L'3, B, L4, U', D, R', D', R, U, R', D, R, D', R, L'],
+
+double rotate, LR axis. the piece on the right turning up, and the piece on the left turning down
+[F'2, B, D', B', D, F', D', B, D, B', F, U'4, R', U3, F', B, D', B', D, F, D', B, D, B', U'3, R, U'4, F2],
+
+Inverted:
+[F'2, U4, R', U3, B, D', B', D, F', D', B, D, B', F, U'3, R, U4, F', B, D', B', D, F, D', B, D, B', F2],
+
+single rotation, right handed:
+[R, L, F', L', F, R', F', L, F, L', R, B'4, D', B3, R', L, F', L', F, R, F', L, F, L', B'3, D, B'4, R2, D'3, F, D'4, R'2, B'4, D', B3, L, F', L', F, R', F', L, F, L', R, B'3, D, B'4, R', L, F', L', F, R, F', L, F, L', R2, D'4, F', D3, R'3],
+
+Inverted, left handed:
+[R3, D'3, F, D4, R'2, L, F', L', F, R', F', L, F, L', R, B4, D', B3, R', L, F', L', F, R, F', L, F, L', B'3, D, B4, R2, D4, F', D3, R'2, B4, D', B3, L, F', L', F, R', F', L, F, L', R, B'3, D, B4, R', L, F', L', F, R, F', L, F, L', R'],
+
+3.25.15
+41b13b4ed89f173aa966092bd09b6437
+c8f16139c27689ec13aaa1bd436e91dc
+236d85fd0bd726a34c6f86fc0de74673
+8ce916d32c6798ce31e51acb34e219a2
+
+3.25.15b
+There are 8 types of pieces. Need to solve the positions then orientations.
+
+3.25.15b
+ebd952e472c941e7744053a4584fb09d
+6281c493682fd09b64c3c89f613dc276
+89fb1357a1b2437e91fb237185dd0bdb
+26b34c7986f20db946738ce916d62c62
+
+
+
+
+====
+3.25.14
+Two types of pieces: big and small.
+- The small pieces are as same as 3.25.13 and can be solved in the same way. The algorithms (apart from the parity sequence) don't affect big pieces.
+- The big pieces 
+3-cycle: left handed 3-cycle
+[F, R, F', R', U, R, F, R', F', U'],
+
+Inverted, right handed 3-cycle:
+[U, F, R, F', R', U', R, F, R', F'],
+
+3-cycle from far away:
+[F, D'4, R, F, R', F', D, F, R, F', R', D3, F'],
+
+Inverted:
+[F, D'3, R, F, R', F', D', F, R, F', R', D4, F'],
+
+double rotation by 45: center going out:
+[F', U'2, R3, B', D', R, F4, D, R, D', R', F, R, D, R', D', F3, R', D, B, R2, F'3, D, R, D', R', F', R, D, R', D', F4, R3, U2, F],
+
+Inverted, center going in:
+[F', U'2, R'3, F'4, D, R, D', R', F, R, D, R', D', F3, R'2, B', D', R, F'3, D, R, D', R', F', R, D, R', D', F'4, R', D, B, R'3, U2, F],
+
+Solve big pieces first and then small pieces.
+
+3.25.14
+c389013aac951d2ebd9d0531c89e613d
+c27989e0135ea1bc439a91dd237a85f4
+0bce26ba4c7486e40d9f465d8cab16d0
+2c6798ce31e51acb34e619cd32aa582f
+
+
+3.25.14b
+be27c45927b2e8635639f66e2fd09b64
+378d9e6d3dc27689ece75ea0bc436e91
+dc347a8cf406d931b34579bef266b945
+738ce916d32c6798ce31e51acb38e6e0
+
+
+
+3.25.13
+3-cycle:
+-->
+[L, F', L', F, R', F', L, F, L', R],
+
+Inverted:
+[R', L, F', L', F, R, F', L, F, L'],
+
+Mirror (cube; plane containing FR, BL edges):
+[B', R, B, R', F, R, B', R', B, F'],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[F, B', R, B, R', F', R, B', R', B],
+
+rotate 2 pieces by 45 deg, center going out:
+[B, L', B', L, F', L', B, L, B', F, R'2, D, L', F'2, L, F', B, L', B', L, F, L', B, L, B', L', F2, L, D', R2, B, L', B', L, F', L', B, L, B', F, R, L', R, B', R', B, L, B', R, B, R'2],
+
+Inverted, center going in:
+[R2, B', R', B, L', B', R, B, R', L, R', F', B, L', B', L, F, L', B, L, B', R'2, D, L', F'2, L, B, L', B', L, F', L', B, L, B', F, L', F2, L, D', R2, F', B, L', B', L, F, L', B, L, B'],
+
+rotate 2 pieces by 180:
+[B, L', B', L, F', L', B, L, B', F, R, L', R, B', R', B, L, B', R, B, R'2],
+
+Parity: swapping 2 pieces is possible because each move is an 8-cycle, also there are identical pieces.
+
+3.25.13:
+41b53b4ed89f173aa9ea092cd09b6437
+c8f36138c27689ec13aaa1bd436e91dc
+236d85fd0bd426a64c6b86f70da74671
+8ce916d32c6798ce31e51acb34e3196a
+
+3.25.13b:
+As same as 3.25.13, but the parity is only because of 8-cycles.
+
+Parity algo, swapping two pieces:
+[R, B, L', B', L, F', L', B, L, B', F, R, F', B, L', B', L, F, L', B, L, B', R, B, L', B', L, F', L', B, L, B', F, R, F', B, L', B', L, F, L', B, L, B', R, B, L', B', L, F', L', B, L, B', F, R, F', B, L', B', L, F, L', B, L, B', R, B, L', B', L, F', L', B, L, B', F, R, F', B, L', B', L, F, L', B, L, B', R],
+
+3.25.13b:
+af3019849c09ac27deb91884f20db946
+736fe915d32c6798cec5e51bcb34e619
+cd25a7514fbd9d773be797612f069b65
+37c89e613dc27689ec135ea1bc406e58
+
+
+
+3.25.12
+
+3-cycle #1:
+BR -> D-FR -> U-FR
+[U2, R', B', R, B, F'4, B', R', B, R, F'4, U'2],
+
+Inverted:
+[U2, F4, R', B', R, B, F4, B', R', B, R, U'2],
+
+Mirror (cube; plane containing FR, BL edges):
+[U'2, F, L, F', L', R4, L, F, L', F', R4, U2],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[U'2, R'4, F, L, F', L', R'4, L, F, L', F', U2],
+
+3-cycle #2:
+BR -> D-FR -> R-UF
+[U3, L', U'3, U2, R', B', R, B, F'4, B', R', B, R, F'4, U'2, U3, L, U'3],
+
+Inverted:
+[U3, L', U'3, U2, F4, R', B', R, B, F4, B', R', B, R, U'2, U3, L, U'3],
+
+Mirror (cube; plane containing FR, BL edges):
+[U'3, B, U3, U'2, F, L, F', L', R4, L, F, L', F', R4, U2, U'3, B', U3],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[U'3, B, U3, U'2, R'4, F, L, F', L', R'4, L, F, L', F', U2, U'3, B', U3],
+
+flip 2 pieces at the same time: D-FR and U-FR
+[U2, R', B', R, B, F'4, B', R', B, R, F'4, U'2],U3,L'2,B'2,U3,[U2, F4, R', B', R, B, F4, B', R', B, R, U'2],U'3,B2,L2,U'3,
+
+3.25.12:
+ffe175d24465edcf5ca87bce34e619cd
+324c584eb09d623bc463682ed09b6437
+c8896134c27a89fc1345a187431791df
+237a85f40bd926b34c7986f20dbb465d
+
+3.25.12b:
+parity: need to swap two pieces: 
+We can make U2, D'2 to simulate a rotation of 90, except for 4 edges.
+
+3.25.12b:
+5cd9f8655fcaeb605055178eec135ea1
+bc476e95dc237a85f4ffd927b34c7986
+f21ab94f7380e907d32f6793ceb2e51b
+cb34e619cd32a7584fb09d623bc097c6
+
+
+
+3.12.0
+
+based on 2x2x2. Every sticker can be rotated by 90.
+
+URF piece,
+F sticker CCW, R sticker CW (tips going up):
+[U, D', F, D, F', L, F, D', F', D, L', R, F, D', F', L, D', F, D, F', L', F, D', F', D, F, D, F', R', U'2, B, U', R, F, D', F', D', F, D, F', L, F, D', F', D, L', F, D, F', R', L, D', F, D, F', L', F, D', F', D, U, B', U, R', D, R', L', U, L, U', B, U, L', U', L, B', F, U, L', U', B, L', U, L, U', B', U, L', U', L, U, L, U', F', R, D', R'2, F, U, L', U', L', U, L, U', B, U, L', U', L, B', U, L, U', F', B, L', U, L, U', B', U, L', U', L, R'],
+
+Inverted:
+[R, L', U, L, U', B, U, L', U', L, B', F, U, L', U', B, L', U, L, U', B', U, L', U', L, U, L, U', F', R2, D, R', F, U, L', U', L', U, L, U', B, U, L', U', L, B', U, L, U', F', B, L', U, L, U', B', U, L', U', L, R, D', R, U', B, U', D', F, D, F', L, F, D', F', D, L', R, F, D', F', L, D', F, D, F', L', F, D', F', D, F, D, F', R', U, B', U2, R, F, D', F', D', F, D, F', L, F, D', F', D, L', F, D, F', R', L, D', F, D, F', L', F, D', F', D, U'],
+
+How can we rotate one sticker on one piece and another sticker on another piece?
+It seems we need to move two pieces, so that on each piece, one sticker rotates for 180.
+
+This is a type of parity. Fixing parity of URF and DRF:
+[D', R', F', R, F', L'2, F, R', F', L'2, F'2, R'2, U', L, F, L', R', F'2, L'2, F, R, F', L'2, F, R', F, R, L, F', L', U, R', D],
+
+b166eaed7b5cd4bd2e62f0dd237a85f4
+0b0726b44c7986f20d4d46728ce916d3
+2c7098c731ed1adf34d119fc323b584c
+b09d623bc497682fd09b6437c896611f
+
+solved at 10/8/2023 8:56pm PDT
+
+3.25.0:
+1-1 commutator exists. Very intuitive solve.
+
+7ebf2572e4eb63d241a7f9cf31e51acb
+346219cd32a7584fb069623ac497682f
+d08c643ec8966128c27189c01393a1bf
+436e91dc237a85f40bd926b34c7986f2
+
+3.25.0b
+1-1 commutator exists. Very intuitive solve.
+
+3574efe87ed15966f55450e71acb34e6
+196c32a7584fb09d62cfc496682fd09b
+6420c8976135c26389f91352a115436d
+91dc237a85f40bd926b34c7986f20db9
+
+
+3.12.0
+special set up
+
+[R, U', L, F, L'],
+
+Inverted:
+[L, F', L', U, R'],
+
+special 3-cycle:
+[R', F', R, F', L'2, F, R', F', L'2, F'2, R],
+
+[R', F2, L2, F, R, F', L2, F, R', F, R],
+
+
+[R', F', R, F', L'2, F, R', F', L'2, F'2, R],
+[R, U', L, F, L'],
+[R', F2, L2, F, R, F', L2, F, R', F, R],
+[L, F', L', U, R'],
+
+
+backup
+
+[R, U', R', U]x6,
+
+[F, R', F', R]x6, U'2, [R', F, R, F']x6,U2,
+
+[[R, U', R', U]x2, U, [U', R, U, R']x2, U']x3,
+
+[R, U', R', U],L,[U', R, U, R'],L',
+
+
+[R, U, F', U'],
+
+[U, F, U', R'],
+
+
+
+[F', U, F, U', L, U, F', U', F, L', R, U, F', U', L, F', U, F, U', L', U, F', U', F, U, F, U', R'],
+
+Inverted:
+[R, U, F', U', F', U, F, U', L, U, F', U', F, L', U, F, U', R', L, F', U, F, U', L', U, F', U', F],
+
+original:
+[U, D', F, D, F', L, F, D', F', D, L', R, F, D', F', L, D', F, D, F', L', F, D', F', D, F, D, F', R', U'],
+
+Inverted:
+[U, R, F, D', F', D', F, D, F', L, F, D', F', D, L', F, D, F', R', L, D', F, D, F', L', F, D', F', D, U'],
+
+
+[U, D', F, D, F', L, F, D', F', D, L', R, F, D', F', L, D', F, D, F', L', F, D', F', D, F, D, F', R', U'],
+[U', B, U'2],
+[U, R, F, D', F', D', F, D, F', L, F, D', F', D, L', F, D, F', R', L, D', F, D, F', L', F, D', F', D, U'],
+[U2, B', U],
+
+
+2x2x2
+3.1.1:
+
+0a86910cd144068c845ab22c6798ce31
+e529cb34e619cd32a7ac4fb19d623bc4
+977f2fd99b6837c69e6f3ddb7610ec12
+5ea1bc436e91dc237a85f40bd926b34c
+

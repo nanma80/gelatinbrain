@@ -1,0 +1,156 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.000webhostapp.com/permuzzle/
+https://zqjxkvby.000webhostapp.com/permuzzle/scoreboard.php
+
+===
+TODO: send to gelatinbrain:
+
+
+177aab9a093fb776e419725aa1bc436e
+9184237d85f40bd926474c7886f20db9
+46648ce316dd2c6798c131e71ab534e4
+19cd32a7584fb09d623bc4976826d0db
+
+
+9654a8308e1bb832caba2eb09d623bc4
+97492fd59b6437c89e953dc37689ec13
+5eb6bc496e9cdc347ab1f424d920b34c
+7986f20db946738ce916d32c679dce2f
+
+
+1272a172e1ee665eccf7226f91dc237a
+85ad0bdf26b34c7986060db846738ce9
+16c42c6d98c331f21ae434ce197932a5
+584fb09d623bc497682fd09b643fc83f
+
+
+===
+
+3.43.2
+
+3-cycle:
+moving left
+[FU, UB'2, LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB, FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', UB', LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB2, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR'],
+
+Inverted:
+[UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', UB'2, LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB', LU, UB, LU', UB, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UB', LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB, LU, UB', LU', UB2, FU'],
+
+Double rotation:
+The following algos affect both FUR and FDR pieces. If we remove the BD'2, ... BD2 setup moves,
+then they affect FUR and BDL pieces.
+
+both FUR and FDR pieces right handed rotation around centers:
+BD'2,[UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF],BD2,
+
+Inverted:
+BD'2,[RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB],BD2,
+
+FUR piece around BUR, right handed
+BD'2,[FU, RF'3, UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF'2, FU'],BD2,
+
+Inverted:
+BD'2,[FU, RF2, FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF3, FU'],BD2,
+
+FUR piece around FUL, right handed
+BD'2,[UR', RF'3, UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF'2, UR],BD2,
+
+Inverted:
+BD'2,[UR', RF2, FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF3, UR],BD2,
+
+FUR piece around FDR, right handed, FDR left handed
+BD'2,[FU, RF3, UR', RF2, FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF3, UR, RF3, FU'],BD2,
+
+Inverted:
+BD'2,[FU, RF'3, UR', RF'3, UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF'2, UR, RF'3, FU'],BD2,
+
+Single rotation FUR piece, U2
+[RF, UR'3, FU', UR2, RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FL', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', FL, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FL', FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FL, UR'3, FU, UR'3, RF', FL', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', LU', FU, LU, FU', FL, UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FL', FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FU, LU', FU', LU, FL, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, UR, FU', UR', FU, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR],
+
+Single rotation FUR piece by 120, left handed
+[UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF'2, FU', RF'3, FU', RF, UR'3, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, UR'3, RF', FU, RF'3, FU, RF'3],
+
+Inverted:
+[RF3, FU', RF3, FU', RF, UR3, UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UR3, RF', FU, RF3, FU, RF2, FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB],
+
+Double rotation by 90:
+[DL, RF, BR'2, UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR, RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', BR', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR2, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', DF, BD, DF'2, DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF, BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', DF', DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF2, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', DF', DL', UR'2, DL, DF'3, LU', FU', FL, FU, FL', FU', FL, FU, FL', FU', FL, FU, FL', FU', FL, FU, FL', FU', FL, FU, FL', FU', FL, FU, FL', LU, DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', FL', DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', LU', FL, FU', FL', FU, FL, FU', FL', FU, FL, FU', FL', FU, FL, FU', FL', FU, FL, FU', FL', FU, FL, FU', FL', FU, LU, DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF'2, DL', UR2],
+
+backup
+some swaps.
+RF',LB,RF,LB',
+
+order-7
+[RF', FU, RF, UR'],
+
+order-12
+[RF', FU, RF, FU'],
+
+[RF', FU, RF, FU']x6,
+
+[FU', UR, FU, UR']x6,
+
+with setup
+[UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB],
+
+Inverted:
+[UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB],
+
+3-cycle:
+[FL'2, DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', FL', DF, FL, DF', FL, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', FL', DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL, DF, FL', DF', FL2, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF],
+
+rotation of 7 pieces in place at the same time:
+[RF', FU, RF, FU']x4,
+
+[RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU'],
+[RU', FR, RU, FR', RU', FR, RU, FR', RU', FR, RU, FR', RU', FR, RU, FR'],
+
+rotation of 5 pieces at the same time
+[RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF'],
+
+Inverted:
+[RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF],
+
+double rotation
+[UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB],
+[RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF'],
+[UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB],
+[RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF],
+
+Double rotation by 90 deg??
+[DL, RF, BR'2, UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR, RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', RF', RD, RF, RD', BR', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR2, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', RF, RD, RF', RD', DF, BD, DF'2, DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF', DL, DF, DL', DF, BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', BD', RD, BD, RD', DF', DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF, DL, DF', DL', DF2, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', BD, RD, BD', RD', DF', DL'],
+
+setup for rotation
+[RF'3, FU', RF'3, FU', RF, UR'3],
+
+Inverted:
+[UR3, RF', FU, RF3, FU, RF3],
+
+[UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF],
+[RF'3, FU', RF'3, FU', RF, UR'3],
+[RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', RF', FU, RF, FU', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UR', RF, UR, RF', UB', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', BR', UR, BR, UR', UB, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, RF, UR', RF', UR, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, FU, RF', FU', RF, UB', UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UR, BR', UR', BR, UB],
+[UR3, RF', FU, RF3, FU, RF3],
+
+
+3.43.2
+177aab9a093fb776e419725aa1bc436e
+9184237d85f40bd926474c7886f20db9
+46648ce316dd2c6798c131e71ab534e4
+19cd32a7584fb09d623bc4976826d0db
+
+
+3.43.2b
+9654a8308e1bb832caba2eb09d623bc4
+97492fd59b6437c89e953dc37689ec13
+5eb6bc496e9cdc347ab1f424d920b34c
+7986f20db946738ce916d32c679dce2f
+
+
+3.43.2c
+1272a172e1ee665eccf7226f91dc237a
+85ad0bdf26b34c7986060db846738ce9
+16c42c6d98c331f21ae434ce197932a5
+584fb09d623bc497682fd09b643fc83f
+
