@@ -4,7 +4,8 @@ cd %BASEDIR%
 
 set "url=https://zqjxkvby.000webhostapp.com/permuzzle/permuzzle.jar"
 set "downloadedFile=./permuzzle_download_temp.jar"
-
+set "imagesUrl=https://zqjxkvby.000webhostapp.com/permuzzle/images.zip"
+set "imagesDownloadedFile=./images.zip"
 set "oldFile=./permuzzle/permuzzle.jar"
 
 curl -o "%downloadedFile%" "%url%"
@@ -23,6 +24,7 @@ echo %md5ChecksumOldFile%
 echo New checksum:
 echo %md5ChecksumDownloadedFile%
 
+
 if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
 	echo No new update. Clean up temp file
 	del "%downloadedFile%"
@@ -33,7 +35,5 @@ if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
 	echo Please manually unzip images.zip and save to ./permuzzle/images/
 	echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-	set "imagesUrl=https://zqjxkvby.000webhostapp.com/permuzzle/images.zip"
-	set "imagesDownloadedFile=./images.zip"
 	curl -o "%imagesDownloadedFile%" "%imagesUrl%"
 )
