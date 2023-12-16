@@ -1,0 +1,110 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.000webhostapp.com/permuzzle/
+https://zqjxkvby.000webhostapp.com/permuzzle/scoreboard.php
+
+===
+to send to gelatinbrain:
+
+3.25.18
+55952f78eef078b82ba0ede816d32c67
+987d31e71acb34e6193932a6584fb09d
+622cc49c6820d08c643ec894614dc275
+89ec135ea1bc436e91dc237a85f70bb9
+
+3.25.18b
+872cba27db4e0c879f69d845738ce916
+d334679cce31e51acbc0e618cd32a758
+4fa79d693bcb977f2fc99b4537ca9e60
+3dc27689ec135ea1bc436e91dc277a29
+
+
+===
+3.25.18
+12 cubes. Each move is a 8-cycle. It's easier to see in 3.25.18b. In every move, a cube is rotated by 90 deg.
+
+3.25.18: All pieces are the same. Only need to solve orientations
+3.25.18b: On each cube, there are 4 colors. There are two pairs of dup colors. These two colors indicate the position.
+
+3-cycle:
+FD -> FR -> RD
+[U', L'3, D'4, R'4, U'4, L', U],
+
+Inverted:
+[U', L, U4, R4, D4, L3, U],
+
+double 180 deg flips:
+FR piece and RD piece, both around FR edge
+[B', U'3, F'4, D'4, B'4, U', B, L', B, L'4, F'4, R'4, B3, L, B', U'3, F'4, D'4, B'4, U', B, L', B, L'4, F'4, R'4, B3, L, B', U'3, F'4, D'4, B'4, U', B, L', B, L'4, F'4, R'4, B3, L],
+
+mirror:
+FR piece and FD piece, both around FR edge
+[L, U3, R4, D4, L4, U, L', B, L', B4, R4, F4, L'3, B', L, U3, R4, D4, L4, U, L', B, L', B4, R4, F4, L'3, B', L, U3, R4, D4, L4, U, L', B, L', B4, R4, F4, L'3, B'],
+
+120-deg single rotation
+FR piece, CCW around ULF corner
+[L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U, L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U],
+
+Inverted:
+[U', L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L, U', L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L],
+
+FR piece, CCW around URB corner
+[U, B3, D'4, F'4, U'4, B, U', B, L', B'4, R'4, F'4, L'3, B', U, B3, D'4, F'4, U'4, B, U', B, L', B'4, R'4, F'4, L'3, B'],
+
+Inverted:
+[B, L3, F4, R4, B4, L, B', U, B', U4, F4, D4, B'3, U', B, L3, F4, R4, B4, L, B', U, B', U4, F4, D4, B'3, U'],
+
+120-deg single rotation,
+around UFR corner, CCW
+[L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U, L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U2, B3, D'4, F'4, U'4, B, U', B, L', B'4, R'4, F'4, L'3, B', U, B3, D'4, F'4, U'4, B, U', B, L', B'4, R'4, F'4, L'3, B'],
+
+Inverted:
+[B, L3, F4, R4, B4, L, B', U, B', U4, F4, D4, B'3, U', B, L3, F4, R4, B4, L, B', U, B', U4, F4, D4, B'3, U'2, L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L, U', L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L],
+
+3.25.18
+55952f78eef078b82ba0ede816d32c67
+987d31e71acb34e6193932a6584fb09d
+622cc49c6820d08c643ec894614dc275
+89ec135ea1bc436e91dc237a85f70bb9
+
+3.25.18b
+872cba27db4e0c879f69d845738ce916
+d334679cce31e51acbc0e618cd32a758
+4fa79d693bcb977f2fc99b4537ca9e60
+3dc27689ec135ea1bc436e91dc277a29
+
+
+backup:
+120-deg rotation
+[L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U, L', B'3, R'4, F'4, L'4, B', L, U', L, U'4, R'4, D'4, L3, U],
+
+Inverted:
+[U', L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L, U', L'3, D4, R4, U4, L', U, L', B, L4, F4, R4, B3, L],
+
+3-cycle:
+[U'4, F'4, D'4, B'4],
+
+Inverted:
+[B4, D4, F4, U4],
+
+3-cycle:
+FD -> FR -> RD
+[U', L'3, D'4, R'4, U'4, L', U],
+
+Inverted:
+[U', L, U4, R4, D4, L3, U],
+
+Mirror (cube; plane containing FR, BL edges):
+[U, B3, D4, F4, U4, B, U'],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[U, B', U'4, F'4, D'4, B'3, U'],
+
+
+3.25.19
+14 cubes
+Each move is a 8-cycle + rotation of a single piece. In every move, a cube is rotated by 90 deg.
+
+
