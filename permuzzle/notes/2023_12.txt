@@ -4,6 +4,7 @@ use trailing comma
 https://github.com/Hypercubers/gelatinbrain
 https://zqjxkvby.000webhostapp.com/permuzzle/
 https://zqjxkvby.000webhostapp.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
@@ -20,6 +21,17 @@ d334679cce31e51acbc0e618cd32a758
 4fa79d693bcb977f2fc99b4537ca9e60
 3dc27689ec135ea1bc436e91dc277a29
 
+3.25.19
+a0040499a633901ba6cf871bcd32a758
+4ffb9d6a3bc497682f249b6537c89e61
+3dd57682ec035eb4bc5c6ea7dc5a7a87
+f40bd926b34c7986f20db9467385e9ec
+
+3.25.19b
+1db8bf221287810ab4f7d24f7986f20d
+b903738ae916d32c676cce30e51acb34
+e60ecd39a7484fa59d523bfe97042fd1
+9b6437c89e613dc27689ec135ea8bc6a
 
 ===
 3.25.18
@@ -104,7 +116,143 @@ Inverted Mirror (cube; plane containing FR, BL edges):
 
 
 3.25.19
-14 cubes
+14 cubes, 6 centers and 8 corners
 Each move is a 8-cycle + rotation of a single piece. In every move, a cube is rotated by 90 deg.
 
+3 cycle:
+DFR -> UFR -> DFL
+[U, R2, B'4, L'4, F'4, R', F'4, L'4, B'4, R'3, F', R3, B'4, L'4, F'4, R, F'4, L'4, B'4, R'4, F, R2, U'],
 
+Inverted:
+[U, R'2, F', R4, B4, L4, F4, R', F4, L4, B4, R'3, F, R3, B4, L4, F4, R, F4, L4, B4, R'2, U'],
+
+
+UFL -> U -> UBR
+[F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R],
+
+Inverted:
+[R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4],
+
+Double rotate by 90
+U: left hand rotation around U, UFR: right hand rotation around U'
+[B, R', B', F, U'4, R'4, D'4, L'4, U', L'4, D'4, R'4, U'3, L', U3, R'4, D'4, L'4, U, L'4, D'4, R'4, U'4, L, F', B, F, B', F, L', U'4, R'4, D'4, L'4, U', L'4, D'4, R'4, U'3, L, U3, R'4, D'4, L'4, U, L'4, D'4, R'4, U'4, F', B, F', R, B'],
+
+Inverted:
+[B, R', F, B', F, U4, R4, D4, L4, U', L4, D4, R4, U'3, L', U3, R4, D4, L4, U, L4, D4, R4, U4, L, F', B, F', B', F, L', U4, R4, D4, L4, U', L4, D4, R4, U'3, L, U3, R4, D4, L4, U, L4, D4, R4, U4, F', B, R, B'],
+
+Single rotate by 120:
+UFR around UFR (center corner), CCW
+[F', D', U, F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R, U', D, U, D', U, R', F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R, F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, U', D, U', B, L, U, D', U, F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R, U', D, U', D', U, R', F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R, F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, U', D, L', B', F],
+
+Inverted:
+[F', B, L, D', U, F4, L4, B4, R4, F', R4, B4, L4, F'3, R', F3, L4, B4, R4, F, R4, B4, L4, F4, R, U', D, U, D', U, R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4, U', D, U', L', B', U, D', U, F4, L4, B4, R4, F', R4, B4, L4, F'3, R', F3, L4, B4, R4, F, R4, B4, L4, F4, R, U', D, U', D', U, R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4, U', D, F],
+
+UFR around DFR (down corner), CCW
+[R, D', U, R'4, F'4, L'4, B'4, R', B'4, L'4, F'4, R'3, B', R3, F'4, L'4, B'4, R, B'4, L'4, F'4, R'4, B, U', D, U, D', U, B', R'4, F'4, L'4, B'4, R', B'4, L'4, F'4, R'3, B, R3, F'4, L'4, B'4, R, B'4, L'4, F'4, R'4, U', D, U', L, F, U, D', U, R'4, F'4, L'4, B'4, R', B'4, L'4, F'4, R'3, B', R3, F'4, L'4, B'4, R, B'4, L'4, F'4, R'4, B, U', D, U', D', U, B', R'4, F'4, L'4, B'4, R', B'4, L'4, F'4, R'3, B, R3, F'4, L'4, B'4, R, B'4, L'4, F'4, R'4, U', D, F', L', R'],
+
+Inverted:
+[R, L, F, D', U, R4, F4, L4, B4, R', B4, L4, F4, R'3, B', R3, F4, L4, B4, R, B4, L4, F4, R4, B, U', D, U, D', U, B', R4, F4, L4, B4, R', B4, L4, F4, R'3, B, R3, F4, L4, B4, R, B4, L4, F4, R4, U', D, U', F', L', U, D', U, R4, F4, L4, B4, R', B4, L4, F4, R'3, B', R3, F4, L4, B4, R, B4, L4, F4, R4, B, U', D, U', D', U, B', R4, F4, L4, B4, R', B4, L4, F4, R'3, B, R3, F4, L4, B4, R, B4, L4, F4, R4, U', D, R'],
+
+UFR around UBR (up right corner), CCW
+[F', D', U, L'4, B'4, R'4, F'4, L', F'4, R'4, B'4, L'3, F', L3, B'4, R'4, F'4, L, F'4, R'4, B'4, L'4, F, U', D, U, D', U, F', L'4, B'4, R'4, F'4, L', F'4, R'4, B'4, L'3, F, L3, B'4, R'4, F'4, L, F'4, R'4, B'4, L'4, U', D, U', R, B, U, D', U, L'4, B'4, R'4, F'4, L', F'4, R'4, B'4, L'3, F', L3, B'4, R'4, F'4, L, F'4, R'4, B'4, L'4, F, U', D, U', D', U, F', L'4, B'4, R'4, F'4, L', F'4, R'4, B'4, L'3, F, L3, B'4, R'4, F'4, L, F'4, R'4, B'4, L'4, U', D, B', R', F],
+
+Inverted:
+[F', R, B, D', U, L4, B4, R4, F4, L', F4, R4, B4, L'3, F', L3, B4, R4, F4, L, F4, R4, B4, L4, F, U', D, U, D', U, F', L4, B4, R4, F4, L', F4, R4, B4, L'3, F, L3, B4, R4, F4, L, F4, R4, B4, L4, U', D, U', B', R', U, D', U, L4, B4, R4, F4, L', F4, R4, B4, L'3, F', L3, B4, R4, F4, L, F4, R4, B4, L4, F, U', D, U', D', U, F', L4, B4, R4, F4, L', F4, R4, B4, L'3, F, L3, B4, R4, F4, L, F4, R4, B4, L4, U', D, F],
+
+UFR around UFL (up left corner), CCW
+[R, D', U, B4, R4, F4, L4, B', L4, F4, R4, B'3, L', B3, R4, F4, L4, B, L4, F4, R4, B4, L, U', D, U, D', U, L', B4, R4, F4, L4, B', L4, F4, R4, B'3, L, B3, R4, F4, L4, B, L4, F4, R4, B4, U', D, U', R', F', U, D', U, B4, R4, F4, L4, B', L4, F4, R4, B'3, L', B3, R4, F4, L4, B, L4, F4, R4, B4, L, U', D, U', D', U, L', B4, R4, F4, L4, B', L4, F4, R4, B'3, L, B3, R4, F4, L4, B, L4, F4, R4, B4, U', D, F],
+
+Inverted:
+[F', D', U, B'4, R'4, F'4, L'4, B', L'4, F'4, R'4, B'3, L', B3, R'4, F'4, L'4, B, L'4, F'4, R'4, B'4, L, U', D, U, D', U, L', B'4, R'4, F'4, L'4, B', L'4, F'4, R'4, B'3, L, B3, R'4, F'4, L'4, B, L'4, F'4, R'4, B'4, U', D, U', F, R, U, D', U, B'4, R'4, F'4, L'4, B', L'4, F'4, R'4, B'3, L', B3, R'4, F'4, L'4, B, L'4, F'4, R'4, B'4, L, U', D, U', D', U, L', B'4, R'4, F'4, L'4, B', L'4, F'4, R'4, B'3, L, B3, R'4, F'4, L'4, B, L'4, F'4, R'4, B'4, U', D, R'],
+
+Parity:
+3.25.19: If need to rotate a single piece by 90, make one move around any face and continue.
+3.25.19: If need to swap two pieces, make one move
+
+3.25.19
+a0040499a633901ba6cf871bcd32a758
+4ffb9d6a3bc497682f249b6537c89e61
+3dd57682ec035eb4bc5c6ea7dc5a7a87
+f40bd926b34c7986f20db9467385e9ec
+
+
+3.25.19b
+1db8bf221287810ab4f7d24f7986f20d
+b903738ae916d32c676cce30e51acb34
+e60ecd39a7484fa59d523bfe97042fd1
+9b6437c89e613dc27689ec135ea8bc6a
+
+
+=====
+backup
+Double rotate by 90
+[D', U, F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R, U', D, U, D', U, R', F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R, F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, U', D, U'],
+
+Inverted:
+[U, D', U, F4, L4, B4, R4, F', R4, B4, L4, F'3, R', F3, L4, B4, R4, F, R4, B4, L4, F4, R, U', D, U', D', U, R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4, U', D],
+
+3 cycle with setup
+[D', U, F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R, U', D],
+
+Inverted:
+[D', U, R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4, U', D],
+
+3 cycle:
+UFL -> U -> UBR
+[F'4, L'4, B'4, R'4, F', R'4, B'4, L'4, F'3, R', F3, L'4, B'4, R'4, F, R'4, B'4, L'4, F'4, R],
+
+Inverted:
+[R', F4, L4, B4, R4, F', R4, B4, L4, F'3, R, F3, L4, B4, R4, F, R4, B4, L4, F4],
+
+4 pieces rotate by 180
+[R', D'4, R'4, U'4, L'4, R, U'4, L', R'4, U'4, L'4, D'4, L, U'4],
+
+Inverted:
+[U4, L', D4, L4, U4, R4, L, U4, R', L4, U4, R4, D4, R],
+
+2 pieces rotated by 180
+[R'2, D'4, R'4, U'4, L'4, R, U'4, L', R'4, U'4, L'4, D'4, L, U'4, R],D,
+[R', U4, L', D4, L4, U4, R4, L, U4, R', L4, U4, R4, D4, R2],D',
+
+3 3-cycles
+[D'4, R'4, U'4, L'4],
+
+Inverted:
+[L4, U4, R4, D4],
+
+with setup
+[R', D'4, R'4, U'4, L'4, R],
+
+Inverted:
+[R', L4, U4, R4, D4, R],
+
+setup:
+[U', D3, F'4, U'4, B'4, D, U],
+
+Inverted:
+[U', D', B4, U4, F4, D'3, U],
+
+[D'4, F'4, U'4, B'4, D', B'4, U'4, F'4, D'3],
+
+Inverted:
+[D3, F4, U4, B4, D, B4, U4, F4, D4],
+
+
+[D'4, R'4, U'4, L'4],
+U4,,
+[L4, U4, R4, D4],
+U'4,
+
+3x:
+D'4, R'4, U'4, L'4, D'4, R'4, U'4, L'4, D'4, R'4, U'4, L'4,
+
+[D'4, R'4, U'4, L'4, B'4, R'4, D'4, L'4, U'4, B'4],
+
+Inverted:
+[B4, U4, L4, D4, R4, B4, L4, U4, R4, D4],
+
+no effect
+[D'4, R'4, U'4, L'4, B'4, R'4, D'4, L'4, F'4, D'4],
+
+Not sure:
+[U', D3, F'4, U'4, B'4, D, U, F'4, D', U', B'4, D'4, F'4, U'3, D, F'4],

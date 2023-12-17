@@ -1,8 +1,8 @@
-algocolumns:5
-windowsize:1249 867
-usersession:C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\sessions
-favorites:
-recents:3.25.19b 3.25.19 3.25.18b 3.25.18 3.25.16 3.25.17 3.43.2 3.43.2b 3.43.2c 7.8.6d 7.8.6c 7.8.6b 7.8.6 7.8.5c 7.8.5b 7.8.5 7.8.4 7.8.4d 7.8.4c 7.8.4b 7.8.3e 7.8.3d 7.8.3c 7.8.3b 7.8.3 7.8.2e 7.8.2d 7.8.2c 7.8.2b 7.8.2 7.8.1 7.7.4e
-lastmenunode:3
-name:schuma
 certificate:1
+name:schuma
+lastmenunode:3
+recents:3.25.19b 3.25.19 3.25.8b 3.25.10 3.25.17 3.25.13 3.25.12 3.25.0 3.25.18b 3.25.18 3.25.16 3.43.2 3.43.2b 3.43.2c 7.8.6d 7.8.6c 7.8.6b 7.8.6 7.8.5c 7.8.5b 7.8.5 7.8.4 7.8.4d 7.8.4c 7.8.4b 7.8.3e 7.8.3d 7.8.3c 7.8.3b 7.8.3 7.8.2e 7.8.2d
+favorites:
+usersession:C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\sessions
+windowsize:1509 951
+algocolumns:5
