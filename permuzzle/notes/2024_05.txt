@@ -9,5 +9,86 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
+7.2.5
+be3bc45927b7e86256a4f6692fd09b64
+37859e613dc27689ece75ea0bc436e91
+dc3b7a81f412d926b35579bff226b945
+738ce916d32c6798ce31e51acb34e644
+
 ===
 7.2.5
+
+Each piece can be flipped, rotated, and moved
+
+1. solve the locations of the pieces: trivial. Solve the 3 corners, then the others automatically solve themselves. 3 cycles don't exist.
+
+2. flip:
+bottom left and bottom right
+[C'2, B'2, C'2, B'2, C'2, B', C'2, B],
+
+3. rotate:
+rotate two pieces by 60: Bottom left CW, bottom right CCW
+[B', C'2, B, C, B'2, C'],
+
+Inverted:
+[C, B2, C', B', C2, B],
+
+rotate single by 120: bottom left CW
+bottom left
+[C2, B'2, C'2, B'2, C'2, B', C'2, B, C', B, C'2, B'2, C'2, B', C'2, B, C'2, B, C'3],
+
+Inverted:
+[C3, B', C2, B', C2, B, C2, B2, C2, B', C, B', C2, B, C2, B2, C2, B2, C'2],
+
+top CW:
+[A', C, B'2, C'2, B'2, C'2, B', C'2, B, C', B, C'2, B'2, C'2, B', C'2, B, C'2, B, C'2, A],
+
+Inverted:
+[A', C2, B', C2, B', C2, B, C2, B2, C2, B', C, B', C2, B, C2, B2, C2, B2, C', A],
+
+be3bc45927b7e86256a4f6692fd09b64
+37859e613dc27689ece75ea0bc436e91
+dc3b7a81f412d926b35579bff226b945
+738ce916d32c6798ce31e51acb34e644
+
+
+
+backup
+
+[C', B, C, B'],
+[C'2, B'2, C'2, B'2],
+
+[C'2, B', C'2, B],
+
+rotating 3 pieces: CW by 120
+[C', B, C, B', C'2, B'2, C'2, B'2, C', B, C, B', C'2, B'2, C'2, B'2],
+
+
+[B2, C2, B2, C2, B, C', B', C, B2, C2, B2, C2, B, C', B', C],
+
+rotating two by 120:
+[C', B, C, B', C'2, B'2, C'2, B'2, C', B, C, B', C'2, B'2, C'2, B'2],
+A',
+[B2, C2, B2, C2, B, C', B', C, B2, C2, B2, C2, B, C', B', C],
+A,
+
+flipping two pieces
+C'2,B'2,C'2,B'2,C'2,B',C'2,B,
+
+[C'2, B'2, C'2, B'2, C'2, B', C'2, B],
+
+[B', C2, B, C2, B2, C2, B2, C2],
+
+rotate single by 120: top CW
+[A', C, B'2, C'2, B'2, C'2, B', C'2, B, C', B, C'2, B'2, C'2, B', C'2, B, C'2, B, C'2, A],
+
+Inverted:
+[A', C2, B', C2, B', C2, B, C2, B2, C2, B', C, B', C2, B, C2, B2, C2, B2, C', A],
+
+rotate two pieces by 60: Bottom left CW, bottom right CCW
+[B', C'2, B, C, B'2, C'],
+
+Inverted:
+[C, B2, C', B', C2, B],
+
+[C3, B', C2, B', C2, B, C2, B2, C2, B', C, B', C2, B, C2, B2, C2, B2, C'2],
