@@ -2,9 +2,9 @@
 set BASEDIR=%~dp0
 cd %BASEDIR%
 
-set "url=https://zqjxkvby.000webhostapp.com/permuzzle/permuzzle.jar"
+set "url=https://qjxkvbyz.000webhostapp.com/permuzzle/permuzzle.jar"
 set "downloadedFile=./permuzzle_download_temp.jar"
-set "imagesUrl=https://zqjxkvby.000webhostapp.com/permuzzle/images.zip"
+set "imagesUrl=https://qjxkvbyz.000webhostapp.com/permuzzle/images.zip"
 set "imagesDownloadedFile=./images.zip"
 set "oldFile=./permuzzle/permuzzle.jar"
 
