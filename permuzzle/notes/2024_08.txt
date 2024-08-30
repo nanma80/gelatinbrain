@@ -1,0 +1,103 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://qjxkvbyz.000webhostapp.com/permuzzle/
+https://qjxkvbyz.000webhostapp.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
+
+===
+to send to gelatinbrain:
+
+7.2.7
+ca6e108d8111a62c0aeaaf31e51acb34
+e693cd32a7584fb09d963bc597682fd0
+9b7c37cf9e7f3dc27682ec185e94bc42
+6e91dc237a85f40bd926b34c7986f289
+
+14b0ad308d1dbe348b2dac32a7584fb0
+9dea3bc497682fd09b9037c99e613dc2
+7691ec145ebfbc436e9edc2d7adcf40a
+d926b34c7986f20db946738ce916d3a8
+
+
+===
+7.9.1 and 7.9.1b
+24 small triangles
+Each piece can be flipped.
+
+backup
+order 6:
+two 6-cycles
+[C, B', C', B],
+[C, B', C', B]x2,
+[C, B', C', B]x3,
+
+with setup:
+C',B',C',B,C'2,
+
+
+
+7.2.7
+
+9 pieces, each piece can be flipped.
+Each move affects 7 pieces. 7 cycle. Each move repeated 7 times moves all pieces back to the original position, flipped.
+Each move repeated 14 times goes back.
+There is no 3-cycle. The shortest cycle is 7-cycle.
+
+- Solve positions by intuition: solve two pieces around a corner first, and then cycle the rest 7 without affcting the corner
+- flipping 1:
+[B, A2, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C6, A', B', A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C'],
+
+
+
+back up:
+
+global rotation:
+B, A,
+A',B',
+
+order 9:
+B, A, B', A',
+
+global flip:
+[B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', A, B', C'],
+
+Inverted:
+[C, B, A', C, B', C', B, C, B', C', B, C, B', C', B, C, B', C', B],
+
+A',B',
+[B', C, B, C', B', C, B, C', B', C, B, C', B', C, B, C', A, B', C'],
+B,A,
+
+another 7-cycle:
+A,B,C',B',A',C,
+
+A,B,C',B',A',C,
+C'3,B'2,
+[C', A, B, C, B', A'],
+B2,C3,
+
+flipping 4:
+[A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C'],
+
+flipping 3:
+[A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C6],
+
+flipping 1:
+[B, A2, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C6, A', B', A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C'],
+
+B,A,
+[A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C6],
+A',B',
+[A, B, C', B', A', C'2, B'2, C', A, B, C, B', A', B2, C'],
+
+ca6e108d8111a62c0aeaaf31e51acb34
+e693cd32a7584fb09d963bc597682fd0
+9b7c37cf9e7f3dc27682ec185e94bc42
+6e91dc237a85f40bd926b34c7986f289
+
+14b0ad308d1dbe348b2dac32a7584fb0
+9dea3bc497682fd09b9037c99e613dc2
+7691ec145ebfbc436e9edc2d7adcf40a
+d926b34c7986f20db946738ce916d3a8
