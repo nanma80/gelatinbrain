@@ -15,16 +15,122 @@ e693cd32a7584fb09d963bc597682fd0
 9b7c37cf9e7f3dc27682ec185e94bc42
 6e91dc237a85f40bd926b34c7986f289
 
-14b0ad308d1dbe348b2dac32a7584fb0
-9dea3bc497682fd09b9037c99e613dc2
-7691ec145ebfbc436e9edc2d7adcf40a
-d926b34c7986f20db946738ce916d3a8
+7.9.1
+ca62108d8111a62c0a08af30e51acb34
+e650cd31a7584fb09d963bc597682fd0
+9b7c37cf9e7e3dc276adec395e14bc43
+6e91dc237a85f40bd926b34c7985f23c
 
+7.9.1b
+a0090499a636901aa63d871bcd32a758
+4f329d613bc497682f249b6537c89e61
+3dda768eec0c5ea1bc5e6e83dc1a7a85
+f40bd926b34c7986f20db946738fe94a
+
+7.9.2
+d47e2cb1f5654ec4fa7e4ed19b6437c8
+9e9f3dc27689ec135e55bc426e91dc23
+7a9df40cd939b34d7989f208b928738c
+e916d32c6798ce31e51acb34e619cdce
+
+7.9.2b
+b151eaed7b59d4bc2eddf0de237a85f4
+0b1026b24c7986f20d4d46728ce916d3
+2c7f98c931fa1aca34ef19d1323b584c
+b09d623bc497682fd09b6437c89f6181
+
+
+===
+7.9.2 and 7.9.2b
+Each piece is a rhombus formed by 4 small triangles.
+Each piece has complicated orientations.
+
+3-cycle:
+top corner, CW
+[C2, A, B, A, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, A', C2],
+
+Inverted:
+[C'2, A, C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A', B', A', C'2],
+
+mirror
+[B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2],
+
+If need an odd perm, make a 4-cycle move
+
+double rotation: top corner right CCW by 90, top center CW by 90
+[C, A, C', B2, C', B, C, B, C, A', C', B', C', B', C, B2],
+
+Inverted:
+[B'2, C', B, C, B, C, A, C', B', C', B', C, B'2, C, A', C'],
+
+top corner triple flip:
+[B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2, C'2, A, B, A, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, A', C'2],
+
+center triple flip:
+[A'2, B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2, C'2, A, B, A, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, A', C'2, A'2],
+
+single 180, top center
+[C, A, C', B2, C', B, C, B, C, A', C', B', C', B', C, B2],
+[A'2, B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2, C'2, A, B, A, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, A', C'2, A'2],
+[B'2, C', B, C, B, C, A, C', B', C', B', C, B'2, C, A', C'],
+[A'2, B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2, C'2, A, B, A, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, A', C'2, A'2],
+
+7.9.2
+d47e2cb1f5654ec4fa7e4ed19b6437c8
+9e9f3dc27689ec135e55bc426e91dc23
+7a9df40cd939b34d7989f208b928738c
+e916d32c6798ce31e51acb34e619cdce
+
+7.9.2b
+b151eaed7b59d4bc2eddf0de237a85f4
+0b1026b24c7986f20d4d46728ce916d3
+2c7f98c931fa1aca34ef19d1323b584c
+b09d623bc497682fd09b6437c89f6181
+
+
+backup:
+3-cycle
+[C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A', B'],
+
+triple flip:
+[B'2, A', C', A', C, B'2, C, B', C', B', C', A, C, B, C, B, C', B'2, A, B'2, C'2, A, B, A, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, A', C'2],
 
 ===
 7.9.1 and 7.9.1b
 24 small triangles
 Each piece can be flipped.
+
+3-cycle: top left -> top right -> center bottom left
+[C, A'2, B'2, C, A', B'2, A', B, A, B, A, C, A', B', A', B', A, B'2, A, C'2, B'2, A', B'2, C'2, A', B'2, A', B, A, B, A, C', A', B', A', B', A, B'2, A, C', B'2, A', C'],
+
+Inverted:
+[C, A, B2, C, A', B2, A', B, A, B, A, C, A', B', A', B', A, B2, A, C2, B2, A, B2, C2, A', B2, A', B, A, B, A, C', A', B', A', B', A, B2, A, C', B2, A2, C'],
+
+bottom left corner:
+[B, C'2, A'2, B, C', A'2, C', A, C, A, C, B, C', A', C', A', C, A'2, C, B'2, A'2, C', A'2, B'2, C', A'2, C', A, C, A, C, B', C', A', C', A', C, A'2, C, B', A'2, C', B'],
+
+Inverted:
+[B, C, A2, B, C', A2, C', A, C, A, C, B, C', A', C', A', C, A2, C, B2, A2, C, A2, B2, C', A2, C', A, C, A, C, B', C', A', C', A', C, A2, C, B', A2, C2, B'],
+
+bottom right corner
+[A, B'2, C'2, A, B', C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A'2, C'2, B', C'2, A'2, B', C'2, B', C, B, C, B, A', B', C', B', C', B, C'2, B, A', C'2, B', A'],
+
+Inverted:
+[A, B, C2, A, B', C2, B', C, B, C, B, A, B', C', B', C', B, C2, B, A2, C2, B, C2, A2, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B, A', C2, B2, A'],
+
+7.9.1
+ca62108d8111a62c0a08af30e51acb34
+e650cd31a7584fb09d963bc597682fd0
+9b7c37cf9e7e3dc276adec395e14bc43
+6e91dc237a85f40bd926b34c7985f23c
+
+7.9.1b
+a0090499a636901aa63d871bcd32a758
+4f329d613bc497682f249b6537c89e61
+3dda768eec0c5ea1bc5e6e83dc1a7a85
+f40bd926b34c7986f20db946738fe94a
+
+
 
 backup
 order 6:
@@ -36,8 +142,38 @@ two 6-cycles
 with setup:
 C',B',C',B,C'2,
 
+3-cycle
+[B, C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A', B'2],
+C,
+[B2, A, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B'],
+C',
+
+with better setup:
+[B'2, C'2, A, B', C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A'2, C'2, B'2],
+B',
+[B2, C2, A2, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B, A', C2, B2],
+B,
 
 
+[B'2, C'2, A, B', C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A'2, C'2],
+B',
+[C2, A2, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B, A', C2, B2],
+B,
+
+3-cycle:
+[B'2, C'2, A, B', C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A'2, C'2, B', C2, A2, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B, A', C2, B2, B],
+
+Inverted:
+[B', B'2, C'2, A, B', C'2, B', C, B, C, B, A, B', C', B', C', B, C'2, B, A'2, C'2, B, C2, A2, B', C2, B', C, B, C, B, A', B', C', B', C', B, C2, B, A', C2, B2],
+
+
+Rotated string:
+[C'2, A'2, B, C', A'2, C', A, C, A, C, B, C', A', C', A', C, A'2, C, B'2, A'2, C', A2, B2, C', A2, C', A, C, A, C, B', C', A', C', A', C, A2, C, B', A2, C2, C],
+
+Rotated twice:
+[A'2, B'2, C, A', B'2, A', B, A, B, A, C, A', B', A', B', A, B'2, A, C'2, B'2, A', B2, C2, A', B2, A', B, A, B, A, C', A', B', A', B', A, B2, A, C', B2, A2, A],
+
+===
 7.2.7
 
 9 pieces, each piece can be flipped.
