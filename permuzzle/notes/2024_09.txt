@@ -18,3 +18,25 @@ to send to gelatinbrain:
 1.1.93
 1.1.94
 3.1.42
+
+====
+
+1.1.91
+
+The pieces in each dodecahedron stay in the same dodecahedron. Not all pieces on a dodecahedron are present. Even if the missing pieces exist, they are always solved. Each dodecahedron needs to go back to the original position. Orientation is very complicated.
+
+[G', F', C', F, C, G],
+L,
+[G', C', F', C, F, G],
+L',
+
+1.1.93
+
+backup:
+[A'2, D', E, D, E', A2],
+D,
+[A'2, E, D', E', D, A2],
+D',
+
+3 cycle
+[A', E, A, E', D', E, A', E', A, D],
