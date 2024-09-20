@@ -23,7 +23,9 @@ to send to gelatinbrain:
 
 1.1.91
 
-The pieces in each dodecahedron stay in the same dodecahedron. Not all pieces on a dodecahedron are present. Even if the missing pieces exist, they are always solved. Each dodecahedron needs to go back to the original position. Orientation is very complicated.
+The pieces in each dodecahedron stay in the same dodecahedron. Not all pieces on a dodecahedron are present. 
+Even if the missing pieces exist, they are always solved. Each dodecahedron needs to go back to the original position. 
+Orientation is very complicated.
 
 [G', F', C', F, C, G],
 L,
@@ -31,8 +33,41 @@ L,
 L',
 
 1.1.93
+On each dodecahedron there are 10 pieces.
 
+Each dodecahedron has its own place to go
+
+3-cycle in one piece: top -> bottom right -> bottom left
+[A'2, B, F', B'2, C, B', I', B, C', B', I, B', F', B, H, B', F, B, H', C, G', C', G, L, G', C, G, L', G, K, G', H', G, K', G', H, C', H, B', F', B, H', B', F, B, I', B, C, B', I, B, C', B', C, H', G, K, G', H, G, K', G', L, G', C', G, L', G', C, G, C', B'2, F, B', A2],
+
+Inverted: <-----
+[A'2, B, F', B2, C, G', C', G, L, G', C, G, L', G, K, G', H', G, K', G', H, C', B, C, B', I', B, C', B', I, B', F', B, H, B', F, B, H', C, H', G, K, G', H, G, K', G', L, G', C', G, L', G', C, G, C', H, B', F', B, H', B', F, B, I', B, C, B', I, B, C', B2, F, B', A2],
+
+
+3-cycle: top -> middle right -> middle left
+[A, F'2, B, I', L, I', F', I, L', I', F, I', B', I, J, I', B, I, J', L, K', L', K, E, K', L, K, E', K, D, K', J', K, D', K', J, L', J, I', B', I, J', I', B, I, F', I, L, I', F, I, L', I', L, J', K, D, K', J, K, D', K', E, K', L', K, E', K', L, K, L', I2, B', F2, A'],
+
+Inverted: <-----
+[A, F'2, B, I'2, L, K', L', K, E, K', L, K, E', K, D, K', J', K, D', K', J, L', I, L, I', F', I, L', I', F, I', B', I, J, I', B, I, J', L, J', K, D, K', J, K, D', K', E, K', L', K, E', K', L, K, L', J, I', B', I, J', I', B, I, F', I, L, I', F, I, L', I, B', F2, A'],
+
+double rotation:
+top piece, bottom left & right rotate down
+[A, E', F2, I, J', I'2, B, I', L', I, B', I', L, I', J', I, H, I', J, I, H', B, C', B', C, G, C', B, C, G', C, D, C', H', C, D', C', H, B', H, I', J', I, H', I', J, I, L', I, B, I', L, I, B', I', B, H', C, D, C', H, C, D', C', G, C', B', C, G', C', B, C, B', I'2, J, I', F'2, E, A2, C'2, D, G'2, L, I', L', I, B, I', L, I, B', I, F, I', H', I, F', I', H, L', G, L, G', C', G, L', G', C, G', D', G, H, G', D, G, H', L, H', I, F, I', H, I, F', I', B, I', L', I, B', I', L, I, L', H, G', D', G, H', G', D, G, C', G, L, G', C, G, L', G, D', C2, A2],
+
+Inverted: rotate up
+[A'2, C'2, D, G', L, G', C', G, L', G', C, G', D', G, H, G', D, G, H', L, I', L', I, B, I', L, I, B', I, F, I', H', I, F', I', H, L', H, G', D', G, H', G', D, G, C', G, L, G', C, G, L', G', L, H', I, F, I', H, I, F', I', B, I', L', I, B', I', L, I, L', G2, D', C2, A'2, E', F2, I, J', I2, B, C', B', C, G, C', B, C, G', C, D, C', H', C, D', C', H, B', I, B, I', L', I, B', I', L, I', J', I, H, I', J, I, H', B, H', C, D, C', H, C, D', C', G, C', B', C, G', C', B, C, B', H, I', J', I, H', I', J, I, L', I, B, I', L, I, B', I2, J, I', F'2, E, A'],
+
+If a single piece needs to be rotated, then adjust the orientation of the puzzle so that this piece is correct, and solve the rest.
+
+====
 backup:
+another 3-cycle:
+[A', C', D2, K, G', K'2, E, K', L', K, E', K', L, K', G', K, J, K', G, K, J', E, F', E', F, I, F', E, F, I', F, B, F', J', F, B', F', J, E', J, K', G', K, J', K', G, K, L', K, E, K', L, K, E', K', E, J', F, B, F', J, F, B', F', I, F', E', F, I', F', E, F, E', K'2, G, K', D'2, C, A],
+
+Inverted:
+[A', C', D2, K, G', K2, E, F', E', F, I, F', E, F, I', F, B, F', J', F, B', F', J, E', K, E, K', L', K, E', K', L, K', G', K, J, K', G, K, J', E, J', F, B, F', J, F, B', F', I, F', E', F, I', F', E, F, E', J, K', G', K, J', K', G, K, L', K, E, K', L, K, E', K2, G, K', D'2, C, A],
+
+
 [A'2, D', E, D, E', A2],
 D,
 [A'2, E, D', E', D, A2],
@@ -105,3 +140,55 @@ Inverted:
 single piece turn:
 order 3
 [A', F, A, F', E', F, A', F', A2, E, A', F, A, E', A', E, F', D', E', F, E', A, E, A', F', A, E', A'2, F, A, F', E, F, A', F', A, E, D],
+
+
+[E, D, E', F', E, D', E', F, E', J', E, A, E', J, E, A'],
+
+Inverted:
+[A, E', J', E, A', E', J, E, F', E, D, E', F, E, D', E'],
+
+Mirror (dodecahedron):
+[D', E', D, C, D', E, D, C', D, G, D', A', D, G', D', A],
+
+Inverted Mirror (dodecahedron):
+[A', D, G, D', A, D, G', D', C, D', E', D, C', D', E, D],
+
+order 7:
+[E, D, E', F', E, D', E', F, E', J', E, A, E', J, E, A'],
+[D', E', D, C, D', E, D, C', D, G, D', A', D, G', D', A],
+[A, E', J', E, A', E', J, E, F', E, D, E', F, E, D', E'],
+[A', D, G, D', A, D, G', D', C, D', E', D, C', D', E, D],
+
+
+
+[D', C, D, C', A', C, D', C', D, A],
+
+should be in place rotation as well.
+order 36
+[A', E, A, E', D', E, A', E', A, D, A, D', A', D, E, D', A, D, A', E'],
+
+
+[F', E, D, E', F', E, D', E', F, E', J', E, A, E', J, E, A', F],
+A,
+[F', A, E', J', E, A', E', J, E, F', E, D, E', F, E, D', E', F],
+A',
+
+[A', E, A, E'],
+[C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D, C, D', E', D, C', D', E, D', K', D, A, D', K, D, A', D],
+[E, A', E', A],
+[D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C', D', A, D', K', D, A', D', K, D, E', D, C, D', E, D, C'],
+
+one piece in the front 5:
+[E, D, E', F', E, D', E', F, E', J', E, A, E', J, E, A'],
+
+[E', D, E, D', E', D, E, D', A', D, E', D', E, D, E', D', E, A],
+
+3-cycle:
+[D, A, D', K', D, A', D', K, D', G', D, E, D', G, D, E'],
+[A, F', A', F, J, F', A, F, J', F, I, F', E', F, I', F', E, A'],
+[E, D', G', D, E', D', G, D, K', D, A, D', K, D, A', D'],
+[A, E', F, I, F', E, F, I', F', J, F', A', F, J', F', A, F, A'],
+
+In one line:
+[D, A, D', K', D, A', D', K, D', G', D, E, D', G, D, E', A, F', A', F, J, F', A, F, J', F, I, F', E', F, I', F', E, A', E, D', G', D, E', D', G, D, K', D, A, D', K, D, A', D', A, E', F, I, F', E, F, I', F', J, F', A', F, J', F', A, F, A'],
+
