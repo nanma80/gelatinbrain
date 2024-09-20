@@ -40,3 +40,68 @@ D',
 
 3 cycle
 [A', E, A, E', D', E, A', E', A, D],
+
+
+[D', A, D, A', E, A, D', A', D, E'],
+
+Inverted:
+[E, D', A, D, A', E', A, D', A', D],
+
+Mirror (dodecahedron):
+[E, A', E', A, D', A', E, A, E', D],
+
+Inverted Mirror (dodecahedron):
+[D', E, A', E', A, D, A', E, A, E'],
+
+concatenate two 3-cycles to rotate in place.
+[A', E, A, E', D', E, A', E', A, D],
+[D', A, D, A', E, A, D', A', D, E'],
+
+order 12:
+[A', E, A, E', D', E, A', E', A2, D, A', E, A, D', A', D, E'],
+
+Mirror (dodecahedron):
+[A, D', A', D, E, D', A, D, A'2, E', A, D', A', E, A, E', D],
+
+2 dodecahedra affected. On each affected dodecahedron, 6 pieces rotated in place
+[A', E, A, E', D', E, A', E', A2, D, A', E, A, D', A', D, E']x4,
+
+
+[A', E, A, E', D', E, A', E', A2, D, A', E, A, D', A', D, E']x3,
+
+another type of 3-cycle
+[A, F, A', D', A, F', A', D],
+
+Inverted:
+[D', A, F, A', D, A, F', A'],
+
+Mirror (dodecahedron):
+[A', C', A, E, A', C, A, E'],
+
+Inverted Mirror (dodecahedron):
+[E, A', C', A, E', A', C, A],
+
+unknown order:
+[A, F, A', D', A, F', A', D, A', C', A, E, A', C, A, E'],
+
+another order 12:
+[A', E, A, E', D', E, A', E', A2, F, A', D, A, F', A'],
+
+[A', E, A, E', D', E, A', E', A2, F, A', D, A, F', A'],
+
+Inverted:
+[A, F, A', D', A, F', A'2, E, A, E', D, E, A', E', A],
+
+single piece turn:
+order 4
+[A', D, A, D', C', D, A', D', A2, E, A', C, A, E', A', E, D, A, E, A', C', A, E', A'2, D, A, D', C, D, A', D', A, D', E'],
+
+
+[A', E, A, E', D', E, A', E', A2, D, A', E, A, D', A', D, E'],
+
+Inverted:
+[E, D', A, D, A', E', A, D', A'2, E, A, E', D, E, A', E', A],
+
+single piece turn:
+order 3
+[A', F, A, F', E', F, A', F', A2, E, A', F, A, E', A', E, F', D', E', F, E', A, E, A', F', A, E', A'2, F, A, F', E, F, A', F', A, E, D],
