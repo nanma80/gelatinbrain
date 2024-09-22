@@ -32,13 +32,153 @@ The pieces in each dodecahedron stay in the same dodecahedron. Not all pieces on
 Even if the missing pieces exist, they are always solved. Each dodecahedron needs to go back to the original position. 
 Orientation is very complicated.
 
+In each dodecahedron, there are 15 pieces. 15*12=180 in total.
+
+backup
 [G', F', C', F, C, G],
 L,
 [G', C', F', C, F, G],
 L',
 
+dodecahedra 3-cycle (top center -> center -> right)
+[F, C', F', C, D', C', F, C, F', D],
+
+Inverted:
+[D', F, C', F', C, D, C', F, C, F'],
+
+Mirror (dodecahedron):
+[C', F, C, F', E, F, C', F', C, E'],
+
+Inverted Mirror (dodecahedron):
+[E, C', F, C, F', E', F, C', F', C],
+
+
+[I, A', I', A, E', A', I, A, I', E, C', E, B', E', B, C, B', E, B, E'],
+
+dodecahedra remain in original positions. Affecting two dodec
+order 40
+[E, C', F, C, F', E', F, C', F', C, E', I, A', I', A, E, A', I, A, I'],
+
+
+
+[E, C', F, C, F', E', F, C', F', C, E', I, A', I', A, E, A', I, A, I'],
+[I, A', I', A, E', A', I, A, I', E, C', E, B', E', B, C, B', E, B, E'],
+
+dodecahedra 3-cycle (left -> center -> right)
+[E, B, D', B', D, E', D', B, D, B'],
+
+Inverted:
+[B, D', B', D, E, D', B, D, B', E'],
+
+Mirror (dodecahedron):
+[D', B', E, B, E', D, E, B', E', B],
+
+Inverted Mirror (dodecahedron):
+[B', E, B, E', D', E, B', E', B, D],
+
+dodecahedra 3-cycle: V -->
+[C, E', C', E, F', E', C, E, C', F],
+
+Inverted:
+[F', C, E', C', E, F, E', C, E, C'],
+
+Mirror (dodecahedron):
+[F', D, F, D', C, D, F', D', F, C'],
+
+Inverted Mirror (dodecahedron):
+[C, F', D, F, D', C', D, F', D', F],
+
+3-cycle by piece. Very long (700+). But this is the proof that this is possible.
+[E, C', F, C, F', E', F, C', F', C, E', I, A', I', A, E, A', I, A, I']x10,
+[C, F', D, F, D', C', D, F', D', F, C', K, A', K', A, C, A', K, A, K']x8,
+[I, A', I', A, E', A', I, A, I', E, C', F, C, F', E, F, C', F', C, E']x10,
+[K, A', K', A, C', A', K, A, K', C, F', D, F, D', C, D, F', D', F, C']x8,
+
+
+[E, C', F, C, F', E', F, C', F', C, E', I, A', I', A, E, A', I, A, I'],
+[C, F', D, F, D', C', D, F', D', F, C', K, A', K', A, C, A', K, A, K'],
+[I, A', I', A, E', A', I, A, I', E, C', F, C, F', E, F, C', F', C, E'],
+[K, A', K', A, C', A', K, A, K', C, F', D, F, D', C, D, F', D', F, C'],
+
+dodec remain in place. Affecting 4 pieces:
+[C, F', C', F, C, F', C', F],
+
+Inverted:
+[F', C, F, C', F', C, F, C'],
+
+Mirror (dodecahedron):
+[F', C, F, C', F', C, F, C'],
+
+Inverted Mirror (dodecahedron):
+[C, F', C', F, C, F', C', F],
+
+
+[B, J', B', J, B, J', B', J],
+
+Inverted:
+[J', B, J, B', J', B, J, B'],
+
+Mirror (dodecahedron):
+[B', G, B, G', B', G, B, G'],
+
+Inverted Mirror (dodecahedron):
+[G, B', G', B, G, B', G', B],
+
+11-cycle on a dodec
+[B, J', B', J, B, J', B', J],
+[B', G, B, G', B', G, B, G'],
+[J', B, J, B', J', B, J, B'],
+[G, B', G', B, G, B', G', B],
+
+order-11
+[B, J', B', J, B, J', B', J, B', G, B, G', B', G, B, G', J', B, J, B', J', B, J, B', G, B', G', B, G, B', G', B],
+
+Rotating two faces on two dodec:
+[J', I, B, E', B', E, J', E', B, E, B', J, I', J, B', K, E', F, E', B, D', B', D, E, D', B, D, B', F', E, B, K'],
+
+Inverted:
+[K, B', E', F, B, D', B', D, E', D', B, D, B', E, F', E, K', B, J', I, J', B, E', B', E, J, E', B, E, B', I', J],
+
+with setup:
+[L', D', G, L, E', L', E, D', E', L, E, L', D, G', D, L', A, E', K, E', L, F', L', F, E, F', L, F, L', K', E, L, A', L],
+
+Inverted:
+[L', A, L', E', K, L, F', L', F, E', F', L, F, L', E, K', E, A', L, D', G, D', L, E', L', E, D, E', L, E, L', G', D, L],
+
+2 swaps, with rotation:
+[L', D', G, L, E', L', E, D', E', L, E, L', D, G', D, L', A, E', K, E', L, F', L', F, E, F', L, F, L', K', E, L, A', L, B', K, J', C, J', D', K, J, A', J', A, D', A', J, A, J', D, K', D, C', J, G', L, G', J, D', J', D, G, D', J, D, J', L', G, J, B, K'],
+
+[L, C, H', L, K, C', K', C, H', C', K, C, K', H, L', H, K', B, C', G, C', K, A', K', A, C, A', K, A, K', G', C, K, B', C', L'],
+
+Inverted:
+[L, C, B, K', C', G, K, A', K', A, C', A', K, A, K', C, G', C, B', K, H', L, H', K, C', K', C, H, C', K, C, K', L', H, C', L'],
+
+pure 3-cycle:
+Original (76 moves, as long as 1.1.93):
+[L, C, H', L, K, C', K', C, H', C', K, C, K', H, L', H, K', B, C', G, C', K, A', K', A, C, A', K, A, K', G', C, K, B', C', L', B', K, J, H, B, K', H', L, K, C', K', C, H', C', K, C, K', H, L', H, B', K, I', J, I', K, H', K', H, I, H', K, H, K', J', I, H', J', B, K'],
+
+Inverted:
+[K, B', J, H, I', J, K, H', K', H, I', H', K, H, K', I, J', I, K', B, H', L, H', K, C', K', C, H, C', K, C, K', L', H, K, B', H', J', K', B, L, C, B, K', C', G, K, A', K', A, C', A', K, A, K', C, G', C, B', K, H', L, H', K, C', K', C, H, C', K, C, K', L', H, C', L'],
+
+take advantage over global orientation. The downside is that it affects orientation.
+[J', C, E', H, K, B', D, I'],
+
+Inverted:
+[I, D', B, K', H', E, C', J],
+
+with setup
+[C, D', I, G', F, K, B', L, A', C'],
+
+Inverted:
+[C, A, L', B, K', F', G, I', D, C'],
+
+pure 3-cycle, but with reorientation:
+[G, K', B, L', A, J, C', I, D', G', C', J, H, G, F', C, J', D', I, A', L, H', K', B],
+
+====
+
 1.1.93
-On each dodecahedron there are 10 pieces.
+On each dodecahedron there are 10 pieces. 10*20=200 pieces in total.
 
 Each dodecahedron has its own place to go
 
@@ -70,6 +210,8 @@ single rotation top, right handed, affecting top back dodecahedron
 Inverted:
 single rotation top, left handed
 [A'2, C, B', I, B', A', B, I', B', A, B', C', B, F, B', C, B, F', I, J', I', J, E, J', I, J, E', J, K, J', F', J, K', J', F, I', F, B', C', B, F', B', C, B, A', B, I, B', A, B, I', B', I, F', J, K, J', F, J, K', J', E, J', I', J, E', J', I, J, I', B2, C', A2, D'2, G', K2, J, L', J2, E, A', E', A, B, A', E, A, B', A, C, A', F', A, C', A', F, E', J, E, J', I', J, E', J', I, J', L', J, F, J', L, J, F', E, F', A, C, A', F, A, C', A', B, A', E', A, B', A', E, A, E', F, J', L', J, F', J', L, J, I', J, E, J', I, J, E', J2, L, J', K'2, G, D2, E, K'2, J, L', H, L', K', L, H', L', K, L', J', L, G, L', J, L, G', H, C', H', C, D, C', H, C, D', C, A, C', G', C, A', C', G, H', G, L', J', L, G', L', J, L, K', L, H, L', K, L, H', L', H, G', C, A, C', G, C, A', C', D, C', H', C, D', C', H, C, H', L2, J', K2, E'2, A'2, D, C', H, C', A', C, H', C', A, C', D', C, B, C', D, C, B', H, I', H', I, F, I', H, I, F', I, J, I', B', I, J', I', B, H', B, C', D', C, B', C', D, C, A', C, H, C', A, C, H', C', H, B', I, J, I', B, I, J', I', F, I', H', I, F', I', H, I, H', C2, D', A2, E'2, K', J2, I, L', I2, F, A', F', A, C, A', F, A, C', A, D, A', B', A, D', A', B, F', I, F, I', H', I, F', I', H, I', L', I, B, I', L, I, B', F, B', A, D, A', B, A, D', A', C, A', F', A, C', A', F, A, F', B, I', L', I, B', I', L, I, H', I, F, I', H, I, F', I2, L, I', J'2, K, E'2, D'2, K, G', H, G', D', G, H', G', D, G', K', G, C, G', K, G, C', H, B', H', B, A, B', H, B, A', B, F, B', C', B, F', B', C, H', C, G', K', G, C', G', K, G, D', G, H, G', D, G, H', G', H, C', B, F, B', C, B, F', B', A, B', H', B, A', B', H, B, H', G2, K', D2, E'2, F'2, A, B'2, H, L', H', L, J, L', H, L, J', L, K, L', I', L, K', L', I, H', B, H, B', F', B, H', B', F, B', A', B, I, B', A, B, I', H, I', L, K, L', I, L, K', L', J, L', H', L, J', L', H, L, H', I, B', A', B, I', B', A, B, F', B, H, B', F, B, H', B, A', F2, E2, D2, C', G2, L, H', L'2, K, L', I', L, K', L', I, L', H', L, J, L', H, L, J', K, E', K', E, F, E', K, E, F', E, A, E', J', E, A', E', J, K', J, L', H', L, J', L', H, L, I', L, K, L', I, L, K', L', K, J', E, A, E', J, E, A', E', F, E', K', E, F', E', K, E, K', L'2, H, L', G'2, C, D2, E'2, A, F'2, I, L', I', L, K, L', I, L, K', L, G, L', J', L, G', L', J, I', F, I, F', E', F, I', F', E, F', A', F, J, F', A, F, J', I, J', L, G, L', J, L, G', L', K, L', I', L, K', L', I, L, I', J, F', A', F, J', F', A, F, E', F, I, F', E, F, I', F, A', E2, D2, A', C2, H, B', H'2, G, H', I', H, G', H', I, H', B', H, L, H', B, H, L', G, K', G', K, J, K', G, K, J', K, E, K', L', K, E', K', L, G', L, H', B', H, L', H', B, H, I', H, G, H', I, H, G', H', G, L', K, E, K', L, K, E', K', J, K', G', K, J', K', G, K, G', H'2, B, H', C'2, A, D2, K'2, E, J'2, I, H', I', H, G, H', I, H, G', H, C, H', L', H, C', H', L, I', J, I, J', K', J, I', J', K, J', E', J, L, J', E, J, L', I, L', H, C, H', L, H, C', H', G, H', I', H, G', H', I, H, I', L, J', E', J, L', J', E, J, K', J, I, J', K, J, I', J, E', K2, G, C', G2, K, J', K', J, I, J', K, J, I', J, F, J', L', J, F', J', L, K', G, K, G', H', G, K', G', H, G', C', G, L, G', C, G, L', K, L', J, F, J', L, J, F', J', I, J', K', J, I', J', K, J, K', L, G', C', G, L', G', C, G, H', G, K, G', H, G, K', G2, C, G', D2, E, K'2, J, L'2, H, C', H', C, D, C', H, C, D', C, A, C', G', C, A', C', G, H', L, H, L', K', L, H', L', K, L', J', L, G, L', J, L, G', H, G', C, A, C', G, C, A', C', D, C', H', C, D', C', H, C, H', G, L', J', L, G', L', J, L, K', L, H, L', K, L, H', L, J', K2, E', D'2, G, C', G2, K, J', K', J, I, J', K, J, I', J, F, J', L', J, F', J', L, K', G, K, G', H', G, K', G', H, G', C', G, L, G', C, G, L', K, L', J, F, J', L, J, F', J', I, J', K', J, I', J', K, J, K', L, G', C', G, L', G', C, G, H', G, K, G', H, G, K', G2, C, G', D2, A2, B'2, C, H'2, L, J', L', J, F, J', L, J, F', J, E, J', I', J, E', J', I, L', H, L, H', B', H, L', H', B, H', C', H, I, H', C, H, I', L, I', J, E, J', I, J, E', J', F, J', L', J, F', J', L, J, L', I, H', C', H, I', H', C, H, B', H, L, H', B, H, L', H, C', B2, A, B, F', B'2, C, B', I', B, C', B', I, B', F', B, H, B', F, B, H', C, G', C', G, L, G', C, G, L', G, K, G', H', G, K', G', H, C', H, B', F', B, H', B', F, B, I', B, C, B', I, B, C', B', C, H', G, K, G', H, G, K', G', L, G', C', G, L', G', C, G, C', B'2, F, B', A2, D'2, K, G'2, H, B', H', B, A, B', H, B, A', B, F, B', C', B, F', B', C, H', G, H, G', D', G, H', G', D, G', K', G, C, G', K, G, C', H, C', B, F, B', C, B, F', B', A, B', H', B, A', B', H, B, H', C, G', K', G, C', G', K, G, D', G, H, G', D, G, H', G, K', D2, E', D', A, D, A', D', A, D, A', E, A, D', A', D, A, D', A', D],
+
+Each dodecahedron needs to be placed into the correct location first, using megaminx algorithms.
 
 1.1.93
 3c38fe6353c4e2684257fa9137c89e61

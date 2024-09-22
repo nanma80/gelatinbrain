@@ -1,0 +1,86 @@
+home1=C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle
+stderr1=null
+imageFile_=C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\images.zip
+java.nio.file.NoSuchFileException: C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\images.zip
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:199)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1849)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1279)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:710)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:143)
+	at jzzz.CMainFrame.<init>(CMainFrame.java:26)
+	at jzzz.CMainFrame$CRunnable.run(CMainFrame.java:150)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+init_ 2,1229,813,java.awt.Dimension[width=1229,height=813]
+CZzzFile.LoadFile loaded C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\sessions\.default.zzz,258
+profile name=GL4bc
+getGLImplBaseClassName() =jogamp.opengl.gl4.GL4bc
+capabilities=GLCaps[rgba 8/8/8/0, opaque, accum-rgba 0/0/0/0, dp/st/ms 16/0/0, dbl, mono  , hw, GLProfile[GL4bc/GL4bc.hw], on-scr[.]]
+getHardwareAccelerated true
+viewAngle=0.16514867741462683
+radius=1.25
+nearZ_=6.125
+midZ_ =7.5
+farZ_ =8.75
+h_ =1.0208334
+CPolyhedraType:0
+ :1,-1
+ :0,-1
+ :0,-1
+CTopFrame.init0 :0
+RestoreSession: 0,102
+LoadStack : 0,0
+LoadStack error : 0,0
+CTopFrame.init1 :0
+viewAngle=0.16514867741462683
+radius=1.25
+nearZ_=6.125
+midZ_ =7.5
+farZ_ =8.75
+h_ =1.0208334
+CMainFrame startjava.awt.Dimension[width=1229,height=813],java.awt.Dimension[width=1217,height=756]
+viewAngle=0.16514867741462683
+radius=1.25
+nearZ_=6.125
+midZ_ =7.5
+farZ_ =8.75
+h_ =1.0208334
+viewAngle=0.16514867741462683
+radius=1.25
+nearZ_=6.125
+midZ_ =7.5
+farZ_ =8.75
+h_ =1.0208334
+glShaderSource 0
+glCompileShader 0
+glShaderSource 0
+glCompileShader 0
+GLSL shader OK 1
+size:(0,0,502,502)
+glShaderSource 0
+glCompileShader 0
+glShaderSource 0
+glCompileShader 0
+GLSL shader OK 3
+size:(0,0,502,502)
+destroy_ 0
+InitSave st=0,ed=0,flags=0x102
+CZzzFile.SaveFile C:\Users\nanma\Documents\Rubik\gelatinbrain\permuzzle\sessions\.default.zzz
