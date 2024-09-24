@@ -34,6 +34,35 @@ Orientation is very complicated.
 
 In each dodecahedron, there are 15 pieces. 15*12=180 in total.
 
+3-cycle: center dodecahedron middle band, left -> center -> right
+[E', A, L, A', E, B'2, J', C, I', D, F, G', B, K', C2, F', L', A, B, D'2, J, C', K, B', E', H, D', I, C2, F', A', E],
+
+Inverted: <----
+[E', A, F, C'2, I', D, H', E, B, K', C, J', D2, B', A', L, F, C'2, K, B', G, F', D', I, C', J, B2, E', A, L', A', E],
+
+3-cycle: center dodecahedron top band behind, left back -> center back -> right back
+[B', H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B],
+
+Inverted: <----
+[B', K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B],
+
+
+Double rotate: center dodecahedron top band front two pieces.
+rotate down
+[B2, F, H'2, J', C, L', A, I, D', H, E', C2, I', B', K, F, H'2, D, I', G, F', C', J, H', E, I2, A', B, K', B2, A', H2, D, I', G, F', C', J, H', E, I'2, C, B, K', A', H2, J', C, L', A, I, D', H, E', C'2, F, B', K, B],
+
+Inverted: rotate up
+[B', K', B, F', C2, E, H', D, I', A', L, C', J, H'2, A, K, B', C', I2, E', H, J', C, F, G', I, D', H'2, A, B'2, K, B', A, I'2, E', H, J', C, F, G', I, D', H2, F', K', B, I, C'2, E, H', D, I', A', L, C', J, H2, F', B'2],
+
+
+dodecahedra 3-cycle (top center -> center -> right)
+[F, C', F', C, D', C', F, C, F', D],
+
+Inverted:
+[D', F, C', F', C, D, C', F, C, F'],
+
+
+=====
 backup
 [G', F', C', F, C, G],
 L,
@@ -172,8 +201,36 @@ with setup
 Inverted:
 [C, A, L', B, K', F', G, I', D, C'],
 
+diff orientation, the global rotation is around top-bottom:
+[I', D, F', G, J, C', E, H'],
+
+Inverted:
+[H, E', C, J', G', F, D', I],
+
+with setup:
+[K', I', D, F', G, J, C', E, H', K],
+
+Inverted:
+[K', H, E', C, J', G', F, D', I, K],
+
+with setup 2:
+[H, A'2, G', F, D', I, C, J', A, L', F2, C'],
+
+Inverted:
+[C, F'2, L, A', J, C', I', D, F', G, A2, H'],
+
 pure 3-cycle, but with reorientation:
 [G, K', B, L', A, J, C', I, D', G', C', J, H, G, F', C, J', D', I, A', L, H', K', B],
+
+global orientation changing algo can be used to construct commutators with normal moves
+[E', H, A', L, D, I', C, J', H, F', H', F, H, F', H', F, J, C', I, D', L', A, H', E, F', C, F, C', F', C, F, C'],
+
+another pure 3-cycle:
+[I', C', J, A', L, B, K', F, G', I, K', B, H', D, I', K, B', G', F, L', A, H, J', C', J2],
+
+pure 3-cycle, without global rotation:
+[C, F'2, D', I, E', H, A, L', F, G', I2, A', B', K, C, F'2, L, A', J, C', I', D, F', G, A2, H', B, K'],
+
 
 ====
 
