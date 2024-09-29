@@ -33,19 +33,49 @@ Even if the missing pieces exist, they are always solved. Each dodecahedron need
 Orientation is very complicated.
 
 In each dodecahedron, there are 15 pieces. 15*12=180 in total.
+Keep top as one dodecahedron (not two)
 
+------
 3-cycle: center dodecahedron middle band, left -> center -> right
 [E', A, L, A', E, B'2, J', C, I', D, F, G', B, K', C2, F', L', A, B, D'2, J, C', K, B', E', H, D', I, C2, F', A', E],
 
 Inverted: <----
 [E', A, F, C'2, I', D, H', E, B, K', C, J', D2, B', A', L, F, C'2, K, B', G, F', D', I, C', J, B2, E', A, L', A', E],
 
+-----
 3-cycle: center dodecahedron top band behind, left back -> center back -> right back
 [B', H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B],
 
 Inverted: <----
 [B', K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B],
 
+-----
+3-cycle: center dodecahedron top right front -> middle right front -> top face back
+[E'2, G', F, K', B, D, I', E, H', F2, D', A', L, C, E'2, I, D', J, C', F', G, E', H, D2, B', A, L', C],
+
+Inverted:
+[C', L, A', B, D'2, H', E, G', F, C, J', D, I', E2, C', L', A, D, F'2, H, E', I, D', B', K, F', G, E2],
+
+Mirror (dodecahedron):
+[D2, J, C', K, B', E', H, D', I, C'2, E, A, L', F', D2, H', E, G', F, C, J', D, I', E'2, B, A', L, F'],
+
+Inverted Mirror (dodecahedron):
+[F, L', A, B', E2, I, D', J, C', F', G, E', H, D'2, F, L, A', E', C2, I', D, H', E, B, K', C, J', D'2],
+
+-----
+3-cycle: center dodecahedron top band left -> right -> right back
+[B, K, B', C, F'2, D', I, E', H, A, L', F, G', I2, A', K', B, F, H'2, D, I', G, F', C', J, H', E, I2, A', B'],
+
+Inverted: <===
+[B, A, I'2, E', H, J', C, F, G', I, D', H2, F', B', K, A, I'2, G, F', L, A', H', E, I', D, F2, C', B, K', B'],
+
+Mirror (dodecahedron): <----
+[B', K', B, F', C2, E, H', D, I', A', L, C', J, H'2, A, K, B', C', I2, E', H, J', C, F, G', I, D', H'2, A, B],
+
+Inverted Mirror (dodecahedron): ---->
+[B', A', H2, D, I', G, F', C', J, H', E, I'2, C, B, K', A', H2, J', C, L', A, I, D', H, E', C'2, F, B', K, B],
+
+====
 
 Double rotate: center dodecahedron top band front two pieces.
 rotate down
@@ -54,7 +84,36 @@ rotate down
 Inverted: rotate up
 [B', K', B, F', C2, E, H', D, I', A', L, C', J, H'2, A, K, B', C', I2, E', H, J', C, F, G', I, D', H'2, A, B'2, K, B', A, I'2, E', H, J', C, F, G', I, D', H2, F', K', B, I, C'2, E, H', D, I', A', L, C', J, H2, F', B'2],
 
+-----
+Double rotate: center dodecahedron top band left and left back
+rotate down
+[B'2, I, C'2, L', A, G', F, H, E', C, J', A2, H', B', K, I, C'2, E, H', D, I', A', L, C', J, H2, F', B, K', B2, F', C2, E, H', D, I', A', L, C', J, H'2, A, B, K', F', C2, L', A, G', F, H, E', C, J', A'2, I, B', K],
 
+Inverted:
+[K', B, I', A2, J, C', E, H', F', G, A', L, C'2, F, K, B', A', H2, J', C, L', A, I, D', H, E', C'2, F, B'2, K, B', F, H'2, J', C, L', A, I, D', H, E', C2, I', K', B, H, A'2, J, C', E, H', F', G, A', L, C2, I', B2],
+
+Mirror (dodecahedron):
+[B2, H', F2, L, A', J, C', I', D, F', G, A'2, I, B, K', H', F2, D', I, E', H, A, L', F, G', I'2, C, B', K, B'2, C, F'2, D', I, E', H, A, L', F, G', I2, A', B', K, C, F'2, L, A', J, C', I', D, F', G, A2, H', B, K'],
+
+Inverted Mirror (dodecahedron):
+[K, B', H, A'2, G', F, D', I, C, J', A, L', F2, C', K', B, A, I'2, G, F', L, A', H', E, I', D, F2, C', B2, K', B, C', I2, G, F', L, A', H', E, I', D, F'2, H, K, B', I', A2, G', F, D', I, C, J', A, L', F'2, H, B'2],
+
+-----
+Double rotate: center dodecahedron top band left back and center back
+rotate down:
+[B', H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B2, I', A2, J, C', E, H', F', G, A', L, C'2, F, B, K', I', A2, G', F, D', I, C, J', A, L', F'2, H, B', K, B'],
+
+Inverted: rotate up
+[B, K', B, H', F2, L, A', J, C', I', D, F', G, A'2, I, K, B', F', C2, L', A, G', F, H, E', C, J', A'2, I, B'2, K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B],
+
+Mirror (dodecahedron):
+rotate down
+[B, I', A2, J, C', E, H', F', G, A', L, C'2, F, B, K', I', A2, G', F, D', I, C, J', A, L', F'2, H, B', K, B'2, H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B],
+
+Inverted Mirror (dodecahedron): rotate up
+[B', K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B2, K', B, H', F2, L, A', J, C', I', D, F', G, A'2, I, K, B', F', C2, L', A, G', F, H, E', C, J', A'2, I, B'],
+
+====
 dodecahedra 3-cycle (top center -> center -> right)
 [F, C', F', C, D', C', F, C, F', D],
 
@@ -63,6 +122,10 @@ Inverted:
 
 
 =====
+pure 3-cycle, without global rotation:
+[C, F'2, D', I, E', H, A, L', F, G', I2, A', B', K, C, F'2, L, A', J, C', I', D, F', G, A2, H', B, K'],
+
+
 backup
 [G', F', C', F, C, G],
 L,
