@@ -15,6 +15,11 @@ to send to gelatinbrain:
 f413d92eb3597992f219b97673eae914
 d32c6798ce31e51acb34e619cd89a7c7
 
+1.1.91
+818bda471b8c9c16be3606b4ce31e51a
+cbdde637cd32a7584f449d633bc49768
+2fc89b6c37d59e603dc476a7ec125ea0
+bc436e91dc237a85f40bd926b370790f
 
 ===
 
@@ -35,6 +40,8 @@ Orientation is very complicated.
 In each dodecahedron, there are 15 pieces. 15*12=180 in total.
 Keep top as one dodecahedron (not two)
 
+To identify a dodecahedron, we can check which color is missing on it.
+
 ------
 3-cycle: center dodecahedron middle band, left -> center -> right
 [E', A, L, A', E, B'2, J', C, I', D, F, G', B, K', C2, F', L', A, B, D'2, J, C', K, B', E', H, D', I, C2, F', A', E],
@@ -50,7 +57,7 @@ Inverted: <----
 [B', K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B],
 
 -----
-3-cycle: center dodecahedron top right front -> middle right front -> top face back
+3-cycle: center dodecahedron top right front -> middle right front -> top face BACK
 [E'2, G', F, K', B, D, I', E, H', F2, D', A', L, C, E'2, I, D', J, C', F', G, E', H, D2, B', A, L', C],
 
 Inverted:
@@ -92,14 +99,14 @@ rotate down
 Inverted:
 [K', B, I', A2, J, C', E, H', F', G, A', L, C'2, F, K, B', A', H2, J', C, L', A, I, D', H, E', C'2, F, B'2, K, B', F, H'2, J', C, L', A, I, D', H, E', C2, I', K', B, H, A'2, J, C', E, H', F', G, A', L, C2, I', B2],
 
-Mirror (dodecahedron):
+Mirror (dodecahedron): right side rotate down
 [B2, H', F2, L, A', J, C', I', D, F', G, A'2, I, B, K', H', F2, D', I, E', H, A, L', F, G', I'2, C, B', K, B'2, C, F'2, D', I, E', H, A, L', F, G', I2, A', B', K, C, F'2, L, A', J, C', I', D, F', G, A2, H', B, K'],
 
 Inverted Mirror (dodecahedron):
 [K, B', H, A'2, G', F, D', I, C, J', A, L', F2, C', K', B, A, I'2, G, F', L, A', H', E, I', D, F2, C', B2, K', B, C', I2, G, F', L, A', H', E, I', D, F'2, H, K, B', I', A2, G', F, D', I, C, J', A, L', F'2, H, B'2],
 
 -----
-Double rotate: center dodecahedron top band left back and center back
+Double rotate: center dodecahedron top band left back and center BACK
 rotate down:
 [B', H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B2, I', A2, J, C', E, H', F', G, A', L, C'2, F, B, K', I', A2, G', F, D', I, C, J', A, L', F'2, H, B', K, B'],
 
@@ -107,7 +114,7 @@ Inverted: rotate up
 [B, K', B, H', F2, L, A', J, C', I', D, F', G, A'2, I, K, B', F', C2, L', A, G', F, H, E', C, J', A'2, I, B'2, K, B', I, C'2, L', A, G', F, H, E', C, J', A2, H', K', B, C, F'2, L, A', J, C', I', D, F', G, A2, H', B],
 
 Mirror (dodecahedron):
-rotate down
+right back side rotate down
 [B, I', A2, J, C', E, H', F', G, A', L, C'2, F, B, K', I', A2, G', F, D', I, C, J', A, L', F'2, H, B', K, B'2, H, A'2, G', F, D', I, C, J', A, L', F2, C', B', K, H, A'2, J, C', E, H', F', G, A', L, C2, I', B, K', B],
 
 Inverted Mirror (dodecahedron): rotate up
@@ -120,8 +127,21 @@ dodecahedra 3-cycle (top center -> center -> right)
 Inverted:
 [D', F, C', F', C, D, C', F, C, F'],
 
+----
+dodecahedra 3-cycle (left -> center -> right)
+[E, B, D', B', D, E', D', B, D, B'],
 
-=====
+Inverted: <-----
+[B, D', B', D, E, D', B, D, B', E'],
+
+1.1.91
+818bda471b8c9c16be3606b4ce31e51a
+cbdde637cd32a7584f449d633bc49768
+2fc89b6c37d59e603dc476a7ec125ea0
+bc436e91dc237a85f40bd926b370790f
+
+
+===== backup ======
 pure 3-cycle, without global rotation:
 [C, F'2, D', I, E', H, A, L', F, G', I2, A', B', K, C, F'2, L, A', J, C', I', D, F', G, A2, H', B, K'],
 
