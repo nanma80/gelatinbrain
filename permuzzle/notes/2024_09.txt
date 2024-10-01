@@ -30,6 +30,56 @@ bc436e91dc237a85f40bd926b370790f
 3.1.42
 
 ====
+1.1.92
+
+==== back up ====
+
+F', C, F, C',
+[F', C, F, C']x5,
+
+dodecahedra 3-cycle (top center -> center -> right)
+[F, C', F', C, D', C', F, C, F', D],
+
+Inverted:
+[D', F, C', F', C, D, C', F, C, F'],
+
+----
+dodecahedra 3-cycle (left -> center -> right)
+[E, B, D', B', D, E', D', B, D, B'],
+
+Inverted: <-----
+[B, D', B', D, E, D', B, D, B', E'],
+
+Mirror (dodecahedron):
+[D', B', E, B, E', D, E, B', E', B],
+
+Inverted Mirror (dodecahedron):
+[B', E, B, E', D', E, B', E', B, D],
+
+-- basic 2 swap
+Original:
+[F', C, F, C'],
+
+Inverted:
+[C, F', C', F],
+
+Mirror (dodecahedron):
+[C, F', C', F],
+
+Inverted Mirror (dodecahedron):
+[F', C, F, C'],
+
+All dodecs remain in place, affecting 4 of them.
+[F', C', F, C, F', C', F, C2, F, C', F', C, F, C', F'],
+
+F',C',F,C,F',C',F,C,
+
+[F', C, F, C', F', C, F, C'],
+
+
+
+
+====
 
 1.1.91
 
