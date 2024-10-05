@@ -5,7 +5,7 @@ cd %BASEDIR%
 set "url=https://zqjxkvby.com/permuzzle/permuzzle.jar"
 set "downloadedFile=./permuzzle_download_temp.jar"
 set "imagesUrl=https://zqjxkvby.com/permuzzle/images.zip"
-set "imagesDownloadedFile=./images.zip"
+set "imagesDownloadedFile=./images_download_temp.zip"
 set "oldFile=./permuzzle/permuzzle.jar"
 
 curl -o "%downloadedFile%" "%url%"
@@ -32,7 +32,7 @@ if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
 	echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	echo There is an update. Replace old file
 	echo Please manually replace ./permuzzle/permuzzle.jar by permuzzle_download_temp.jar
-	echo Please manually unzip images.zip and save to ./permuzzle/images/
+	echo Please manually replace ./permuzzle/images.zip by images_download_temp.zip
 	echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	curl -o "%imagesDownloadedFile%" "%imagesUrl%"
