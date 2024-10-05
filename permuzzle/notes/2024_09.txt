@@ -54,17 +54,17 @@ Inverted Mirror (dodecahedron): ----->
 
 ----
 TOP BACK
-3-cycle: central dodec top BACK -> front right -> front bottom
-[B', A'2, H'2, E, F', H, F', H', F, H, F', H', F2, E', H'2, A, H', A', H, A, H', A', H'2, E, F'2, H, F, H', F', H, F, H', F, E', H2, A, H, A', H', A, H, A', H', A2, B],
+3-cycle: central dodec top BACK -> front top right -> front middle right
+[E, C2, L, C, L', C', L, C, L', C', L'2, A, B', L, B', L', B, L, B', L', B2, A', L2, C, L, C', L', C, L, C', L2, A, B'2, L, B, L', B', L, B, L', B, A', L2, C'2, E'],
 
 Inverted:
-[B', A'2, H, A, H', A', H, A, H', A', H'2, E, F', H, F', H', F, H, F', H', F2, E', H2, A, H, A', H', A, H, A', H2, E, F'2, H, F, H', F', H, F, H', F, E', H2, A2, B],
+[E, C2, L'2, A, B', L, B', L', B, L, B', L', B2, A', L'2, C, L', C', L, C, L', C', L'2, A, B'2, L, B, L', B', L, B, L', B, A', L2, C, L, C', L', C, L, C', L', C'2, E'],
 
 Mirror (dodecahedron):
-[B, A2, I2, D', C, I', C, I, C', I', C, I, C'2, D, I2, A', I, A, I', A', I, A, I2, D', C2, I', C', I, C, I', C', I, C', D, I'2, A', I', A, I, A', I', A, I, A'2, B'],
+[D', F'2, L', F', L, F, L', F', L, F, L2, A', B, L', B, L, B', L', B, L, B'2, A, L'2, F', L', F, L, F', L', F, L'2, A', B2, L', B', L, B, L', B', L, B', A, L'2, F2, D],
 
 Inverted Mirror (dodecahedron):
-[B, A2, I', A', I, A, I', A', I, A, I2, D', C, I', C, I, C', I', C, I, C'2, D, I'2, A', I', A, I, A', I', A, I'2, D', C2, I', C', I, C, I', C', I, C', D, I'2, A'2, B'],
+[D', F'2, L2, A', B, L', B, L, B', L', B, L, B'2, A, L2, F', L, F, L', F', L, F, L2, A', B2, L', B', L, B, L', B', L, B', A, L'2, F', L', F, L, F', L', F, L, F2, D],
 
 ----
 BACK FACE
@@ -133,6 +133,19 @@ Inverted: rotate up
 
 
 ==== back up ====
+
+3-cycle: central dodec top BACK -> front right -> front bottom
+[B', A'2, H'2, E, F', H, F', H', F, H, F', H', F2, E', H'2, A, H', A', H, A, H', A', H'2, E, F'2, H, F, H', F', H, F, H', F, E', H2, A, H, A', H', A, H, A', H', A2, B],
+
+Inverted:
+[B', A'2, H, A, H', A', H, A, H', A', H'2, E, F', H, F', H', F, H, F', H', F2, E', H2, A, H, A', H', A, H, A', H2, E, F'2, H, F, H', F', H, F, H', F, E', H2, A2, B],
+
+Mirror (dodecahedron):
+[B, A2, I2, D', C, I', C, I, C', I', C, I, C'2, D, I2, A', I, A, I', A', I, A, I2, D', C2, I', C', I, C, I', C', I, C', D, I'2, A', I', A, I, A', I', A, I, A'2, B'],
+
+Inverted Mirror (dodecahedron):
+[B, A2, I', A', I, A, I', A', I, A, I2, D', C, I', C, I, C', I', C, I, C'2, D, I'2, A', I', A, I, A', I', A, I'2, D', C2, I', C', I, C, I', C', I, C', D, I'2, A'2, B'],
+
 
 F', C, F, C',
 [F', C, F, C']x5,
