@@ -122,6 +122,14 @@ top back, back up. rotate to the right side
 Inverted: rotate to left
 [C2, J', B', J, B, J', B', J, B, J2, C', H, J', H, J, H', J', H, J, H'2, C, J'2, B', J', B, J, B', J', B, J'2, C', H2, J', H', J, H, J', H', J, H', C, J'2, L, J, L, B, L', B', L, B, L', B', L'2, A, F', L, F', L', F, L, F', L', F2, A', L2, B, L, B', L', B, L, B', L2, A, F'2, L, F, L', F', L, F, L', F, A', L2, J', L', C'2],
 
+----
+back face, bottom two pieces. rotate down (back face rotate to down face)
+[D'2, J, I, J'2, C, H', J, H', J', H, J, H', J', H2, C', J'2, G, J', G', J, G, J', G', J'2, C, H'2, J, H, J', H', J, H, J', H, C', J2, G, J, G', J', G, J, G', J', I', J', I2, D', K, I', K, I, K', I', K, I, K'2, D, I2, G', I, G, I', G', I, G, I2, D', K2, I', K', I, K, I', K', I, K', D, I'2, G', I', G, I, G', I', G, I, D2],
+
+Inverted: rotate up
+[D'2, I', G', I, G, I', G', I, G, I2, D', K, I', K, I, K', I', K, I, K'2, D, I'2, G', I', G, I, G', I', G, I'2, D', K2, I', K', I, K, I', K', I, K', D, I'2, J, I, J, G, J', G', J, G, J', G', J'2, C, H', J, H', J', H, J, H', J', H2, C', J2, G, J, G', J', G, J, G', J2, C, H'2, J, H, J', H', J, H, J', H, C', J2, I', J', D2],
+
+
 
 
 ==== back up ====
