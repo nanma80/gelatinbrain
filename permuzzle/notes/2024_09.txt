@@ -36,6 +36,48 @@ a31c0736a09e143dafe6e8cb135ea1bc
 3.1.42
 
 ====
+1.1.94
+
+
+==== backup ====
+all dodecs in place. Affecting 4
+[E, D', E', D, E, D', E', D],
+
+Inverted:
+[D', E, D, E', D', E, D, E'],
+
+diff orientation
+Mirror (dodecahedron):
+[E', F, E, F', E', F, E, F'],
+
+Inverted Mirror (dodecahedron):
+[F, E', F', E, F, E', F', E],
+
+diff setup
+[A', C', G, H', G', H, G, H', G', H, C, A],
+
+Inverted:
+[A', C', H', G, H, G', H', G, H, G', C, A],
+
+setup 2
+[D'2, G, C', G', C, G, C', G', C, D2],
+
+Inverted:
+[D'2, C', G, C, G', C', G, C, G', D2],
+
+pure 3-cycle:
+[E', F, E, F', E', F, E, F', D'2, G, C', G', C, G, C', G', C, D2, F, E', F', E, F, E', F', E, D'2, C', G, C, G', C', G, C, G', D2],
+
+from commutator:
+[E', F, E, F', E', F, E, F'],
+[D'2, G, C', G', C, G, C', G', C, D2],
+[F, E', F', E, F, E', F', E],
+[D'2, C', G, C, G', C', G, C, G', D2],
+
+
+
+
+====
 1.1.92
 
 ----
