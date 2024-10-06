@@ -21,6 +21,12 @@ cbdde637cd32a7584f449d633bc49768
 2fc89b6c37d59e603dc476a7ec125ea0
 bc436e91dc237a85f40bd926b370790f
 
+1.1.92
+a31c0736a09e143dafe6e8cb135ea1bc
+43b69181237a85f40b2d26b24c7986f2
+0da1467a8cef16d22c7f98d331f31ac9
+34e619cd32a7584fb09d623bc4e56884
+
 ===
 
 1.1.91
@@ -129,7 +135,11 @@ back face, bottom two pieces. rotate down (back face rotate to down face)
 Inverted: rotate up
 [D'2, I', G', I, G, I', G', I, G, I2, D', K, I', K, I, K', I', K, I, K'2, D, I'2, G', I', G, I, G', I', G, I'2, D', K2, I', K', I, K, I', K', I, K', D, I'2, J, I, J, G, J', G', J, G, J', G', J'2, C, H', J, H', J', H, J, H', J', H2, C', J2, G, J, G', J', G, J, G', J2, C, H'2, J, H, J', H', J, H, J', H, C', J2, I', J', D2],
 
-
+1.1.92
+a31c0736a09e143dafe6e8cb135ea1bc
+43b69181237a85f40b2d26b24c7986f2
+0da1467a8cef16d22c7f98d331f31ac9
+34e619cd32a7584fb09d623bc4e56884
 
 
 ==== back up ====
