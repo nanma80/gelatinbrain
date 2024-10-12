@@ -41,18 +41,18 @@ a31c0736a09e143dafe6e8cb135ea1bc
 Each dodec has 20 pieces.
 
 1 top vertex. Solve first, like a kilominx
-3 pieces around the top vertex
-6 pieces on the outer 3 faces
-6 pieces around the side 3 faces
-3 pieces on the 3 more faces
-1 piece on the inside
+3 pieces around the top vertex, level 1
+6 pieces on the outer 3 faces, level 2
+6 pieces around the side 3 faces, level 3
+3 pieces on the 3 more faces, level 4
+1 piece on the inside, anti-tip
 
 ---
 
 First solve the top vertices like kilominx. Later we will not move these pieces.
 
----
-
+=======
+LEVEL 1
 3-cycle right hand rotation front left --> front right -> top back
 [D, C, B', C2, D'2, A2, B', C, B, C', B', C, B, C', A'2, E, K', E', K, E, K', E', K, A2, C, B', C', B, C, B', C', B, A'2, K', E, K, E', K', E, K, E', D2, C'2, B, C', D'],
 
@@ -60,6 +60,16 @@ Inverted: left hand rotation
 [D, C, B', C2, D'2, E, K', E', K, E, K', E', K, A2, B', C, B, C', B', C, B, C', A'2, K', E, K, E', K', E, K, E', A2, C, B', C', B, C, B', C', B, A'2, D2, C'2, B, C', D'],
 
 ----
+LEVEL 1
+top left, top right, rotate down
+[A', C', G, C'2, A2, E', F, E, F', E', F, E, F', D'2, G, C', G', C, G, C', G', C, D2, F, E', F', E, F, E', F', E, D'2, C', G, C, G', C', G, C, G', D2, A'2, C2, G', C, A, E, K, G', K2, E'2, A, F', A', F, A, F', A', F, D2, G', K, G, K', G', K, G, K', D'2, F', A, F, A', F', A, F, A', D2, K, G', K', G, K, G', K', G, D'2, E2, K'2, G, K', E'],
+
+Inverted: rotate up
+[E, K, G', K2, E'2, D2, G', K, G, K', G', K, G, K', D'2, A, F', A', F, A, F', A', F, D2, K, G', K', G, K, G', K', G, D'2, F', A, F, A', F', A, F, A', E2, K'2, G, K', E', A', C', G, C'2, A2, D'2, G, C', G', C, G, C', G', C, D2, E', F, E, F', E', F, E, F', D'2, C', G, C, G', C', G, C, G', D2, F, E', F', E, F, E', F', E, A'2, C2, G', C, A],
+
+
+=====
+LEVEL 2
 3-cycle: top front dodec. top back -> top right -> front left bottom
 [D, C', D2, E'2, F, J', F', J, F, J', F', J, A2, C', D, C, D', C', D, C, D', A'2, J', F, J, F', J', F, J, F', A2, D, C', D', C, D, C', D', C, A'2, E2, D'2, C, D'],
 
@@ -73,6 +83,178 @@ Inverted Mirror (dodecahedron): left side going up
 [E', F, E'2, D2, A'2, F, E', F', E, F, E', F', E, A2, C', G, C, G', C', G, C, G', A'2, E', F, E, F', E', F, E, F', A2, G, C', G', C, G, C', G', C, D'2, E2, F', E],
 
 ----
+level 1 + 2 x level 2
+3-cycle, top front dodec. left front bottom -> right front bottom -> right middle: ---> right
+[D', E2, F'2, A2, D', E, D, E', D', E, D, E', A'2, B, I', B', I, B, I', B', I, A2, E, D', E', D, E, D', E', D, A'2, I', B, I, B', I', B, I, B', F2, E'2, D],
+
+Inverted: <--- right
+[D', E2, F'2, B, I', B', I, B, I', B', I, A2, D', E, D, E', D', E, D, E', A'2, I', B, I, B', I', B, I, B', A2, E, D', E', D, E, D', E', D, A'2, F2, E'2, D],
+
+Mirror (dodecahedron): left <---
+[E, D'2, C2, A'2, E, D', E', D, E, D', E', D, A2, B', H, B, H', B', H, B, H', A'2, D', E, D, E', D', E, D, E', A2, H, B', H', B, H, B', H', B, C'2, D2, E'],
+
+Inverted Mirror (dodecahedron): left --->
+[E, D'2, C2, B', H, B, H', B', H, B, H', A'2, E, D', E', D, E, D', E', D, A2, H, B', H', B, H, B', H', B, A'2, D', E, D, E', D', E, D, E', A2, C'2, D2, E'],
+
+----
+LEVEL 2
+double rotation top right, middle right, rotate outward
+[E', F', B', C, B'2, F2, E', J, E, J', E', J, E, J', A'2, C, B', C', B, C, B', C', B, A2, J, E', J', E, J, E', J', E, A'2, B', C, B, C', B', C, B, C', A2, F'2, B2, C', B, F, E, D, C', D2, E'2, F, J', F', J, F, J', F', J, A2, C', D, C, D', C', D, C, D', A'2, J', F, J, F', J', F, J, F', A2, D, C', D', C, D, C', D', C, A'2, E2, D'2, C, D'],
+
+Inverted: inward
+[D, C', D2, E'2, A2, C', D, C, D', C', D, C, D', A'2, F, J', F', J, F, J', F', J, A2, D, C', D', C, D, C', D', C, A'2, J', F, J, F', J', F, J, F', E2, D'2, C, D', E', F', B', C, B'2, F2, A'2, C, B', C', B, C, B', C', B, A2, E', J, E, J', E', J, E, J', A'2, B', C, B, C', B', C, B, C', A2, J, E', J', E, J, E', J', E, F'2, B2, C', B, F, E],
+
+Mirror (dodecahedron): left side outward
+[D, C, B, F', B2, C'2, D, G', D', G, D, G', D', G, A2, F', B, F, B', F', B, F, B', A'2, G', D, G, D', G', D, G, D', A2, B, F', B', F, B, F', B', F, A'2, C2, B'2, F, B', C', D', E', F, E'2, D2, C', G, C, G', C', G, C, G', A'2, F, E', F', E, F, E', F', E, A2, G, C', G', C, G, C', G', C, A'2, E', F, E, F', E', F, E, F', A2, D'2, E2, F', E],
+
+Inverted Mirror (dodecahedron): left side inward
+[E', F, E'2, D2, A'2, F, E', F', E, F, E', F', E, A2, C', G, C, G', C', G, C, G', A'2, E', F, E, F', E', F, E, F', A2, G, C', G', C, G, C', G', C, D'2, E2, F', E, D, C, B, F', B2, C'2, A2, F', B, F, B', F', B, F, B', A'2, D, G', D', G, D, G', D', G, A2, B, F', B', F, B, F', B', F, A'2, G', D, G, D', G', D, G, D', C2, B'2, F, B', C', D'],
+
+
+==========
+LEVEL 3
+symmetric 3-cycle: right side top left -> top right -> level 3 right side: ---->
+[A, E', J, E'2, A2, B', C, B, C', B', C, B, C', F'2, J, E', J', E, J, E', J', E, F2, C, B', C', B, C, B', C', B, F'2, E', J, E, J', E', J, E, J', F2, A'2, E2, J', E, A'],
+
+Inverted: right side <----
+[A, E', J, E'2, A2, F'2, J, E', J', E, J, E', J', E, F2, B', C, B, C', B', C, B, C', F'2, E', J, E, J', E', J, E, J', F2, C, B', C', B, C, B', C', B, A'2, E2, J', E, A'],
+
+Mirror (dodecahedron): left side <----
+[A', D, G', D2, A'2, B, F', B', F, B, F', B', F, C2, G', D, G, D', G', D, G, D', C'2, F', B, F, B', F', B, F, B', C2, D, G', D', G, D, G', D', G, C'2, A2, D'2, G, D', A],
+
+Inverted Mirror (dodecahedron): left side ---->
+[A', D, G', D2, A'2, C2, G', D, G, D', G', D, G, D', C'2, B, F', B', F, B, F', B', F, C2, D, G', D', G, D, G', D', G, C'2, F', B, F, B', F', B, F, B', A2, D'2, G, D', A],
+
+----
+LEVEL 3
+double rotation (affecting top right) bottom right, rotate front
+[A2, B, I, J', I2, B'2, A, C', A', C, A, C', A', C, F2, J', I, J, I', J', I, J, I', F'2, C', A, C, A', C', A, C, A', F2, I, J', I', J, I, J', I', J, F'2, B2, I'2, J, I', B', A', E', J, E'2, A2, B', C, B, C', B', C, B, C', F'2, J, E', J', E, J, E', J', E, F2, C, B', C', B, C, B', C', B, F'2, E', J, E, J', E', J, E, J', F2, A'2, E2, J', E, A'],
+
+Inverted: rotate back
+[A, E', J, E'2, A2, F'2, J, E', J', E, J, E', J', E, F2, B', C, B, C', B', C, B, C', F'2, E', J, E, J', E', J, E, J', F2, C, B', C', B, C, B', C', B, A'2, E2, J', E, A, B, I, J', I2, B'2, F2, J', I, J, I', J', I, J, I', F'2, A, C', A', C, A, C', A', C, F2, I, J', I', J, I, J', I', J, F'2, C', A, C, A', C', A, C, A', B2, I'2, J, I', B', A'2],
+
+Mirror (dodecahedron): left side rotate front
+[A'2, B', H', G, H'2, B2, A', F, A, F', A', F, A, F', C'2, G, H', G', H, G, H', G', H, C2, F, A', F', A, F, A', F', A, C'2, H', G, H, G', H', G, H, G', C2, B'2, H2, G', H, B, A, D, G', D2, A'2, B, F', B', F, B, F', B', F, C2, G', D, G, D', G', D, G, D', C'2, F', B, F, B', F', B, F, B', C2, D, G', D', G, D, G', D', G, C'2, A2, D'2, G, D', A],
+
+Inverted Mirror (dodecahedron): left side rotate back
+[A', D, G', D2, A'2, C2, G', D, G, D', G', D, G, D', C'2, B, F', B', F, B, F', B', F, C2, D, G', D', G, D, G', D', G, C'2, F', B, F, B', F', B, F, B', A2, D'2, G, D', A', B', H', G, H'2, B2, C'2, G, H', G', H, G, H', G', H, C2, A', F, A, F', A', F, A, F', C'2, H', G, H, G', H', G, H, G', C2, F, A', F', A, F, A', F', A, B'2, H2, G', H, B, A2],
+
+=======
+LEVEL 4
+3-cycle: top right -> left bottom -> bottom back (level 4)
+[A'2, C, B, C', D, C'2, B2, F', I, F, I', F', I, F, I', A'2, D, C', D', C, D, C', D', C, A2, I, F', I', F, I, F', I', F, A'2, C', D, C, D', C', D, C, D', A2, B'2, C2, D', C, B', C', A2],
+
+Inverted: 
+[A'2, C, B, C', D, C'2, B2, A'2, D, C', D', C, D, C', D', C, A2, F', I, F, I', F', I, F, I', A'2, C', D, C, D', C', D, C, D', A2, I, F', I', F, I, F', I', F, B'2, C2, D', C, B', C', A2],
+
+Mirror (dodecahedron): left top -> right bottom -> bottom back
+[A2, F', B', F, E', F2, B'2, C, H', C', H, C, H', C', H, A2, E', F, E, F', E', F, E, F', A'2, H', C, H, C', H', C, H, C', A2, F, E', F', E, F, E', F', E, A'2, B2, F'2, E, F', B, F, A'2],
+
+Inverted Mirror (dodecahedron):
+[A2, F', B', F, E', F2, B'2, A2, E', F, E, F', E', F, E, F', A'2, C, H', C', H, C, H', C', H, A2, F, E', F', E, F, E', F', E, A'2, H', C, H, C', H', C, H, C', B2, F'2, E, F', B, F, A'2],
+
+----
+LEVEL 4
+double rotation top right, bottom back left handed
+[A, F'2, I', H', C, H'2, I2, F', J, F, J', F', J, F, J', B'2, C, H', C', H, C, H', C', H, B2, J, F', J', F, J, F', J', F, B'2, H', C, H, C', H', C, H, C', B2, I'2, H2, C', H, I, F, A, C', A2, F'2, I, J', I', J, I, J', I', J, B2, C', A, C, A', C', A, C, A', B'2, J', I, J, I', J', I, J, I', B2, A, C', A', C, A, C', A', C, B'2, F2, A'2, C, A', F, A'],
+
+Inverted: bottom back right handed
+[A, F', A, C', A2, F'2, B2, C', A, C, A', C', A, C, A', B'2, I, J', I', J, I, J', I', J, B2, A, C', A', C, A, C', A', C, B'2, J', I, J, I', J', I, J, I', F2, A'2, C, A', F', I', H', C, H'2, I2, B'2, C, H', C', H, C, H', C', H, B2, F', J, F, J', F', J, F, J', B'2, H', C, H, C', H', C, H, C', B2, J, F', J', F, J, F', J', F, I'2, H2, C', H, I, F2, A'],
+
+=======
+LEVEL 5
+3-cycle: top right -> bottom right -> anti tip
+[A2, B, F', J, F'2, B2, H', C, H, C', H', C, H, C', I'2, J, F', J', F, J, F', J', F, I2, C, H', C', H, C, H', C', H, I'2, F', J, F, J', F', J, F, J', I2, B'2, F2, J', F, B', A'2],
+
+Inverted:
+[A2, B, F', J, F'2, B2, I'2, J, F', J', F, J, F', J', F, I2, H', C, H, C', H', C, H, C', I'2, F', J, F, J', F', J, F, J', I2, C, H', C', H, C, H', C', H, B'2, F2, J', F, B', A'2],
+
+Mirror (dodecahedron):
+[A'2, B', C, G', C2, B'2, I, F', I', F, I, F', I', F, H2, G', C, G, C', G', C, G, C', H'2, F', I, F, I', F', I, F, I', H2, C, G', C', G, C, G', C', G, H'2, B2, C'2, G, C', B, A2],
+
+Inverted Mirror (dodecahedron):
+[A'2, B', C, G', C2, B'2, H2, G', C, G, C', G', C, G, C', H'2, I, F', I', F, I, F', I', F, H2, C, G', C', G, C, G', C', G, H'2, F', I, F, I', F', I, F, I', B2, C'2, G, C', B, A2],
+
+----
+LEVEL 5
+double rotation anti tip rotation CCW (from back view), affecting bottom right
+[E', F', B2, H, L, J', L2, H'2, B, C', B', C, B, C', B', C, I2, J', L, J, L', J', L, J, L', I'2, C', B, C, B', C', B, C, B', I2, L, J', L', J, L, J', L', J, I'2, H2, L'2, J, L', H', B', F', J, F'2, B2, H', C, H, C', H', C, H, C', I'2, J, F', J', F, J, F', J', F, I2, C, H', C', H, C, H', C', H, I'2, F', J, F, J', F', J, F, J', I2, B'2, F2, J', F, B', F, E],
+
+Inverted Mirror (dodecahedron):
+[E', F', B, F', J, F'2, B2, I'2, J, F', J', F, J, F', J', F, I2, H', C, H, C', H', C, H, C', I'2, F', J, F, J', F', J, F, J', I2, C, H', C', H, C, H', C', H, B'2, F2, J', F, B, H, L, J', L2, H'2, I2, J', L, J, L', J', L, J, L', I'2, B, C', B', C, B, C', B', C, I2, L, J', L', J, L, J', L', J, I'2, C', B, C, B', C', B, C, B', H2, L'2, J, L', H', B'2, F, E],
+
+
+----
+
+
+
+==== backup ====
+double rotation
+
+LEVEL 1
+top left, top right, rotate down
+[A', C', G, C'2, A2, E', F, E, F', E', F, E, F', D'2, G, C', G', C, G, C', G', C, D2, F, E', F', E, F, E', F', E, D'2, C', G, C, G', C', G, C, G', D2, A'2, C2, G', C, A, E, K, G', K2, E'2, A, F', A', F, A, F', A', F, D2, G', K, G, K', G', K, G, K', D'2, F', A, F, A', F', A, F, A', D2, K, G', K', G, K, G', K', G, D'2, E2, K'2, G, K', E'],
+
+Inverted: rotate up
+[E, K, G', K2, E'2, D2, G', K, G, K', G', K, G, K', D'2, A, F', A', F, A, F', A', F, D2, K, G', K', G, K, G', K', G, D'2, F', A, F, A', F', A, F, A', E2, K'2, G, K', E', A', C', G, C'2, A2, D'2, G, C', G', C, G, C', G', C, D2, E', F, E, F', E', F, E, F', D'2, C', G, C, G', C', G, C, G', D2, F, E', F', E, F, E', F', E, A'2, C2, G', C, A],
+
+----
+LEVEL 2
+double rotation top right, middle right, rotate outward
+[E', F', B', C, B'2, F2, E', J, E, J', E', J, E, J', A'2, C, B', C', B, C, B', C', B, A2, J, E', J', E, J, E', J', E, A'2, B', C, B, C', B', C, B, C', A2, F'2, B2, C', B, F, E, D, C', D2, E'2, F, J', F', J, F, J', F', J, A2, C', D, C, D', C', D, C, D', A'2, J', F, J, F', J', F, J, F', A2, D, C', D', C, D, C', D', C, A'2, E2, D'2, C, D'],
+
+Inverted: inward
+[D, C', D2, E'2, A2, C', D, C, D', C', D, C, D', A'2, F, J', F', J, F, J', F', J, A2, D, C', D', C, D, C', D', C, A'2, J', F, J, F', J', F, J, F', E2, D'2, C, D', E', F', B', C, B'2, F2, A'2, C, B', C', B, C, B', C', B, A2, E', J, E, J', E', J, E, J', A'2, B', C, B, C', B', C, B, C', A2, J, E', J', E, J, E', J', E, F'2, B2, C', B, F, E],
+
+Mirror (dodecahedron): left side outward
+[D, C, B, F', B2, C'2, D, G', D', G, D, G', D', G, A2, F', B, F, B', F', B, F, B', A'2, G', D, G, D', G', D, G, D', A2, B, F', B', F, B, F', B', F, A'2, C2, B'2, F, B', C', D', E', F, E'2, D2, C', G, C, G', C', G, C, G', A'2, F, E', F', E, F, E', F', E, A2, G, C', G', C, G, C', G', C, A'2, E', F, E, F', E', F, E, F', A2, D'2, E2, F', E],
+
+Inverted Mirror (dodecahedron): left side inward
+[E', F, E'2, D2, A'2, F, E', F', E, F, E', F', E, A2, C', G, C, G', C', G, C, G', A'2, E', F, E, F', E', F, E, F', A2, G, C', G', C, G, C', G', C, D'2, E2, F', E, D, C, B, F', B2, C'2, A2, F', B, F, B', F', B, F, B', A'2, D, G', D', G, D, G', D', G, A2, B, F', B', F, B, F', B', F, A'2, G', D, G, D', G', D, G, D', C2, B'2, F, B', C', D'],
+
+----
+LEVEL 3
+double rotation top right, bottom right, rotate front
+[A2, B, I, J', I2, B'2, A, C', A', C, A, C', A', C, F2, J', I, J, I', J', I, J, I', F'2, C', A, C, A', C', A, C, A', F2, I, J', I', J, I, J', I', J, F'2, B2, I'2, J, I', B', A', E', J, E'2, A2, B', C, B, C', B', C, B, C', F'2, J, E', J', E, J, E', J', E, F2, C, B', C', B, C, B', C', B, F'2, E', J, E, J', E', J, E, J', F2, A'2, E2, J', E, A'],
+
+Inverted: rotate back
+[A, E', J, E'2, A2, F'2, J, E', J', E, J, E', J', E, F2, B', C, B, C', B', C, B, C', F'2, E', J, E, J', E', J, E, J', F2, C, B', C', B, C, B', C', B, A'2, E2, J', E, A, B, I, J', I2, B'2, F2, J', I, J, I', J', I, J, I', F'2, A, C', A', C, A, C', A', C, F2, I, J', I', J, I, J', I', J, F'2, C', A, C, A', C', A, C, A', B2, I'2, J, I', B', A'2],
+
+Mirror (dodecahedron): left side rotate front
+[A'2, B', H', G, H'2, B2, A', F, A, F', A', F, A, F', C'2, G, H', G', H, G, H', G', H, C2, F, A', F', A, F, A', F', A, C'2, H', G, H, G', H', G, H, G', C2, B'2, H2, G', H, B, A, D, G', D2, A'2, B, F', B', F, B, F', B', F, C2, G', D, G, D', G', D, G, D', C'2, F', B, F, B', F', B, F, B', C2, D, G', D', G, D, G', D', G, C'2, A2, D'2, G, D', A],
+
+Inverted Mirror (dodecahedron): left side rotate back
+[A', D, G', D2, A'2, C2, G', D, G, D', G', D, G, D', C'2, B, F', B', F, B, F', B', F, C2, D, G', D', G, D, G', D', G, C'2, F', B, F, B', F', B, F, B', A2, D'2, G, D', A', B', H', G, H'2, B2, C'2, G, H', G', H, G, H', G', H, C2, A', F, A, F', A', F, A, F', C'2, H', G, H, G', H', G, H, G', C2, F, A', F', A, F, A', F', A, B'2, H2, G', H, B, A2],
+
+----
+LEVEL 4
+double rotation top right, bottom back
+[A, F'2, I', H', C, H'2, I2, F', J, F, J', F', J, F, J', B'2, C, H', C', H, C, H', C', H, B2, J, F', J', F, J, F', J', F, B'2, H', C, H, C', H', C, H, C', B2, I'2, H2, C', H, I, F, A, C', A2, F'2, I, J', I', J, I, J', I', J, B2, C', A, C, A', C', A, C, A', B'2, J', I, J, I', J', I, J, I', B2, A, C', A', C, A, C', A', C, B'2, F2, A'2, C, A', F, A'],
+
+Inverted:
+[A, F', A, C', A2, F'2, B2, C', A, C, A', C', A, C, A', B'2, I, J', I', J, I, J', I', J, B2, A, C', A', C, A, C', A', C, B'2, J', I, J, I', J', I, J, I', F2, A'2, C, A', F', I', H', C, H'2, I2, B'2, C, H', C', H, C, H', C', H, B2, F', J, F, J', F', J, F, J', B'2, H', C, H, C', H', C, H, C', B2, J, F', J', F, J, F', J', F, I'2, H2, C', H, I, F2, A'],
+
+Mirror (dodecahedron):
+[A', C2, H, I, F', I2, H'2, C, G', C', G, C, G', C', G, B2, F', I, F, I', F', I, F, I', B'2, G', C, G, C', G', C, G, C', B2, I, F', I', F, I, F', I', F, B'2, H2, I'2, F, I', H', C', A', F, A'2, C2, H', G, H, G', H', G, H, G', B'2, F, A', F', A, F, A', F', A, B2, G, H', G', H, G, H', G', H, B'2, A', F, A, F', A', F, A, F', B2, C'2, A2, F', A, C', A],
+
+Inverted Mirror (dodecahedron):
+[A', C, A', F, A'2, C2, B'2, F, A', F', A, F, A', F', A, B2, H', G, H, G', H', G, H, G', B'2, A', F, A, F', A', F, A, F', B2, G, H', G', H, G, H', G', H, C'2, A2, F', A, C, H, I, F', I2, H'2, B2, F', I, F, I', F', I, F, I', B'2, C, G', C', G, C, G', C', G, B2, I, F', I', F, I, F', I', F, B'2, G', C, G, C', G', C, G, C', H2, I'2, F, I', H', C'2, A],
+
+----
+LEVEL 5
+double rotation anti tip rotation CCW (from back view), affecting bottom right
+[E', F', B2, H, L, J', L2, H'2, B, C', B', C, B, C', B', C, I2, J', L, J, L', J', L, J, L', I'2, C', B, C, B', C', B, C, B', I2, L, J', L', J, L, J', L', J, I'2, H2, L'2, J, L', H', B', F', J, F'2, B2, H', C, H, C', H', C, H, C', I'2, J, F', J', F, J, F', J', F, I2, C, H', C', H, C, H', C', H, I'2, F', J, F, J', F', J, F, J', I2, B'2, F2, J', F, B', F, E],
+
+Inverted Mirror (dodecahedron):
+[E', F', B, F', J, F'2, B2, I'2, J, F', J', F, J, F', J', F, I2, H', C, H, C', H', C, H, C', I'2, F', J, F, J', F', J, F, J', I2, C, H', C', H, C, H', C', H, B'2, F2, J', F, B, H, L, J', L2, H'2, I2, J', L, J, L', J', L, J, L', I'2, B, C', B', C, B, C', B', C, I2, L, J', L', J, L, J', L', J, I'2, C', B, C, B', C', B, C, B', H2, L'2, J, L', H', B'2, F, E],
+
+
+
+==== other backup ====
+3-cycle, level 1 + level 2 + level 4
+[A'2, C, B, C', D, C'2, B2, F', I, F, I', F', I, F, I', A'2, D, C', D', C, D, C', D', C, A2, I, F', I', F, I, F', I', F, A'2, C', D, C, D', C', D, C, D', A2, B'2, C2, D', C, B', C', A2],
+
+
 3-cycle, top front dodec. left front bottom -> right front bottom -> right middle
 [D', E2, F'2, A2, D', E, D, E', D', E, D, E', A'2, B, I', B', I, B, I', B', I, A2, E, D', E', D, E, D', E', D, A'2, I', B, I, B', I', B, I, B', F2, E'2, D],
 
@@ -88,20 +270,6 @@ Inverted Mirror (dodecahedron): left --->
 ---
 
 
-
-
-
-====
-double rotation
-
-front left, front right, rotate down
-[A', C', G, C'2, A2, E', F, E, F', E', F, E, F', D'2, G, C', G', C, G, C', G', C, D2, F, E', F', E, F, E', F', E, D'2, C', G, C, G', C', G, C, G', D2, A'2, C2, G', C, A, E, K, G', K2, E'2, A, F', A', F, A, F', A', F, D2, G', K, G, K', G', K, G, K', D'2, F', A, F, A', F', A, F, A', D2, K, G', K', G, K, G', K', G, D'2, E2, K'2, G, K', E'],
-
-Inverted: rotate up
-[E, K, G', K2, E'2, D2, G', K, G, K', G', K, G, K', D'2, A, F', A', F, A, F', A', F, D2, K, G', K', G, K, G', K', G, D'2, F', A, F, A', F', A, F, A', E2, K'2, G, K', E', A', C', G, C'2, A2, D'2, G, C', G', C, G, C', G', C, D2, E', F, E, F', E', F, E, F', D'2, C', G, C, G', C', G, C, G', D2, F, E', F', E, F, E', F', E, A'2, C2, G', C, A],
-
-
-==== backup ====
 all dodecs in place. Affecting 4
 [E, D', E', D, E, D', E', D],
 
