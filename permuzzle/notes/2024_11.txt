@@ -9,6 +9,30 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
+7.10.1
+42cc79ca5ce16ccd5fad394eb09d623b
+c4b2682bd09b6437c86a613cc27689ec
+1346a1b6436791c9237b85c30b1f26b2
+4c7986f20db946738ce916d32c63982d
+
+7.10.2
+fac6705fc9bb366efcfb427885f40bd9
+26934c7b86f20db946878ce816d32c67
+98d631ef1ac134e619e9328a583db09e
+623bc497682fd09b6437c89e613fc220
+
+7.11.1
+
+7.11.2
+===
+
+7.11.1
+
+
+
+7.11.2
+
+
 
 ===
 
@@ -178,5 +202,88 @@ bottom left rotating down
 
 ================
 7.10.2
-7.11.1
-7.11.2
+
+There are 2 orbits: 9 leftward triangles and 9 rightward triangles. 
+Every two triangles are paired up. They never move away and can be seen as one piece. 9 pieces in total.
+These two triangles always share two colors. The rotation of each piece is complicated. 
+Two triangles can rotate independently.
+
+1. permute pieces
+3-cycle: top left -> top right -> center right
+[B, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B'],
+
+Inverted:
+[B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'],
+
+2. fix orientation of leftward triangles. affecting rightward triangles
+top right rotate CW (left), center right CCW (right)
+[C, A'2, C, A, C', A, C', B'5, C, A', C, A', C', A2, C', B5],
+
+Inverted: top right rotate CCW (right), center right CW (left)
+[B'5, C, A'2, C, A, C', A, C', B5, C, A', C, A', C', A2, C'],
+
+3. fix parity for leftward triangles.
+center right CW (left)
+[A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B', A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B', A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B', A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B', A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B4, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'],
+
+Inverted: center right CCW (right)
+[B, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B'4, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A'],
+
+4. fix orientation of rightward triangles
+rightward triangle rotation. top right CCW (right), center top right CW (left)
+[B', C', A', B', A2, B', A', B, A', B, C, B', A, B', A, B, A'2, B, C', A, C, B2, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B', C, A'2, C, A, C', A, C', B'5, C, A', C, A', C', A2, C', B5],
+
+Inverted: top right CW (left), center top right CCW (right)
+[B'5, C, A'2, C, A, C', A, C', B5, C, A', C, A', C', A2, C', B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'2, C', A', C, B', A2, B', A', B, A', B, C', B', A, B', A, B, A'2, B, A, C, B],
+
+fac6705fc9bb366efcfb427885f40bd9
+26934c7b86f20db946878ce816d32c67
+98d631ef1ac134e619e9328a583db09e
+623bc497682fd09b6437c89e613fc220
+
+===========
+backup
+
+[B, C'2, B, C, B', C, B'],
+
+Inverted:
+[B, C', B, C', B', C2, B'],
+
+3-cycle in each orbit
+[B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A'],
+
+Inverted:
+[A, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B'],
+
+
+with setup:
+3-cycle: top left -> top right -> center right
+[B, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B'],
+
+Inverted:
+[B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'],
+
+mirror:
+[C', A', B', A2, B', A', B, A', B, C, B', A, B', A, B, A'2, B, C', A, C],
+
+Double rotate:
+Opposite rotation within a pair
+top right rotate inward, center right rotate outward
+[B', C', A', B', A2, B', A', B, A', B, C, B', A, B', A, B, A'2, B, C', A, C, B2, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B'],
+
+Inverted:
+[B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'2, C', A', C, B', A2, B', A', B, A', B, C', B', A, B', A, B, A'2, B, A, C, B],
+
+Sync rotation within a pair
+top right rotate inward, center right rotate outward
+[C, A'2, C, A, C', A, C', B'5, C, A', C, A', C', A2, C', B5],
+
+Inverted:
+[B'5, C, A'2, C, A, C', A, C', B5, C, A', C, A', C', A2, C'],
+
+
+rightward triangle rotation. top right CCW (right), center top right CW (left)
+[B', C', A', B', A2, B', A', B, A', B, C, B', A, B', A, B, A'2, B, C', A, C, B2, A, C, A'2, C, A, C', A, C', B', C, A', C, A', C', A2, C', B, A', B', C, A'2, C, A, C', A, C', B'5, C, A', C, A', C', A2, C', B5],
+
+Inverted: top right CW (left), center top right CCW (right)
+[B'5, C, A'2, C, A, C', A, C', B5, C, A', C, A', C', A2, C', B, A, B', C, A'2, C, A, C', A, C', B, C, A', C, A', C', A2, C', A', B'2, C', A', C, B', A2, B', A', B, A', B, C', B', A, B', A, B, A'2, B, A, C, B],
