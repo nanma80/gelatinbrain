@@ -17,6 +17,52 @@ to send to gelatinbrain:
 Each move x5 returns all pieces back to the original positions, in wrong orientations.
 Each move x15 is identity.
 
+1. solve upward triangles location
+
+3-cycle for up triangle, no rotation, affecting down:
+top left -> top right -> center
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'],
+
+Inverted:
+[A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+
+2. solve upward triangles orientation
+Double rotation of upward triangles. Bottom two rotating upward
+[A, B'2, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'5, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A5, B2, A'],
+
+Inverted: rotating downward
+[A, B'2, A'5, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A5, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', B2, A'],
+
+
+3. fix rotation parity
+Single rotation of an up triangle is possible, after a single move.
+bottom left rotating down
+[A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A4, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+
+Inverted:
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'4, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A],
+
+4. solve downward (inverted) triangles location
+top center -> middle right -> middle left, rotating bottom right
+[A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B],
+
+Inverted:
+[B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A'],
+
+5. solve downward triangles orientation
+top center CW (left), middle left CCW (right)
+[A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B, A'5, B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A4],
+
+Inverted: top center CCW (right), middle left CW (left)
+[A'4, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B, A5, B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A'],
+
+42cc79ca5ce16ccd5fad394eb09d623b
+c4b2682bd09b6437c86a613cc27689ec
+1346a1b6436791c9237b85c30b1f26b2
+4c7986f20db946738ce916d32c63982d
+
+
+===================
 backup
 two 5-cycles (5 up and 5 down):
 [B', C, B, C'],
@@ -30,8 +76,23 @@ diff cycle:
 with setup:
 [A2, B, C, B', C', A'2],
 
+Inverted:
+[A2, C, B, C', B', A'2],
+
+mirror:
+[A'2, C', B', C, B, A2],
+
+diff 5-cycle 2 (M shape):
+[C', B, C, B'],
+
 4 swaps:
 [A2, B, C, B', C', A'2, B', C, B, C'],
+
+two 3-cycles:
+[B, C', B', C, B', A, B, A'],
+
+mirror
+[C', B, C, B', C, A', C', A],
 
 3-cycle of up triangles, 4 cycle + 2 cycle of down:
 [A2, [B, C, B', C']x3, A'2, B', C, B, C'],
@@ -43,8 +104,7 @@ or
 with setup
 [A', B, A, B', A', B, A3, C, B, C', B', C, B, C', B', A'2, B', C, B, C', A', B', A, B, A', B', A],
 
-rotated: 
-up triangle 3-cycle, affecting downward. affecting orientation of all
+[too long] up triangle 3-cycle, affecting downward. affecting orientation of all
 top left -> top right -> center
 [C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C],
 
@@ -54,20 +114,69 @@ Inverted:
 mirror:
 [B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B'],
 
-double rotation of up triangle, affecting down: two bottom ones, rotate up
+
+[too long] double rotation of up triangle, affecting down: two bottom ones, rotate up
 [B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C],
 
 Inverted: rotate down
 [C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B'],
 
-Parity: single rotation of an up triangle may be possible, after a single move.
-Bottom right single rotate up
-[A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A4, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, C2, B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C'3, A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C],
-
-Inverted: bottom right single rotate down
-[C', B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C3, B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C'2, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, B, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A'4, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A],
 
 
+shorter 3-cycle for up triangle, no rotation, affecting down:
+top left -> top right -> center
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'],
+
+Inverted:
+[A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+
+mirror:
+[B', A', B, C', B, C, B', A', C, A, C', B, C', B', C, A],
+
+down triangle 5-cycle:
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B', A', B, C', B, C, B', A', C, A, C', B, C', B', C, A],
+
+Inverted:
+[A', C', B, C, B', C, A', C', A, B, C', B', C, B', A, B, A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+
+Double rotation in each orbit. Shorter:
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'5, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A5],
+
+3-cycle of down triangles, rotating one more:
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B', A', B, C', B, C, B', A', C, A, C', B, C', B', C, A],
+A',C',B',
+[A', C', B, C, B', C, A', C', A, B, C', B', C, B', A, B, A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+B,C,A,
+
+or:
+
+[C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B', A', B, C', B, C, B', A', C, A, C', B, C', B'2, A', C', B, C, B', C, A', C', A, B, C', B', C, B', A, B, A, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', B, C, A],
+
+3-cycle of inverted triangles:
+top center -> middle right -> middle left, rotating bottom right
+[A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B],
+
+Inverted:
+[B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A'],
+
+Double rotate inverted triangles:
+top center CW, middle left CCW
+[A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B, A'5, B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A4],
+
+Inverted: top center CCW, middle left CW
+[A'4, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C'2, B', A', C, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A', C, A, B, A5, B', A', C', A, B, A', C, A', C', A, B, C', B', C, A', C, A, C', B', C', B', C, A', C, A, C', B', A, B, A', C, A', C', A, B, C2, A, C', A, B', A', B, C, A', C', A, C', B, C, B, C, A', C', A, C', B, C, B', A', C, A, C', A, B', A'],
+
+Double rotation of upward triangles. Bottom two rotating upward
+[A, B'2, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A'5, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A5, B2, A'],
+
+Inverted: rotating downward
+[A, B'2, A'5, C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A5, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', B2, A'],
+
+Parity: single rotation of an up triangle is possible, after a single move.
+bottom left rotating down
+[A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A4, B, C', B', C, B', A, B, A', C', B, C, B', C, A', C', A', C, A, C', B, C', B', C, A, B', A', B, C', B, C, B', A', B, C', B', C, B', A, B, A', C', B, C, B', C, A', C'],
+
+================
 7.10.2
 7.11.1
 7.11.2
