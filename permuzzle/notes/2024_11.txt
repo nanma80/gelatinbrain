@@ -13,6 +13,61 @@ to send to gelatinbrain:
 ===
 
 7.10.1
+13 triangular pieces. 7 upward triangles, 6 downward triangles. Upward triangles stay upward, downward stay downward.
+Each move x5 returns all pieces back to the original positions, in wrong orientations.
+Each move x15 is identity.
+
+backup
+two 5-cycles (5 up and 5 down):
+[B', C, B, C'],
+
+Inverted:
+[C, B', C', B],
+
+diff cycle:
+[B, C, B', C'],
+
+with setup:
+[A2, B, C, B', C', A'2],
+
+4 swaps:
+[A2, B, C, B', C', A'2, B', C, B, C'],
+
+3-cycle of up triangles, 4 cycle + 2 cycle of down:
+[A2, [B, C, B', C']x3, A'2, B', C, B, C'],
+or equivalently,
+[A2, [C, B, C', B']x2, A'2, B', C, B, C'],
+or
+[A2, C, B, C', B', C, B, C', B', A'2, B', C, B, C'],
+
+with setup
+[A', B, A, B', A', B, A3, C, B, C', B', C, B, C', B', A'2, B', C, B, C', A', B', A, B, A', B', A],
+
+rotated: 
+up triangle 3-cycle, affecting downward. affecting orientation of all
+top left -> top right -> center
+[C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C],
+
+Inverted:
+[C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C],
+
+mirror:
+[B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B'],
+
+double rotation of up triangle, affecting down: two bottom ones, rotate up
+[B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C],
+
+Inverted: rotate down
+[C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B'],
+
+Parity: single rotation of an up triangle may be possible, after a single move.
+Bottom right single rotate up
+[A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A4, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, C2, B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C'3, A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C],
+
+Inverted: bottom right single rotate down
+[C', B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C3, B, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, B, A', B', A, B, A', B', C', A, C, A', B'2, A', C', A, C, A', C', A, C, B3, A, B', A', B, A, B', C'2, A', B', A, B, A', B'3, C', A', C, A, C', A', C, A, B2, A, C', A', C, B, A, B', A', B, A, B', C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, B, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A'4, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A, C', A, C, A', C', A, C3, B, A, B', A', B, A, B', A', C'2, A', B, A, B', C', A', C, A, C', A', C, A, C', A, C, A', C', A, C, B, A', B', A, C2, A, B, A', B', A, B, A', B', C'3, A', C, A, C', A', C, A],
+
+
 7.10.2
 7.11.1
 7.11.2
