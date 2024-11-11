@@ -22,15 +22,157 @@ fac6705fc9bb366efcfb427885f40bd9
 623bc497682fd09b6437c89e613fc220
 
 7.11.1
+af0819849c0cac26de6f1887f20db946
+7358e912d32c6798cec5e51bcb34e619
+cd2aa7524fba9d723bda977b2fc69b67
+37c89e613dc27689ec135ea1bc476e4f
 
 7.11.2
+48e8f46947d7ee645a3cff603dc27689
+ecbf5ea0bc436e91dcd77a84f40bd926
+b354798cf207b95673bce92fd3ee6799
+ce31e51acb34e619cd32a7584fb19dfe
+
+
 ===
 
-7.11.1
-
 
 
 7.11.2
+All pieces in one orbit
+
+first, solve the top left side and top right side, because they are hard to setup for the 3-cycle here.
+
+=====
+3-cycle:
+top right -> top left -> center left
+[C'4, A'2, C'5, B, A', B', A, C5, A, C'5, A', B, A, B', C5, A, C4],
+
+Inverted:
+[C'4, A', C'5, B, A', B', A, C5, A', C'5, A', B, A, B', C5, A2, C4],
+
+====
+double rotation
+center left CW (left), top left CCW (right)
+[B3, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'13],
+
+Inverted: center left CCW (right), top left CW (left)
+[B13, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B'3],
+
+====
+swap two piece:
+top left and center left
+[B2, A'5, C, B', C', B, A5, B', A'5, B', C, B, C', A5, B', A'5, C, B', C', B, A5, B', A'5, B', C, B, C', A5, B', A'5, C, B', C', B, A5, B', A'5, B', C, B, C', A5, B', A'5, C, B', C', B, A5, B', A'5, B', C, B, C', A5, B', A'5, C, B', C', B, A5, B', A'5, B', C, B, C', A5, B6],
+
+====
+single rotation:
+top left CCW (right)
+[B13, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'9, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B8],
+
+Inverted: top left CW (left)
+[B'8, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B9, A'5, C, B', C', B, A5, B'10, A'5, B', C, B, C', A5, B'13],
+
+48e8f46947d7ee645a3cff603dc27689
+ecbf5ea0bc436e91dcd77a84f40bd926
+b354798cf207b95673bce92fd3ee6799
+ce31e51acb34e619cd32a7584fb19dfe
+
+====
+backup
+
+[A'5, C, B', C', B, A5],
+B,
+[A'5, B', C, B, C', A5],
+B',
+
+
+[A'5, C, B', C', B, A5],
+B10,
+[A'5, B', C, B, C', A5],
+B'10,
+
+B',
+[[A'5, C, B', C', B, A5],
+B',
+[A'5, B', C, B, C', A5],
+B']x5,
+
+single rotation:
+B10,
+[[B3, A'5, C, B', C', B, A5, B10, A'5, B', C, B, C', A5, B'13],
+B]x10,
+B'10,
+
+
+7.11.1
+13 pieces. All in one orbit
+Each move x10 returns all pieces back in wrong orientation.
+Each move x30 is identity.
+Potentially two types of parity:
+- swapping two pieces
+- single rotation
+
+====
+3-cycle:
+top right -> top center -> bottom center
+[A2, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'2],
+
+Inverted:
+[A2, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'2],
+
+====
+Double rotation:
+bottom center CW (left) top center CCW (right)
+[A2, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'12],
+
+Inverted: bottom center CCW (right) top center CW (left)
+[A12, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'2],
+
+====
+swap two pieces: top center, bottom center
+[A, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A', B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A', B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A', B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A', B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A', B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A', B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A', B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A', B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A', B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A7],
+
+====
+rotate a single piece
+top center CCW (right)
+[A12, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9],
+
+Inverted: top center CW (left)
+[A'9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A9, B4, C', B', C, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, C', B, C, B', A2, B'3, A3, C', B, C, B', A'3, B3, A'2, B'3, A'10, B3, A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'4, A'12],
+
+af0819849c0cac26de6f1887f20db946
+7358e912d32c6798cec5e51bcb34e619
+cd2aa7524fba9d723bda977b2fc69b67
+37c89e613dc27689ec135ea1bc476e4f
+
+
+====
+backup
+4 cycle + 2 cycle
+[B, C', B', C],
+
+Inverted:
+[C', B, C, B'],
+
+with setup:
+A3, [B, C', B', C], A'3,
+
+with setup 2:
+[A2, B'3, A3, B, C', B', C, A'3, B3, A'2],
+
+Inverted:
+[A2, B'3, A3, C', B, C, B', A'3, B3, A'2],
+
+3-cycle:
+[A2, B'3, A3, B, C', B', C, A'3, B3, A'2],
+[B, C', B', C],
+[A2, B'3, A3, C', B, C, B', A'3, B3, A'2],
+[C', B, C, B'],
+
+or
+[A2, B'3, A3, B, C', B', C, A'3, B3, A'2, B, C', B', C, A2, B'3, A3, C', B, C, B', A'3, B3, A'2, C', B, C, B'],
+
+single swap:
 
 
 
