@@ -37,3 +37,5 @@ if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
 
 	curl -o "%imagesDownloadedFile%" "%imagesUrl%"
 )
+
+echo The current local date time is: %DATE% %TIME%
