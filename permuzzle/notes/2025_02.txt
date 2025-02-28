@@ -17,8 +17,31 @@ Black screen bug for the following two puzzles:
 3.39.4
 3.39.5
 
+=== solutions ===
 
 3.1.43
+
+
+There are 8 cubes. Each cube has 24 triangular pieces. The 6 pieces closest to the center are sticked together. They can be solved like a 2x2x2.
+
+==== 1. 2x2x2 phase to solve the innermost pieces ====
+The identity of the 2x2x2 cube is the opposite of the 6 innermost pieces.
+
+swapping URF and URB
+[R, U'2, R', U', R, U'2, L', U, R', U', L],
+
+Inverted:
+[L', U, R, U', L, U2, R', U, R, U2, R'],
+
+Double rotation:
+URF right handed, DRF left handed
+[U', F, U, F', U', F, U, F', R, F, U', F', U, F, U', F', U, R'],
+
+Inverted:
+[R, U', F, U, F', U', F, U, F', R', F, U', F', U, F, U', F', U],
+
+
+backup
 
 
 
