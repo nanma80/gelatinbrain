@@ -9,6 +9,11 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
+3.1.43
+2b79d39c0a39b1960557b18c6437c89e
+6165c27389ed135ea148436f91dc237a
+85ed0bdb26b24c6a86ef0d9946a98ce9
+16d32c6798ce31e51acb34e7199432cd
 
 ===
 3.1.43
@@ -92,6 +97,10 @@ Mirror (cube; plane containing FR, BL edges): UB -> UF -> FD
 Inverted Mirror (cube; plane containing FR, BL edges):
 [F', L', B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', U, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, U'2, B', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', U, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, U', B, U'2, R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', R', B, R, B', U', B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, B, R', B', R, U', B', U, F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', U', R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, B, U, B, L, F],
 
+2b79d39c0a39b1960557b18c6437c89e
+6165c27389ed135ea148436f91dc237a
+85ed0bdb26b24c6a86ef0d9946a98ce9
+16d32c6798ce31e51acb34e7199432cd
 
 =====
 backup
