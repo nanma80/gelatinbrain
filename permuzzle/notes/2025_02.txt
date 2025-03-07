@@ -9,11 +9,11 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
-3.1.43
-2b79d39c0a39b1960557b18c6437c89e
-6165c27389ed135ea148436f91dc237a
-85ed0bdb26b24c6a86ef0d9946a98ce9
-16d32c6798ce31e51acb34e7199432cd
+3.39.6
+5c82f8605fcaeb61500c179dec135ea1
+bc626eb7dc237a85f4ffd927b34c7986
+f214b944738be919d33a678bcef2e518
+cb34e619cd32a7584fb09d623bf49708
 
 ===
 3.1.43
@@ -25,13 +25,53 @@ Black screen bug for the following two puzzles:
 
 === solutions ===
 
+3.39.6
 3.39.6 is probably the easier than .5, which is easier than .4
+
+There are 8 cubies. Each cubie has 4*3+2*3=18 triangles.
+Each move x2 is like the move from a helicopter cube.
+
+3 cycle:
+UFR cubie, U-L -> U-B -> DBL cubie, DL
+[LB'2, UR, LU', BR'2, UB'2, BR'2, UR', FU', LB, DL'2, LB, DL'2, FL'2, DL'2, FL'2, DL'2, FL'2, LB', FL'2, LU'2, FL'2, LU'2, FL'2, LU'2, LB, FL'2, DL'2, FL'2, DL'2, FL'2, DL'2, LB', LU'2, FL'2, LU'2, FL'2, LU'2, FL'2, DL'2, LB', FU, UR, BR'2, UB'2, BR'2, LU, UR', LB'2],
+
+Inverted:
+[LB2, UR, LU', BR2, UB2, BR2, UR', FU', LB, DL2, FL2, LU2, FL2, LU2, FL2, LU2, LB, DL2, FL2, DL2, FL2, DL2, FL2, LB', LU2, FL2, LU2, FL2, LU2, FL2, LB, FL2, DL2, FL2, DL2, FL2, DL2, LB', DL2, LB', FU, UR, BR2, UB2, BR2, LU, UR', LB2],
+
+Mirror (cube; plane containing FR, BL edges):
+[BL2, UF', BU, LF2, UL2, LF2, UF, RU, BL', DB2, BL', DB2, RB2, DB2, RB2, DB2, RB2, BL, RB2, BU2, RB2, BU2, RB2, BU2, BL', RB2, DB2, RB2, DB2, RB2, DB2, BL, BU2, RB2, BU2, RB2, BU2, RB2, DB2, BL, RU', UF', LF2, UL2, LF2, BU', UF, BL2],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[BL'2, UF', BU, LF'2, UL'2, LF'2, UF, RU, BL', DB'2, RB'2, BU'2, RB'2, BU'2, RB'2, BU'2, BL', DB'2, RB'2, DB'2, RB'2, DB'2, RB'2, BL, BU'2, RB'2, BU'2, RB'2, BU'2, RB'2, BL', RB'2, DB'2, RB'2, DB'2, RB'2, DB'2, BL, DB'2, BL, RU', UF', LF'2, UL'2, LF'2, BU', UF, BL'2],
+
+3.39.6
+5c82f8605fcaeb61500c179dec135ea1
+bc626eb7dc237a85f4ffd927b34c7986
+f214b944738be919d33a678bcef2e518
+cb34e619cd32a7584fb09d623bf49708
+
+
+backup:
+[FU'2, UR'2, FU'2, UR'2, FU'2, UR'2],
+
+UR,UB'2,LU'2,UB'2,LU'2,UB'2,LU'2,UR',
+
+
+[UR, UB'2, LU'2, UB'2, LU'2, UB'2, LU'2, UR'],
+[LU'2, FU'2, LU'2, FU'2, LU'2, FU'2],
+[UR, LU2, UB2, LU2, UB2, LU2, UB2, UR'],
+[FU2, LU2, FU2, LU2, FU2, LU2],
+
+pure 3 cycle
+[UR, UB'2, LU'2, UB'2, LU'2, UB'2, LU'2, UR', LU'2, FU'2, LU'2, FU'2, LU'2, FU'2, UR, LU'2, UB'2, LU'2, UB'2, LU'2, UB'2, UR', FU'2, LU'2, FU'2, LU'2, FU'2, LU'2],
+
+with setup
+[UB', RF'2, UR'2, RF'2, FU', LU', BR, BD'2, BR, BD'2, LB'2, BD'2, LB'2, BD'2, LB'2, BR', LB'2, UB'2, LB'2, UB'2, LB'2, UB'2, BR, LB'2, BD'2, LB'2, BD'2, LB'2, BD'2, BR', UB'2, LB'2, UB'2, LB'2, UB'2, LB'2, BD'2, BR', LU, FU, RF'2, UR'2, RF'2, UB],
+
 
 
 
 3.1.43
-
-
 There are 8 cubes. Each cube has 24 triangular pieces. The 6 pieces closest to the center are sticked together. They can be solved like a 2x2x2.
 
 ==== 1. 2x2x2 phase to solve the innermost pieces ====
