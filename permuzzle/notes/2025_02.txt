@@ -21,8 +21,13 @@ to send to gelatinbrain:
 Black screen bug for the following two puzzles:
 3.39.4
 3.39.5
+3.39.6
 
 === solutions ===
+
+3.39.6 is probably the easier than .5, which is easier than .4
+
+
 
 3.1.43
 
