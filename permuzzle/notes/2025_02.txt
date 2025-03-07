@@ -25,9 +25,25 @@ Black screen bug for the following two puzzles:
 
 === solutions ===
 
-3.39.6
-3.39.6 is probably the easier than .5, which is easier than .4
+3.39.5
+There are 8 cubies. Each cubie has 24 triangles.
 
+backup:
+
+[FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR']x2,
+
+algo from 3.3.22:
+[FU, UR, FU, UR, DF, UR, FU, UR, FU, DF],
+
+3.39.5:
+[FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2, DF2],
+
+[FU2, UR'2, FU'2, UR2, DF, UR'2, FU2, UR2, FU'2, DF'],
+
+
+
+
+3.39.6
 There are 8 cubies. Each cubie has 4*3+2*3=18 triangles.
 Each move x2 is like the move from a helicopter cube.
 
