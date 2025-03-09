@@ -21,15 +21,33 @@ cb34e619cd32a7584fb09d623bf49708
 466a8ceb16da2c6798fc31f31a3534e5
 19cd32a7584fb09d623bc49768f5d0bb
 
-===
-3.1.43
-
-Black screen bug for the following two puzzles:
-3.39.4
-3.39.5
-3.39.6
-
 === solutions ===
+
+3.39.4
+There are 8 cubies. Each cubie has all 24 triangles.
+
+backup
+
+[FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2, DF2]x3,
+
+[FU2, UR2, FU2, UR2, DL2, UR2, FU2, UR2, FU2, DL2]x3,
+
+double 3-cycle
+UR,
+[FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2],
+UR',
+[FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2],
+UR,
+[DF2, FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2, DF2, FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2, DF2, FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2],
+UR',
+[RF2, FL2, LU2, FL2, LU2, RF2, LU2, FL2, LU2, FL2, RF2, FL2, LU2, FL2, LU2, RF2, LU2, FL2, LU2, FL2, RF2, FL2, LU2, FL2, LU2, RF2, LU2, FL2, LU2, FL2],
+
+with setup
+[LU', DF', UR, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, UR', FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, UR, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, DF'2, FU'2, UR'2, FU'2, UR'2, DF'2, UR'2, FU'2, UR'2, FU'2, UR', RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, RF'2, FL'2, LU'2, FL'2, LU'2, RF'2, LU'2, FL'2, LU'2, FL'2, DF, LU],
+
+
+
+
 
 3.39.5
 There are 8 cubies. Each cubie has all 24 triangles.
