@@ -28,18 +28,25 @@ Black screen bug for the following two puzzles:
 3.39.5
 There are 8 cubies. Each cubie has all 24 triangles.
 
+UFR cubie, U-L -> U-B -> DBL cubie, DL
+
+[RD, BD, FL'2, LU', FU', FL'2, UR'2, FL, FU', BR, DL, RD', DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, BD'2, DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, BD'2, DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, BD'2, RD, DL', UB, DL', UR, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, FL'2, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, FL'2, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, FL'2, UR', DL, UB', DL, RD', BD'2, DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, BD'2, DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, BD'2, DF'2, FL'2, DF'2, FL'2, BD'2, FL'2, DF'2, FL'2, DF'2, RD, DL', UB, DL', UR, FL'2, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, FL'2, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, FL'2, LB'2, BD'2, LB'2, BD'2, FL'2, BD'2, LB'2, BD'2, LB'2, UR', DL, UB', BR', FU, FL', UR'2, FL'2, FU, LU, FL'2, BD', RD'],
+
+Inverted:
+[RD, BD, FL2, LU', FU', FL2, UR2, FL, FU', BR, UB, DL', UR, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, FL2, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, FL2, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, FL2, UR', DL, UB', DL, RD', DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, BD2, DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, BD2, DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, BD2, RD, DL', UB, DL', UR, FL2, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, FL2, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, FL2, LB2, BD2, LB2, BD2, FL2, BD2, LB2, BD2, LB2, UR', DL, UB', DL, RD', BD2, DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, BD2, DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, BD2, DF2, FL2, DF2, FL2, BD2, FL2, DF2, FL2, DF2, RD, DL', BR', FU, FL', UR2, FL2, FU, LU, FL2, BD', RD'],
+
+Mirror (cube; plane containing FR, BL edges):
+[FD', LD', RB2, BU, RU, RB2, UF2, RB', RU, LF', DB', FD, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, LD2, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, LD2, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, LD2, FD', DB, UL', DB, UF', BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, RB2, BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, RB2, BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, RB2, UF, DB', UL, DB', FD, LD2, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, LD2, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, LD2, DR2, RB2, DR2, RB2, LD2, RB2, DR2, RB2, DR2, FD', DB, UL', DB, UF', RB2, BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, RB2, BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, RB2, BL2, LD2, BL2, LD2, RB2, LD2, BL2, LD2, BL2, UF, DB', UL, LF, RU', RB, UF2, RB2, RU', BU', RB2, LD, FD],
+
+Inverted Mirror (cube; plane containing FR, BL edges):
+[FD', LD', RB'2, BU, RU, RB'2, UF'2, RB', RU, LF', UL', DB, UF', BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, RB'2, BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, RB'2, BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, RB'2, UF, DB', UL, DB', FD, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, LD'2, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, LD'2, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, LD'2, FD', DB, UL', DB, UF', RB'2, BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, RB'2, BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, RB'2, BL'2, LD'2, BL'2, LD'2, RB'2, LD'2, BL'2, LD'2, BL'2, UF, DB', UL, DB', FD, LD'2, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, LD'2, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, LD'2, DR'2, RB'2, DR'2, RB'2, LD'2, RB'2, DR'2, RB'2, DR'2, FD', DB, LF, RU', RB, UF'2, RB'2, RU', BU', RB'2, LD, FD],
 
 
 
 
+====
 backup:
 
-[FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR', FU', UR, FU, UR']x2,
-
-algo from 3.3.22:
-[FU, UR, FU, UR, DF, UR, FU, UR, FU, DF],
-
-3.39.5:
 [FU2, UR2, FU2, UR2, DF2, UR2, FU2, UR2, FU2, DF2],
 
 [FU2, UR'2, FU'2, UR2, DF, UR'2, FU2, UR2, FU'2, DF'],
@@ -79,6 +86,8 @@ better setup
 or
 [FU, BR', UR, FL', LU', BD, FU', LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, FU, BD', LU, BD', DF, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, DF', BD, LU', BD, FU', BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, FU, BD', LU, BD', DF, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DF', BD, FL, UR', BR, FU'],
 
+or
+[BR'2, UB, UR, BR'2, FU'2, BR', UR, FL', LU', BD, FU', LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, FU, BD', LU, BD', DF, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, DF', BD, LU', BD, FU', BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, BR'2, LB'2, DL'2, LB'2, DL'2, BR'2, DL'2, LB'2, DL'2, LB'2, FU, BD', LU, BD', DF, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DL'2, RD'2, BR'2, RD'2, BR'2, DL'2, BR'2, RD'2, BR'2, RD'2, DF', BD, FL, UR', BR, FU'2, BR'2, UR', UB', BR'2],
 
 
 3.39.6
