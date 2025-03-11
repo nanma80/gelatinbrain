@@ -21,6 +21,12 @@ cb34e619cd32a7584fb09d623bf49708
 466a8ceb16da2c6798fc31f31a3534e5
 19cd32a7584fb09d623bc49768f5d0bb
 
+3.39.4
+9549ae36cf5a3ab0f0915ae497682fd0
+9b1237489e603dc2767dec125ea1bc43
+6e88dc217a8ff41ed91db36d7964f20f
+b946738ce916d32c6798ce30e596cb70
+
 === solutions ===
 
 3.39.4
@@ -45,6 +51,18 @@ top --> --> DBL cubie, DB (bottom view left)
 exchange top two with buttom two:
 [RD, BD, DF'2, FL'2, RD, BD, BR, FU, LB', UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, LB, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, LB', FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, LB, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, FU', BR', RD'2, LU', DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, BD'2, DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, BD'2, DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, BD'2, LU, RD'2, BR, FU, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, LB', UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, LB, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LU'2, UR'2, BR'2, UR'2, BR'2, LU'2, BR'2, UR'2, BR'2, UR'2, LB', FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, FU'2, UB'2, LB'2, UB'2, LB'2, FU'2, LB'2, UB'2, LB'2, UB'2, LB, FU', BR', RD'2, LU', BD'2, DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, BD'2, DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, BD'2, DF'2, RF'2, DF'2, RF'2, BD'2, RF'2, DF'2, RF'2, DF'2, LU, RD'2, BD', RD', FL'2, DF'2, BD', RD', DF', DL', RD'2, BR'2, DF', DL', DF'2, UB, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, DL'2, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, DL'2, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, DL'2, UB', DF'2, FL', UR', LB, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LB', FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, LB, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, LB', UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UR, FL, DF'2, UB, DL'2, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, DL'2, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, DL'2, RD'2, RF'2, RD'2, RF'2, DL'2, RF'2, RD'2, RF'2, RD'2, UB', DF'2, FL', UR', FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, LB, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LB', UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, UB'2, FU'2, FL'2, FU'2, FL'2, UB'2, FL'2, FU'2, FL'2, FU'2, LB, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, UR'2, LU'2, LB'2, LU'2, LB'2, UR'2, LB'2, LU'2, LB'2, LU'2, LB', UR, FL, DL, DF, BR'2, RD'2, DL, DF],
 
+double 3-cycles:
+top <--<-- DBL cubie both left & right
+[FU', LU', DL', DF', DL'2, BR'2, LU, FU, FL'2, UB', BR'2, DF'2, BR'2, RD', FU', DL, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, FU'2, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, FU'2, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, FU'2, DL', RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FL'2, RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FL'2, RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FL'2, DL, FU'2, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, FU'2, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, FU'2, DF'2, DL'2, DF'2, DL'2, FU'2, DL'2, DF'2, DL'2, DF'2, DL', FL'2, RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FL'2, RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FL'2, RF'2, RD'2, RF'2, RD'2, FL'2, RD'2, RF'2, RD'2, RF'2, FU, RD, BR'2, DF'2, BR'2, UB, FL'2, FU', LU', BR'2, DL'2, DF, DL, LU, FU],
+
+Inverted:
+top -->-->
+[FU', LU', DL', DF', DL2, BR2, LU, FU, FL2, UB', BR2, DF2, BR2, RD', FU', RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, FL2, RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, FL2, RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, FL2, DL, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, FU2, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, FU2, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, FU2, DL', FL2, RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, FL2, RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, FL2, RF2, RD2, RF2, RD2, FL2, RD2, RF2, RD2, RF2, DL, FU2, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, FU2, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, FU2, DF2, DL2, DF2, DL2, FU2, DL2, DF2, DL2, DF2, DL', FU, RD, BR2, DF2, BR2, UB, FL2, FU', LU', BR2, DL2, DF, DL, LU, FU],
+
+9549ae36cf5a3ab0f0915ae497682fd0
+9b1237489e603dc2767dec125ea1bc43
+6e88dc217a8ff41ed91db36d7964f20f
+b946738ce916d32c6798ce30e596cb70
 
 
 backup
