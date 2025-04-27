@@ -1,0 +1,41 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.com/permuzzle/
+https://zqjxkvby.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
+
+===
+to send to gelatinbrain:
+
+=== to solve ===
+
+3.47.1
+3.47.1b
+3.47.1c
+3.47.2
+3.47.2b
+3.47.2c
+
+
+=== solutions ===
+
+3.47.1c
+Each piece is a small triangle.
+
+
+backup:
+[F', U', F, U, R, U', F', U, F, R'],
+
+Inverted:
+[R, F', U', F, U, R', U', F', U, F],
+
+
+3-cycle:
+[R', F', R, F, U, F', R', F, R, U'],
+
+[R', F', R, F],
+U,
+[F', R', F, R],
+U',
