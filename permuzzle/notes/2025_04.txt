@@ -9,9 +9,16 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
+3.47.1
+0985970ab124c64d14b09300b946738c
+e95fd3256798ce31e5eecb35e619cd32
+a7414fb39d793bd697632fd49b0837c8
+9e613dc27689ec135ea1bc436e98dc25
+
+
+
 === to solve ===
 
-3.47.1
 3.47.1b
 3.47.1c
 3.47.2
@@ -21,13 +28,50 @@ to send to gelatinbrain:
 
 === solutions ===
 
-3.47.1c
+3.47.1, 3.47.1b, 3.47.1c:
 Each piece is a small triangle.
+Each move is a two 12-cycle. Odd perm is impossible. 
+Can we get odd perm by confusing centers? I'm not sure.
+
+3-cycle:
+U-F -> B-L -> L-B  (  <<<==== )
+[U'5, B'2, U', B, U, B'3, R', B, R, U, R', B', R, B, U', B2, U', B', U, B2, U5],
+
+Inverted:
+U-F -> L-B -> B-L ( ===>>>  )
+[U'5, B'2, U', B, U, B'2, U, B', R', B, R, U', R', B', R, B3, U', B', U, B2, U5],
 
 
+Double rotation
+U-F CCW (right handed), B-L CW (left handed)
+[U5, L2, U, B, U', B', L4, F'3, D', F, L'5, B, U, B', U', L5, F', D, F3, L'6, U'5],
+
+Inverted:
+U-F CW (left handed), B-L CCW (right handed)
+[U5, L6, F'3, D', F, L'5, U, B, U', B', L5, F', D, F3, L'4, B, U, B', U', L'2, U'5],
+
+3.47.1
+0985970ab124c64d14b09300b946738c
+e95fd3256798ce31e5eecb35e619cd32
+a7414fb39d793bd697632fd49b0837c8
+9e613dc27689ec135ea1bc436e98dc25
+
+
+============
 backup:
-[F', U', F, U, R, U', F', U, F, R'],
+U-F -> R-F -> F-R  (  <<<==== )
+[U, F'2, U', F, U, F'3, L', F, L, U, L', F', L, F, U', F2, U', F', U, F2, U'],
 
+Inverted: U-F -> F-R -> R-F ( ===>>>  )
+[U, F'2, U', F, U, F'2, U, F', L', F, L, U', L', F', L, F3, U', F', U, F2, U'],
+
+[U', R2, U, F, U', F', R4, B'3, D', B, R'5, F, U, F', U', R5, B', D, B3, R'6, U],
+
+Inverted:
+U-F CW (left handed), F-R CCW (right handed)
+[U', R6, B'3, D', B, R'5, U, F, U', F', R5, B', D, B3, R'4, F, U, F', U', R'2, U],
+
+[F', U', F, U, R, U', F', U, F, R'],
 Inverted:
 [R, F', U', F, U, R', U', F', U, F],
 
@@ -39,3 +83,14 @@ Inverted:
 U,
 [F', R', F, R],
 U',
+
+
+R',F',R,F,
+U'4,B3,L,B',U5,
+
+
+[R', F', R, F],
+[U'4, B3, L, B', U5],
+[F', R', F, R],
+[U'5, B, L', B'3, U4],
+
