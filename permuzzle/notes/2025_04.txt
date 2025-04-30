@@ -23,12 +23,51 @@ to send to gelatinbrain:
 
 
 3.47.2, 3.47.2b, 3.47.2c
+3-cycle:
 FR-U -> BL-U -> B-L (<<<===)
 [L, U'5, R, F', R, F, R'2, U', R2, F', R', F, R', U6, L'],
 
 Inverted:
 FR-U -> B-L -> BL-U (===>>>)
 [L, U'6, R, F', R, F, R'2, U, R2, F', R', F, R', U5, L'],
+
+double rotation by 60 deg
+FR-U CW (left handed). B-L CCW (right handed)
+[L, U'6, R, F', R, F, R'2, U'6, B2, L2, U'5, L'2, B'2, R2, F', R', F, R', B2, L2, U5, L'2, B'2, L'],
+
+Inverted: 60 deg
+FR-U CCW (right handed). B-L CW (left handed)
+[L, B2, L2, U'5, L'2, B'2, R, F', R, F, R'2, B2, L2, U5, L'2, B'2, U6, R2, F', R', F, R', U6, L'],
+
+double rotation by 90 deg
+FR-U CW (left handed). B-L CCW (right handed)
+[L, U'6, R, F', R, F, R'2, U'6, B, L2, U2, B, U'6, B', L'2, B', R2, F', R', F, R', B, L2, B, U'6, B', U'2, L'2, B', L'],
+
+Inverted: 90 deg
+FR-U CCW (right handed). B-L CW (left handed)
+[L, B, L2, U2, B, U6, B', L'2, B', R, F', R, F, R'2, B, L2, B, U6, B', U'2, L'2, B', U6, R2, F', R', F, R', U6, L'],
+
+For 3.47.2,
+All circles are exchangable.
+
+For 3.47.2b,
+Two types of 2-color circles are not interchangeable. 
+If we swap a circle on a edge and a circle on a face, we can't fix the orientation.
+If you find a piece 45 or 15 degrees off, it's in a wrong spot.
+
+3.47.2
+09a9970ab124c64d1446930ab946738c
+e9aed3246798ce31e5eecb35e619cd32
+a7414fb39d7f3bd4974c2fd69b0837ca
+9e613dc27689ec135ea1bc436e9adc3f
+
+3.47.2b
+418a3b4ed89f173aa9f2093dd09b6437
+c8f0612dc27689ec13aaa1bd436e91dc
+236385f70bc726b34c7b86f80d674671
+8ce916d32c6798ce31e51acb34f419a1
+
+
 
 
 
@@ -50,6 +89,12 @@ orientation: 1/6 round:
 U'6, B2, L2, U'5,L'2,B'2,
 [R2, F', R', F, R'],
 B2,L2,U5, L'2, B'2, U6, 
+
+90 deg
+[R, F', R, F, R'2], 
+[U'6, B, L2, U2, B, U'6, B', L'2, B'],
+[R2, F', R', F, R'],
+B, L2, B, U6, B', U'2, L'2, B', U6,
 
 
 
