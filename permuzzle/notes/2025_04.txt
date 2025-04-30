@@ -9,15 +9,13 @@ https://twistypuzzles.com/forum/
 ===
 to send to gelatinbrain:
 
+3.47.2c
+ffc775d24465edcf5c9a7bd534e619cd
+3204585cb09d623bc463682ed09b6437
+c887613ec26889e2134ba1b2431791dd
+237a85f40bd926b34c7986f20daa46b8
 
 === to solve ===
-
-3.47.1b
-3.47.1c
-3.47.2
-3.47.2b
-3.47.2c
-
 
 === solutions ===
 
@@ -47,6 +45,10 @@ Inverted: 90 deg
 FR-U CCW (right handed). B-L CW (left handed)
 [L, B, L2, U2, B, U6, B', L'2, B', R, F', R, F, R'2, B, L2, B, U6, B', U'2, L'2, B', U6, R2, F', R', F, R', U6, L'],
 
+Swapping the two edge circles on the FR edge and RU edge.
+[L, U'5, R, F', R, F, R'2, U', R2, F', R', F, R', U'6, L', F', L, U'6, R, F', R, F, R'2, U, R2, F', R', F, R', U5, L', F, L, U'5, R, F', R, F, R'2, U', R2, F', R', F, R', U'6, L', R'2, L, U'6, R, F', R, F, R'2, U, R2, F', R', F, R', U5, L', R', L, U'5, R, F', R, F, R'2, U', R2, F', R', F, R', U'6, L', R, L, U'6, R, F', R, F, R'2, U, R2, F', R', F, R', U5, L', R2],
+
+
 For 3.47.2,
 All circles are exchangable.
 
@@ -54,6 +56,9 @@ For 3.47.2b,
 Two types of 2-color circles are not interchangeable. 
 If we swap a circle on a edge and a circle on a face, we can't fix the orientation.
 If you find a piece 45 or 15 degrees off, it's in a wrong spot.
+
+For 3.47.2c,
+All circles are distinct, including the circles on edges.
 
 3.47.2
 09a9970ab124c64d1446930ab946738c
@@ -67,6 +72,11 @@ c8f0612dc27689ec13aaa1bd436e91dc
 236385f70bc726b34c7b86f80d674671
 8ce916d32c6798ce31e51acb34f419a1
 
+3.47.2c
+ffc775d24465edcf5c9a7bd534e619cd
+3204585cb09d623bc463682ed09b6437
+c887613ec26889e2134ba1b2431791dd
+237a85f40bd926b34c7986f20daa46b8
 
 
 
