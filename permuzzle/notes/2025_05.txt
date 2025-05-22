@@ -8,6 +8,11 @@ https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
+3.25.20
+afd919849c09ac26de99188af20db946
+73d2e919d32c6798cec5e51bcb34e619
+cd2ba75c4fa59d6d3bef97782f869b64
+37c89e613dc27689ec135ea1bc4d6eec
 
 
 === to solve ===
@@ -19,4 +24,84 @@ to send to gelatinbrain:
 
 === solutions ===
 
+3.25.20, 3.25.20b
+Each move is an 8-cycle
+There are two types of pieces: big and small
 
+The big pieces are as same as those in 3.25.6
+
+*********** big pieces ************
+First several pieces can be solve intuitively
+*** 3-cycle:
+BL-D -> FR-U -> BL-U
+[R'3, D2, L', B, D, B', D', L, D, B, D', B', D'2, R3],
+
+Inverted:
+[R'3, D2, B, D, B', D', L', D, B, D', B', L, D'2, R3],
+
+*** Double rotation by 45. Two pieces next to the FRU corner, going down
+[F, R, F', R', U, R, F, R', F', U', F', U', F, U, R', U', F', U, F, R],
+
+Inverted: going up
+[R', F', U', F, U, R, U', F', U, F, U, F, R, F', R', U', R, F, R', F'],
+
+*** parity: If we need to swap two big pieces, make a 45 deg rotation and fix everything.
+Or the following algo: swapping FR-U, BL-D
+[F, R'3, D2, L', B, D, B', D', L, D, B, D', B', D'2, R3, F, R'3, D2, B, D, B', D', L', D, B, D', B', L, D'2, R3, F, R'3, D2, L', B, D, B', D', L, D, B, D', B', D'2, R3, F, R'3, D2, B, D, B', D', L', D, B, D', B', L, D'2, R3, F, R'3, D2, L', B, D, B', D', L, D, B, D', B', D'2, R3, F, R'3, D2, B, D, B', D', L', D, B, D', B', L, D'2, R3, F, R'3, D2, L', B, D, B', D', L, D, B, D', B', D'2, R3, F, R'3, D2, B, D, B', D', L', D, B, D', B', L, D'2, R3, F],
+
+
+*********** small pieces ************
+3-cycle of small pieces:
+B-LD -> B-L -> F-R
+[R', D'4, B, L2, U3, B, D, B', U', L2, B, L', U, L, B', L, B, L'2, U', L2, B', L'3, U, B, D', B', U'3, L'2, B', D'4, R],
+
+Inverted:
+[R', D4, B, L2, U3, B, D, B', U', L3, B, L'2, U, L2, B', L', B, L', U', L, B', L'2, U, B, D', B', U'3, L'2, B', D4, R],
+
+Double rotation by 3/8 rounds. B-L -> F-R
+F-R right handed by 3/8
+[B, D'3, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D', B'],
+
+Inverted:
+[B, D, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D3, B'],
+
+3.25.20
+afd919849c09ac26de99188af20db946
+73d2e919d32c6798cec5e51bcb34e619
+cd2ba75c4fa59d6d3bef97782f869b64
+37c89e613dc27689ec135ea1bc4d6eec
+
+
+backup:
+double rotation
+[U'4, R, F', R, F, R'2, U'4],
+[L, B, U, U4, B', L', U'4],
+[U4, R2, F', R', F, R', U4],
+[U4, L, B, U'4, U', B', L'],
+
+[L',B',U',B,L, U'4, R, F', R, F, R'2, U'4,L,B,U,B',L'],
+
+Inverted:
+[U4, R2, F', R', F, R', U4],
+
+
+3-cycle
+[R, F', R, F, R'2],
+U,
+[R2, F', R', F, R'],
+U',
+
+or
+
+[R2, F', R', F, R'],
+U,
+[R, F', R, F, R'2],
+U',
+
+[R, F', R, F, R'2],
+U',
+[R2, F', R', F, R'],
+U,
+
+with setup
+[F, R2, U3, F, D, F', U', R3, F, R'2, U, R2, F', R', F, R', U', R, F', R'2, U, F, D', F', U'3, R'2, F'],
