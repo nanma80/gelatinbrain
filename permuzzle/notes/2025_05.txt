@@ -14,11 +14,14 @@ afd919849c09ac26de99188af20db946
 cd2ba75c4fa59d6d3bef97782f869b64
 37c89e613dc27689ec135ea1bc4d6eec
 
+3.25.20b
+483ff46947d2ee645a04ff443dc27689
+ec095ef6bc436e91dcd77a84f40bd926
+b3557982f218b9527385e910d32e679b
+ce31e51acb34e619cd32a7584fed9d58
 
 === to solve ===
 
-3.25.20
-3.25.20b
 3.25.21
 3.25.21b
 
@@ -58,18 +61,32 @@ B-LD -> B-L -> F-R
 Inverted:
 [R', D4, B, L2, U3, B, D, B', U', L3, B, L'2, U, L2, B', L', B, L', U', L, B', L'2, U, B, D', B', U'3, L'2, B', D4, R],
 
-Double rotation by 3/8 rounds. B-L -> F-R
+Double rotation by 3/8 rounds. B-L and F-R
 F-R right handed by 3/8
+first type. better solve on F
 [B, D'3, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D', B'],
 
 Inverted:
 [B, D, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D3, B'],
+
+second type (two setup moves away), better solve on R
+R-FD right handed by 3/8
+[F', R', B, D'3, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D'4, F, R', F, R, F'2, D'4, B, L, D'3, L', B', F2, R', F', R, F', B, L, D3, L', B', D', B', R, F],
+
+Inverted:
+[F', R', B, D, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D4, B, L, D'3, L', B', F, R', F, R, F'2, B, L, D3, L', B', D4, F2, R', F', R, F', D3, B', R, F],
 
 3.25.20
 afd919849c09ac26de99188af20db946
 73d2e919d32c6798cec5e51bcb34e619
 cd2ba75c4fa59d6d3bef97782f869b64
 37c89e613dc27689ec135ea1bc4d6eec
+
+3.25.20b
+483ff46947d2ee645a04ff443dc27689
+ec095ef6bc436e91dcd77a84f40bd926
+b3557982f218b9527385e910d32e679b
+ce31e51acb34e619cd32a7584fed9d58
 
 
 backup:
