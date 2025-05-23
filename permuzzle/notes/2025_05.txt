@@ -8,17 +8,11 @@ https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
-3.25.20
-afd919849c09ac26de99188af20db946
-73d2e919d32c6798cec5e51bcb34e619
-cd2ba75c4fa59d6d3bef97782f869b64
-37c89e613dc27689ec135ea1bc4d6eec
-
-3.25.20b
-483ff46947d2ee645a04ff443dc27689
-ec095ef6bc436e91dcd77a84f40bd926
-b3557982f218b9527385e910d32e679b
-ce31e51acb34e619cd32a7584fed9d58
+3.25.21
+5f9bfbcf59e76fcb592578c432a7584f
+b0a36208c497682fd06f6436c89e613d
+c26f89e81348a1a9435991eb235b85f5
+0bd926b34c7986f20db946738cdb16e9
 
 === to solve ===
 
@@ -31,11 +25,12 @@ ce31e51acb34e619cd32a7584fed9d58
 Each move is an 8-cycle
 There are two types of pieces: big and small
 
+We can choose to solve small first or big first.
+Pro of solving big first is that we have good reference.
+
 ***** big pieces ****
 The big pieces are as same as those in 3.25.8
 big piece algo from 3.25.8
-Basic 3-cycle:
-[U, R2, U'2, B2, U2, R'4, U', B'2, R, D'4, R'2, B'2, R2, D'2, R', B2],
 
 UF-L -> UF-R -> target
 target: B:
@@ -80,9 +75,52 @@ Single 45 rotation (U, CW 45):
 
 ******** small pieces *******
 
+Original:
+BL -> LB -> FR
+[L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
+
+Inverted:
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L'],
+
+Almost Mirror (cube; plane containing FR, BL edges):
+BL -> LB -> RF
+[B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B],
+
+Inverted Almost Mirror (cube; plane containing FR, BL edges):
+[B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B],
+
+Double rotation:
+Double rotation by 3/8 rounds. B-L and F-R
+F-R right handed by 3/8
+first type. better solve on F
+[R, F, B', L'2, B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L, B, F', R'],
+
+Inverted:
+[R, F, B', L', D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L2, B, F', R'],
+
+second type (two setup moves away), better solve on R
+R-FD right handed by 3/8
+B', L'2, B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L, B,
+
+Inverted:
+B', L', D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L2, B,
+
+3.25.21
+5f9bfbcf59e76fcb592578c432a7584f
+b0a36208c497682fd06f6436c89e613d
+c26f89e81348a1a9435991eb235b85f5
+0bd926b34c7986f20db946738cdb16e9
+
+3.25.21b
 
 
+
+===========
 backup
+Big piece Basic 3-cycle:
+[U, R2, U'2, B2, U2, R'4, U', B'2, R, D'4, R'2, B'2, R2, D'2, R', B2],
+
+
 [U, R2, U'2, B2, U2, R'4, U', B'2, R, D'4, R'2, B'2, R2, D'2, R', B2]x3,
 or:
 
@@ -91,6 +129,30 @@ or:
 Inverted:
 [B'2, R, D2, R'2, B2, R2, D4, R', B2, U, R4, U'2, B'2, U2, R'2, U', B'2, R, D2, R'2, B2, R2, D4, R', B2, U, R4, U'2, B'2, U2, R'2, U', B'2, R, D2, R'2, B2, R2, D4, R', B2, U, R4, U'2, B'2, U2, R'2, U'],
 
+[F', R, F', R, F, R'2, F],
+U,
+[F', R2, F', R', F, R', F],
+U',
+
+[R, F', R, F, R'2],
+U,
+[R2, F', R', F, R'],
+U',
+
+[R, [F', R, F, R']x6, R'],
+U,
+[R, [R, F', R', F]x6, R'],
+U',
+
+small piece 3-cycle:
+[R, F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R'2, U, R2, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R', U', R, F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R', F', R, F, R'2, U, R2, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R, F', R', F, R', U'],
+3 times more than 3.25.20. At the end we approach the limit
+
+double rotation: 3 times this:
+[U'4, R, [F', R, F, R']x6, R', U'4],
+[L, B, U, U4, B', L', U'4],
+[U4, R, [R, F', R', F]x6, R', U4],
+[U4, L, B, U'4, U', B', L'],
 
 
 =========
