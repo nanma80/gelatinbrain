@@ -8,16 +8,13 @@ https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
-3.25.21
-5f9bfbcf59e76fcb592578c432a7584f
-b0a36208c497682fd06f6436c89e613d
-c26f89e81348a1a9435991eb235b85f5
-0bd926b34c7986f20db946738cdb16e9
+3.25.21b
+554e2f78eef078b92b73edf416d32c67
+989231481acb34e6193932a6584fb09d
+6222c4936838d0946411c8b7618dc277
+89ec135ea1bc436e91dc237a85350b74
 
 === to solve ===
-
-3.25.21
-3.25.21b
 
 === solutions ===
 
@@ -27,6 +24,14 @@ There are two types of pieces: big and small
 
 We can choose to solve small first or big first.
 Pro of solving big first is that we have good reference.
+
+Counting pieces:
+small piece #: per square face: 5*4=20
+total: 120.
+Before fixing the orientation of small pieces, we have 18490 moves.
+Limit: 99500-18490=81010, or 675 moves per small piece
+Limit for each double rotation algo: 270 moves
+
 
 ***** big pieces ****
 The big pieces are as same as those in 3.25.8
@@ -89,21 +94,75 @@ BL -> LB -> RF
 Inverted Almost Mirror (cube; plane containing FR, BL edges):
 [B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B],
 
-Double rotation:
+Double rotation of small pieces
+=============
+1/8:
+Double rotation by 1/8 rounds. B-L and F-R
+F-R right handed by 1/8
+first type. better solve on F
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F'2, U', R'2, D', F'2, U', R', B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B, R, U, F2, D, R2, U, F2, D, R2, U, F],
+
+Inverted:
+[F', U', R'2, D', F'2, U', R'2, D', F'2, U', R', B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B, R, U, F2, D, R2, U, F2, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
+
+second type (two setup moves away), better solve on R
+R-FD right handed by 1/8
+[F', R', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F'2, U', R'2, D', F'2, U', R', B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B, R, U, F2, D, R2, U, F2, D, R2, U, F, R, F],
+
+Inverted:
+[F', R', F', U', R'2, D', F'2, U', R'2, D', F'2, U', R', B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B, R, U, F2, D, R2, U, F2, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', R, F],
+
+==============
+2/8:
+Double rotation by 2/8 rounds. B-L and F-R
+F-R right handed by 2/8
+first type. better solve on F
+[F', U', R'2, D', F', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
+
+Inverted:
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F', L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', F, D, R2, U, F],
+
+second type (two setup moves away), better solve on R
+R-FD right handed by 2/8
+[F', R', F', U', R'2, D', F', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', R, F],
+
+Inverted:
+[F', R', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F', L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', F, D, R2, U, F, R, F],
+
+=============
+3/8:
 Double rotation by 3/8 rounds. B-L and F-R
 F-R right handed by 3/8
 first type. better solve on F
-[R, F, B', L'2, B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L, B, F', R'],
+[F', U', R', B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B, R, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
 
 Inverted:
-[R, F, B', L', D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L2, B, F', R'],
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R', B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B, R, U, F],
 
 second type (two setup moves away), better solve on R
 R-FD right handed by 3/8
-B', L'2, B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L', B'4, R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, B'4, L, D, B'3, D', L', R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', L, D, B3, D', L, B,
+[F', R', F', U', R', B', L, B'2, R, U'2, R', U2, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R', U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R, U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', R, U2, R', B2, L', B, R, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', R, F],
 
 Inverted:
-B', L', D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L, D, B'3, D', L', R, U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R'2, L, D, B3, D', L', B4, R2, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R', B4, L2, B,
+[F', R', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R', B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B, R, U, F, R, F],
+
+=============
+4/8 (half turn):
+Double rotation by 4/8 rounds. B-L and F-R
+F-R right handed by 4/8
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F'2, U', R'2, D', F', L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', F, D, R2, U, F2, D, R2, U, F],
+
+Inverted:
+[F', U', R'2, D', F'2, U', R'2, D', F', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F, D, R2, U, F2, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
+
+second type (two setup moves away), better solve on R
+R-FD right handed by 4/8
+[F', R', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F', U', R'2, D', F'2, U', R'2, D', F', L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', F, D, R2, U, F2, D, R2, U, F, R, F],
+
+Inverted:
+[F', R', F', U', R'2, D', F'2, U', R'2, D', F', L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L', F, D, R2, U, F2, D, R2, U, F, L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L', R, F],
+
+====
 
 3.25.21
 5f9bfbcf59e76fcb592578c432a7584f
@@ -112,6 +171,10 @@ c26f89e81348a1a9435991eb235b85f5
 0bd926b34c7986f20db946738cdb16e9
 
 3.25.21b
+554e2f78eef078b92b73edf416d32c67
+989231481acb34e6193932a6584fb09d
+6222c4936838d0946411c8b7618dc277
+89ec135ea1bc436e91dc237a85350b74
 
 
 
@@ -153,6 +216,19 @@ double rotation: 3 times this:
 [L, B, U, U4, B', L', U'4],
 [U4, R, [R, F', R', F]x6, R', U4],
 [U4, L, B, U'4, U', B', L'],
+No this doesn't work. It rotates big pieces
+
+
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L'],
+[F', U', R'2, D', F']x2,
+[L, B', L2, F', U2, F, U'2, F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F, U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F', U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, F', U'2, F, L'2, B, L'],
+[F, D, R2, U, F]x2,
+
+[L, B', L2, F', U2, F, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U, R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U', R', U, R, U'2, F, U2, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U, R', U', R, U', F', U2, F', U'2, F, L'2, B, L'],
+[F', U', R'2, D', F'],[F', U', R'2, D', F', F', U', R'],
+[B', L, B'2, R, U'2, R', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U', F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U, F, U', F', U2, R', U'2, F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U', F, U, F', U, R, U'2, R, U2, R', B2, L', B],
+[R,U,F,F, D, R2, U, F],[F, D, R2, U, F],
+
 
 
 =========
@@ -161,6 +237,14 @@ Each move is an 8-cycle
 There are two types of pieces: big and small
 
 The big pieces are as same as those in 3.25.6
+
+Counting pieces:
+small piece #: per square face: 5*4=20
+total: 120.
+double rotation ~ 70 moves per algo
+on average, each small piece needs 2.5 algos
+175 * 120 = 21000 moves for small piece orientation.
+Total for 3.25.20b: 23866. About right
 
 *********** big pieces ************
 First several pieces can be solve intuitively
