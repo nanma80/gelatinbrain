@@ -27,6 +27,80 @@ to send to gelatinbrain:
 
 === solutions ===
 
+1.19.2, 1.19.2b
+
+3-cycle:
+Cross faces:
+front bottom -> top front left -> top front right (left handed)
+[AB, AE', BI, AE, BI', AB'],
+
+Inverted: (right)
+[AB, BI, AE', BI', AE, AB'],
+
+For front center:
+front center -> top front left -> top front right (left handed)
+[AD', AE', AB, AE', BI, AE, BI', AB', AE, AD],
+
+Inverted: front center -> top front right -> top front left (right handed)
+[AD', AE', AB, BI, AE', BI', AE, AB', AE, AD],
+
+****** same face
+Front face center -> top left -> top right (left handed permutation)
+[DE2, LJ2, IH', AB, AD, HB', AD', HB, AB', IH, LJ2, DE2],
+
+Inverted: (right handed permutation)
+[DE'2, LJ'2, IH', AB, HB', AD, HB, AD', AB', IH, LJ'2, DE'2],
+
+******
+3-cycle around one corner: (left)
+[AE, KJ'2, IH'2, BC', AE, EK, AC', EK', AC, AE', BC, IH'2, KJ'2, AE'],
+
+Inverted: (right)
+[AE, KJ2, IH2, BC', AE, AC', EK, AC, EK', AE', BC, IH2, KJ2, AE'],
+
+****** double rotation
+front face bottom left handed 1/5
+[AE', EF, KD'2, LH'2, BI', EF, DE, FB', DE', FB, EF', BI, LH'2, KD'2, EF', AF, JI'2, HG'2, CD', AF, AD', FJ, AD, FJ', AF', CD, HG'2, JI'2, AF', AE],
+
+Inverted: right handed 1/5
+[AE', AF, JI2, HG2, CD', AF, FJ, AD', FJ', AD, AF', CD, HG2, JI2, AF', EF, KD2, LH2, BI', EF, FB', DE, FB, DE', EF', BI, LH2, KD2, EF', AE],
+
+1.19.2
+0aa69109d146068c8457b2296798ce31
+e531cb36e619cd32a7ac4fb19d623bc4
+97712fd59b7237c69e483dde7690ec12
+5ea1bc436e91dc237a85f40bd924b350
+
+1.19.2b
+cf620d95b4230f859990b835b34c7986
+f230b956738ce916d3d86799ce31e51a
+cb2de61ccd24a7484fbb9d543b029769
+2fd09b6437c89e613dc27689ec035e2f
+
+======
+
+backup
+3-cycles with different setups
+[EF', CD, EF, CD'],
+
+[AB, AE', BI, AE, BI', AB'],
+
+Inverted:
+[AB, BI, AE', BI', AE, AB'],
+
+Mirror (dodecahedron):
+[AB', AD, BH', AD', BH, AB],
+
+Inverted Mirror (dodecahedron):
+[AB', BH', AD, BH, AD', AB],
+
+[IH'2, GK'2, DE'],
+[AB, AE', BI, AE, BI', AB'],
+[DE, GK2, IH2],
+
+
+
+
 1.19.1, 1.19.1b
 There are 12*6 = 72 pentagonal stickers. Each goes independently.
 Each move is two 4-cycles. Even perm. No need to worry about parity.
