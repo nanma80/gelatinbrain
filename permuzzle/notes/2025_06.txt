@@ -1,0 +1,79 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.com/permuzzle/
+https://zqjxkvby.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
+
+===
+to send to gelatinbrain:
+1.19.1
+1.19.1b
+
+=== to solve ===
+1.19.1
+1.19.1b
+1.19.2
+1.19.2b
+1.19.3
+1.19.3b
+1.19.4
+1.19.4b
+1.19.5
+1.19.5b
+1.19.6
+1.19.6b
+
+=== solutions ===
+
+1.19.1, 1.19.1b
+There are 12*6 = 72 pentagonal stickers. Each goes independently.
+Each move is two 4-cycles. Even perm. No need to worry about parity.
+
+3-cycle:
+[AF, AC', AF', AC],
+Should be used intuitively
+
+Front face center -> top left -> top right (left handed permutation)
+[AE'2, EF'2, IF'2, BI'2, BC, FB', BC', FB, BI'2, IF'2, EF'2, AE'2],
+
+Inverted: (right handed permutation)
+[AE2, EF2, IF2, BI2, FB', BC, FB, BC', BI2, IF2, EF2, AE2],
+
+==========
+Double rotation
+front face bottom left handed 1/5
+[DE'2, AE'2, DE, JE', DE', JE, EF'2, AF'2, AE'2, EF'2, AF'2, AE'2, JE', DE, JE, DE', AE'2, AF'2, EF'2, AE'2, AF'2, EF'2, AE'2, DE'2],
+
+left handed 2/5:
+[DE2, AE2, EF2, AF2, AE2, DE, JE', DE', JE, AE2, AF2, EF2, JE', DE, JE, DE', AE2, DE2],
+
+3/5, (right 2/5)
+[DE'2, AE'2, DE, JE', DE', JE, EF'2, AF'2, AE'2, JE', DE, JE, DE', AE'2, AF'2, EF'2, AE'2, DE'2],
+
+4/5, (right 1/5)
+[DE2, AE2, EF2, AF2, AE2, EF2, AF2, AE2, DE, JE', DE', JE, AE2, AF2, EF2, AE2, AF2, EF2, JE', DE, JE, DE', AE2, DE2],
+
+1.19.1
+9a08b0280f98bb318892aa32e619cd32
+a79c4fb19d623bc4979c2fd19b6437c8
+9e783dc7769fec185eaebc5b6e58dc21
+7a85f40bd926b34c7986f20db94673a8
+
+1.19.1b
+b82b851da532d2582245fc693bc49768
+2fc79b6337c89e613d367688ec135ea1
+bc5a6e94dc357a89f403d929b3e27985
+f20db946738ce916d32c6798ce34e50a
+
+
+backup
+3-cycle is [1,1] commutator:
+[AF, AC', AF', AC],
+
+with setup
+[HB'2, CH'2, CD'2, AD'2],
+[AF, AC', AF', AC],
+[AD2, CD2, CH2, HB2],
+
