@@ -10,11 +10,9 @@ https://twistypuzzles.com/forum/
 to send to gelatinbrain:
 1.19.3
 1.19.3b
+1.19.4
 
 === to solve ===
-1.19.3
-1.19.3b
-1.19.4
 1.19.4b
 1.19.5
 1.19.5b
@@ -22,6 +20,121 @@ to send to gelatinbrain:
 1.19.6b
 
 === solutions ===
+
+1.19.4, 1.19.4b
+Each move affects 20 pieces, five 4-cycles. Odd perm. Need to handle parity.
+
+cross face 3-cycle, front bottom
+front bottom -> top front left -> top front right (left handed)
+[AD, AE', IF, EF2, EK, FB, GK, AC', GK', AC, FB', AC', GK, AC, GK', EK', EF2, IF', AE, AD'],
+
+Inverted: (right)
+[AD, AE', IF, EF'2, EK, GK, AC', GK', AC, FB, AC', GK, AC, GK', FB', EK', EF'2, IF', AE, AD'],
+
+************
+cross face 3-cycle, front center:
+front center -> top front left -> top front right (left handed)
+[AE, AD'2, AE', IF, EF'2, EK, FB, GK, AC', GK', AC, FB', AC', GK, AC, GK', EK', EF'2, IF', AE, AD'2, AE'],
+
+Inverted: front center -> top front right -> top front left (right handed)
+[AE, AD2, AE', IF, EF2, EK, GK, AC', GK', AC, FB, AC', GK, AC, GK', FB', EK', EF2, IF', AE, AD2, AE'],
+
+************
+same face 3-cycle
+Front face center -> top left -> top right (left handed permutation)
+[DE, DG, CH, CD, CH'2, LH, LJ, FB', LJ', FB, AC, FB', LJ, FB, LJ', AC', LH', CH'2, CD', CH', DG', DE'],
+
+Inverted: (right handed permutation)
+[DE, DG, CH, CD, CH2, LH, AC, LJ, FB', LJ', FB, AC', FB', LJ, FB, LJ', LH', CH2, CD', CH', DG', DE'],
+
+***********
+double rotation
+front face, center and bottom double rotation. The label is for bottom
+left handed 1/5
+[AE', DE, AF, FJ, HB', HG'2, FJ, KD', FJ', KD, GC, KD', FJ, KD, FJ', GC', HG'2, HB, FJ', LH', FB, EF'2, LH', KD, LH, KD', AE', KD, LH', KD', LH, AE, EF'2, FB', LH, AF', DE', AE],
+
+right handed 1/5
+[AE', DE, AF, LH', FB, EF2, AE', LH', KD, LH, KD', AE, KD, LH', KD', LH, EF2, FB', LH, FJ, HB', HG2, GC, FJ, KD', FJ', KD, GC', KD', FJ, KD, FJ', HG2, HB, FJ', AF', DE', AE],
+
+***********
+different setup to solve the front center, affecting a sticker on top
+
+front center left handed 1/5
+[AD', BI, GC', GK'2, BI, JE', BI', JE, KD, JE', BI, JE, BI', KD', GK'2, GC, BI', LG', BC, FB'2, LG', JE, LG, JE', AF', JE, LG', JE', LG, AF, FB'2, BC', LG, AD],
+
+right handed 1/5
+[AD', LG', BC, FB2, AF', LG', JE, LG, JE', AF, JE, LG', JE', LG, FB2, BC', LG, BI, GC', GK2, KD, BI, JE', BI', JE, KD', JE', BI, JE, BI', GK2, GC, BI', AD],
+
+***********
+Fix parity
+front face, swap center and bottom
+[FB', BC, GC', AE', AF', GK', AE, GK', AE', GK'2, AF', GK'2, AE, GK, AE', GK, AF', GK', AE, GK', AE', GK'2, AF', GK'2, AE, GK, AE', GK, AF', GK', AE, GK', AE', GK'2, AB, AE, GK', AE, GK', AE', GK'2, AE', AB', AF', AB, AE, GK'2, AE, GK, AE', GK, AE', AB', AF', AB, AE, GK', AE, GK', AE', GK'2, AE', AB', AF', AB, AE, GK'2, AE, GK, AE', GK, AE', AB', AF', AB, AE, GK', AE, GK', AE', GK'2, AE', AB', AE, FB, FJ, EK, EF, EK'2, LK, LH, CD', LH', CD, AE, CD', LH, CD, LH', AE', LK', EK'2, EF', EK', FJ', FB', AD', CD, AE, EK, IF', IH'2, EK, GC', EK', GC, HB, GC', EK, GC, EK', HB', IH'2, IF, EK', LI', EF, DE'2, LI', GC, LI, GC', AD', GC, LI', GC', LI, AD, DE'2, EF', LI, AE', CD', AD, AB, KD', CH, IH'2, KD', FJ, KD, FJ', BI', FJ, KD', FJ', KD, BI, IH'2, CH', KD, LH, CD', DE'2, LH, FJ', LH', FJ, AE, FJ', LH, FJ, LH', AE', DE'2, CD, LH', AB', GC, BC', FB],
+
+1.19.4
+a3bf0733a09e143dafd5e8ef135ea1bc
+433391d8237a85f40b2d26b24c7986f2
+0da046768cf116d32c6f98d931b31ac9
+34e619cd32a7584fb09d623bc4936897
+
+1.19.4b
+
+
+backup
+basic 3-cycle:
+[EF, CD', EF', CD, HG, CD', EF, CD, EF', HG'],
+
+with setup
+[IF, EF'2, EK, GK, AC', GK', AC, FB, AC', GK, AC, GK', FB', EK', EF'2, IF'],
+
+3-cycle with 3 symmetric locations
+[IF, AC', GC'2, IF, LK', IF', LK, DG, LK', IF, LK, IF', DG', GC'2, AC, IF'],
+
+mirror
+[HC', AF, JF2, HC', LK, HC, LK', EJ', LK, HC', LK', HC, EJ, JF2, AF', HC],
+
+Combining these two generates a 2-rotation
+
+double 3-cycles:
+[AD, HG', AD', HG],
+
+Inverted:
+[HG', AD, HG, AD'],
+
+with setup:
+[HG', AD, HG', AD', HG'2],
+
+Inverted:
+[HG2, AD, HG, AD', HG],
+
+another setup:
+[AF, AD, HG', AD, HG', AD', HG'2, AD', AF'],
+
+Inverted:
+[AF, AD, HG2, AD, HG, AD', HG, AD', AF'],
+
+Constructing parity:
+4-cycle:
+AE',
+[HG', AD, HG', AD', HG'2],
+AE',
+[HG2, AD, HG, AD', HG],
+AE',
+[HG', AD, HG', AD', HG'2],
+AE',
+[HG2, AD, HG, AD', HG],
+AE',
+[HG', AD, HG', AD', HG'2],
+[AF, AD, HG', AD, HG', AD', HG'2, AD', AF'],
+AE',
+[AF, AD, HG2, AD, HG, AD', HG, AD', AF'],
+AE',
+[AF, AD, HG', AD, HG', AD', HG'2, AD', AF'],
+AE',
+[AF, AD, HG2, AD, HG, AD', HG, AD', AF'],
+AE',
+[AF, AD, HG', AD, HG', AD', HG'2, AD', AF'],
+
+
 
 1.19.3, 1.19.3b
 
