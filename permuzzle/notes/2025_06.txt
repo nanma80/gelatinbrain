@@ -8,14 +8,10 @@ https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
-1.19.1
-1.19.1b
+1.19.3
+1.19.3b
 
 === to solve ===
-1.19.1
-1.19.1b
-1.19.2
-1.19.2b
 1.19.3
 1.19.3b
 1.19.4
@@ -26,6 +22,96 @@ to send to gelatinbrain:
 1.19.6b
 
 === solutions ===
+
+1.19.3, 1.19.3b
+
+************
+cross face 3-cycle, front bottom
+front bottom -> top front left -> top front right (left handed)
+[AE, AB'2, EF, BC', GC', EF', AB', AF, KD', AF', KD, AB, EF, GC, BC, EF', AB'2, AE'],
+
+Inverted: (right)
+[AE, AB2, EF, BC', GC', EF', AB', KD', AF, KD, AF', AB, EF, GC, BC, EF', AB2, AE'],
+
+************
+cross face 3-cycle, front center:
+front center -> top front left -> top front right (left handed)
+[AD', AB2, EF, BC', GC', EF', AB', AF, KD', AF', KD, AB, EF, GC, BC, EF', AB2, AD],
+
+Inverted: front center -> top front right -> top front left (right handed)
+[AD', AB'2, EF, BC', GC', EF', AB', KD', AF, KD, AF', AB, EF, GC, BC, EF', AB'2, AD],
+
+************
+same face 3-cycle
+Front face center -> top left -> top right (left handed permutation)
+[BC, HB', AD', AE'2, DE'2, LG'2, GC, BI, LG', DG', BI', LH', IH, AC', IH', AC, LH, BI, DG, LG, BI', GC', LG'2, DE'2, AE'2, AD, HB, BC'],
+
+Inverted: (right handed permutation)
+[BC, HB', AD', AE2, DE2, LG2, GC, BI, LG', DG', BI', LH', AC', IH, AC, IH', LH, BI, DG, LG, BI', GC', LG2, DE2, AE2, AD, HB, BC'],
+
+***********
+double rotation
+front face, center and bottom double rotation. The label is for bottom
+left handed 1/5
+[AB', AE'2, EF', BC, FJ', HB, FJ, HB', BC', EF, BI', AE, AD, HB', AD', HB, AE', BI, EF', BC, FJ', HB, FJ, HB', BC', EF, BI', AE, AD, HB', AD', HB, AE', BI, AE'2, AB],
+
+left handed 2/5
+[AB', AE2, BI', AE, HB', AD, HB, AD', AE', BI, EF', BC, HB, FJ', HB', FJ, BC', EF, AE2, AB],
+
+right handed 2/5
+[AB', AE'2, EF', BC, FJ', HB, FJ, HB', BC', EF, BI', AE, AD, HB', AD', HB, AE', BI, AE'2, AB],
+
+right handed 1/5
+[AB', AE2, BI', AE, HB', AD, HB, AD', AE', BI, EF', BC, HB, FJ', HB', FJ, BC', EF, BI', AE, HB', AD, HB, AD', AE', BI, EF', BC, HB, FJ', HB', FJ, BC', EF, AE2, AB],
+
+***********
+different setup to solve the front center, affecting the back sticker on top
+
+front center left handed 1/5
+[AB'2, BC'2, CH', AC'2, IH', AC, LH', CD, LH, CD', AC', IH, AB', HG, LH, FB', LH', FB, HG', AB, IH', AC, LH', CD, LH, CD', AC', IH, AB', HG, LH, FB', LH', FB, HG', AB, AC'2, CH, BC'2, AB'2],
+
+front center left handed 2/5
+[AB2, BC2, CH', AC2, AB', HG, FB', LH, FB, LH', HG', AB, IH', AC, CD, LH', CD', LH, AC', IH, AC2, CH, BC2, AB2],
+
+front center right handed 2/5
+[AB'2, BC'2, CH', AC'2, IH', AC, LH', CD, LH, CD', AC', IH, AB', HG, LH, FB', LH', FB, HG', AB, AC'2, CH, BC'2, AB'2],
+
+front center right handed 1/5
+[AB2, BC2, CH', AC2, AB', HG, FB', LH, FB, LH', HG', AB, IH', AC, CD, LH', CD', LH, AC', IH, AB', HG, FB', LH, FB, LH', HG', AB, IH', AC, CD, LH', CD', LH, AC', IH, AC2, CH, BC2, AB2],
+
+1.19.3
+b7b50b2bb89b1137a5f20039c27689ec
+1350a1b8436e91dc238e85f50bd926b3
+4c6086f70dae46668cfa16cc2c6f98cf
+31e51acb34e619cd32a7584fb0996261
+
+1.19.3b
+a00f049ca631901aa6fe8709cd32a758
+4f189d6e3bc497682f249b6537c89e61
+3ddb768cec045eb7bc656e87dc9a7a84
+f40bd926b34c7986f20db9467381e93a
+
+
+
+backup
+basic 3-cycle
+[EF', CD, EF, CD'],
+
+with setup:
+[AB'2, EF, BC', GC', EF', AB', KD', AF, KD, AF', AB, EF, GC, BC, EF', AB'2],
+
+
+[DE'2, LG'2, GC, BI, LG', DG', BI', LH', IH, AC', IH', AC, LH, BI, DG, LG, BI', GC', LG'2, DE'2],
+
+3-cycle with symmetric positions
+[CD', EF, DG', JE, DG, JE', EF', CD],
+
+Inverted:
+[CD', EF, JE, DG', JE', DG, EF', CD],
+
+double rotation:
+[CD', EF, DG', JE, DG, JE', EF', CD, EK', AC, AB, JE', AB', JE, AC', EK],
+
 
 1.19.2, 1.19.2b
 
