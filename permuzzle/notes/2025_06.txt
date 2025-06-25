@@ -8,12 +8,9 @@ https://twistypuzzles.com/forum/
 
 ===
 to send to gelatinbrain:
-1.19.3
-1.19.3b
-1.19.4
+1.19.4b
 
 === to solve ===
-1.19.4b
 1.19.5
 1.19.5b
 1.19.6
@@ -77,6 +74,10 @@ a3bf0733a09e143dafd5e8ef135ea1bc
 34e619cd32a7584fb09d623bc4936897
 
 1.19.4b
+47c37ac95aa72d4fdd510336c497682f
+d0fc6424c89e613dc28289ed135ea1bc
+437791d9236285e30bd726b54ca386f0
+0db946738ce916d32c6798ce31f01aae
 
 
 backup
