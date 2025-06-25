@@ -7,17 +7,220 @@ https://zqjxkvby.com/permuzzle/scoreboard.php
 https://twistypuzzles.com/forum/
 
 ===
-to send to gelatinbrain:
+Waiting for the scoreboard to be updated:
 1.19.4b
-
-=== to solve ===
 1.19.5
 1.19.5b
+
+=== to solve ===
 1.19.6
 1.19.6b
 
 === solutions ===
 
+1.19.6, 1.19.6b
+Each move is an odd perm. Sharing many algos with 1.19.5
+
+3-cycle 1, cross face
+back face top -> front face top left -> front face top right
+[LH, KJ'2, HB, KJ', HB', KJ, AB, KJ', HB, KJ, HB', AB', KJ'2, LH'],
+
+Inverted:
+[LH, KJ2, AB, HB, KJ', HB', KJ, AB', KJ', HB, KJ, HB', KJ2, LH'],
+
+=========
+3-cycle 2, cross face to front center
+back face top -> front face center -> front face top right
+[LI', AB, AF, LI, GK'2, AF, IF, GK', IF', GK, AF', GK', IF, GK, IF', GK'2, LI', AF', AB', LI],
+
+Inverted:
+[LI', AB, AF, LI, GK2, IF, GK', IF', GK, AF, GK', IF, GK, IF', AF', GK2, LI', AF', AB', LI],
+
+=========
+3-cycle 3, cross face from back center
+back face center -> front face top left -> front face top right
+[GK', HG', LG, KJ'2, HB, KJ', HB', KJ, AB, KJ', HB, KJ, HB', AB', KJ'2, LG', HG, GK],
+
+Inverted:
+[GK', HG', LG, KJ2, AB, HB, KJ', HB', KJ, AB', KJ', HB, KJ, HB', KJ2, LG', HG, GK],
+
+=========
+same face 1, Front face center -> top left -> top right (left handed permutation)
+???
+
+===========
+same face 2, 3-cycle, moving left <====
+???
+
+=======
+Double rotation
+???
+
+=====
+parity
+???
+
+backup
+
+
+
+
+
+
+
+==========
+
+1.19.5, 1.19.5b
+Each move is an odd perm
+
+3-cycle 1, cross face
+back face top -> front face top left -> front face top right
+[LH, KJ'2, HB, KJ', HB', KJ, AB, KJ', HB, KJ, HB', AB', KJ'2, LH'],
+
+Inverted:
+[LH, KJ2, AB, HB, KJ', HB', KJ, AB', KJ', HB, KJ, HB', KJ2, LH'],
+
+=========
+3-cycle 2, cross face to front center
+back face top -> front face center -> front face top right
+[LI', AB, AF, LI, GK'2, AF, IF, GK', IF', GK, AF', GK', IF, GK, IF', GK'2, LI', AF', AB', LI],
+
+Inverted:
+[LI', AB, AF, LI, GK2, IF, GK', IF', GK, AF, GK', IF, GK, IF', AF', GK2, LI', AF', AB', LI],
+
+=========
+3-cycle 3, cross face from back center
+back face center -> front face top left -> front face top right
+[GK', HG', LG, KJ'2, HB, KJ', HB', KJ, AB, KJ', HB, KJ, HB', AB', KJ'2, LG', HG, GK],
+
+Inverted:
+[GK', HG', LG, KJ2, AB, HB, KJ', HB', KJ, AB', KJ', HB, KJ, HB', KJ2, LG', HG, GK],
+
+=========
+same face 1, Front face center -> top left -> top right (left handed permutation)
+[FB', HB', CH', LH, EF', LH', EF, CH, EF', LH, EF, LH', HB, FB],
+
+right handed
+[FB', HB', LH, EF', LH', EF, CH', EF', LH, EF, LH', CH, HB, FB],
+
+===========
+same face 2, 3-cycle, moving left <====
+[BC', DG', LG, FB', LG', FB, DG, FB', LG, FB, LG', BC],
+
+Inverted: moving right ====>
+[BC', LG, FB', LG', FB, DG', FB', LG, FB, LG', DG, BC],
+
+=========
+Double rotation 1
+front face, center and bottom double rotation. The label is for bottom
+left handed 1/5
+[EF', AD, AC, IF', AC, LJ'2, AD'2, FJ, DG', FJ', DG, AF'2, DG', FJ, DG, FJ', AF'2, AD'2, LJ'2, LH'2, AD'2, HB', KD, HB, KD', AB'2, KD, HB', KD', HB, AB'2, AD'2, LH'2, AC', IF, AC', AD', EF],
+
+right handed 1/5
+[EF', AD, AC, IF', AC, LH2, AD2, AB2, HB', KD, HB, KD', AB2, KD, HB', KD', HB, AD2, LH2, LJ2, AD2, AF2, FJ, DG', FJ', DG, AF2, DG', FJ, DG, FJ', AD2, LJ2, AC', IF, AC', AD', EF],
+
+=========
+Double rotation 2: to solve the front center, affecting a sticker on top
+front center left handed 1/5
+[ED, GD, LK2, AF2, DK', FI, DK, FI', AD2, FI, DK', FI', DK, AD2, AF2, LK2, LH2, AF2, HC, JF', HC', JF, AC2, JF', HC, JF, HC', AC2, AF2, LH2, GD', ED'],
+
+inverted, right handed 1/5:
+[ED, GD, LH'2, AF'2, AC'2, HC, JF', HC', JF, AC'2, JF', HC, JF, HC', AF'2, LH'2, LK'2, AF'2, AD'2, DK', FI, DK, FI', AD'2, FI, DK', FI', DK, AF'2, LK'2, GD', ED'],
+
+=====
+parity, swapping front face, top two:
+[KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AB', KJ, JI'2, HG'2, HB', KJ, HB, KJ', HG'2, JI'2, KJ', AB', KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AB', KJ, JI'2, HG'2, HB', KJ, HB, KJ', HG'2, JI'2, KJ', AB', KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AB'2, AE'2, DG, FB', AD, KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AD', FB, DG', AE'2, AB', AE'2, DG, FB', AD, KJ, JI'2, HG'2, HB', KJ, HB, KJ', HG'2, JI'2, KJ', AD', FB, DG', AE'2, AB', AE'2, DG, FB', AD, KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AD', FB, DG', AE'2, AB', AE'2, DG, FB', AD, KJ, JI'2, HG'2, HB', KJ, HB, KJ', HG'2, JI'2, KJ', AD', FB, DG', AE'2, AB', AE'2, DG, FB', AD, KJ, JI'2, HG'2, KJ, HB', KJ', HB, HG'2, JI'2, KJ', AD', FB, DG', AE'2, AB, JE', KD', BC', FJ, DG', FJ', DG, BC, KD, JE, AB, JE', KD', BC', DG', FJ, DG, FJ', BC, KD, JE, LJ', JI, LH', JI, IF, CH', IF, DG'2, JI'2, HG, JE', HG', JE, IH'2, JE', HG, JE, HG', IH'2, JI'2, DG'2, AD'2, JI'2, AB', KJ, AB, KJ', BI'2, KJ, AB', KJ', AB, BI'2, JI'2, AD'2, DG'2, JI'2, HG, JE', HG', JE, IH'2, JE', HG, JE, HG', IH'2, JI'2, DG'2, AD'2, JI'2, AB', KJ, AB, KJ', BI'2, KJ, AB', KJ', AB, BI'2, JI'2, AD'2, IF', CH, IF', JI', LH, JI', LJ, AB', AC, HB', AC, CD, LH', CD, KJ'2, AC'2, GC'2, GK', AF, GK, AF', GC'2, AF, GK', AF', GK, AC'2, KJ'2, JI'2, AC'2, CH'2, IH, AE', IH', AE, CH'2, AE', IH, AE, IH', AC'2, JI'2, CD', LH, CD', AC', HB, AC'],
+
+1.19.5
+e44e4cd4f36442c8f3965cc87689ec13
+5ea0bc476e91dc237a71f40ad926b34c
+799ff208b95f7383e91bd30067b0ce32
+e51acb34e619cd32a7584fb09d663bde
+
+1.19.5b
+af0419819c0bac26de421895f20db946
+73eee905d32c6798cec5e51bcb34e619
+cd2ba75d4fa99d723be2974d2f069b65
+37c89e613dc27689ec135ea1bc576ef7
+
+
+
+
+
+
+
+backup
+useful algo, 2-swaps
+[FJ, DG', FJ', DG],
+Inverted
+[DG', FJ, DG, FJ'],
+
+3-cycle:
+[FJ, DG', FJ', DG, FB, DG', FJ, DG, FJ', FB'],
+
+with setup
+[DG, BI', DG', BI, AD'2, BI', DG, BI, DG', AD'2],
+
+symmetric 3-cycle:
+[LG'2, AB'2, DG, BI', DG', BI, AD'2, BI', DG, BI, DG', AD'2, AB'2, LG'2],
+
+Inverted:
+[LG2, AB2, AD2, DG, BI', DG', BI, AD2, BI', DG, BI, DG', AB2, LG2],
+
+Mirror (dodecahedron):
+[LJ2, AB2, EJ', BH, EJ, BH', AE2, BH, EJ', BH', EJ, AE2, AB2, LJ2],
+
+Inverted Mirror (dodecahedron):
+[LJ'2, AB'2, AE'2, EJ', BH, EJ, BH', AE'2, BH, EJ', BH', EJ, AB'2, LJ'2],
+
+Double rotation:
+[LG'2, AB'2, DG, BI', DG', BI, AD'2, BI', DG, BI, DG', AD'2, AB'2, LG'2, LJ'2, AB'2, JE', HB, JE, HB', AE'2, HB, JE', HB', JE, AE'2, AB'2, LJ'2],
+
+double swaps with setup
+[LI', AF', GC, JI', GC', JI, AF, LI],
+or
+[HG', LI', AF', GC, JI', GC', JI, AF, LI, HG],
+
+more setups:
+[LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH'],
+Inverted:
+[LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH'],
+
+more setup2:
+[DE'2, DG'2, BC, EK', CD, LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH', CD', EK, BC', DG'2, DE'2],
+
+Inverted:
+[DE2, DG2, BC, EK', CD, LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH', CD', EK, BC', DG2, DE2],
+
+[HG', LI', AF', GC, JI', GC', JI, AF, LI, HG, AB', HG', LI', AF', JI', GC, JI, GC', AF, LI, HG, AB],
+
+parity algo, construction:
+
+DE',
+[LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH'],
+DE',
+[LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH'],
+DE',
+[LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH'],
+DE',
+[LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH'],
+DE',
+[LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH'],
+[DE'2, DG'2, BC, EK', CD, LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH', CD', EK, BC', DG'2, DE'2],
+DE',
+[DE2, DG2, BC, EK', CD, LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH', CD', EK, BC', DG2, DE2],
+DE',
+[DE'2, DG'2, BC, EK', CD, LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH', CD', EK, BC', DG'2, DE'2],
+DE',
+[DE2, DG2, BC, EK', CD, LH, LJ2, FB2, EF', LH, EF, LH', FB2, LJ2, LH', CD', EK, BC', DG2, DE2],
+DE',
+[DE'2, DG'2, BC, EK', CD, LH, LJ'2, FB'2, LH, EF', LH', EF, FB'2, LJ'2, LH', CD', EK, BC', DG'2, DE'2],
+
+Parity without fixing rotation:
+[AB', LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', AB', LG, DG'2, JE'2, AE', LG, AE, LG', JE'2, DG'2, LG', AB', LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', AB', LG, DG'2, JE'2, AE', LG, AE, LG', JE'2, DG'2, LG', AB', LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', AB'2, HB'2, JI, AC', BI, LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', BI', AC, JI', HB'2, AB', HB'2, JI, AC', BI, LG, DG'2, JE'2, AE', LG, AE, LG', JE'2, DG'2, LG', BI', AC, JI', HB'2, AB', HB'2, JI, AC', BI, LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', BI', AC, JI', HB'2, AB', HB'2, JI, AC', BI, LG, DG'2, JE'2, AE', LG, AE, LG', JE'2, DG'2, LG', BI', AC, JI', HB'2, AB', HB'2, JI, AC', BI, LG, DG'2, JE'2, LG, AE', LG', AE, JE'2, DG'2, LG', BI', AC, JI', HB'2, AB, HG', LI', AF', GC, JI', GC', JI, AF, LI, HG, AB, HG', LI', AF', JI', GC, JI, GC', AF, LI, HG],
+
+
+******************************
 1.19.4, 1.19.4b
 Each move affects 20 pieces, five 4-cycles. Odd perm. Need to handle parity.
 
