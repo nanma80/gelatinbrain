@@ -12,9 +12,9 @@ Waiting for the scoreboard to be updated:
 1.19.5
 1.19.5b
 1.19.6
+1.19.6b
 
 === to solve ===
-1.19.6b
 
 === solutions ===
 
@@ -98,8 +98,11 @@ parity, swapping front face, top two:
 a1a5436b91c5236f85e10bfb26a14c79
 86f20db946738ce916d32c6798cd317d
 
-
 1.19.6b
+cf6a0d95b4230f859958b82ab34c7986
+f202b953738ce916d3d86799ce31e51a
+cb2de61ccd2ba74f4fae9d7b3b02976b
+2fd09b6437c89e613dc27689ec065ee5
 
 
 
