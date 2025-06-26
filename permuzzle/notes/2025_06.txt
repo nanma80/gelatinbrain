@@ -11,9 +11,9 @@ Waiting for the scoreboard to be updated:
 1.19.4b
 1.19.5
 1.19.5b
+1.19.6
 
 === to solve ===
-1.19.6
 1.19.6b
 
 === solutions ===
@@ -46,27 +46,136 @@ Inverted:
 
 =========
 same face 1, Front face center -> top left -> top right (left handed permutation)
-???
+[GC2, LK, LI2, AC', LJ2, AD, AB, LJ', AB', LJ, AD', LJ', AB, LJ, AB', LJ2, AC, LI2, LK', GC2],
+
+Inverted
+[GC'2, LK, LI'2, AC', LJ'2, AB, LJ', AB', LJ, AD, LJ', AB, LJ, AB', AD', LJ'2, AC, LI'2, LK', GC'2],
 
 ===========
 same face 2, 3-cycle, moving left <====
-???
+[IF'2, LH, LG, LK, IH'2, KD, IH', KD', IH, AD, IH', KD, IH, KD', AD', IH'2, LK', LG', LH', IF'2],
+
+moving right =====>
+[IF2, LH, LG, LK, IH2, AD, KD, IH', KD', IH, AD', IH', KD, IH, KD', IH2, LK', LG', LH', IF2],
 
 =======
 Double rotation
-???
+front face, center and bottom double rotation. The label is for bottom
+left 1/5
+[AF', LI'2, GK, KD, EK, LG'2, AE, LG', AE', LG, AB, LG', AE, LG, AE', AB', LG'2, EK', KD', GK', LI'2, GC'2, LK', KJ', EK', LG'2, EF', LG, EF, LG', FB', LG, EF', LG', EF, FB, LG'2, EK, KJ, LK, GC'2, LI'2, GK, KD, EK, LG'2, AE, LG', AE', LG, AB, LG', AE, LG, AE', AB', LG'2, EK', KD', GK', LI'2, GC'2, LK', KJ', EK', LG'2, EF', LG, EF, LG', FB', LG, EF', LG', EF, FB, LG'2, EK, KJ, LK, GC'2, AF],
+
+left 2/5
+[AF', GC2, LK', KJ', EK', LG2, FB', EF', LG, EF, LG', FB, LG, EF', LG', EF, LG2, EK, KJ, LK, GC2, LI2, GK, KD, EK, LG2, AB, AE, LG', AE', LG, AB', LG', AE, LG, AE', LG2, EK', KD', GK', LI2, AF],
+
+right 2/5
+[AF', LI'2, GK, KD, EK, LG'2, AE, LG', AE', LG, AB, LG', AE, LG, AE', AB', LG'2, EK', KD', GK', LI'2, GC'2, LK', KJ', EK', LG'2, EF', LG, EF, LG', FB', LG, EF', LG', EF, FB, LG'2, EK, KJ, LK, GC'2, AF],
+
+right 1/5
+[AF', GC2, LK', KJ', EK', LG2, FB', EF', LG, EF, LG', FB, LG, EF', LG', EF, LG2, EK, KJ, LK, GC2, LI2, GK, KD, EK, LG2, AB, AE, LG', AE', LG, AB', LG', AE, LG, AE', LG2, EK', KD', GK', LI2, GC2, LK', KJ', EK', LG2, FB', EF', LG, EF, LG', FB, LG, EF', LG', EF, LG2, EK, KJ, LK, GC2, LI2, GK, KD, EK, LG2, AB, AE, LG', AE', LG, AB', LG', AE, LG, AE', LG2, EK', KD', GK', LI2, AF],
+
+=======
+Double rotation 2: to solve the front center, affecting a sticker on top
+front center left handed 1/5
+left 1/5
+[IF, AB', KD'2, LJ', JI', FJ', LK'2, BC', FB', LK, FB, LK', BC, LK, FB', LK', FB, LK'2, FJ, JI, LJ, KD'2, LH'2, KJ, JE, FJ, LK'2, AC, AF, LK', AF', LK, AC', LK', AF, LK, AF', LK'2, FJ', JE', KJ', LH'2, KD'2, LJ', JI', FJ', LK'2, BC', FB', LK, FB, LK', BC, LK, FB', LK', FB, LK'2, FJ, JI, LJ, KD'2, LH'2, KJ, JE, FJ, LK'2, AC, AF, LK', AF', LK, AC', LK', AF, LK, AF', LK'2, FJ', JE', KJ', LH'2, AB, IF'],
+
+left 2/5
+[IF, AB', LH'2, KJ, JE, FJ, LK'2, AF, LK', AF', LK, AC, LK', AF, LK, AF', AC', LK'2, FJ', JE', KJ', LH'2, KD'2, LJ', JI', FJ', LK'2, FB', LK, FB, LK', BC', LK, FB', LK', FB, BC, LK'2, FJ, JI, LJ, KD'2, AB, IF'],
+
+right 2/5
+[IF, AB', KD2, LJ', JI', FJ', LK2, BC', FB', LK, FB, LK', BC, LK, FB', LK', FB, LK2, FJ, JI, LJ, KD2, LH2, KJ, JE, FJ, LK2, AC, AF, LK', AF', LK, AC', LK', AF, LK, AF', LK2, FJ', JE', KJ', LH2, AB, IF'],
+
+right 1/5
+[IF, AB', LH2, KJ, JE, FJ, LK2, AF, LK', AF', LK, AC, LK', AF, LK, AF', AC', LK2, FJ', JE', KJ', LH2, KD2, LJ', JI', FJ', LK2, FB', LK, FB, LK', BC', LK, FB', LK', FB, BC, LK2, FJ, JI, LJ, KD2, LH2, KJ, JE, FJ, LK2, AF, LK', AF', LK, AC, LK', AF, LK, AF', AC', LK2, FJ', JE', KJ', LH2, KD2, LJ', JI', FJ', LK2, FB', LK, FB, LK', BC', LK, FB', LK', FB, BC, LK2, FJ, JI, LJ, KD2, AB, IF'],
 
 =====
-parity
-???
+parity, swapping front face, top two:
+[AB'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', FB, EK'2, LG, GC'2, EF', HG'2, FJ, AF, HG', AF', HG, FJ', HG', AF, HG, AF', HG'2, EF, GC'2, LG', EK'2, FB', FJ'2, AB', AC', AD', FB'2, LG', DG', FB, DG, FB', LG, FB, DG', FB', DG, FB'2, AD, AC, AB, FJ'2, HB'2, AF, AE, AD, FB'2, LK, KD, FB', KD', FB, LK', FB', KD, FB, KD', FB'2, AD', AE', AF', HB'2, AB],
+
+1.19.6
+69e357e271cd47a73517d198623bc497
+68c2d0996437c89e61c9c27789ec135e
+a1a5436b91c5236f85e10bfb26a14c79
+86f20db946738ce916d32c6798cd317d
+
+
+1.19.6b
+
+
 
 backup
+3-cycle:
+[FJ, DG', FJ', DG, FB, DG', FJ, DG, FJ', FB'],
 
+[LI'2, AC, LI', AC', LI, AE, LI', AC, LI, AC', AE', LI'2],
 
+[AD', LI'2, AC, LI', AC', LI, AE, LI', AC, LI, AC', AE', LI'2, AD],
 
+[EK'2, EF', JE, HG', JE', HG, AE, HG', JE, HG, JE', AE', EF, EK'2],
 
+double rotation
+[KD'2, LJ, LI, LH, KJ'2, HB, KJ', HB', KJ, AB, KJ', HB, KJ, HB', AB', KJ'2, LH', LI', LJ', KD'2, FJ'2, LK', LG', LH', KJ'2, CH', KJ, CH, KJ', AC', KJ, CH', KJ', CH, AC, KJ'2, LH, LG, LK, FJ'2],
 
+double swap
+[FJ, DG', FJ', DG],
 
+[KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD],
+
+setup1:
+[AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE'],
+
+Inverted:
+[AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE'],
+
+setup2:
+[AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF],
+
+Inverted:
+[AF', AB', KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AB, AF],
+
+setup3:
+[AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD'],
+
+Inverted:
+[AD, AE, DE2, AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE', DE2, AE', AD'],
+
+parity algo:
+
+AB',
+[AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE'],
+AB',
+[AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE'],
+AB',
+[AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE'],
+AB',
+[AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE'],
+AB',
+[AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE'],
+
+[AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF],
+AB',
+[AF', AB', KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AB, AF],
+AB',
+[AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF],
+AB',
+[AF', AB', KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AB, AF],
+AB',
+[AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF],
+
+[AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD'],
+AB',
+[AD, AE, DE2, AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE', DE2, AE', AD'],
+AB',
+[AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD'],
+AB',
+[AD, AE, DE2, AE, AD, KD', LI2, KD, LK2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK2, KD', LI2, KD, AD', AE', DE2, AE', AD'],
+AB',
+[AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD'],
+
+before fixing rotation:
+[AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AB', AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AB', AF', AB', KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AB, AF, AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, GC', EF, GC, EF', CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', AB', AD, AE, DE'2, AE, AD, KD', LI'2, KD, LK'2, DG, AB', CH, EF, GC', EF', GC, CH', AB, DG', LK'2, KD', LI'2, KD, AD', AE', DE'2, AE', AD', FB, EK'2, LG, GC'2, EF', HG'2, FJ, AF, HG', AF', HG, FJ', HG', AF, HG, AF', HG'2, EF, GC'2, LG', EK'2, FB'],
+
+[FJ2, AB', AC', AD', FB2, LG', DG', FB, DG, FB', LG, FB, DG', FB', DG, FB2, AD, AC, AB, FJ2, HB2, AF, AE, AD, FB2, LK, KD, FB', KD', FB, LK', FB', KD, FB, KD', FB2, AD', AE', AF', HB2],
 
 ==========
 
