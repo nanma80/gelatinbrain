@@ -9,6 +9,12 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
+7.7.8
+a039049aa636901aa6788718cd32a758
+4f6c9d623bc497682f249b6537c89e61
+3ddb7681ec0d5ea8bc5d6eb6dc5a7a84
+f40bd926b34c7986f20db946738ce9ce
+
 === to solve ===
 
 === solutions ===
@@ -16,3 +22,66 @@ Waiting for the scoreboard to be updated:
 7.7.8
 Looks similar to 7.7.0. (renaming process: 7.7.0 <- 7.0.1 <- 7.2.3)
 7.7.4 in 2023_10_solves.txt
+Each ball has 4 colors, like a spherical tetrahedron. Any move * 3 is an identity.
+Permutation is trivial. Rotation is more interesting.
+On each ball, all 12 orientations of a tetrahedron are possible
+
+Double rotation:
+- middle left ball swapping top and bottom left; middle right ball swapping top and bottom right
+[C, B', C', B, A', B, A, B'],
+
+- middle left ball rotating around top; middle right ball rotating around top
+[C', B', D, B, D', B', D, B, D', C, A', C', D, B', D', B, D, B', D', B, C, A],
+
+
+- middle right ball swapping top and bottom right; bottom center swapping left and right
+[A, C', A', C, B', C, B, C'],
+
+- middle right ball rotating around bottom right; bottom center rotating around bottom right
+[A', C', D, C, D', C', D, C, D', A, B', A', D, C', D', C, D, C', D', C, A, B],
+
+
+- middle left ball swapping top and bottom left; bottom center swapping left and right
+[B, A', B', A, C', A, C, A'],
+
+- middle left ball rotating around bottom left; bottom center rotating around bottom left
+[B', A', D, A, D', A', D, A, D', B, C', B', D, A', D', A, D, A', D', A, B, C],
+
+
+Single swap, bottom center, swapping top and left
+[A', C', D, C, D', C', D, C, D', A, B', A', D, C', D', C, D, C', D', C, A, B, A, B', A', D, A, D', A', D, A, D', B, C', B', D, A', D', A, D, A', D', A, B, C, A'],
+
+swapping left and right
+[C', D', A', C', D, C, D', C', D, C, D', A, B', A', D, C', D', C, D, C', D', C, A, B, A, B', A', D, A, D', A', D, A, D', B, C', B', D, A', D', A, D, A', D', A, B, C, A', D, C],
+
+swapping top and right
+C',D',[C', D', A', C', D, C, D', C', D, C, D', A, B', A', D, C', D', C, D, C', D', C, A, B, A, B', A', D, A, D', A', D, A, D', B, C', B', D, A', D', A, D, A', D', A, B, C, A', D, C],D,C,
+
+
+
+backup
+Double rotation: 
+- middle left ball swapping top and bottom left; middle right ball swapping top and bottom right
+[C, B', C', B, A', B, A, B'],
+
+[A, C', A', C, B', C, B, C'],
+
+[B, A', B', A, C', A, C, A'],
+
+[A', B, A, B'], C, B', C', B,
+
+[B', A', D, A, D', A', D, A, D', B],
+C',
+[B', D, A', D', A, D, A', D', A, B],
+C,
+
+
+[A', C', D, C, D', C', D, C, D', A, B', A', D, C', D', C, D, C', D', C, A, B],
+
+[B', A', D, A, D', A', D, A, D', B, C', B', D, A', D', A, D, A', D', A, B, C],
+
+a039049aa636901aa6788718cd32a758
+4f6c9d623bc497682f249b6537c89e61
+3ddb7681ec0d5ea8bc5d6eb6dc5a7a84
+f40bd926b34c7986f20db946738ce9ce
+
