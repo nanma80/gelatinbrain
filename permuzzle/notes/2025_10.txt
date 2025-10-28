@@ -9,9 +9,103 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
+7.0.6
+e4464cd1f36342c8f3595cc27689ec13
+5e8cbc436e91dc237a71f40ad926b34c
+799ff204b95a7383e901d3066730ce31
+e51acb34e619cd32a7584fb09d623b87
+
+3.2.26
+353aefeb7ed15967f5c050e41acb34e6
+198232a6584fb09d62cfc496682fd09b
+642ec8976121c26689e41344a155436e
+91dc237a85f40bd926b34c7986f30d6b
 
 === to solve ===
-3.2.26
-7.0.6
 
 === solutions ===
+
+3.2.26
+Pieces move like a Dino cube. Pieces can be rotated.
+Each piece is a tetrahedron. It can be oriented in all orientations of the tetrahedron.
+
+Double rotation of UF, UR, around the U face.
+Inner faces go foward
+[URF, BRU, URF', ULB, LUF, URF', LUF', URF, ULB', BRU'],
+
+Inverted:
+[BRU, ULB, URF', LUF, URF, LUF', ULB', URF, BRU', URF'],
+
+====
+UF rotating around F, UR rotating around U
+[BRU', RBD', DFR', URF, LUF, URF', FDL, DFR, URF', DFR', URF, FDL', LUF', DFR, RBD, BRU],
+
+Inverted:
+[BRU', RBD', DFR', LUF, FDL, URF', DFR, URF, DFR', FDL', URF, LUF', URF', DFR, RBD, BRU],
+
+====
+UF piece single rotation. Swapping 2 pairs of faces:
+- {U, F} and inner faces
+[BRU', RBD', DFR', LUF, FDL, URF', DFR, URF, DFR', FDL', URF, LUF', URF', DFR, RBD, BRU', ULB, URF', LUF, URF, LUF', ULB', URF, BRU', URF'],
+
+- U <-> F, and swapping two inner faces
+[LUF, ULB', BRU', URF', FDL, DFR, LUF', URF, LUF, URF', DFR', LUF, FDL', LUF', URF, BRU, ULB', DBL, LUF', FDL, LUF, FDL', DBL', LUF, ULB', LUF],
+
+3.2.26
+353aefeb7ed15967f5c050e41acb34e6
+198232a6584fb09d62cfc496682fd09b
+642ec8976121c26689e41344a155436e
+91dc237a85f40bd926b34c7986f30d6b
+
+
+=====
+7.0.6
+12 moves is an identity. Each tile can be rotated by 60 deg. Single rotation by 60 is impossible. Single rotation by 120 is possible.
+
+1. permute the pieces. Once the 3 tip pieces are in place, the 3 middle pieces are also in place.
+
+2. rotate the pieces.
+rotating 3 pieces:
+2 middle level pieces CW by 60, bottom middle CCW by 120
+[B', C, B', C, B, C', B, C'],
+
+Inverted:
+[C, B', C, B', C', B, C', B],
+
+rotating 2 pieces:
+middle right CW by 60, bottom middle CW by 60
+[C', B', C, B', C, B, C', B, C', B'2, C, B, C'2, B'2, C, B, C'],
+
+Inverted:
+[C, B', C', B2, C2, B', C', B2, C, B', C, B', C', B, C', B, C],
+
+single 120: bottom middle CCW by 120
+[C2, B', C', B2, C2, B', C', B2],
+
+Inverted:
+[B'2, C, B, C'2, B'2, C, B, C'2],
+====
+backup:
+B',C,B',C,
+
+B,C',B,C',
+
+C,B',C,B',
+
+3 rotation
+B',C,B',C,B,C',B,C',
+
+C,B',C',B2,C,
+
+single 120:
+[C2, B', C', B2, C2, B', C', B2],
+
+Inverted:
+[B'2, C, B, C'2, B'2, C, B, C'2],
+====
+7.0.6
+e4464cd1f36342c8f3595cc27689ec13
+5e8cbc436e91dc237a71f40ad926b34c
+799ff204b95a7383e901d3066730ce31
+e51acb34e619cd32a7584fb09d623b87
+
