@@ -30,7 +30,7 @@ Pieces move like a Dino cube. Pieces can be rotated.
 Each piece is a tetrahedron. It can be oriented in all orientations of the tetrahedron.
 
 Double rotation of UF, UR, around the U face.
-Inner faces go foward
+Inner faces go forward
 [URF, BRU, URF', ULB, LUF, URF', LUF', URF, ULB', BRU'],
 
 Inverted:
