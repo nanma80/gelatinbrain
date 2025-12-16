@@ -93,6 +93,13 @@ e2f3407bedf37ed94b8e2d7986f20db9
 19d432ac5840b0926234c4a76805d09a
 6437c89e613dc27689ec135ea1bc4374
 
+2nd try
+aa09d04d1181870dd4ac128ce916d32c
+67cbce31e51acb34e6edcd33a7584fb0
+9d7b3bcf97782fd99b6037fd9e8c3dc1
+7689ec135ea1bc436e91dc237a85f4de
+
+
 7.0.7b:
 Are all pieces the same. No, there are 3(?) types of pieces.
 Opposite faces:
