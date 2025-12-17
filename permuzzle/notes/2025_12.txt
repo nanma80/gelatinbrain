@@ -9,25 +9,13 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
-7.0.7
-e2f3407bedf37ed94b8e2d7986f20db9
-46688ce916d32c67983a31e41acb34e6
-19d432ac5840b0926234c4a76805d09a
-6437c89e613dc27689ec135ea1bc4374
-
-7.0.7b
-1da1bf221282810bb437d24e7986f20d
-b9f9738ce916d32c676cce30e51acb34
-e600cd39a7574fbf9d7d3be697c42fd0
-9b6437c89e613dc27689ec135ea1bcfa
-
-7.0.7c
-962ba8358e1eb832ca942eb09d623bc4
-97322fd09b6437c89e953dc37689ec13
-5eb8bc486e9edc2c7aa3f428d960b34e
-7986f20db946738ce916d32c6798ce86
-
 === to solve ===
+7.0.8
+7.0.8b
+7.0.8c
+7.0.9
+7.0.9b
+7.0.9c
 
 === solutions ===
 
