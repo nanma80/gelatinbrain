@@ -9,6 +9,12 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
+7.0.8
+952bae33cf5f3ab0f0fc5ac497682fd0
+9b9f37c89e613dc2767dec125ea1bc43
+6e88dc287a94f41fd90fb36a7924f20d
+b946738ce916d32c6798ce31e51acbcd
+
 === to solve ===
 7.0.8
 7.0.8b
@@ -19,6 +25,147 @@ Waiting for the scoreboard to be updated:
 
 === solutions ===
 
+7.0.9
+A move is a 5-cycle with rotation. If a move is repeated 10 times, it comes back.
+3-cycle is possible. Single 90 should be possible as well.
+
+1. permute the pieces, without considering orientation:
+A: Solve the top corner intuitively
+B: Solve the bottom right corner:
+middle left -> bottom middle -> bottom right
+[A', B', C, B, C', A3],
+Use C move if necessary
+
+C: middle 3 pieces CW, affecting rotation of all pieces (not bottom left)
+[B', C', B, C, A, C],
+
+Inverted: middle 3 pieces CCW
+[C', A', C', B', C, B],
+
+2. solve orientation:
+
+
+backup
+3-cycle, asymmetric
+[B', C, B, C', A2],
+
+mirror:
+[C, B', C', B, A'2],
+
+3-cycle, affecting the orientation of 2 extra pieces
+[B', C, B, C', A2, C, B', C', B, A'2],
+
+Rotated 3-cycle, not affecting the orientation of top
+[C', A', C, A, B, A],
+
+Inverted:
+[A', B', A', C', A, C],
+
+mirror:
+[B, A, B', A', C', A'],
+
+flipping 3 around face centers:
+[B, A, B', A', C', A', C', A', C, A, B, A],
+bottom left, rotated around bottom right face by 180
+middle right, rotated around top face by 180
+bottom right, rotated around bottom right face by 180
+
+almost symmetric, flipping 3 around face centers:
+[A, B, A, B', A', C', A', C', A', C, A, B],
+middle left and right, rotated around top face by 180
+bottom middle, rotated around bottom left face by 180
+
+mirror
+[A', C', A', C, A, B, A, B, A, B', A', C'],
+
+bottom middle, rotate around top face by 180:
+[A, B, A, B', A', C', A', C', A', C, A, B],[A', C', A', C, A, B, A, B, A, B', A', C'],
+
+double flip around edge center:
+[A, B', C, B, C', A, B', C', B, C, A, C, A, B', C, B, C', A, B', C', B, C, A, C, A, B', C, B, C', A, B', C', B, C, A, C],
+
+
+7.0.8
+A move is a 4-cycle, with rotation. If a move is repeated 12 times, it comes back.
+
+(as same as 7.0.6)
+1. permute the pieces. Once the 3 tip pieces are in place, the 3 middle pieces are also in place.
+B-variant: 3 types of pieces. If 3 corners are solved but middle pieces are not, your assumption about corners are wrong.
+Opposite faces:
+white - black
+red - cyan
+purple - green
+blue - yellow
+
+C-variant: the opposite faces have the same color, except white-black. All pieces are distinct.
+
+2. orientation:
+Move 1:
+two 90-deg rotations, middle layer outward
+[B', C, B', C, B, C', B, C', B'2, C, B, C'2, B'2, C, B, C'2],
+
+Inverted:
+[C2, B', C', B2, C2, B', C', B2, C, B', C, B', C', B, C', B],
+
+left middle + bottom middle, rotated outward
+[A', B, A', B, A, B', A, B', A'2, B, A, B'2, A'2, B, A, B'2],
+
+Inverted:
+[B2, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A],
+
+right middle + bottom middle, rotated outward
+[C', A, C', A, C, A', C, A', C'2, A, C, A'2, C'2, A, C, A'2],
+
+Inverted:
+[A2, C', A', C2, A2, C', A', C2, A, C', A, C', A', C, A', C],
+
+Move 2:
+Single rotation by 120
+Bottom center piece rotated by the bottom corner by 120 -->
+[B', A', B, A', B, A, B', A, B', A'2, B, A, B'2, A'2, B, A, B', A2, C', A', C2, A2, C', A', C2, A, C', A, C', A', C, A', C, A', B, A', B, A, B', A, B', A'2, B, A, B'2, A'2, B, A, B'2],
+
+Inverted:
+[B2, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, C', A, C', A, C, A', C, A', C'2, A, C, A'2, C'2, A, C, A'2, B, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, B],
+
+rotated by the top right corner
+[A'4, B2, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, C', A, C', A, C, A', C, A', C'2, A, C, A'2, C'2, A, C, A'2, B, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, B, A4],
+
+rotated by the top left corner
+[A4, B2, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, C', A, C', A, C, A', C, A', C'2, A, C, A'2, C'2, A, C, A'2, B, A', B', A2, B2, A', B', A2, B, A', B, A', B', A, B', A, B, A'4],
+
+
+Move 3:
+Single rotation by 90
+Is it necessary?
+
+7.0.8
+952bae33cf5f3ab0f0fc5ac497682fd0
+9b9f37c89e613dc2767dec125ea1bc43
+6e88dc287a94f41fd90fb36a7924f20d
+b946738ce916d32c6798ce31e51acbcd
+
+7.0.8b
+d46b2cb1f5654ec4fa894ed19b6437c8
+9e013dc37689ec135e55bc426e91dc23
+7a9cf400d937b35879b5f20bb9a8738f
+e916d32c6798ce31e51acb34e618cdab
+
+7.0.8c
+3f4de5f365be3373e16d77d32c6798ce
+31621aca34e619cd3253584eb09d623b
+c48e6824d08a6423c8a8611cc2cf89ee
+135ea1bc436e91dc237a85f40bd82621
+
+
+backup
+7.0.6 algos:
+[B', C, B', C, B, C', B, C'],
+
+[C', B', C, B', C, B, C', B, C', B'2, C, B, C'2, B'2, C, B, C'],
+
+
+
+========
 7.0.7
 
 A move is a 3-cycle, with rotation. If a move is repeated 12 times, it comes back.
@@ -89,7 +236,7 @@ aa09d04d1181870dd4ac128ce916d32c
 
 
 7.0.7b:
-Are all pieces the same. No, there are 3(?) types of pieces.
+Not all pieces are the same. There are 3(?) types of pieces.
 Opposite faces:
 white - black
 red - cyan
@@ -104,10 +251,8 @@ e600cd39a7574fbf9d7d3be697c42fd0
 9b6437c89e613dc27689ec135ea1bcfa
 
 7.0.7c
-Here, the opposite faces have the same color. All pieces are distinct.
+Here, the opposite faces have the same color, except white-black. All pieces are distinct.
 
-white - black
-red - red ... (other colors are same with opposite faces)
 
 7.0.7c
 962ba8358e1eb832ca942eb09d623bc4
