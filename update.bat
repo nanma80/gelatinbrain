@@ -7,6 +7,7 @@ set "downloadedFile=./permuzzle_download_temp.jar"
 set "imagesUrl=https://zqjxkvby.com/permuzzle/images.zip"
 set "imagesDownloadedFile=./images_download_temp.zip"
 set "oldFile=./permuzzle/permuzzle.jar"
+set MIN_SIZE=1048576
 
 curl -o "%downloadedFile%" "%url%"
 
@@ -24,18 +25,28 @@ echo %md5ChecksumOldFile%
 echo New checksum:
 echo %md5ChecksumDownloadedFile%
 
+for %%F in ("%downloadedFile%") do (
+    set size=%%~zF
+)
 
-if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
-	echo No new update. Clean up temp file
-	del "%downloadedFile%"
-) else (
-	echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	echo There is an update. Replace old file
-	echo Please manually replace ./permuzzle/permuzzle.jar by permuzzle_download_temp.jar
-	echo Please manually replace ./permuzzle/images.zip by images_download_temp.zip
-	echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+for %%F in ("%downloadedFile%") do (
+    echo New file size: %%~zF bytes
+    if %%~zF LSS %MIN_SIZE% (
+        echo New file smaller than 1MB. Not real game file. Likely network issues. Clean up temp file and ignore
+		del "%downloadedFile%"
+    ) else if "%md5ChecksumDownloadedFile%" == "%md5ChecksumOldFile%" (
+		echo No new update. Clean up temp file
+		del "%downloadedFile%"
+	) else (
+		echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		echo There is an update. Replacing old file
+		echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-	curl -o "%imagesDownloadedFile%" "%imagesUrl%"
+		curl -o "%imagesDownloadedFile%" "%imagesUrl%"
+
+		move /y "permuzzle_download_temp.jar" ".\permuzzle\permuzzle.jar"
+		move /y "images_download_temp.zip" ".\permuzzle\images.zip"
+	)
 )
 
 echo The current local date time is: %DATE% %TIME%
