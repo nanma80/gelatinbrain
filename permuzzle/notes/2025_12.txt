@@ -27,13 +27,43 @@ c497682fd09b6437c89e613dc276897a
 6222c49c6837d08e6412c8bc61cdc274
 89ec135ea1bc436e91dc237a85f40b42
 
-=== to solve ===
 7.0.11
+65e84f66f0c944e5773e55e619cd32a7
+588eb09d623bc49768dbd09a6437c89e
+6124c27d89f41348a18e434a91d9237a
+85f40bd926b34c7986f20db946738c01
+
 7.0.11b
+9a2ab02d0f9fbb318814aa35e619cd32
+a7bb4fb09d623bc4979c2fd19b6437c8
+9e783dc97691ec045ea3bc476e18dc23
+7a85f40bd926b34c7986f20db9467367
+
 7.0.11c
+42d879ca5ce16ccd5fa0394eb09d623b
+c44d682fd09b6437c86a613cc27689ec
+1347a1b7437691cb237c85c00b5f26b0
+4c7986f20db946738ce916d32c679830
+
 7.0.12
+cf7d0d90b4240f8599fab827b34c7986
+f21eb942738ce916d3d86799ce31e51a
+cb2de612cd2aa74f4f829d533b82976b
+2fd09b6437c89e613dc27689ec165e8f
+
 7.0.12b
+5045e6f563de53b321ffe7f10db94673
+8c6c16d02c6798ce31111aca34e619cd
+32be5844b084623bc49f6804d0876437
+c89e613dc27689ec135ea1bc436d91a7
+
 7.0.12c
+1dd1bf221282810bb41dd24e7986f20d
+b96d738fe916d32c676cce30e51acb34
+e600cd39a7414fb09d703bf597c42fd0
+9b6437c89e613dc27689ec135ea6bc56
+
+=== to solve ===
 7.8.7
 7.8.7b
 
@@ -51,6 +81,223 @@ C-variant: the opposite faces have the same color, except white-black. All piece
 7.0.10 should be similar to 7.0.7
 7.0.11 should be similar to 7.0.8
 7.0.12 should be similar to 7.0.9
+
+7.0.12
+Need to rediscover the algos
+
+1. permute
+center -> top left -> left (CCW)
+[C, D, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D', C'],
+
+Inverted:
+[C, D, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D', C'],
+
+2. rotate
+
+Single rotation by 120 (4 algos)
+Center piece rotation around middle CCW
+[E4, B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5, C'5, D'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, C'5, E'5],
+
+Inverted: CW
+[E5, C5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D5, C5, D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E'4],
+
+Center piece rotation around bottom corner, <--
+[D'5, E4, B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5, C'5, D'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, C'5, E'5, D'5],
+
+Inverted: -->
+[D5, E5, C5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D5, C5, D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E'4, D5],
+
+Center piece rotation around top right corner, top -> right
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5, C'5, D'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, C'5],
+
+Inverted: right -> top
+[C5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D5, C5, D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+
+Center piece rotation around top left corner, top -> left
+[C'5, E'5, C'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5, C'5, D'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E'4, C'5],
+
+Inverted: left -> top
+[C5, E4, B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D5, C5, D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, C5, E5, C5],
+
+Double edge rotation, double parity:
+center and left piece rotate around UF edge
+[C2, A, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5, A', C'2],
+
+Single edge rotation: (single parity)
+center piece rotation around FL edge
+[E', D'5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D, E],
+
+7.0.12
+cf7d0d90b4240f8599fab827b34c7986
+f21eb942738ce916d3d86799ce31e51a
+cb2de612cd2aa74f4f829d533b82976b
+2fd09b6437c89e613dc27689ec165e8f
+
+7.0.12b
+5045e6f563de53b321ffe7f10db94673
+8c6c16d02c6798ce31111aca34e619cd
+32be5844b084623bc49f6804d0876437
+c89e613dc27689ec135ea1bc436d91a7
+
+7.0.12c
+1dd1bf221282810bb41dd24e7986f20d
+b96d738fe916d32c676cce30e51acb34
+e600cd39a7414fb09d703bf597c42fd0
+9b6437c89e613dc27689ec135ea6bc56
+
+
+backup
+mirror: B<->F, E<->C
+
+two swaps
+[E', B, E, B'],
+
+Inverted:
+[B, E', B', E],
+
+mirror:
+[C, F', C', F],
+
+Inverted:
+[F', C, F, C'],
+
+3-cycle:
+[E', B, E, B'],
+[C, F', C', F],
+[B, E', B', E],
+[F', C, F, C'],
+
+minimized:
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C'],
+
+Inverted:
+[C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+
+with setup:
+[F, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', F'],
+
+Inverted:
+[F, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, F'],
+
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C'],
+D5,
+[C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+D'5,
+
+minimized:
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5],
+
+Inverted:
+[D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+
+with setup:
+[D2, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D3],
+
+with setup:
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', F', C'5, F, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, F', C'5, F],
+
+
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D'5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E, D'5],
+C5,
+[D5, E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C', D5, C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+C'5,
+
+D5,
+[E', B, E, B', C, F', C', F, B, E', B', E, F', C, F, C'],
+D,
+[C, F', C', F, E', B, E, B', F', C, F, C', B, E', B', E],
+D,
+
+
+
+7.0.11
+1. permute
+center -> top left -> left (CCW)
+[E'2, D, A', D', A, E2],
+
+Inverted:
+[E'2, A', D, A, D', E2],
+
+Parity:
+swap left and center, affecting top left and top right
+[E'3, D, A', D', A, E4],
+
+2. rotate
+
+Double rotation of center and left pieces, around U
+inward
+[B'3, C2, B', A, B', A, B, A', B, A', B'2, A, B, A'2, B'2, A, B, A'2, C'2, B3],
+
+Inverted: outward
+[B'3, C2, A2, B', A', B2, A2, B', A', B2, A, B', A, B', A', B, A', B, C'2, B3],
+
+Double rotation of center and left pieces, around the contacting faces
+both up
+[B', D', B, A, B', A, B, A', B, A', B'2, A, B, A'2, B'2, A, B, A'2, B'2, D, B],
+
+Inverted: both down
+[B', D', B2, A2, B', A', B2, A2, B', A', B2, A, B', A, B', A', B, A', B', D, B],
+
+Double rotation of center and left pieces, around non contacting faces
+left up, center down
+[F3, C'2, B', A, B', A, B, A', B, A', B'2, A, B, A'2, B'2, A, B, A'2, C2, F'3],
+
+Inverted: left down, center up
+[F3, C'2, A2, B', A', B2, A2, B', A', B2, A, B', A, B', A', B, A', B, C2, F'3],
+
+single center by 120, around middle:
+[A'4, F, E', B4, E', B'4, E2, F', B4, E', B'4, E, A4],
+
+single center by 120, top left corner
+[F, E', B4, E', B'4, E2, F', B4, E', B'4, E],
+
+single center by 120, top right corner
+[A4, F, E', B4, E', B'4, E2, F', B4, E', B'4, E, A'4],
+
+single center by 120, bottom corner
+[B'4, F, E', B4, E', B'4, E2, F', B4, E', B'4, E, B4],
+
+Single by 180, center piece U2:
+[B4, E', B'4, E, A4, E', B4, E, B'4, A'4],
+
+Single by 180, center piece F2:
+[B4, E', B'4, E, F4, E', B4, E, B'4, F'4],
+
+7.0.11
+65e84f66f0c944e5773e55e619cd32a7
+588eb09d623bc49768dbd09a6437c89e
+6124c27d89f41348a18e434a91d9237a
+85f40bd926b34c7986f20db946738c01
+
+7.0.11b
+9a2ab02d0f9fbb318814aa35e619cd32
+a7bb4fb09d623bc4979c2fd19b6437c8
+9e783dc97691ec045ea3bc476e18dc23
+7a85f40bd926b34c7986f20db9467367
+
+7.0.11c
+42d879ca5ce16ccd5fa0394eb09d623b
+c44d682fd09b6437c86a613cc27689ec
+1347a1b7437691cb237c85c00b5f26b0
+4c7986f20db946738ce916d32c679830
+
+
+backup:
+Double rotation by 120, center and left pieces
+center around the top right corner down, left around middle CW
+[B4, E', B'4, E],
+
+Inverted:
+[E', B4, E, B'4],
+
+[B4, E', B'4, E],B4,
+[E', B4, E, B'4],B'4,
+
+Double 90 deg rotation
+[B', A, B', A, B, A', B, A', B'2, A, B, A'2, B'2, A, B, A'2],
+
+[C', B, C', B, C, B', C, B', C'2, B, C, B'2, C'2, B, C, B'2],
+
 
 7.0.10
 moves are similar to 7.0.7. But algos must discovered again
