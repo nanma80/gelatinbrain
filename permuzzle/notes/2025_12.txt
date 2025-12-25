@@ -9,10 +9,25 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
-=== to solve ===
 7.0.10
+a0140499a636901aa6128718cd32a758
+4fca9d623bc497682f249b6537c89e61
+3ddb7682ec0b5eb4bc536eb9dcda7a85
+f40bd926b34c7986f20db946738ce963
+
 7.0.10b
+6067c2bd2b69e4dc4e47e4f60bd926b3
+4cfb86f20db946738c1d16d22c6798ce
+31fc1ac034fe19d832b8584bb07f623a
+c497682fd09b6437c89e613dc276897a
+
 7.0.10c
+55892f78eef578b92b6dede816d32c67
+984f31e51acb34e6193932a6584fb09d
+6222c49c6837d08e6412c8bc61cdc274
+89ec135ea1bc436e91dc237a85f40b42
+
+=== to solve ===
 7.0.11
 7.0.11b
 7.0.11c
@@ -23,6 +38,15 @@ Waiting for the scoreboard to be updated:
 7.8.7b
 
 === solutions ===
+A-variant: all pieces are the same, with the same color pattern as the Rubik's cube
+B-variant: 3 types of pieces. If 3 corners are solved but middle pieces are not, your assumption about corners are wrong.
+Opposite faces:
+white - black
+red - cyan
+purple - green
+blue - yellow
+
+C-variant: the opposite faces have the same color, except white-black. All pieces are distinct.
 
 7.0.10 should be similar to 7.0.7
 7.0.11 should be similar to 7.0.8
@@ -31,10 +55,113 @@ Waiting for the scoreboard to be updated:
 7.0.10
 moves are similar to 7.0.7. But algos must discovered again
 
+1. permute
+
+2. rotate
+Double rotation of center and left pieces, around the contacting faces
+center up, left down
+[F', B3, F, B'3],
+
+Inverted:
+[B3, F', B'3, F],
+
+Double rotation of center and left pieces, around the non contacting faces
+center up, left down
+[E, C'3, E', C3],
+
+Inverted:
+[C'3, E, C3, E'],
+
+Double rotation of center and left pieces, around the U faces
+inward
+[B'3, E', D, E, C'3, E', C3, D', E, B3],
+
+Inverted: outward
+[B'3, E', D, C'3, E, C3, E', D', E, B3],
+
+Single 120, center, around the center axis: CCW
+[E'2, D, E, C'3, E', C3, D', E2, C'3, E', C3, E],
+
+around the bottom axis:
+[E'5, D, E, C'3, E', C3, D', E2, C'3, E', C3, E4],
+
+around the top right axis:
+[E4, D, E, C'3, E', C3, D', E2, C'3, E', C3, E'5],
+
+around the top left axis:
+[C3, E'5, D, E, C'3, E', C3, D', E2, C'3, E', C3, E4, C'3],
+
+single piece, center, rotated by 180, U2
+[A, C', A3, C, A'4, B, A'3, B', A3],
+
+single piece center by 90 (parity)
+[F'4, E, C'3, E', C3, F],
+
+
+7.0.10
+a0140499a636901aa6128718cd32a758
+4fca9d623bc497682f249b6537c89e61
+3ddb7682ec0b5eb4bc536eb9dcda7a85
+f40bd926b34c7986f20db946738ce963
+
+7.0.10b
+6067c2bd2b69e4dc4e47e4f60bd926b3
+4cfb86f20db946738c1d16d22c6798ce
+31fc1ac034fe19d832b8584bb07f623a
+c497682fd09b6437c89e613dc276897a
+
+7.0.10c
+55892f78eef578b92b6dede816d32c67
+984f31e51acb34e6193932a6584fb09d
+6222c49c6837d08e6412c8bc61cdc274
+89ec135ea1bc436e91dc237a85f40b42
+
 
 backup: single piece, center, rotated by 180, U2
 [A, C', A3, C, A'4, B, A'3, B', A3],
 
+From 7.0.7. Replace A by F
+Double rotation of center and left pieces, around the contacting faces
+center up, left down
+[F', B3, F, B'3],
+
+Inverted:
+[B3, F', B'3, F],
+
+Double rotation of center and left pieces, around the non contacting faces
+center up, left down
+[E, C'3, E', C3],
+
+Inverted:
+[C'3, E, C3, E'],
+
+Double rotation around the contacting faces
+both up
+[E', D, F', B3, F, B'3, D', E],
+
+Inverted: both down
+[E', D, B3, F', B'3, F, D', E],
+
+Double rotation, diff axes
+[E', D, E, C'3, E', C3, D', E],
+
+Inverted:
+[E', D, C'3, E, C3, E', D', E],
+
+Single 120, left:
+[E', D, E, C'3, E', C3, D', E2, C'3, E', C3],
+
+Single 120, center, around the center axis: CCW
+[E'2, D, E, C'3, E', C3, D', E2, C'3, E', C3, E],
+
+around the bottom axis:
+[E'5, D, E, C'3, E', C3, D', E2, C'3, E', C3, E4],
+
+around the top right axis:
+[E4, D, E, C'3, E', C3, D', E2, C'3, E', C3, E'5],
+
+around the top left axis:
+[C3, E'5, D, E, C'3, E', C3, D', E2, C'3, E', C3, E4, C'3],
 
 
 7.0.9
