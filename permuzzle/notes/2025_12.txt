@@ -9,59 +9,7 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
-7.0.10
-a0140499a636901aa6128718cd32a758
-4fca9d623bc497682f249b6537c89e61
-3ddb7682ec0b5eb4bc536eb9dcda7a85
-f40bd926b34c7986f20db946738ce963
 
-7.0.10b
-6067c2bd2b69e4dc4e47e4f60bd926b3
-4cfb86f20db946738c1d16d22c6798ce
-31fc1ac034fe19d832b8584bb07f623a
-c497682fd09b6437c89e613dc276897a
-
-7.0.10c
-55892f78eef578b92b6dede816d32c67
-984f31e51acb34e6193932a6584fb09d
-6222c49c6837d08e6412c8bc61cdc274
-89ec135ea1bc436e91dc237a85f40b42
-
-7.0.11
-65e84f66f0c944e5773e55e619cd32a7
-588eb09d623bc49768dbd09a6437c89e
-6124c27d89f41348a18e434a91d9237a
-85f40bd926b34c7986f20db946738c01
-
-7.0.11b
-9a2ab02d0f9fbb318814aa35e619cd32
-a7bb4fb09d623bc4979c2fd19b6437c8
-9e783dc97691ec045ea3bc476e18dc23
-7a85f40bd926b34c7986f20db9467367
-
-7.0.11c
-42d879ca5ce16ccd5fa0394eb09d623b
-c44d682fd09b6437c86a613cc27689ec
-1347a1b7437691cb237c85c00b5f26b0
-4c7986f20db946738ce916d32c679830
-
-7.0.12
-cf7d0d90b4240f8599fab827b34c7986
-f21eb942738ce916d3d86799ce31e51a
-cb2de612cd2aa74f4f829d533b82976b
-2fd09b6437c89e613dc27689ec165e8f
-
-7.0.12b
-5045e6f563de53b321ffe7f10db94673
-8c6c16d02c6798ce31111aca34e619cd
-32be5844b084623bc49f6804d0876437
-c89e613dc27689ec135ea1bc436d91a7
-
-7.0.12c
-1dd1bf221282810bb41dd24e7986f20d
-b96d738fe916d32c676cce30e51acb34
-e600cd39a7414fb09d703bf597c42fd0
-9b6437c89e613dc27689ec135ea6bc56
 
 === to solve ===
 7.8.7
@@ -77,6 +25,108 @@ purple - green
 blue - yellow
 
 C-variant: the opposite faces have the same color, except white-black. All pieces are distinct.
+
+7.8.7
+Each move x6 is identity.
+B-variant:
+Opposite faces:
+red - cyan
+purple - green
+blue - yellow
+white - white
+black - black
+Some pieces are identical if rotate by 180 around face centers
+
+1. permute
+bottom right -> top center -> bottom left
+[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C'],
+
+Inverted:
+[C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C'],
+
+swapping two bottom pieces:
+[A'2, C'2, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C2, A2],
+
+2. rotate
+Double rotation, top (CW) and bottom right (around top left, left -> top)
+[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2],
+
+Inverted:
+[B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C'],
+
+Double rotation, top around bottom center --->, affect bottom right
+[B2, C2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, C'2, B'2],
+
+Inverted: <---
+[B2, C2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, C'2, B'2],
+
+Double rotation, top around top right (top -> right), affect bottom right
+[A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2],
+
+Inverted:
+[A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2],
+
+Double rotation, top around top left (top -> left), affect bottom right
+[C'2, B'2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, B2, C2],
+
+Inverted:
+[C'2, B'2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, B2, C2],
+
+
+
+
+backup:
+useful algo
+[C', B2, C', B', C, B', C],
+
+Inverted:
+[C', B, C', B, C, B'2, C],
+
+3-cycle:
+[C', B2, C', B', C, B', C],A3,[C', B, C', B, C, B'2, C],A'3,
+
+3-cycle with setup:
+[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C'],
+
+Inverted:
+[C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C'],
+
+mirror:
+[B', A', C2, B, C'2, B, C, B', C, B', A3, B, C', B, C', B', C2, B', A3, C'2, A, B],
+
+mirror Inverted:
+[B', A', C2, A'3, B, C'2, B, C, B', C, B', A'3, B, C', B, C', B', C2, B', C'2, A, B],
+
+
+3-cycle + mirror. Need to analyze rotation
+[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B', A', C2, B, C'2, B, C, B', C, B', A'3, B, C', B, C', B', C2, B', A'3, C'2, A, B],
+
+parity, swapping 2 pieces:
+A,
+[C', B2, C', B', C, B', C],
+A,
+[C', B, C', B, C, B'2, C],
+A,
+
+rotation, with setup
+[C'2, B'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'],
+
+Inverted:
+[C, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', B2, C2],
+
+single rotation, bottom right pieces. R2:
+[A2, B'3, A'2, B2, C'3, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C'3, B'2, C, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C', A2, B'3, A'2, B2, C2, A2, B'3, A'2, B2, C'3, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C'3, B'2, C, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C', A2, B'3, A'2, C'2, B'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2],
+
+3-cycle with a short setup:
+[B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, C'],
+
+Inverted:
+[C, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2],
+
+another double rotation
+[A, B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, C'3, B, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, C', B, C2, A'],
+
+====
 
 7.0.10 should be similar to 7.0.7
 7.0.11 should be similar to 7.0.8
@@ -138,6 +188,11 @@ cb2de612cd2aa74f4f829d533b82976b
 8c6c16d02c6798ce31111aca34e619cd
 32be5844b084623bc49f6804d0876437
 c89e613dc27689ec135ea1bc436d91a7
+
+1104a7960028a59b092da99c613dc276
+8933135ba1bc436e9128237b85f40bd9
+26aa4c7286eb0db246688ce2162d2c64
+98ce31e51acb34e619cd32a75848b098
 
 7.0.12c
 1dd1bf221282810bb41dd24e7986f20d
