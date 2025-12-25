@@ -9,27 +9,33 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
-7.0.9
-be07c45927b7e86256baf66a2fd09b64
-37889e633dc27689ece75ea0bc436e91
-dc3a7a8ef419d92cb3587991f266b946
-738ce916d32c6798ce31e51acb36e623
-
-7.0.9b
-3545efe87ed45967f57150e61acb34e6
-191e32a6584fb09d62cfc496682fd09b
-642ec895612fc27c89c91379a1d5436f
-91dc237a85f40bd926b34c7986f30d7d
-
-7.0.9c
-09b2970ab121c64c1462930cb946738c
-e9c0d32e6798ce31e5eecb35e619cd32
-a7414fbb9d703bce975c2ff89b8837cb
-9e613dc27689ec135ea1bc436e94dc7f
-
 === to solve ===
+7.0.10
+7.0.10b
+7.0.10c
+7.0.11
+7.0.11b
+7.0.11c
+7.0.12
+7.0.12b
+7.0.12c
+7.8.7
+7.8.7b
 
 === solutions ===
+
+7.0.10 should be similar to 7.0.7
+7.0.11 should be similar to 7.0.8
+7.0.12 should be similar to 7.0.9
+
+7.0.10
+moves are similar to 7.0.7. But algos must discovered again
+
+
+backup: single piece, center, rotated by 180, U2
+[A, C', A3, C, A'4, B, A'3, B', A3],
+
+
 
 7.0.9
 A move is a 5-cycle with rotation. If a move is repeated 10 times, it comes back.
