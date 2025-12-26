@@ -9,11 +9,19 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
+7.8.7
+4885f46947d7ee645a4eff633dc27689
+ec8d5ea5bc436e91dcd77a84f40bd926
+b355798df214b95273b9e93dd3ae679b
+ce31e51acb34e619cd32a7584fb59d20
 
+7.8.7b
+5038e6f563de53b321aee7f40db94673
+8c6e16d52c6798ce31111aca34e619cd
+32be5844b084622ec4876802d0476436
+c89e613dc27689ec135ea1bc43679165
 
 === to solve ===
-7.8.7
-7.8.7b
 
 === solutions ===
 A-variant: all pieces are the same, with the same color pattern as the Rubik's cube
@@ -48,33 +56,56 @@ swapping two bottom pieces:
 [A'2, C'2, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A, C2, A2],
 
 2. rotate
-Double rotation, top (CW) and bottom right (around top left, left -> top)
-[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2],
+Single rotation 120, top (CW)
+[B, A'2, B', C, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C', B'2, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B'3, A2, B'],
 
-Inverted:
-[B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C'],
+Inverted: (CCW)
+[B, A'2, B3, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, B2, C, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, C', B, A2, B'],
 
-Double rotation, top around bottom center --->, affect bottom right
-[B2, C2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, C'2, B'2],
+Single rotation 120, top around bottom center --->
+[C'2, B'2, C'2, B'2, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C, B2, C2],
 
 Inverted: <---
-[B2, C2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, C'2, B'2],
+[C'2, B'2, C', A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, C', B'2, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, B2, C2, B2, C2],
 
-Double rotation, top around top right (top -> right), affect bottom right
-[A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2],
+Single rotation 120, top around top right (top -> right)
+[B2, C, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, C', B'2, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3],
+
+Inverted: (right -> top)
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C', B'2],
+
+Single rotation 120, top around top left (top -> left)
+[C'2, B'2, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C],
+
+Inverted: (left -> top)
+[C', A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, C', B'2, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, B2, C2],
+
+------
+Double parity: top and top right
+[C', A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C],
+
+Double parity: top and inner left
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3],
 
 Inverted:
-[A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2],
+[A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3],
 
-Double rotation, top around top left (top -> left), affect bottom right
-[C'2, B'2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, B2, C2],
+Double 90 (double parity): top and bottom right
+[C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B],
 
-Inverted:
-[C'2, B'2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, B2, C2],
+7.8.7
+4885f46947d7ee645a4eff633dc27689
+ec8d5ea5bc436e91dcd77a84f40bd926
+b355798df214b95273b9e93dd3ae679b
+ce31e51acb34e619cd32a7584fb59d20
 
+7.8.7b
+5038e6f563de53b321aee7f40db94673
+8c6e16d52c6798ce31111aca34e619cd
+32be5844b084622ec4876802d0476436
+c89e613dc27689ec135ea1bc43679165
 
-
-
+====
 backup:
 useful algo
 [C', B2, C', B', C, B', C],
@@ -84,6 +115,11 @@ Inverted:
 
 3-cycle:
 [C', B2, C', B', C, B', C],A3,[C', B, C', B, C, B'2, C],A'3,
+
+or
+
+[C', B2, C', B', C, B', C],A,[C', B, C', B, C, B'2, C],A',
+
 
 3-cycle with setup:
 [C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C'],
@@ -96,7 +132,6 @@ mirror:
 
 mirror Inverted:
 [B', A', C2, A'3, B, C'2, B, C, B', C, B', A'3, B, C', B, C', B', C2, B', C'2, A, B],
-
 
 3-cycle + mirror. Need to analyze rotation
 [C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B', A', C2, B, C'2, B, C, B', C, B', A'3, B, C', B, C', B', C2, B', A'3, C'2, A, B],
@@ -125,6 +160,60 @@ Inverted:
 
 another double rotation
 [A, B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, C'3, B, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, C', B, C2, A'],
+
+3-cycle symmetric setup:
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', A'3],
+
+Inverted:
+[A3, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3],
+
+mirror:
+[A3, B', A3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A3],
+
+mirror Inverted:
+[A'3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A'3, B, A'3],
+
+Single rotation 120:
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C', B'2],
+
+Inverted:
+[B2, C, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3, C', B'2, A3, B', A2, B, C'2, B, C, B', C, B', A, B, C', B, C', B', C2, B', A3, B, C, A'2, C', B2, C', B', C, B', C, A', C', B, C', B, C, B'2, C, A3, C', A3],
+
+3-cycle + mirror: top edge flip FR, left middle flip UL (double parity)
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3],
+
+Double rotation 120 algos no longer useful:
+
+Double rotation, top (CW) and bottom right (around top left, left -> top)
+[C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2],
+
+Inverted:
+[B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C'],
+
+Double rotation, top around bottom center --->, affect bottom right
+[B2, C2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, C'2, B'2],
+
+Inverted: <---
+[B2, C2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, C'2, B'2],
+
+Double rotation, top around top right (top -> right), affect bottom right
+[A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2],
+
+Inverted:
+[A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2],
+
+Double rotation, top around top left (top -> left), affect bottom right
+[C'2, B'2, A2, B'3, A'2, C, A, B'2, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, A'3, B2, A', C', B2, C'3, A, B'2, A'3, C', B2, C', B', C, B', C, A'3, C', B, C', B, C, B'2, C, B2, A', C'3, B'2, A2, B'3, A'2, B2, C2],
+
+Inverted:
+[C'2, B'2, A2, B3, A'2, B2, C3, A, B'2, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, A3, B2, A', C3, B'2, C, A, B'2, A3, C', B2, C', B', C, B', C, A3, C', B, C', B, C, B'2, C, B2, A', C', A2, B3, A'2, B2, C2],
+
+Single rotation for inner left:
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C', B'2, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C],
+
+B,A'2,B',C,
+[A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, C', B'2, A'3, C, A'3, C', B2, C', B', C, B', C, A, C', B, C', B, C, B'2, C, A2, C', B', A'3, B, C'2, B, C, B', C, B', A', B, C', B, C', B', C2, B', A'2, B, A'3, B2, C],
+C',B,A2,B',
 
 ====
 
