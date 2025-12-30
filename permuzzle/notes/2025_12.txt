@@ -9,10 +9,19 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
-=== to solve ===
 7.0.13
-7.0.13b
+d41b2cb1f5654ec4fa294ed29b6437c8
+9ea23dc17689ec135e55bc426e91dc23
+7a9cf400d93bb35a7996f21fb928738f
+e916d32c6798ce31e51acb34e61ccd7b
 
+7.0.13b
+302af2dd4b7df0f466ce47b04c7986f2
+0d8d46778ce916d32c9398cf31e51acb
+34ff19c632ba5859b0836228c483682d
+d09b6437c89e613dc27689ec135aa1f7
+
+=== to solve ===
 
 === solutions ===
 A-variant: all pieces are the same, with the same color pattern as the Rubik's cube
@@ -24,6 +33,98 @@ purple - green
 blue - yellow
 
 C-variant: the opposite faces have the same color, except white-black. All pieces are distinct.
+
+7.0.13
+4 distinct moves. Each move x6 is identity. Permutation parity is possible
+
+1. permutation:
+top right -> lower center -> top left
+[C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'],
+
+Inverted: top left -> lower center -> top right
+[C, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'],
+
+Parity: swap: top left and top right
+[A'3, C2, B, C, B', C2, A, C'2, B, C', B', C'3, A, C'3, B, C, B', C2, A, C'2, B, C', B', C'3, A, C'3, B, C, B', C2, A, C'2, B, C', B', C'3, A2, C, A'3],
+
+2. rotate:
+Double 90 turn: lower center U', -->, affect top right piece
+[C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'],
+
+Inverted: lower center U, <-- affect top right
+[C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C],
+
+Double 90 turn: lower center F, top -> right, affect top right piece
+[D2, B', C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B, D'2],
+
+Inverted: F', right -> top
+[D2, B', C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C, B, D'2],
+
+Double 90 turn: lower center R', top -> left, affect top right piece
+[D'2, C2, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, D2],
+
+Inverted: R, left -> top
+[D'2, B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'2, D2],
+
+Single 120:
+lower center rotate around center, CW
+[B2, A, D'2, C, D2, B', C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C, D'2, B'2, C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C', B2, C2, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C'2, D2, B, D'2, C', D2, A', B'2],
+
+Inverted: CCW
+[B2, A, D'2, C, D2, B', D'2, C2, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C'2, B'2, C, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B2, D2, C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B, D'2, C', D2, A', B'2],
+
+lower center rotate around bottom -->
+[D2, B', D'2, C2, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, D2, C', B'2, C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C', B2, C2, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B, D'2],
+
+Inverted: <--
+[D2, B', C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C'2, B'2, C, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B2, C, D'2, B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'2, D2, B, D'2],
+
+lower center around top right corner, top -> right
+[D'2, C2, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C'2, B'2, C, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B2, D2, C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'],
+
+Inverted: right -> top
+[C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C, D'2, B'2, C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C', B2, C2, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C'2, D2],
+
+lower center around top left corner, top -> left
+[D'2, C, D2, B', C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C, D'2, B'2, C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C', B2, C2, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C'2, D2, B, D'2, C', D2],
+
+Inverted:
+[D'2, C, D2, B', D'2, C2, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C'2, B'2, C, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B2, D2, C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C', B, D'2, C', D2],
+
+7.0.13
+d41b2cb1f5654ec4fa294ed29b6437c8
+9ea23dc17689ec135e55bc426e91dc23
+7a9cf400d93bb35a7996f21fb928738f
+e916d32c6798ce31e51acb34e61ccd7b
+
+7.0.13b
+302af2dd4b7df0f466ce47b04c7986f2
+0d8d46778ce916d32c9398cf31e51acb
+34ff19c632ba5859b0836228c483682d
+d09b6437c89e613dc27689ec135aa1f7
+
+
+backup:
+algo for commutator
+[C'3, B, C, B', C2],
+
+Inverted:
+[C'2, B, C', B', C3],
+
+[C'3, B, C, B', C2],A',[C'2, B, C', B', C3],A,
+
+A,
+[C'3, B, C, B', C2],A,[C'2, B, C', B', C3],A,
+
+Double 90 turn
+[C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C],
+
+Single 120:
+[C, A'3, C2, B, C, B', C2, A', C'2, B, C', B', C'3, A, C, A'3, C'2, B'2, C, A'3, C', A', C'3, B, C, B', C2, A, C'2, B, C', B', C'2, A'3, C', B2, C],
+D'2,C,
+[C', B'2, C, A3, C2, B, C, B', C2, A', C'2, B, C', B', C3, A, C, A3, C', B2, C2, A3, C', A', C3, B, C, B', C2, A, C'2, B, C', B', C'2, A3, C'],
+C',D2,
+
 
 7.8.7
 Each move x6 is identity.
