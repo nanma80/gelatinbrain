@@ -9,10 +9,137 @@ https://twistypuzzles.com/forum/
 ===
 Waiting for the scoreboard to be updated:
 
+7.7.9
+506ce6f663de53b321d5e7f30db94673
+8c4916d22c6798ce31111aca34e619cd
+32bd584fb083622ec4a7682ed0876437
+c89e613dc27689ec135ea1bc436c91e3
+
+7.7.9b
+2db6df410696a923173a9509d926b34c
+796bf20fb946738ce9e2d32d6798ce31
+e500cb34e607cd24a7584f969d803bc5
+97682fd09b6437c89e613dc2768aecc3
+
+7.7.9c
+d2a4206cf9db567ae8a46add26b34c79
+869c0dbb46738ce916272c6698ce31e5
+1ad134e619d332b15853b0956201c496
+682fd09b6437c89e613dc27689ef135d
 
 === to solve ===
-7.7.9
-7.7.9b
-7.7.9c
 
 === solutions ===
+
+7.7.9
+
+Every move *3 = identity
+
+Permutation is trivial.
+
+Single rotation is possible.
+
+
+Double rotation, middle layers, 1/5 round. inward
+[B', A', C, B', C', B', C, B', A, D, A, D, B, C', B, C, B, D', A', D', A', C', A, B],
+
+Inverted: outward
+[B', A', C, A, D, A, D, B', C', B', C, B', D', A', D', A', B, C', B, C, B, C', A, B],
+
+Double rotation, middle right, bottom center, inward
+[C', B', A, C', A', C', A, C', B, D, B, D, C, A', C, A, C, D', B', D', B', A', B, C],
+
+Inverted: right outward
+[C', B', A, B, D, B, D, C', A', C', A, C', D', B', D', B', C, A', C, A, C, A', B, C],
+
+Double rotation, middle left, bottom center, inward
+[A', C', B, A', B', A', B, A', C, D, C, D, A, B', A, B, A, D', C', D', C', B', C, A],
+
+Inverted: left outward
+[A', C', B, C, D, C, D, A', B', A', B, A', D', C', D', C', A, B', A, B, A, B', C, A],
+
+Single rotation of middle right by 120 around the front face center, CW
+[A', C', A', C, D, A, C', A', C, D, A, C', A', C, B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', D, A'],
+
+Inverted: CCW
+[A, D', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', C', A, C, A', D', C', A, C, A', D', C', A, C, A],
+
+Single rotation of middle right by 120 around the front bottom center, CW
+[D, B', C, B, C', D', B', C, B, C', D', B', C, B, C', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', D],
+
+Inverted:
+[D', B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', C, B', C', B, D, C, B', C', B, D, C, B', C', B, D'],
+
+Single rotation of middle right by 2/5 round <--<--
+[A', C', A', C, D, A, C', A', C, D, A, C', A', C, B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', D, A', D', A, C', A', C, D, A, C', A', C, D, A, C', A', C, B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', D, B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', C, B', C', B, D, C, B', C', B, D, C, B', C', B, D'],
+
+Inverted: -->-->
+[D, B', C, B, C', D', B', C, B, C', D', B', C, B, C', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', D', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', C', A, C, A', D', C', A, C, A', D', C', A, C, A', D, A, D', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', C', A, C, A', D', C', A, C, A', D', C', A, C, A],
+
+7.7.9
+506ce6f663de53b321d5e7f30db94673
+8c4916d22c6798ce31111aca34e619cd
+32bd584fb083622ec4a7682ed0876437
+c89e613dc27689ec135ea1bc436c91e3
+
+7.7.9b
+2db6df410696a923173a9509d926b34c
+796bf20fb946738ce9e2d32d6798ce31
+e500cb34e607cd24a7584f969d803bc5
+97682fd09b6437c89e613dc2768aecc3
+
+7.7.9c
+d2a4206cf9db567ae8a46add26b34c79
+869c0dbb46738ce916272c6698ce31e5
+1ad134e619d332b15853b0956201c496
+682fd09b6437c89e613dc27689ef135d
+
+
+=============
+backup
+
+C,B',C',B,
+
+[A', B, A, B', C', A, C, A'],
+
+Double rotation:
+[C, B', C', B, D]x3,
+
+Double rotation, middle layers, 1/5 round. middle left <--
+[A', B, A, B', D', A', B, A, B', D', A', B, A, B', D'],
+
+Inverted:
+[D, B, A', B', A, D, B, A', B', A, D, B, A', B', A],
+
+Double rotation, middle layers, algo 2 1/5 round, middle right -->
+[A, C', A', C, D, A, C', A', C, D, A, C', A', C, D],
+
+Inverted:
+[D', C', A, C, A', D', C', A, C, A', D', C', A, C, A'],
+
+
+left middle, bottom center
+[C, B', C', B, D, C, B', C', B, D, C, B', C', B, D],
+
+Inverted:
+[D', B', C, B, C', D', B', C, B, C', D', B', C, B, C'],
+
+left middle, bottom center, algo 2
+[B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B'],
+
+Inverted:
+[B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B'],
+
+Single rotation of left middle by 120
+[B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', C, B', C', B, D, C, B', C', B, D, C, B', C', B, D],
+
+Inverted:
+[D', B', C, B, C', D', B', C, B, C', D', B', C, B, C', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B'],
+
+Single rotation of left middle by 120 algo 2
+[A, C', A', C, D, A, C', A', C, D, A, C', A', C, B, A', B, A, B', D', A', B, A, B', D', A', B, A, B', D', B', D],
+
+Inverted:
+[D', B, D, B, A', B', A, D, B, A', B', A, D, B, A', B', A, B', C', A, C, A', D', C', A, C, A', D', C', A, C, A'],
+
+
