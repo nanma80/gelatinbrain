@@ -1,0 +1,36 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.com/permuzzle/
+https://zqjxkvby.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
+
+===
+Waiting for the scoreboard to be updated:
+
+=== to solve ===
+
+=== solutions ===
+
+3.2.27
+Permutation is as same as dino cube. Rotation is more complicated.
+
+
+backup
+
+[DFR', FDL, DBL, RBD, DFR'],
+
+Inverted:
+[DFR, RBD', DBL', FDL', DFR],
+
+URF',
+[DFR', FDL, DBL, RBD, DFR'],
+URF,
+[DFR, RBD', DBL', FDL', DFR],
+
+Double rotation, 5 fold
+[URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR],
+
+Inverted:
+[DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF],
