@@ -8,14 +8,54 @@ https://twistypuzzles.com/forum/
 
 ===
 Waiting for the scoreboard to be updated:
+1b65b3990c35bd9e0c4fa37589ec135e
+a14e436a91dc237a85000bd826b34c79
+86e80db8467e8cf916cc2c67987131e4
+1acb34e619cd32a7584fb09d623ec4f7
 
 === to solve ===
 
 === solutions ===
 
 3.2.27
-Permutation is as same as dino cube. Rotation is more complicated.
+Permutation is as same as dino cube. Rotation is more complicated. Single rotation by 72 deg is possible. 
+Each piece needs to be rotated to an exact orientation to be solved
 
+Double rotation, 5 fold -->
+[URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR],
+
+Inverted: <--
+[DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF],
+
+
+Single rotation, 5 fold, around top left down
+[UBL, BUR', UFR, DRF, RDB', DLB', FLD', DRF, UFR', DRF', FLD, DLB, RDB, DRF', BUR, UBL', UFR, LFU, FLD, DRF, UBL, BUR', DRF, RDB', DLB', FLD', DRF, UFR, DRF', FLD, DLB, RDB, DRF', UFR', BUR, UBL', DRF', FLD', LFU', UFR'],
+
+Inverted Mirror (cube; plane containing FR, BL edges): left going up
+[UFR, LFU, FLD, DRF, UBL, BUR', UFR, DRF, RDB', DLB', FLD', DRF, UFR', DRF', FLD, DLB, RDB, DRF', BUR, UBL', DRF', FLD', LFU', UFR', UBL, BUR', DRF, RDB', DLB', FLD', DRF, UFR, DRF', FLD, DLB, RDB, DRF', UFR', BUR, UBL'],
+
+Single rotation, 5 fold, around top right going down
+[ULB', LUF, URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR, LUF', ULB, URF', BRU', RBD', DFR', ULB', LUF, DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF, LUF', ULB, DFR, RBD, BRU, URF],
+
+Inverted: right going up
+[URF', BRU', RBD', DFR', ULB', LUF, URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR, LUF', ULB, DFR, RBD, BRU, URF, ULB', LUF, DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF, LUF', ULB],
+
+Single rotation, 5 fold, CW
+[DFR', BRU, RBD', DFR, FDL, DBL', ULB', LUF', FDL, DFR', FDL', LUF, ULB, DBL, FDL', RBD, BRU', DFR, URF, LUF, FDL, BRU, RBD', FDL, DBL', ULB', LUF', FDL, DFR, FDL', LUF, ULB, DBL, FDL', DFR', RBD, BRU', FDL', LUF', URF'],
+
+Inverted: CCW
+[URF, LUF, FDL, BRU, RBD', DFR, FDL, DBL', ULB', LUF', FDL, DFR', FDL', LUF, ULB, DBL, FDL', RBD, BRU', FDL', LUF', URF', DFR', BRU, RBD', FDL, DBL', ULB', LUF', FDL, DFR, FDL', LUF, ULB, DBL, FDL', DFR', RBD, BRU', DFR],
+
+Single rotation, double length -->
+[ULB', LUF, URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR, LUF', ULB, URF', BRU', RBD', DFR', ULB', LUF, DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF, LUF', ULB, DFR, RBD, BRU, URF', LUF, FDL, DFR, ULB, BRU', URF, DFR, RBD', DBL', FDL', DFR, URF', DFR', FDL, DBL, RBD, DFR', BRU, ULB', DFR', FDL', LUF', URF', ULB, BRU', DFR, RBD', DBL', FDL', DFR, URF, DFR', FDL, DBL, RBD, DFR', URF', BRU, ULB'],
+
+Inverted: <--
+[ULB, BRU', URF, DFR, RBD', DBL', FDL', DFR, URF', DFR', FDL, DBL, RBD, DFR', BRU, ULB', URF, LUF, FDL, DFR, ULB, BRU', DFR, RBD', DBL', FDL', DFR, URF, DFR', FDL, DBL, RBD, DFR', URF', BRU, ULB', DFR', FDL', LUF', URF, BRU', RBD', DFR', ULB', LUF, URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR, LUF', ULB, DFR, RBD, BRU, URF, ULB', LUF, DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF, LUF', ULB],
+
+1b65b3990c35bd9e0c4fa37589ec135e
+a14e436a91dc237a85000bd826b34c79
+86e80db8467e8cf916cc2c67987131e4
+1acb34e619cd32a7584fb09d623ec4f7
 
 backup
 
@@ -29,8 +69,11 @@ URF',
 URF,
 [DFR, RBD', DBL', FDL', DFR],
 
-Double rotation, 5 fold
-[URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR],
+
+with setup: front center and back center
+[ULB', LUF, URF', DFR', FDL, DBL, RBD, DFR', URF, DFR, RBD', DBL', FDL', DFR, LUF', ULB],
 
 Inverted:
-[DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF],
+[ULB', LUF, DFR', FDL, DBL, RBD, DFR', URF', DFR, RBD', DBL', FDL', DFR, URF, LUF', ULB],
+
+
