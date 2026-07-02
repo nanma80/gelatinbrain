@@ -7,10 +7,186 @@ https://zqjxkvby.com/permuzzle/scoreboard.php
 https://twistypuzzles.com/forum/
 
 ===
+3.48.1
+969fa8338e1bb832caf42eb29d623bc4
+97452fd39b6437c89e953dc37689ec13
+5ebbbc456e90dc357aa9f40ad9a0b34c
+7986f20db946738ce916d32c679acedb
+
+1.48.1
+ebcc52e272cb41e6742353a0584fb09d
+6220c49d682fd09b64c3c89f613dc276
+89f61358a1be436e91d12379855d0bd9
+26b34c7986f20db946738ce916de2cc9
 
 === to solve ===
-3.48.1
-1.48.1
 
 === solutions ===
+
+1.48.1
+Can rotate by face, corner, edge
+
+Any rotation * 60 = identity
+
+
+- use edge rotation to permute face centers
+- use face rotation to fix orientation of face centers
+- Permute 3 edges: front lower left -> front lower right -> back up center
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H],
+
+Inverted:
+[H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+- Rotate two edges by 1/4 (90 deg): front lower left (right turn) -> front lower right (left turn)
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H, I, B'3, ACD, A', B, A, B', ACD', ADE, ACD, B, A', B', A, ACD', ADE', B3, I',H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+Inverted:
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H, I, B'3, ADE, ACD, A', B, A, B', ACD', ADE', ACD, B, A', B', A, ACD', B3, I', H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+
+- rotate a single edge by 180: front top center
+[AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', AF', FB, AF, FB', AFB', ABC', C', DCG', DGK, KGL', L', J3, AEF', F, J', F', J, AEF, AFB', AEF', J', F, J, F', AEF, AFB, AEF', F, J', F', J, AEF, AFB', AEF', J', F, J, F', AEF, AFB, J'3, L, K, J'3, BFI, F', J, F, J', BFI', AFB, BFI, J, F', J', F, BFI', AFB', J3, K', KGL, DGK', DCG, C, ABC],
+
+- permute corners like a normal 3x3
+
+- Rotate two corners by 1/3:
+AB'20,
+
+- Rotate two corners by 1/6: front top left (left turn), front top right (right turn)
+[ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB],
+
+Inverted:
+[AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', AB', BC, AB, BC', ABC', BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC, BC, AB', BC', AB, ABC],
+
+
+
+- rotate a single corner by 1/3: left turn
+[AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD', AC, AD, AC', ACD'2, AC, AD', AC', AD, ACD2, AD'20],
+
+Inverted: right turn
+[AD20, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD, ACD'2, AD', AC, AD, AC', ACD2, AC, AD', AC', AD],
+
+ebcc52e272cb41e6742353a0584fb09d
+6220c49d682fd09b64c3c89f613dc276
+89f61358a1be436e91d12379855d0bd9
+26b34c7986f20db946738ce916de2cc9
+
+
+===backup
+permute 3 edges
+[A, E', A', E, ACD', E', A, E, A', ACD],
+
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H],
+
+Inverted:
+[H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+rotate two edges by 1/4:
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H, I, B'3, ACD, A', B, A, B', ACD', ADE, ACD, B, A', B', A, ACD', ADE', B3, I'],
+
+Inverted:
+[I, B'3, ADE, ACD, A', B, A, B', ACD', ADE', ACD, B, A', B', A, ACD', B3, I', H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+
+[H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H, I, B'3, ADE, ACD, A', B, A, B', ACD', ADE', ACD, B, A', B', A, ACD', B3, I', H', B3, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, ADE', AEF', A, B', A', B, AEF, ADE, AEF', B', A, B, A', AEF, B'3, H],
+
+AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', AE', AD, AE, AD', ADE', EDK', K', JKL', IJL, HIL', H', B3, AEF', A, B', A', B, AEF, ADE', AEF', B', A, B, A', AEF, ADE, B'3, H, HIL, IJL', JKL, K, EDK,
+
+
+what can I build with this?
+[AE', AD, AE, AD', ADE']x10, [AD, AE', AD', AE, AED]x10,
+
+
+
+3.48.1
+
+Can rotate by face, corner, edge
+
+Face rotation:
+Face center rotate by 1/8 rounds, but the pieces permute by 1/4 rounds
+
+edge rotation:
+Edge center rotate by 1/4, but the pieces permute by 1/2 rounds
+
+corner rotation:
+corner rotate by 1/6, but the pieces permute by 1/3 rounds
+
+The surrounding pieces have complicated rotation.
+Every rotation * 24 = identity
+
+- use edge rotation to permute face centers
+- use face rotation to fix orientation of face centers
+- Permute 3 edges: UF -> UR -> LB
+[L, U', F, U, F', URF', F, U', F', U, URF, L'],
+
+Inverted:
+[L, URF', U', F, U, F', URF, F, U', F', U, L'],
+
+3 pieces in front, right permute
+[LUF', F', U', F, U, F', URF', F, U', F', U, URF, F, LUF],
+
+Inverted: left permute
+[LUF', F', URF', U', F, U, F', URF, F, U', F', U, F, LUF],
+
+- Rotate two edges by 1/4 (90 deg): UF, UR
+UF right handed, UR left handed
+[F', LUF', BRU, LUF, BRU', FU, UR, FL', FU', FDL, URF', FDL', URF, F],
+
+- rotate a single edge by 180
+[RF'2, UR', RF, UR, RF', UR, FU', UR', FU, UR', RF, UR, RF', UR, FU', UR', FU, UR', RF, UR, RF', UR, FU', UR', FU, UR', RF, UR, RF', UR, FU', UR', FU, UR', RF, UR, RF', UR, FU', UR', FU, UR', RF, UR, RF', UR, FU', UR', FU, URF'12, UR'12, RF8],
+
+- permute corners like a normal 3x3
+
+- Rotate two corners by 1/3:
+RF'8,
+
+- Rotate two corners by 1/6: two left turn
+[U, FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', FU', UR, FU, UR', URF', LUF', F', U', F, U, F', URF', F, U', F', U, URF, F, LUF, F', LUF', BRU, LUF, BRU', FU, UR, FL', FU', FDL, URF', FDL', URF, LUF', BRU, LUF, BRU', FU, UR, FL', FU', FDL, URF', FDL', URF, F, R', DFR', LUF, DFR, LUF', RF, FU, RD', RF', RBD, URF', RBD', URF, DFR', LUF, DFR, LUF', RF, FU, RD', RF', RBD, URF', RBD', URF, DFR', LUF, DFR, LUF', RF, FU, RD', RF', RBD, URF', RBD', URF, R, U', F', R, F, R', U2, R, F', R', F, U', RF8, U'],
+
+Inverted: two right turn
+[U, RF'8, U, F', R, F, R', U'2, R, F', R', F, U, R', URF', RBD, URF, RBD', RF, RD, FU', RF', LUF, DFR', LUF', DFR, URF', RBD, URF, RBD', RF, RD, FU', RF', LUF, DFR', LUF', DFR, URF', RBD, URF, RBD', RF, RD, FU', RF', LUF, DFR', LUF', DFR, R, F', URF', FDL, URF, FDL', FU, FL, UR', FU', BRU, LUF', BRU', LUF, URF', FDL, URF, FDL', FU, FL, UR', FU', BRU, LUF', BRU', LUF, F, LUF', F', URF', U', F, U, F', URF, F, U', F', U, F, LUF, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, URF, UR, FU', UR', FU, U'],
+
+- rotate a single corner by 1/3:
+[RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR, RF', FU, RF, UR'7, RF'8, FU'8],
+
+969fa8338e1bb832caf42eb29d623bc4
+97452fd39b6437c89e953dc37689ec13
+5ebbbc456e90dc357aa9f40ad9a0b34c
+7986f20db946738ce916d32c679acedb
+
+===
+backup:
+
+Rotate two corners by 1/3:
+RF'8,
+
+rotate two face centers by 1/2:
+RF12,
+
+rotate a single face center by 1/2:
+[URF'12, RF'12],
+
+
+LUF', BRU, LUF, BRU',
+
+[LUF', BRU, LUF, BRU', FU, UR],
+
+Inverted:
+[UR', FU', BRU, LUF', BRU', LUF],
+
+
+Rotate two edges by 1/4 (90 deg): UF, UR
+[F', LUF', BRU, LUF, BRU', FU, UR, FL', FU', FDL, URF', FDL', URF, F],
+
+Permute 3 edges
+[L, U', F, U, F', URF', F, U', F', U, URF, L'],
+
+Inverted:
+[L, URF', U', F, U, F', URF, F, U', F', U, L'],
+
+parity:
+[URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL, URF', FDL', URF', FDL],
+
+rotate a single corner by 1/3. longer version
+[UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, UB', LU, UB, LU', LB, LU', LB', LU, LB8, UR'8, FU'8],
 
