@@ -1,0 +1,95 @@
+http://www.brandonenright.net/cgi-bin/gb_util.pl
+use trailing comma
+
+https://github.com/Hypercubers/gelatinbrain
+https://zqjxkvby.com/permuzzle/
+https://zqjxkvby.com/permuzzle/scoreboard.php
+https://twistypuzzles.com/forum/
+
+===
+
+3.7.6j
+141bad368d18be348b15ac3ba7584fb0
+9d233bc597682fd09b9037c99e613dc2
+7693ec155eb3bc526e91dc197a5cf40b
+d926b34c7986f20db946738ce916d37e
+
+=== to solve ===
+3.7.12
+
+=== solutions ===
+
+3.7.12
+
+3 cycle, front lower center left -> front lower center left -> back upper center right
+[L'4, RF, FDL'3, DFR', RF', DF, RF, DF', DFR, RD, DFR', DF, RF', DF', RF, DFR, RD', FDL'3, RF', L'4],
+
+Inverted:
+[L4, RF, FDL3, RD, DFR', RF', DF, RF, DF', DFR, RD', DFR', DF, RF', DF', RF, DFR, FDL3, RF', L4],
+
+Double rotation, front up left, front up right. Inside edge up
+[U', BR'2, B2, BRU', UR', BR, UR, BR', BRU, UB, BRU', BR, UR', BR', UR, BRU, UB', B'2, BR'2, UR, UB'2, B'2, BRU, UR, UB', UR', UB, BRU', BR', BRU, UB', UR, UB, UR', BRU', BR, B2, UB'2, UR', U],
+
+Inverted:
+[U', UR, UB2, B'2, BR', BRU, UR, UB', UR', UB, BRU', BR, BRU, UB', UR, UB, UR', BRU', B2, UB2, UR', BR2, B2, UB, BRU', UR', BR, UR, BR', BRU, UB', BRU', BR, UR', BR', UR, BRU, B'2, BR2, U],
+
+backup
+basic 3 cycle:
+[URF', FU', RF, FU, RF', URF, UR, URF', RF, FU', RF', FU, URF, UR'],
+
+
+basic 3 cycle with setup
+[UR'2, U2, URF', RF', UR, RF, UR', URF, FU, URF', UR, RF', UR', RF, URF, FU', U'2, UR'2],
+
+Inverted:
+[UR2, U2, FU, URF', RF', UR, RF, UR', URF, FU', URF', UR, RF', UR', RF, URF, U'2, UR2],
+
+Mirror (cube; plane containing FR, BL edges):
+[UF2, U'2, UFR, FR, UF', FR', UF, UFR', RU', UFR, UF', FR, UF, FR', UFR', RU, U2, UF2],
+
+
+===
+3.7.6j
+
+Solve as much as you can intuitively.
+
+front left -> front right -> back left
+[LB, ULB'3, URF', U'4, URF'2, UR, URF, UR', U', UR, URF', UR', URF, U, URF, U'4, URF, ULB'3, LB'],
+
+Inverted:
+[LB, ULB3, URF', U4, URF', U', URF', UR, URF, UR', U, UR, URF', UR', URF2, U4, URF, ULB3, LB'],
+
+Double rotation, front up left, front up right. Inside edge up
+[URF, R', UR', R, URF, R', UR, R, UR', URF', U, UR, U', URF', U, UR', U', UR],
+
+Inverted: inside edge down
+[UR', U, UR, U', URF, U, UR', U', URF, UR, R', UR', R, URF', R', UR, R, URF'],
+
+
+141bad368d18be348b15ac3ba7584fb0
+9d233bc597682fd09b9037c99e613dc2
+7693ec155eb3bc526e91dc197a5cf40b
+d926b34c7986f20db946738ce916d37e
+
+backup
+[URF', UR, URF, UR', U', UR, URF', UR', URF, U],
+
+[LB, ULB'3, URF', U'4, URF'2, UR, URF, UR', U', UR, URF', UR', URF, U, URF, U'4, URF, ULB'3, LB'],
+
+Inverted:
+[LB, ULB3, URF', U4, URF', U', URF', UR, URF, UR', U, UR, URF', UR', URF2, U4, URF, ULB3, LB'],
+
+[LB2, ULB'3, URF', U'4, URF'2, UR, URF, UR', U', UR, URF', UR', URF, U, URF, U'4, URF, ULB'3, LB'2],
+
+3-cycle around an edge
+[RF', R, RF, R', URF', R, RF', R', RF, URF],
+
+Inverted:
+[URF', RF', R, RF, R', URF, R, RF', R', RF],
+
+Double rotation
+[F', RF', F, URF, F', RF, F, RF', URF', R, RF, R', URF', R, RF', R', RF, URF],
+
+Inverted:
+[URF', RF', R, RF, R', URF, R, RF', R', URF, RF, F', RF', F, URF', F', RF, F],
+
