@@ -14,14 +14,20 @@ https://twistypuzzles.com/forum/
 7693ec155eb3bc526e91dc197a5cf40b
 d926b34c7986f20db946738ce916d37e
 
-=== to solve ===
 3.7.12
+65574f60f0cc44e577c855e819cd32a7
+5873b095623bc49768dbd09a6437c89e
+6127c27089ff134aa1a8437f9159237a
+85f40bd926b34c7986f20db9467b8c72
+
+=== to solve ===
+
 
 === solutions ===
 
 3.7.12
 
-3 cycle, front lower center left -> front lower center left -> back upper center right
+3 cycle, front lower center left -> front lower center right -> back upper center right
 [L'4, RF, FDL'3, DFR', RF', DF, RF, DF', DFR, RD, DFR', DF, RF', DF', RF, DFR, RD', FDL'3, RF', L'4],
 
 Inverted:
@@ -32,6 +38,12 @@ Double rotation, front up left, front up right. Inside edge up
 
 Inverted:
 [U', UR, UB2, B'2, BR', BRU, UR, UB', UR', UB, BRU', BR, BRU, UB', UR, UB, UR', BRU', B2, UB2, UR', BR2, B2, UB, BRU', UR', BR, UR, BR', BRU, UB', BRU', BR, UR', BR', UR, BRU, B'2, BR2, U],
+
+
+65574f60f0cc44e577c855e819cd32a7
+5873b095623bc49768dbd09a6437c89e
+6127c27089ff134aa1a8437f9159237a
+85f40bd926b34c7986f20db9467b8c72
 
 backup
 basic 3 cycle:
