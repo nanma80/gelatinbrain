@@ -7,12 +7,116 @@ https://zqjxkvby.com/permuzzle/scoreboard.php
 https://twistypuzzles.com/forum/
 
 ===
+9.2.1
+cf420d90b42b0f859985b802b34c7986
+f292b94d738ce916d3d86799ce31e51a
+cb2ee610cd3da7554f9b9d7a3b82976a
+2fd09b6437c89e613dc27689ec1e5e21
 
 === to solve ===
 
 
 === solutions ===
+2.13.*
 
+
+
+9.2.1
 9.2.1 doc:
 https://zqjxkvby.com/permuzzle/doc/square_f1.php
+Every move x4 = identity
+
+target: facing right
+bottom left up -> target -> bottom left down
+[O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2],
+
+Inverted:
+[O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2],
+
+target: facing left
+[D', J2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J2, D],
+
+Inverted:
+[D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+
+Parity:
+[A, O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D, A, D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D, O'2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O'2, A, O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D, A, D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D, O'2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O'2, A, O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+
+cf420d90b42b0f859985b802b34c7986
+f292b94d738ce916d3d86799ce31e51a
+cb2ee610cd3da7554f9b9d7a3b82976a
+2fd09b6437c89e613dc27689ec1e5e21
+
+====
+Double rotate: affecting bottom top
+facing right: CW
+[O2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O2, A, N, H, O', D', J2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J2, D, O, H', N', A'],
+
+Inverted: CCW
+[A, N, H, O', D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A', O'2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O'2],
+
+facing left: CW
+[O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+
+Inverted: facing left, CCW
+[D', J2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J2, D, O, H', N', A', O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2, A, N, H, O'],
+
+
+
+backup:
+3 cycle:
+[A, S, A', S'],H,[S, A, S', A'],H',
+
+
+[J, A, S, A', S', H, S, A, S', A', H', J'],
+
+[A', J, A, S, A', S', H, S, A, S', A', H', J', A],
+
+3-cycle with 3 pieces together:
+[H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H'],
+
+Inverted:
+[H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H'],
+
+3-cycle with two pieces together and a third one far away:
+[S, D, G', D', G, B, G', D, G, D', B', S'],
+
+better setup:
+target: facing right
+bottom left up -> target -> bottom left down
+[O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2],
+
+Inverted:
+[O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2],
+
+alternative facing right:
+[A, N, H, O', D', J'2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J'2, D, O, H', N', A'],
+
+Inverted:
+[A, N, H, O', D', J2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J2, D, O, H', N', A'],
+
+target: facing left
+[D', J2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J2, D],
+
+Inverted:
+[D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+
+alternative facing left:
+[O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O'],
+
+Inverted:
+[O, H', N', A', O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2, A, N, H, O'],
+
+Sequence useful for parity:
+[O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2],
+[D', J2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J2, D],
+[O, H', N', A', O'2, L', S, D, G', D', G, B, G', D, G, D', B', S', L, O'2, A, N, H, O', D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+A,
+[D', J2, H, A', J, H, A, S, A', S', H', S, A, S', A', J', A, H', J2, D, O, H', N', A', O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2, A, N, H, O'],
+[D', J'2, H, A', J, A, S, A', S', H, S, A, S', A', H', J', A, H', J'2, D],
+[O2, L', S, B, D, G', D', G, B', G', D, G, D', S', L, O2],
+A,
+
+
+
 
