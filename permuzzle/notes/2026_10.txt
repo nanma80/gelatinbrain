@@ -7,18 +7,121 @@ https://zqjxkvby.com/permuzzle/scoreboard.php
 https://twistypuzzles.com/forum/
 
 ===
-9.2.1
-cf420d90b42b0f859985b802b34c7986
-f292b94d738ce916d3d86799ce31e51a
-cb2ee610cd3da7554f9b9d7a3b82976a
-2fd09b6437c89e613dc27689ec1e5e21
+2.13.1
+78f045b12478f3f2601c27778ce916d3
+2c4398cc31e51acb341219cc32a7584f
+b0876232c4876824d09f6407c88b613f
+c27689ec135ea1bc436e91dc237b8518
 
 === to solve ===
 
-
 === solutions ===
-2.13.*
+2.13.1
+20 pieces. Each is a tetrahedron
 
+Permutation: intuitive, just like megaminx corners
+3 cycle: <--
+[D', A, D, A', E, A, D', A', D, E'],
+
+Inverted: -->
+[E, D', A, D, A', E', A, D', A', D],
+
+
+Double rotation:
+=========
+front two pieces, rotating around vertical axis -->
+[E', D, E, D', A'5, D, E', D', E, A5],
+
+Inverted: vertical axis <--
+[A'5, E', D, E, D', A5, D, E', D', E],
+
+=========
+center piece rotating CW
+[K, G2, A'5, E'5, K', G'2, K', E', D, E, D', K, G2, K, E5, A5, K', G'2, K', D, E', D', E, K, G2, K, G'2, K'],
+
+Inverted CCW:
+[K, G2, K', G'2, K', E', D, E, D', K, G2, K, A'5, E'5, K', G'2, K', D, E', D', E, K, G2, K, E5, A5, G'2, K'],
+
+=========
+two pieces in front, rotating around the bottom LEFT, front to the left side, bottom going up
+[K2, E, K', D, K, E', K', E, D', K', D, K, D', E', D, K', D'],
+
+Inverted: -->
+[D, K, D', E, D, K', D', K, D, E', K, E, K', D', K, E', K'2],
+
+=========
+Mirror (dodecahedron):
+two pieces in front, rotating around the bottom RIGHT, front to the right side, bottom going up
+[K'2, D', K, E', K', D, K, D', E, K, E', K', E, D, E', K, E],
+
+Inverted Mirror (dodecahedron):
+[E', K', E, D', E', K, E, K', E', D, K', D', K, E, K', D, K2],
+
+=========
+Single flip:
+center piece, front <-> bottom face
+[E2, A, E', D, E, A', E', A, D', E', D, E, D', A', D, E', D', C', G', K', A'2, E', A, D', A', E, A, E', D, A, D', A', D, E, D', A, D, K, G, C],
+
+78f045b12478f3f2601c27778ce916d3
+2c4398cc31e51acb341219cc32a7584f
+b0876232c4876824d09f6407c88b613f
+c27689ec135ea1bc436e91dc237b8518
+
+
+backup:
+<--
+[D', A, D, A', E, A, D', A', D, E'],
+
+Inverted:
+[E, D', A, D, A', E', A, D', A', D],
+
+Mirror (dodecahedron):
+[E, A', E', A, D', A', E, A, E', D],
+
+Inverted Mirror (dodecahedron):
+[D', E, A', E', A, D, A', E, A, E'],
+
+alternative:
+[D, E, D', A, D, E', D', E, A', E'],
+
+Inverted:
+[E, A, E', D, E, D', A', D, E', D'],
+
+Mirror (dodecahedron):
+[E', D', E, A', E', D, E, D', A, D],
+
+Inverted Mirror (dodecahedron):
+[D', A', D, E', D', E, A, E', D, E],
+
+
+double rotation:
+
+alternative
+center piece around bottom RIGHT corner, rotating down
+[A, F, J, D2, K, D', E, D, K', D', K, E', D', E, D, E', K', E, D', E', J', F', A'],
+
+Inverted:
+[A, F, J, E, D, E', K, E, D', E', D, E, K', D, K, D', E', D, K', D'2, J', F', A'],
+
+Mirror (dodecahedron):
+center piece around bottom LEFT corner, rotating down
+[A', C', G', E'2, K', E, D', E', K, E, K', D, E, D', E', D, K, D', E, D, G, C, A],
+
+Inverted Mirror (dodecahedron):
+[A', C', G', D', E', D, K', D', E, D, E', D', K, E', K', E, D, E', K, E2, G, C, A],
+
+Double rotation in front:
+[K2, E, K', D, K, E', K', E, D', K', D, K, D', E', D, K', D', E', K', E, D', E', K, E, K', E', D, K', D', K, E, K', D, K2, D, K, D', E, D, K', D', K, D, E', K, E, K', D', K, E', K'2],
+
+Inverted:
+[K2, E, K', D, K, E', K', E, D', K', D, K, D', E', D, K', D', K'2, D', K, E', K', D, K, D', E, K, E', K', E, D, E', K, E, D, K, D', E, D, K', D', K, D, E', K, E, K', D', K, E', K'2],
+
+Single piece flip:
+center piece, front <-> bottom face
+[E2, A, E', D, E, A', E', A, D', E', D, E, D', A', D, E', D', C', G', K', A'2, E', A, D', A', E, A, E', D, A, D', A', D, E, D', A, D, K, G, C],
+
+alt:
+[D', K'2, D, K2, D, A, E', A', E, D', K'2, D', F5, A5, D, K2, D, E', A, E, A', D', K'2, D', A'5, F'5, K2, D2, C2, D', C'2, D', E', A, E, A', D, C2, D, F'5, E'5, D', C'2, D', A, E', A', E, D, C2, D, E5, F5, C'2, D'],
 
 
 9.2.1
