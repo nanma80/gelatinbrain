@@ -13,9 +13,195 @@ https://twistypuzzles.com/forum/
 b0876232c4876824d09f6407c88b613f
 c27689ec135ea1bc436e91dc237b8518
 
+2.13.2
+ffd375d24466edce5cea7bc834e619cd
+3227584eb09d623bc463682ed09b6437
+c8846134c26689e2134da19143d791dd
+237a85f40bd926b34c7986f20db8460f
+
+2.13.3
+9621a8358e18b832ca992eb39d623bc4
+97552fd39b6437c89e953dc37689ec13
+5ebbbc4a6e81dc2c7a89f40fd920b34d
+7986f20db946738ce916d32c679bce45
+
+2.13.4
+b7ab0b2eb89a1137a547003ec27689ec
+13bea1bf436e91dc238e85f50bd926b3
+4c6386fb0da9467c8cc716f32c6f98cc
+31e51acb34e619cd32a7584fb0996273
+
 === to solve ===
 
 === solutions ===
+2.13.4:
+Move is as same as 2.13.3 except the central core also rotates by 120 deg. Algos from 2.13.3 notes work without modification.
+
+We need to handle a new parity: single rotation by 120
+
+Single rotation CW
+[ADE, ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE, LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE, ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE, LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE, ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE, LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE, ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE, LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE, ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE, LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC'],
+
+Inverted: CCW
+[ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE', LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE', ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE', LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE', ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE', LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE', ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE', LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE', ABC, LHI', FAE, LHI, FAE', ABC', FAE, LHI', FAE', LHI, ADE', LHI', FAE, LHI, FAE', ABC, FAE, LHI', FAE', LHI, ABC', ADE'],
+
+2.13.4
+b7ab0b2eb89a1137a547003ec27689ec
+13bea1bf436e91dc238e85f50bd926b3
+4c6386fb0da9467c8cc716f32c6f98cc
+31e51acb34e619cd32a7584fb0996273
+
+backup:
+Construction of the parity algorithm:
+
+IBF,
+[EJF, DGK', AFB, DGK, AFB', EJF', AFB, DGK', AFB', DGK],
+IBF,
+[DGK', AFB, DGK, AFB', EJF, AFB, DGK', AFB', DGK, EJF'],
+IBF,
+repeat the last four lines a few times and finally, adjust IBF
+
+
+2.13.3
+Each move is a 9-cycle
+
+3-cycle: -->
+[EJF, DGK', AFB, DGK, AFB', EJF', AFB, DGK', AFB', DGK],
+
+Inverted: <--
+[DGK', AFB, DGK, AFB', EJF, AFB, DGK', AFB', DGK, EJF'],
+
+====
+
+double rotation:
+
+====
+center piece rotating around the vertical axis -->
+[DCG', CDA', ABC', LHI'2, CDA, EKJ', HGC, EKJ, HGC', CDA', HGC, EKJ', HGC', EKJ, LHI2, ADE', GHL, ADE, GHL', HCB, GHL, ADE', GHL', ADE, HCB', ABC, CDA, DCG],
+
+Inverted: <--
+[DCG', CDA', ABC', HCB, ADE', GHL, ADE, GHL', HCB', GHL, ADE', GHL', ADE, LHI'2, EKJ', HGC, EKJ, HGC', CDA, HGC, EKJ', HGC', EKJ, CDA', LHI2, ABC, CDA, DCG],
+
+====
+center piece rotating CW
+[DCG', HGC', JLI'2, DCG, FAE', LKG, FAE, LKG', DCG', LKG, FAE', LKG', FAE, JLI2, CDA', LJK, CDA, LJK', GHL, LJK, CDA', LJK', CDA, GHL', HGC, DCG],
+
+Inverted: CCW
+[DCG', HGC', GHL, CDA', LJK, CDA, LJK', GHL', LJK, CDA', LJK', CDA, JLI'2, FAE', LKG, FAE, LKG', DCG, LKG, FAE', LKG', FAE, DCG', JLI2, HGC, DCG],
+
+====
+two pieces in front, rotating around the bottom LEFT, front to the left side, bottom going up
+[LKG', IFJ'2, DGK, ABC', EKJ, ABC, EKJ', DGK', EKJ, ABC', EKJ', ABC, IFJ2, DCG', EJF, DCG, EJF', LJK, EJF, DCG', EJF', DCG, LJK', LKG],
+
+Inverted:
+[LKG', LJK, DCG', EJF, DCG, EJF', LJK', EJF, DCG', EJF', DCG, IFJ'2, ABC', EKJ, ABC, EKJ', DGK, EKJ, ABC', EKJ', ABC, DGK', IFJ2, LKG],
+
+====
+Mirror (dodecahedron):
+two pieces in front, rotating around the bottom RIGHT, front to the right side, bottom going up
+[LKJ, HCG2, EJK', ABF, DKG', ABF', DKG, EJK, DKG', ABF, DKG, ABF', HCG'2, EFJ, DGC', EFJ', DGC, LGK', DGC', EFJ, DGC, EFJ', LGK, LKJ'],
+
+Inverted Mirror (dodecahedron):
+[LKJ, LGK', EFJ, DGC', EFJ', DGC, LGK, DGC', EFJ, DGC, EFJ', HCG2, ABF, DKG', ABF', DKG, EJK', DKG', ABF, DKG, ABF', EJK, HCG'2, LKJ'],
+
+====
+single flip:
+[DCG', CDA', ABC', LHI'2, CDA, EKJ', HGC, EKJ, HGC', CDA', HGC, EKJ', HGC', EKJ, LHI2, ADE', GHL, ADE, GHL', HCB, GHL, ADE', GHL', ADE, HCB', ABC, CDA, DCG, KED'3, FAE', EJF', IFJ', IBF, EKJ', ABC, EKJ, ABC', IBF', ABC, EKJ', ABC', EKJ, HCB'2, DGK', AFB, DGK, AFB', EJF, AFB, DGK', AFB', DGK, EJF', HCB2, IFJ, EJF, FAE, KED3],
+
+2.13.3
+9621a8358e18b832ca992eb39d623bc4
+97552fd39b6437c89e953dc37689ec13
+5ebbbc4a6e81dc2c7a89f40fd920b34d
+7986f20db946738ce916d32c679bce45
+
+
+
+backup:
+[EJF', DCG, EJF, DCG'],
+ABC,
+[DCG, EJF', DCG', EJF],
+ABC',
+
+
+
+2.13.2
+3 cycle: -->
+[EJF', IBF', ABC, FAE', ABC', FAE, IBF, EJF],
+
+Inverted: <--
+[EJF', IBF', FAE', ABC, FAE, ABC', IBF, EJF],
+
+====
+
+single rotation (parity). Since the parity algorithms are short, we can directly use them
+rotating around the vertical axis -->
+[ADE', KED', EKJ, LKG, EKJ, LKG', EKJ, LKG, EKJ, LKG', KED, ADE],
+
+Inverted: <--
+[ADE', KED', LKG, EKJ', LKG', EKJ', LKG, EKJ', LKG', EKJ', KED, ADE],
+
+====
+Around the front face CW
+[ADE, ABC, ADE, ABC', ADE, ABC, ADE, ABC'],
+
+Inverted: CCW
+[ABC, ADE', ABC', ADE', ABC, ADE', ABC', ADE'],
+
+====
+front center piece, rotating around the bottom LEFT, front to the left side, bottom going up
+[FAE, IBF', EJF, IBF, EJF, IBF', EJF, IBF, EJF, FAE'],
+
+Inverted:
+[FAE, EJF', IBF', EJF', IBF, EJF', IBF', EJF', IBF, FAE'],
+
+=====
+front center piece, rotating around the bottom RIGHT, front to the right side, bottom going up
+Mirror (dodecahedron):
+[CAD', HBC, DGC', HBC', DGC', HBC, DGC', HBC', DGC', CAD],
+
+Inverted Mirror (dodecahedron):
+[CAD', DGC, HBC, DGC, HBC', DGC, HBC, DGC, HBC', CAD],
+
+====
+2.13.2
+ffd375d24466edce5cea7bc834e619cd
+3227584eb09d623bc463682ed09b6437
+c8846134c26689e2134da19143d791dd
+237a85f40bd926b34c7986f20db8460f
+
+
+backup:
+
+Double rotation:
+center piece rotating around the vertical axis -->
+[FAE, DGK, CDA', FAE', CDA, AFB', CDA', AFB, ABC, AFB', CDA, AFB, CDA', ABC', FAE, CDA, DGK', FAE'],
+
+Inverted: <--
+[FAE, DGK, CDA', FAE', ABC, CDA, AFB', CDA', AFB, ABC', AFB', CDA, AFB, CDA', FAE, CDA, DGK', FAE'],
+====
+
+center piece rotating CW
+[DGK, ADE, CDA, KED', CDA', KED, ADE', KED', CDA, KED, CDA', DGK'],
+
+Inverted:
+[DGK, CDA, KED', CDA', KED, ADE, KED', CDA, KED, CDA', ADE', DGK'],
+
+====
+two pieces in front, rotating around the bottom LEFT, front to the left side, bottom going up
+[EKJ', FAE, EKJ', FAE', EKJ, EJF, EKJ', FAE, EKJ, FAE', EJF', EKJ],
+
+Inverted:
+[EKJ', EJF, FAE, EKJ', FAE', EKJ, EJF', EKJ', FAE, EKJ, FAE', EKJ],
+
+====
+two pieces in front, rotating around the bottom RIGHT, front to the right side, bottom going up
+Mirror (dodecahedron):
+[DKG, CAD', DKG, CAD, DKG', DGC', DKG, CAD', DKG', CAD, DGC, DKG'],
+
+Inverted Mirror (dodecahedron):
+[DKG, DGC', CAD', DKG, CAD, DKG', DGC, DKG, CAD', DKG', CAD, DKG'],
+
+
 2.13.1
 20 pieces. Each is a tetrahedron
 
