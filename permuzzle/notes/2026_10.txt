@@ -31,9 +31,106 @@ b7ab0b2eb89a1137a547003ec27689ec
 4c6386fb0da9467c8cc716f32c6f98cc
 31e51acb34e619cd32a7584fb0996273
 
+2.13.5
+3520efed7ed25967f55b50e71acb34e6
+198f32a5584fb09d62cfc496682fd09b
+642dc897612dc26289ec1340a155436c
+91dc237a85f40bd926b34c7986f00dd7
+
+
 === to solve ===
 
 === solutions ===
+2.13.6:
+
+
+backup:
+
+4 rotation: order 3
+[EF', DC, EF, DC', EF', DC, EF, DC'],
+
+Inverted:
+[DC, EF', DC', EF, DC, EF', DC', EF],
+
+
+[AE', DA, AE, DA']x3,
+
+[DA, AE', DA', AE]x3,
+
+
+=======
+2.13.5:
+There will be a parity to swap two pieces.
+It's unclear if we will have rotational parity or not.
+
+3-cycle: -->
+[AC', EK, AC, EK', DG', EK, AC', EK', AC, DG],
+
+Inverted: <--
+[DG', AC', EK, AC, EK', DG, EK, AC', EK', AC],
+
+====
+Swap 2 pieces:
+[AB, EF', DC, EF, DC', AB, DC, EF', DC', EF, AB, EF', DC, EF, DC', AB, DC, EF', DC', EF, AB, EF', DC, EF, DC', AB, DC, EF', DC', EF, AB, EF', DC, EF, DC', AB, DC, EF', DC', EF, AB],
+
+====
+Double rotation
+center piece rotating around the vertical axis -->
+[DA', EF, EJ', DA, JK', DA', JK, EJ, EF', JK', DA, JK],
+
+Inverted: <--
+[JK', DA', JK, EF, EJ', JK', DA, JK, DA', EJ, EF', DA],
+
+===
+center piece rotation CW
+[EK', BF', ED', BF, AC, AB', BF', ED, BF, ED', AB, AC', ED, EK],
+
+Inverted: CCW
+[EK', ED', AC, AB', ED, BF', ED', BF, AB, AC', BF', ED, BF, EK],
+
+===
+two pieces in front, rotating around the bottom LEFT, front to the left side, bottom going UP
+[AB, AF', DC, EF', DC', EF, AF, AB', EF', DC, EF, DC'],
+
+Inverted: LEFT DOWN
+[DC, EF', DC', EF, AB, AF', EF', DC, EF, DC', AF, AB'],
+
+====
+Mirror (dodecahedron):
+two pieces in front, rotating around the bottom RIGHT, front to the right side, bottom going UP
+[AB', AC, EF', DC, EF, DC', AC', AB, DC, EF', DC', EF],
+
+Inverted Mirror (dodecahedron): RIGHT DOWN
+[EF', DC, EF, DC', AB', AC, DC, EF', DC', EF, AC', AB],
+
+====
+Single flip:
+[AF', GC', AE', GC, DK, DG', GC', AE, GC, AE', DG, DK', AE, AF, IF, JF', AB, EJ', AB', EJ, JF, IF', EJ', AB, EJ, AB'],
+
+====
+Single rotation. Not sure if it's possible
+
+2.13.5
+3520efed7ed25967f55b50e71acb34e6
+198f32a5584fb09d62cfc496682fd09b
+642dc897612dc26289ec1340a155436c
+91dc237a85f40bd926b34c7986f00dd7
+
+
+backup:
+[EF', DC, EF, DC'],
+[DC, EF', DC', EF],
+
+Constructing parity algorithm to swap 2 pieces:
+AB, [[EF', DC, EF, DC'],AB,[DC, EF', DC', EF],AB]x4,
+
+Constructing double rotation:
+[EF', DC, EF, DC'],AB',AC,
+[DC, EF', DC', EF],AC',AB,
+
+
+====
+
 2.13.4:
 Move is as same as 2.13.3 except the central core also rotates by 120 deg. Algos from 2.13.3 notes work without modification.
 
