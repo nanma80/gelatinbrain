@@ -37,11 +37,69 @@ b7ab0b2eb89a1137a547003ec27689ec
 642dc897612dc26289ec1340a155436c
 91dc237a85f40bd926b34c7986f00dd7
 
+2.13.6
+3527efed7ed25967f52950e71acb34e6
+19ad32a3584fb09d62cfc496682fd09b
+642dc897612dc26389d71369a195436c
+91dc237a85f40bd926b34c7986f60de7
 
 === to solve ===
 
 === solutions ===
 2.13.6:
+
+3-cycle: -->
+[EK', IB', BF, IB, BF', IB', BF, IB, BF', IB', BF, IB, BF', EK, BF, IB', BF', IB, BF, IB', BF', IB, BF, IB', BF', IB],
+
+Inverted: <--
+[IB', BF, IB, BF', IB', BF, IB, BF', IB', BF, IB, BF', EK', BF, IB', BF', IB, BF, IB', BF', IB, BF, IB', BF', IB, EK],
+
+Parity: swap 2 pieces: 270 moves. Use at most once
+[BC, GK', IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK, JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, BC, IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK', JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, GK, BC, GK', IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK, JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, BC, IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK', JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, GK, BC, GK', IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK, JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, BC, IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK', JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, GK, BC, GK', IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK, JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, BC, IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK', JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, GK, BC, GK', IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK, JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, BC, IF', JF, IF, JF', IF', JF, IF, JF', IF', JF, IF, JF', GK', JF, IF', JF', IF, JF, IF', JF', IF, JF, IF', JF', IF, GK, BC],
+
+=======
+Double rotation:
+
+center piece rotating around the vertical axis -->
+[DA'2, GC, AC', GC2, IH', BC', LG, BC, LG', BC', LG, BC, LG', IH, LG, BC', LG', BC, LG, BC', LG', BC, GC'2, AC, GC', DA2],
+
+Inverted: <--
+[DA'2, GC, AC', GC2, BC', LG, BC, LG', BC', LG, BC, LG', IH', LG, BC', LG', BC, LG, BC', LG', BC, IH, GC'2, AC, GC', DA2],
+
+=======
+Rotation CW
+[DA', DK2, HG', DC', LK, DC, LK', DC', LK, DC, LK', HG, LK, DC', LK', DC, LK, DC', LK', DC, DK'2, DA],
+
+Inverted: CCW
+[DA', DK2, DC', LK, DC, LK', DC', LK, DC, LK', HG', LK, DC', LK', DC, LK, DC', LK', DC, HG, DK'2, DA],
+
+=====
+two pieces in front, rotating around the bottom LEFT, front to the left side, bottom going UP
+[DK', AF, DK, AF', DK', AF, DK, AF', EJ', AF, DK', AF', DK, AF, DK', AF', DK, EJ],
+
+Inverted: LEFT DOWN
+[EJ', DK', AF, DK, AF', DK', AF, DK, AF', EJ, AF, DK', AF', DK, AF, DK', AF', DK],
+
+======
+Mirror (dodecahedron):
+two pieces in front, rotating around the bottom RIGHT, front to the right side, bottom going UP
+[EK, AC', EK', AC, EK, AC', EK', AC, DG, AC', EK, AC, EK', AC', EK, AC, EK', DG'],
+
+Inverted Mirror (dodecahedron): RIGHT DOWN
+[DG, EK, AC', EK', AC, EK, AC', EK', AC, DG', AC', EK, AC, EK', AC', EK, AC, EK'],
+
+===
+Single flip:
+[AE'2, BF, EF', BF2, JF', HB, JF, HB', JF', HB, JF, HB', LI', HB, JF', HB', JF, HB, JF', HB', JF, LI, BF'2, EF, BF', AE2, AF', ED', BC, ED, BC', ED', BC, ED, BC', AF, BC, ED', BC', ED, BC, ED', BC', ED],
+
+====
+single rotation?? Not sure if it's possible. I haven't encountered it in solve.
+
+2.13.6
+3527efed7ed25967f52950e71acb34e6
+19ad32a3584fb09d62cfc496682fd09b
+642dc897612dc26389d71369a195436c
+91dc237a85f40bd926b34c7986f60de7
 
 
 backup:
@@ -56,6 +114,17 @@ Inverted:
 [AE', DA, AE, DA']x3,
 
 [DA, AE', DA', AE]x3,
+
+Useful algo to construct 3 cycles:
+[HB', HC, HB, HC', HB', HC, HB, HC', HB', HC, HB, HC'],
+
+[HC, HB', HC', HB, HC, HB', HC', HB, HC, HB', HC', HB],
+
+commutating with ED. Not clear commutator (intersection > 1 piece)
+
+HG,
+[[EK', IB', BF, IB, BF', IB', BF, IB, BF', IB', BF, IB, BF', EK, BF, IB', BF', IB, BF, IB', BF', IB, BF, IB', BF', IB],HG,
+[IB', BF, IB, BF', IB', BF, IB, BF', IB', BF, IB, BF', EK', BF, IB', BF', IB, BF, IB', BF', IB, BF, IB', BF', IB, EK],HG]x5,
 
 
 =======
@@ -108,7 +177,7 @@ Single flip:
 [AF', GC', AE', GC, DK, DG', GC', AE, GC, AE', DG, DK', AE, AF, IF, JF', AB, EJ', AB', EJ, JF, IF', EJ', AB, EJ, AB'],
 
 ====
-Single rotation. Not sure if it's possible
+Single rotation. Not sure if it's possible. I haven't encountered it in solve.
 
 2.13.5
 3520efed7ed25967f55b50e71acb34e6
