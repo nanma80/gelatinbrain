@@ -1,0 +1,30 @@
+name: Permuzzle update monitor
+
+on:
+  schedule:
+    # Daily at 17:23 UTC (morning in Los Angeles, including DST).
+    - cron: '23 17 * * *'
+  workflow_dispatch:
+    inputs:
+      force_notification:
+        description: Send a test notification even if no update or Friday signal is due
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check JAR (failure means notification; see summary)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Compare JARs and signal when needed
+        env:
+          FORCE_NOTIFICATION: ${{ inputs.force_notification || false }}
+        run: python3 .github/scripts/check_permuzzle.py
