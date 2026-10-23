@@ -2,8 +2,8 @@ name: Permuzzle update monitor
 
 on:
   schedule:
-    # Daily at 17:23 UTC (morning in Los Angeles, including DST).
-    - cron: '23 17 * * *'
+    # Daily at 22:00 UTC: 3 p.m. PDT / 2 p.m. PST in Los Angeles.
+    - cron: '0 22 * * *'
   workflow_dispatch:
     inputs:
       force_notification:

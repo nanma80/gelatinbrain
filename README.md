@@ -21,7 +21,8 @@ See also the [archived scoreboard](https://qjxkvbyz.000webhostapp.com/permuzzle/
 ## Update monitor
 
 The `Permuzzle update monitor` GitHub Actions workflow checks the author's JAR
-against `permuzzle/permuzzle.jar` on `main` daily at 17:23 UTC. It never updates
+against `permuzzle/permuzzle.jar` on `main` daily at 22:00 UTC
+(3 p.m. PDT / 2 p.m. PST). It never updates
 the repository. Downloads stay in memory and are validated as Java archives.
 
 Enable email notifications for Actions in your personal GitHub notification
