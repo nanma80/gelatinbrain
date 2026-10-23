@@ -16,15 +16,34 @@ permissions:
 
 jobs:
   check:
-    name: Check JAR (failure means notification; see summary)
+    name: Compare committed and author JARs
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    outputs:
+      title: ${{ steps.compare.outputs.title }}
+      notify: ${{ steps.compare.outputs.notify }}
     steps:
       - uses: actions/checkout@v7.0.1
         with:
           ref: main
           persist-credentials: false
       - name: Compare JARs and signal when needed
+        id: compare
         env:
           FORCE_NOTIFICATION: ${{ inputs.force_notification || false }}
         run: python3 .github/scripts/check_permuzzle.py
+
+  notify:
+    needs: check
+    if: needs.check.outputs.notify == 'true'
+    name: ${{ needs.check.outputs.title }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Trigger GitHub notification with result in job name
+        env:
+          RESULT: ${{ needs.check.outputs.title }}
+        run: |
+          printf '%s\n' "$RESULT" >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' "$RESULT"
+          exit 1

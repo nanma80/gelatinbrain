@@ -37,8 +37,10 @@ No custom secrets or email credentials are required.
 - Unexpected monitor errors also fail, so inspect the run summary/logs to distinguish
   a requested signal from a real workflow problem.
 
-Emails use GitHub's failure wording even for healthy Friday signals; open the run
-summary for the actual result. To test, select **Actions → Permuzzle update monitor
+Emails use GitHub's failure wording even for healthy Friday signals, but the
+failing job's name includes GREEN, UPDATE, or INCONCLUSIVE and the result.
+The comparison job succeeds; a separate notification job deliberately fails
+only when a signal is due. To test, select **Actions → Permuzzle update monitor
 → Run workflow**. On Friday every run sends a signal; on other days enable
 `force_notification` to request one. Repeated runs can each produce a notification.
 

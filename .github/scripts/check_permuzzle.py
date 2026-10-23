@@ -1,4 +1,4 @@
-"""Stateless monitor. Exit 1 intentionally requests a GitHub failure notification."""
+"""Stateless comparison; outputs drive a separately named notification job."""
 
 import hashlib
 import io
@@ -61,7 +61,7 @@ def main():
     report = (
         f"{title}\n\nLos Angeles time: {now.isoformat()}\n"
         f"Manual test requested: {force}\n\n{details}\n\n"
-        "Exit status 1 intentionally requests a failure notification when a signal is due.\n"
+        "A separate job intentionally fails to request a notification when a signal is due.\n"
         "No files are updated; downloads are held only in memory.\n"
     )
     print(report)
@@ -69,7 +69,11 @@ def main():
     if summary:
         with open(summary, "a", encoding="utf-8") as output:
             output.write(report)
-    return 1 if notify else 0
+    output_path = os.environ.get("GITHUB_OUTPUT")
+    if output_path:
+        with open(output_path, "a", encoding="utf-8") as output:
+            output.write(f"title={title}\nnotify={str(notify).lower()}\n")
+    return 0
 
 
 if __name__ == "__main__":
